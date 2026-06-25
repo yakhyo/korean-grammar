@@ -1,0 +1,2971 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KIIP Level 4 — Grammar & Vocabulary</title>
+  <meta name="description" content="Grammar and vocabulary reference for KIIP Level 4 (한국어와 한국문화 중급 2).">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Noto+Serif+KR:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;700&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --bg: #fdfcfa;
+      --surface: #ffffff;
+      --ink: #211e1b;
+      --ink-strong: #1a1815;
+      --muted: #6b6560;
+      --soft: #4a4540;
+      --faint: #9a938b;
+      --line: #d8d2ca;
+      --line-strong: #ddd5c8;
+      --zebra: #f4f7f4;
+      --accent: #7a3f5c;
+      --accent-ink: #7a3f5c;
+      --accent-bg: #f4eef1;
+      --accent-line: #e6d5de;
+      --shadow: rgba(0, 0, 0, .05);
+      --shadow-hover: rgba(0, 0, 0, .10);
+    }
+
+    :root[data-theme="dark"] {
+      --bg: #16140f;
+      --surface: #211d18;
+      --ink: #ece6da;
+      --ink-strong: #f3ede2;
+      --muted: #a79f92;
+      --soft: #c4bcae;
+      --faint: #8a8276;
+      --line: #322d25;
+      --line-strong: #453f34;
+      --zebra: #1c1a16;
+      --accent: #8c4f6c;
+      --accent-ink: #cf90ad;
+      --accent-bg: #261b22;
+      --accent-line: #45313c;
+      --shadow: rgba(0, 0, 0, .30);
+      --shadow-hover: rgba(0, 0, 0, .45);
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      transition: background-color .25s ease, color .25s ease;
+    }
+
+    .page-controls {
+      position: fixed;
+      top: 16px;
+      right: 16px;
+      display: flex;
+      gap: 8px;
+      z-index: 60;
+    }
+
+    .ctrl {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      height: 36px;
+      padding: 0 13px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: var(--surface);
+      color: var(--ink);
+      cursor: pointer;
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      box-shadow: 0 1px 3px var(--shadow);
+      transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+    }
+
+    .ctrl:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 16px var(--shadow-hover);
+      border-color: var(--line-strong);
+    }
+
+    .ctrl svg { display: block; }
+    .theme-toggle { padding: 0 11px; }
+    .theme-toggle .i-moon { display: none; }
+    :root[data-theme="dark"] .theme-toggle .i-sun { display: none; }
+    :root[data-theme="dark"] .theme-toggle .i-moon { display: inline; }
+
+    .ctrl-group { position: relative; }
+    .level-switch .chev { transition: transform .15s ease; }
+    .level-switch[aria-expanded="true"] .chev { transform: rotate(180deg); }
+
+    .level-menu {
+      position: absolute;
+      top: calc(100% + 8px);
+      right: 0;
+      min-width: 192px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      box-shadow: 0 12px 30px var(--shadow-hover);
+      padding: 6px;
+      z-index: 70;
+    }
+
+    .level-menu[hidden] { display: none; }
+
+    .level-menu a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      padding: 8px 12px;
+      border-radius: 6px;
+      text-decoration: none;
+      color: var(--ink);
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .level-menu a:hover { background: var(--accent-bg, var(--line)); color: var(--accent-ink, var(--ink)); }
+    .level-menu a[aria-current="page"] { color: var(--accent-ink, var(--ink)); }
+    .level-menu a[aria-current="page"]::after { content: "✓"; font-size: 11px; }
+    .level-menu .menu-sep { height: 1px; background: var(--line); margin: 4px 2px; }
+
+    @media (max-width: 520px) {
+      .ctrl span { display: none; }
+      .ctrl { padding: 0 10px; }
+    }
+
+    .doc {
+      box-sizing: border-box;
+      max-width: 8.5in;
+      margin: 0 auto;
+      background: inherit;
+      padding: 56px clamp(24px, 5vw, 0.85in) 110px;
+      color: var(--ink);
+      font-family: 'Noto Serif', 'Noto Serif KR', Georgia, serif;
+      font-size: 15px;
+      line-height: 1.62;
+      font-feature-settings: "kern" 1, "liga" 1;
+    }
+
+    .doc-frame {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .doc-frame td {
+      padding: 0;
+    }
+
+    .running-hdr,
+    .running-ftr,
+    .hdr-space,
+    .ftr-space {
+      display: none;
+    }
+
+    .kr,
+    .gram-form,
+    .vocab-kr,
+    .topic-kr,
+    .ex .k,
+    .legend .k {
+      font-family: 'Noto Serif KR', 'Noto Serif', serif;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      text-wrap: balance;
+      color: var(--ink-strong);
+    }
+
+    p,
+    li,
+    td,
+    th {
+      text-wrap: pretty;
+    }
+
+    .doc h1 {
+      font-size: 38px;
+      line-height: 1.12;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      margin: 0 0 6px;
+    }
+
+    .subtitle {
+      font-size: 16px;
+      color: var(--muted);
+      font-style: italic;
+      margin: 0 0 26px;
+      font-weight: 400;
+    }
+
+    .part-head {
+      margin: 0 0 4px;
+      padding-top: 8px;
+      font-size: 13px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent-ink);
+      font-weight: 600;
+      font-family: 'Noto Sans KR', sans-serif;
+    }
+
+    h2.part-title {
+      font-size: 26px;
+      font-weight: 700;
+      margin: 2px 0 18px;
+      letter-spacing: -0.01em;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--ink);
+    }
+
+    .lesson {
+      margin: 34px 0 0;
+    }
+
+    .lesson-head {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      flex-wrap: wrap;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 8px;
+      margin-bottom: 4px;
+    }
+
+    .lesson-num {
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      color: #fff;
+      background: var(--accent);
+      padding: 3px 9px;
+      border-radius: 2px;
+      white-space: nowrap;
+      align-self: center;
+    }
+
+    .topic-kr {
+      font-size: 21px;
+      font-weight: 600;
+    }
+
+    .topic-en {
+      font-size: 15px;
+      color: var(--muted);
+      font-style: italic;
+    }
+
+    .gram {
+      margin: 22px 0 0;
+    }
+
+    .gram-form {
+      font-size: 20px;
+      font-weight: 600;
+      margin: 0 0 2px;
+      color: var(--ink-strong);
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .gram-form .gloss {
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--accent-ink);
+      font-style: italic;
+      font-family: 'Noto Serif', serif;
+    }
+
+    .meta {
+      font-size: 13px;
+      color: var(--muted);
+      margin: 0 0 8px;
+    }
+
+    .meta .tag,
+    .note .tag {
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: var(--accent-ink);
+      margin-right: 7px;
+    }
+
+    .def {
+      margin: 0 0 12px;
+    }
+
+    table.conj {
+      border-collapse: collapse;
+      margin: 0 0 14px;
+      width: auto;
+      font-size: 14px;
+    }
+
+    table.conj th,
+    table.conj td {
+      border: 1px solid var(--line);
+      padding: 6px 14px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    table.conj th {
+      background: var(--accent-bg);
+      font-weight: 600;
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 12.5px;
+    }
+
+    table.conj .k {
+      font-family: 'Noto Serif KR', serif;
+    }
+
+    .ex {
+      margin: 0 0 9px;
+      padding-left: 15px;
+      border-left: 2px solid var(--accent-line);
+      break-inside: avoid;
+    }
+
+    .ex .k {
+      font-family: 'Noto Serif KR', serif;
+      font-size: 15.5px;
+      margin: 0;
+      color: var(--ink);
+    }
+
+    .ex .e {
+      font-size: 13.5px;
+      color: var(--muted);
+      margin: 1px 0 0;
+      font-style: italic;
+    }
+
+    .note {
+      background: var(--accent-bg);
+      border: 1px solid var(--accent-line);
+      border-radius: 3px;
+      padding: 10px 14px;
+      margin: 12px 0 0;
+      font-size: 14px;
+      break-inside: avoid;
+    }
+
+    .note p {
+      margin: 0;
+    }
+
+    .vocab {
+      margin: 26px 0 0;
+    }
+
+    .vocab h3 {
+      font-size: 18px;
+      font-weight: 600;
+      margin: 0 0 4px;
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .vocab h3 .en {
+      font-size: 13.5px;
+      color: var(--muted);
+      font-style: italic;
+      font-weight: 400;
+    }
+
+    table.voc {
+      border-collapse: collapse;
+      width: 100%;
+      font-size: 14px;
+      margin-top: 8px;
+    }
+
+    table.voc th {
+      background: var(--ink);
+      color: var(--bg);
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-align: left;
+      padding: 7px 12px;
+    }
+
+    table.voc td {
+      border-bottom: 1px solid var(--line);
+      padding: 6px 12px;
+      vertical-align: top;
+    }
+
+    table.voc tr:nth-child(even) td {
+      background: var(--zebra);
+    }
+
+    table.voc tr.grp td {
+      background: var(--accent-bg) !important;
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--accent-ink);
+      padding: 5px 12px;
+    }
+
+    table.voc .w {
+      font-family: 'Noto Serif KR', serif;
+      font-size: 15px;
+      line-height: 1.4;
+    }
+
+    .intro {
+      font-size: 15.5px;
+    }
+
+    .legend {
+      background: var(--accent-bg);
+      border: 1px solid var(--accent-line);
+      border-radius: 4px;
+      padding: 16px 20px;
+      margin: 22px 0;
+    }
+
+    .legend h4 {
+      margin: 0 0 8px;
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-family: 'Noto Sans KR', sans-serif;
+      color: var(--accent-ink);
+    }
+
+    .legend dl {
+      margin: 0;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 4px 14px;
+      font-size: 14px;
+    }
+
+    .legend dt {
+      font-family: 'Noto Sans KR', sans-serif;
+      font-weight: 600;
+      color: var(--ink-strong);
+    }
+
+    .legend dd {
+      margin: 0;
+      color: var(--soft);
+    }
+
+    nav.toc {
+      margin: 8px 0 0;
+      columns: 2;
+      column-gap: 36px;
+      font-size: 14px;
+    }
+
+    nav.toc a {
+      color: var(--ink);
+      text-decoration: none;
+      display: block;
+      padding: 3px 0;
+      border-bottom: 1px dotted var(--line);
+      break-inside: avoid;
+    }
+
+    nav.toc a .n {
+      color: var(--accent-ink);
+      font-family: 'Noto Sans KR', sans-serif;
+      font-weight: 600;
+      font-size: 12px;
+      margin-right: 8px;
+    }
+
+    nav.toc a:hover {
+      color: var(--accent-ink);
+    }
+
+    hr.rule {
+      border: none;
+      border-top: 1px solid var(--line);
+      margin: 30px 0;
+    }
+
+    @page {
+      size: letter;
+      margin: 0;
+    }
+
+    @media print {
+      .page-controls { display: none !important; }
+
+      :root[data-theme="dark"] {
+        --bg: #fdfcfa;
+        --surface: #ffffff;
+        --ink: #211e1b;
+        --ink-strong: #1a1815;
+        --muted: #6b6560;
+        --soft: #4a4540;
+        --faint: #9a938b;
+        --line: #d8d2ca;
+        --zebra: #f4f7f4;
+        --accent: #7a3f5c;
+        --accent-ink: #7a3f5c;
+        --accent-bg: #f4eef1;
+        --accent-line: #e6d5de;
+      }
+
+      html {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      .doc {
+        max-width: none !important;
+        margin: 0 !important;
+        padding: 0 0.75in !important;
+        box-shadow: none !important;
+        border: none !important;
+      }
+
+      #dc-root,
+      .sc-host {
+        height: auto !important;
+      }
+
+      .hdr-space,
+      .ftr-space {
+        display: table-cell;
+        height: 0.7in !important;
+      }
+
+      .running-hdr,
+      .running-ftr {
+        display: flex !important;
+        justify-content: space-between;
+        align-items: baseline;
+        position: fixed !important;
+        left: 0;
+        right: 0;
+        margin: 0 !important;
+        font-size: 10px;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--faint);
+        font-family: 'Noto Sans KR', sans-serif;
+      }
+
+      .running-hdr {
+        top: 0;
+        padding: 0.3in 0.75in 0 !important;
+      }
+
+      .running-ftr {
+        bottom: 0;
+        padding: 0 0.75in 0.3in !important;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4 {
+        break-after: avoid;
+      }
+
+      .ex,
+      table.conj,
+      table.voc,
+      .note,
+      .lesson-head,
+      .vocab h3,
+      tr {
+        break-inside: avoid;
+      }
+
+      .gram {
+        break-inside: avoid;
+      }
+
+      p,
+      li {
+        orphans: 3;
+        widows: 3;
+      }
+
+      .screen-only {
+        display: none !important;
+      }
+    }
+  </style>
+  <script>
+    (function () {
+      var root = document.documentElement, KEY = 'kiip-theme';
+      var mq = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)');
+      function setTheme(t) { root.setAttribute('data-theme', t); }
+      var saved = null;
+      try { saved = localStorage.getItem(KEY); } catch (e) { }
+      setTheme(saved || (mq && mq.matches ? 'dark' : 'light'));
+      function closeMenu() {
+        var m = document.querySelector('.level-menu'), b = document.querySelector('.level-switch');
+        if (m) m.hidden = true;
+        if (b) b.setAttribute('aria-expanded', 'false');
+      }
+      document.addEventListener('click', function (e) {
+        if (e.target.closest('.theme-toggle')) {
+          var t = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+          setTheme(t);
+          try { localStorage.setItem(KEY, t); } catch (e) { }
+          return;
+        }
+        var sw = e.target.closest('.level-switch');
+        if (sw) {
+          var open = sw.getAttribute('aria-expanded') === 'true';
+          var m = document.querySelector('.level-menu');
+          sw.setAttribute('aria-expanded', String(!open));
+          if (m) m.hidden = open;
+          return;
+        }
+        if (!e.target.closest('.level-menu')) closeMenu();
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeMenu();
+      });
+    })();
+  </script>
+</head>
+
+<body>
+  <div class="page-controls">
+    <div class="ctrl-group">
+      <button class="ctrl level-switch" type="button" aria-haspopup="true" aria-expanded="false"
+        aria-label="Switch level">
+        Level 4
+        <svg class="chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M6 9l6 6 6-6" />
+        </svg>
+      </button>
+      <div class="level-menu" role="menu" hidden>
+        <a role="menuitem" href="../index.html">Home</a>
+        <div class="menu-sep"></div>
+        <a role="menuitem" href="level-1.html">Level 1 · 초급 1</a>
+        <a role="menuitem" href="level-2.html">Level 2 · 초급 2</a>
+        <a role="menuitem" href="level-3.html">Level 3 · 중급 1</a>
+        <a role="menuitem" href="level-4.html" aria-current="page">Level 4 · 중급 2</a>
+        <a role="menuitem" href="level-5.html">Level 5 · 한국사회</a>
+      </div>
+    </div>
+    <a class="ctrl" href="https://github.com/yakhyo/korean-grammar" target="_blank" rel="noopener"
+      aria-label="Star this project on GitHub" title="Star this project on GitHub">
+      <svg width="15" height="15" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path
+          d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.75.75 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Z" />
+      </svg>
+      <span>Star</span>
+    </a>
+    <button class="ctrl theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
+      <svg class="i-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="4" />
+        <path
+          d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
+      </svg>
+      <svg class="i-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+      </svg>
+    </button>
+  </div>
+  <main class="doc">
+    <table class="doc-frame" role="presentation">
+      <thead>
+        <tr>
+          <td class="hdr-space"></td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+
+            <div class="running-hdr"><span>KIIP Level 4 · Grammar &amp; Vocabulary</span><span>한국어와 한국문화 · 중급 2</span>
+            </div>
+            <div class="running-ftr"><span>Self-study reference</span><span>사회통합프로그램</span></div>
+
+            <h1>KIIP Level 4 — Grammar &amp; Vocabulary</h1>
+            <p class="subtitle">A self-study reference for 한국어와 한국문화 중급 2 (16-lesson edition) · Korea Immigration &amp;
+              Integration Program</p>
+
+            <div class="intro">
+              <p>This reference follows the <strong>KIIP Level 4 textbook</strong> (한국어와 한국문화 중급 2) — the
+                upper-intermediate stage of the Social Integration Program. It is organized into the book's <strong>16
+                  lessons</strong>. At this level the topics shift toward society — science, heritage, globalization,
+                the information age, elections, the economy, law, and immigrant life — and the grammar becomes more
+                abstract: degree and emphasis, reported and quoted speech, supposition, concession, and formal written
+                connectors. Each lesson presents its two grammar points (form, meaning, usage notes, examples) and
+                matching vocabulary. A grammar index closes the book.</p>
+            </div>
+
+            <div class="legend">
+              <h4>How to read each entry</h4>
+              <dl>
+                <dt>V</dt>
+                <dd>Verb (동사) — e.g. 가다, 먹다</dd>
+                <dt>A</dt>
+                <dd>Adjective / descriptive verb (형용사) — e.g. 크다, 예쁘다</dd>
+                <dt>N</dt>
+                <dd>Noun (명사) — e.g. 사람, 학교</dd>
+                <dt class="k">-(으)</dt>
+                <dd>Use <strong>-으</strong> after a consonant-final stem; drop it after a vowel-final stem</dd>
+                <dt class="k">아 / 어</dt>
+                <dd>Choose 아 after ㅏ/ㅗ stem vowels, otherwise 어 (하다 → 해)</dd>
+              </dl>
+            </div>
+
+            <h2 class="part-title" style="border:none; margin-bottom:6px; padding-bottom:0;">Contents — 16 Lessons</h2>
+            <nav class="toc">
+              <a href="#l1"><span class="n">L1</span>한국 생활 적응 · Adapting to Life</a>
+              <a href="#l2"><span class="n">L2</span>가족의 변화 · Changing Families</a>
+              <a href="#l3"><span class="n">L3</span>생활 속의 과학 · Everyday Science</a>
+              <a href="#l4"><span class="n">L4</span>한국의 의례 · Korean Ceremonies</a>
+              <a href="#l5"><span class="n">L5</span>문화유산 · Cultural Heritage</a>
+              <a href="#l6"><span class="n">L6</span>국제화 시대 · Globalization</a>
+              <a href="#l7"><span class="n">L7</span>현대인의 질병 · Modern Illness</a>
+              <a href="#l8"><span class="n">L8</span>정보화 사회 · Information Society</a>
+              <a href="#l9"><span class="n">L9</span>사건과 사고 · Incidents &amp; Accidents</a>
+              <a href="#l10"><span class="n">L10</span>언어생활 · Language Life</a>
+              <a href="#l11"><span class="n">L11</span>교육 제도 · Education System</a>
+              <a href="#l12"><span class="n">L12</span>선거와 투표 · Elections &amp; Voting</a>
+              <a href="#l13"><span class="n">L13</span>환경 보호 · Environmental Protection</a>
+              <a href="#l14"><span class="n">L14</span>생활과 경제 · Living &amp; Economy</a>
+              <a href="#l15"><span class="n">L15</span>법과 질서 · Law &amp; Order</a>
+              <a href="#l16"><span class="n">L16</span>이민 생활 · Immigrant Life</a>
+              <a href="#index"><span class="n">▦</span>Grammar Index</a>
+            </nav>
+
+            <hr class="rule">
+            <p class="part-head" id="part1">Part I</p>
+            <h2 class="part-title">Lessons 1–16 — Grammar &amp; Vocabulary</h2>
+
+            <section class="lesson" id="l1">
+              <div class="lesson-head"><span class="lesson-num">LESSON 1</span><span class="topic-kr">한국 생활
+                  적응</span><span class="topic-en">Adapting to Life in Korea</span></div>
+              <div class="gram">
+                <h3 class="gram-form">-느라고 <span class="gloss">— "because of (doing), occupied with"</span></h3>
+                <p class="meta"><span class="tag">Form</span> Verb stem + 느라고 &nbsp;·&nbsp; <span
+                    class="tag">Rule</span> same subject; second clause is usually a negative result</p>
+                <p class="def">The effort or time spent on the first action causes a (usually unfavorable) result in the
+                  second — being unable to do something, being tired, missing out. Both clauses share one subject, and
+                  the second clause cannot be a command or suggestion.</p>
+                <div class="ex">
+                  <p class="k">한국 생활에 적응하느라고 정신이 없었어요.</p>
+                  <p class="e">I was so caught up adjusting to life in Korea that I was overwhelmed.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">일하느라고 가족과 보낼 시간이 부족해요.</p>
+                  <p class="e">Being busy with work, I don't have enough time to spend with my family.</p>
+                </div>
+                <p class="note">
+                <p><span class="tag">Note</span> Compare 아서/어서: 느라고 stresses that time/effort spent on one action
+                  <em>caused</em> the negative outcome, and requires the same subject in both clauses.</p>
+                </p>
+              </div>
+              <div class="gram">
+                <h3 class="gram-form">-(으)ㄹ수록 <span class="gloss">— "the more… the more…"</span></h3>
+                <p class="meta"><span class="tag">Form</span> consonant stem + 을수록 · vowel/ㄹ stem + ㄹ수록 &nbsp;·&nbsp;
+                  often 으면 + -(으)ㄹ수록</p>
+                <p class="def">As the degree of the first situation increases, the second changes accordingly.
+                  Frequently reinforced by a leading 으면: 살면 살수록 ("the longer one lives…").</p>
+                <div class="ex">
+                  <p class="k">한국어는 공부할수록 재미있어요.</p>
+                  <p class="e">The more I study Korean, the more fun it gets.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">한국에 살면 살수록 정이 들어요.</p>
+                  <p class="e">The longer I live in Korea, the more attached I become.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">값이 쌀수록 품질을 잘 살펴봐야 해요.</p>
+                  <p class="e">The cheaper it is, the more carefully you should check the quality.</p>
+                </div>
+              </div>
+              <div class="vocab">
+                <h3>어휘 <span class="en">Adapting to life</span></h3>
+                <table class="voc">
+                  <tr>
+                    <th style="width:38%">Korean</th>
+                    <th>English</th>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Early life in Korea (한국 생활 초기에 어땠어요?)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">낯선 환경에 적응하다</td>
+                    <td>to adapt to an unfamiliar environment</td>
+                  </tr>
+                  <tr>
+                    <td class="w">새로운 생활을 즐기다</td>
+                    <td>to enjoy a new life</td>
+                  </tr>
+                  <tr>
+                    <td class="w">부푼 꿈을 가지다</td>
+                    <td>to have big hopes</td>
+                  </tr>
+                  <tr>
+                    <td class="w">설레다</td>
+                    <td>to be excited, flutter</td>
+                  </tr>
+                  <tr>
+                    <td class="w">의사소통이 잘 안 되다</td>
+                    <td>communication does not go well</td>
+                  </tr>
+                  <tr>
+                    <td class="w">답답하다</td>
+                    <td>to feel frustrated, stifled</td>
+                  </tr>
+                  <tr>
+                    <td class="w">신기하게 느껴지다</td>
+                    <td>to feel novel, fascinating</td>
+                  </tr>
+                  <tr>
+                    <td class="w">향수병에 걸리다</td>
+                    <td>to be homesick</td>
+                  </tr>
+                  <tr>
+                    <td class="w">그립다</td>
+                    <td>to miss, long for</td>
+                  </tr>
+                  <tr>
+                    <td class="w">자신이 있다</td>
+                    <td>to be confident</td>
+                  </tr>
+                  <tr>
+                    <td class="w">문화 차이가 크다</td>
+                    <td>the cultural difference is large</td>
+                  </tr>
+                  <tr>
+                    <td class="w">불편하다</td>
+                    <td>to be uncomfortable, inconvenient</td>
+                  </tr>
+                  <tr>
+                    <td class="w">살 곳과 직장을 구하다</td>
+                    <td>to find a place to live and a job</td>
+                  </tr>
+                  <tr>
+                    <td class="w">선배가 도움을 주다</td>
+                    <td>a senior helps out</td>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Current life in Korea (지금의 한국 생활은 어때요?)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">여유가 생기다</td>
+                    <td>to gain room, leisure</td>
+                  </tr>
+                  <tr>
+                    <td class="w">서툴러서 오해를 받다</td>
+                    <td>to be misunderstood for being clumsy</td>
+                  </tr>
+                  <tr>
+                    <td class="w">속상하다</td>
+                    <td>to be upset, hurt</td>
+                  </tr>
+                  <tr>
+                    <td class="w">생활이 안정되다</td>
+                    <td>life becomes stable</td>
+                  </tr>
+                  <tr>
+                    <td class="w">나만의 노하우가 생기다</td>
+                    <td>to develop one's own know-how</td>
+                  </tr>
+                  <tr>
+                    <td class="w">편견 때문에 서글프다</td>
+                    <td>to feel sad because of prejudice</td>
+                  </tr>
+                  <tr>
+                    <td class="w">자리를 잡다</td>
+                    <td>to settle down, get established</td>
+                  </tr>
+                </table>
+              </div>
+            </section>
+
+            <section class="lesson" id="l2">
+              <div class="lesson-head"><span class="lesson-num">LESSON 2</span><span class="topic-kr">가족의 변화</span><span
+                  class="topic-en">Changes in the Family</span></div>
+              <div class="gram">
+                <h3 class="gram-form">-(으)ㄹ 뿐만 아니라 <span class="gloss">— "not only… but also"</span></h3>
+                <p class="meta"><span class="tag">Form</span> V/A + -(으)ㄹ 뿐만 아니라 · N + 뿐만 아니라 (past: -았/었을 뿐만 아니라)</p>
+                <p class="def">Adds a second, often stronger point to the first. "Not only X, but also Y." Works with
+                  nouns directly (N뿐만 아니라).</p>
+                <div class="ex">
+                  <p class="k">요즘은 가족 형태가 다양할 뿐만 아니라 계속 변하고 있어요.</p>
+                  <p class="e">These days family forms are not only diverse but also constantly changing.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">그분은 한국어뿐만 아니라 영어도 잘해요.</p>
+                  <p class="e">He is good not only at Korean but also at English.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">이 일은 시간이 많이 걸릴 뿐만 아니라 비용도 많이 들어요.</p>
+                  <p class="e">This task not only takes a lot of time but also costs a lot.</p>
+                </div>
+              </div>
+              <div class="gram">
+                <h3 class="gram-form">-(으)ㄹ 수밖에 없다 <span class="gloss">— "have no choice but to / be bound to"</span>
+                </h3>
+                <p class="meta"><span class="tag">Form</span> Verb / Adjective stem + -(으)ㄹ 수밖에 없다</p>
+                <p class="def">There is no other option (with verbs), or an outcome is only natural and unavoidable
+                  (with adjectives).</p>
+                <div class="ex">
+                  <p class="k">맞벌이 가정이 늘면서 보육 시설이 늘어날 수밖에 없어요.</p>
+                  <p class="e">As dual-income households increase, childcare facilities are bound to grow.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">버스가 끊겨서 택시를 탈 수밖에 없었어요.</p>
+                  <p class="e">The buses had stopped, so I had no choice but to take a taxi.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">물가가 오르니 생활이 힘들 수밖에 없지요.</p>
+                  <p class="e">With prices rising, life is inevitably hard.</p>
+                </div>
+              </div>
+              <div class="vocab">
+                <h3>어휘 <span class="en">Changing families</span></h3>
+                <table class="voc">
+                  <tr>
+                    <th style="width:38%">Korean</th>
+                    <th>English</th>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Extended &amp; nuclear family (대가족과 핵가족)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">대가족</td>
+                    <td>extended family</td>
+                  </tr>
+                  <tr>
+                    <td class="w">핵가족</td>
+                    <td>nuclear family</td>
+                  </tr>
+                  <tr>
+                    <td class="w">부모님을 모시고 살다</td>
+                    <td>to live with and care for one's parents</td>
+                  </tr>
+                  <tr>
+                    <td class="w">여러 세대가 함께 살다</td>
+                    <td>several generations live together</td>
+                  </tr>
+                  <tr>
+                    <td class="w">가족 간의 유대가 깊다</td>
+                    <td>family bonds are deep</td>
+                  </tr>
+                  <tr>
+                    <td class="w">집안의 중요한 일은 어른들이 결정하다</td>
+                    <td>elders decide important family matters</td>
+                  </tr>
+                  <tr>
+                    <td class="w">분가해서 살다</td>
+                    <td>to live apart (branch off from the family)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">가사를 분담하다</td>
+                    <td>to share housework</td>
+                  </tr>
+                  <tr>
+                    <td class="w">각자의 생활을 존중하다</td>
+                    <td>to respect each other's lives</td>
+                  </tr>
+                  <tr>
+                    <td class="w">집안의 중요한 일은 가족이 함께 결정하다</td>
+                    <td>the family decides important matters together</td>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Modern family types (현대의 다양한 가족 형태)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">다문화 가족</td>
+                    <td>multicultural family</td>
+                  </tr>
+                  <tr>
+                    <td class="w">맞벌이 부부</td>
+                    <td>dual-income couple</td>
+                  </tr>
+                  <tr>
+                    <td class="w">1인 가구</td>
+                    <td>single-person household</td>
+                  </tr>
+                  <tr>
+                    <td class="w">한 부모 가족</td>
+                    <td>single-parent family</td>
+                  </tr>
+                  <tr>
+                    <td class="w">주말부부</td>
+                    <td>weekend couple (living apart on weekdays)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">독거노인</td>
+                    <td>elderly person living alone</td>
+                  </tr>
+                  <tr>
+                    <td class="w">국제결혼을 하다</td>
+                    <td>to marry internationally</td>
+                  </tr>
+                  <tr>
+                    <td class="w">한쪽 부모와 살다</td>
+                    <td>to live with one parent</td>
+                  </tr>
+                  <tr>
+                    <td class="w">아이를 낳지 않다</td>
+                    <td>to not have children</td>
+                  </tr>
+                  <tr>
+                    <td class="w">맞벌이를 하다</td>
+                    <td>both spouses work</td>
+                  </tr>
+                  <tr>
+                    <td class="w">주말부부로 지내다</td>
+                    <td>to live as a weekend couple</td>
+                  </tr>
+                  <tr>
+                    <td class="w">아이를 입양하다</td>
+                    <td>to adopt a child</td>
+                  </tr>
+                  <tr>
+                    <td class="w">독립하다</td>
+                    <td>to become independent</td>
+                  </tr>
+                  <tr>
+                    <td class="w">혼자 살다</td>
+                    <td>to live alone</td>
+                  </tr>
+                  <tr>
+                    <td class="w">재혼하다</td>
+                    <td>to remarry</td>
+                  </tr>
+                </table>
+              </div>
+            </section>
+
+            <section class="lesson" id="l3">
+              <div class="lesson-head"><span class="lesson-num">LESSON 3</span><span class="topic-kr">생활 속의
+                  과학</span><span class="topic-en">Science in Everyday Life</span></div>
+              <div class="gram">
+                <h3 class="gram-form">-(으)ㄴ/는 줄 알다 / 모르다 <span class="gloss">— "to (mistakenly) think / not know
+                    that"</span></h3>
+                <p class="meta"><span class="tag">Form</span> V/A modifier + 줄 알다(모르다): 는 줄 (V present) · -(으)ㄴ 줄 (A / V
+                  past) · -(으)ㄹ 줄 (future)</p>
+                <p class="def">Expresses what one assumed, knew, or failed to realize about a fact — often when the
+                  assumption turns out wrong. (Distinct from -(으)ㄹ 줄 알다 = "to know how to do".)</p>
+                <div class="ex">
+                  <p class="k">저는 그 기계가 고장 난 줄 몰랐어요.</p>
+                  <p class="e">I didn't know that machine was broken.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">오늘 회의가 있는 줄 알았는데 아니었어요.</p>
+                  <p class="e">I thought there was a meeting today, but there wasn't.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">이 약이 그렇게 효과가 좋은 줄 몰랐어요.</p>
+                  <p class="e">I had no idea this medicine was so effective.</p>
+                </div>
+              </div>
+              <div class="gram">
+                <h3 class="gram-form">-곤 하다 <span class="gloss">— "used to / tend to (repeatedly) do"</span></h3>
+                <p class="meta"><span class="tag">Form</span> Verb stem + 곤 하다 (past habit: 곤 했다)</p>
+                <p class="def">Describes a recurring or habitual action. In the past tense it means "used to (do) from
+                  time to time".</p>
+                <div class="ex">
+                  <p class="k">스마트폰이 없던 시절에는 편지를 쓰곤 했어요.</p>
+                  <p class="e">Back when there were no smartphones, I used to write letters.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">스트레스를 받으면 단 음식을 찾곤 해요.</p>
+                  <p class="e">When I'm stressed, I tend to reach for sweet food.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">어렸을 때 할머니 댁에 자주 가곤 했어요.</p>
+                  <p class="e">When I was young, I would often go to my grandmother's house.</p>
+                </div>
+              </div>
+              <div class="vocab">
+                <h3>어휘 <span class="en">Everyday science &amp; technology</span></h3>
+                <table class="voc">
+                  <tr>
+                    <th style="width:38%">Korean</th>
+                    <th>English</th>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">High-tech products in daily life (생활 속 첨단 기술 제품)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">인공 지능(AI)</td>
+                    <td>artificial intelligence (AI)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">로봇 청소기</td>
+                    <td>robot vacuum cleaner</td>
+                  </tr>
+                  <tr>
+                    <td class="w">인공 지능 스피커</td>
+                    <td>AI speaker</td>
+                  </tr>
+                  <tr>
+                    <td class="w">자율 주행차</td>
+                    <td>self-driving car</td>
+                  </tr>
+                  <tr>
+                    <td class="w">스리디(3D) 프린터</td>
+                    <td>3D printer</td>
+                  </tr>
+                  <tr>
+                    <td class="w">드론</td>
+                    <td>drone</td>
+                  </tr>
+                  <tr>
+                    <td class="w">가상 현실(VR) 게임</td>
+                    <td>virtual reality (VR) game</td>
+                  </tr>
+                  <tr>
+                    <td class="w">무인 편의점</td>
+                    <td>unmanned convenience store</td>
+                  </tr>
+                  <tr>
+                    <td class="w">모바일 앱</td>
+                    <td>mobile app</td>
+                  </tr>
+                </table>
+              </div>
+            </section>
+
+            <section class="lesson" id="l4">
+              <div class="lesson-head"><span class="lesson-num">LESSON 4</span><span class="topic-kr">한국의 의례</span><span
+                  class="topic-en">Korean Ceremonies &amp; Rites</span></div>
+              <div class="gram">
+                <h3 class="gram-form">-더니 <span class="gloss">— "(I observed)… and then / so now"</span></h3>
+                <p class="meta"><span class="tag">Form</span> Verb / Adjective stem + 더니 (recalls something witnessed;
+                  2nd/3rd person)</p>
+                <p class="def">Recalls something the speaker personally observed in the past, then states a related
+                  result or contrasting change. The subject is usually someone other than the speaker.</p>
+                <div class="ex">
+                  <p class="k">친구가 열심히 준비하더니 결국 시험에 합격했어요.</p>
+                  <p class="e">My friend prepared hard, and (sure enough) passed the exam.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">아침에는 춥더니 지금은 따뜻해졌어요.</p>
+                  <p class="e">It was cold this morning, but now it's gotten warm.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">동생이 한국 드라마를 보더니 한국어에 관심이 생겼어요.</p>
+                  <p class="e">My younger sibling watched Korean dramas and then took an interest in Korean.</p>
+                </div>
+              </div>
+              <div class="gram">
+                <h3 class="gram-form">-(으)ㄴ 나머지 <span class="gloss">— "as a result of (extreme)…"</span></h3>
+                <p class="meta"><span class="tag">Form</span> Verb / Adjective stem + -(으)ㄴ 나머지 (the first state is
+                  intense/excessive)</p>
+                <p class="def">Because of an extreme degree of emotion or state in the first clause, a (usually negative
+                  or unexpected) result follows.</p>
+                <div class="ex">
+                  <p class="k">너무 긴장한 나머지 인사말을 잊어버렸어요.</p>
+                  <p class="e">I was so nervous that I forgot my greeting.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">기쁜 나머지 눈물이 났어요.</p>
+                  <p class="e">I was so happy that I cried.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">서두른 나머지 중요한 서류를 두고 왔어요.</p>
+                  <p class="e">In my haste, I left an important document behind.</p>
+                </div>
+              </div>
+              <div class="vocab">
+                <h3>어휘 <span class="en">Ceremonies &amp; rites</span></h3>
+                <table class="voc">
+                  <tr>
+                    <th style="width:38%">Korean</th>
+                    <th>English</th>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Wedding (결혼식)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">사회자</td>
+                    <td>master of ceremonies</td>
+                  </tr>
+                  <tr>
+                    <td class="w">주례</td>
+                    <td>wedding officiant</td>
+                  </tr>
+                  <tr>
+                    <td class="w">결혼식장</td>
+                    <td>wedding hall</td>
+                  </tr>
+                  <tr>
+                    <td class="w">하객</td>
+                    <td>wedding guest</td>
+                  </tr>
+                  <tr>
+                    <td class="w">신랑</td>
+                    <td>groom</td>
+                  </tr>
+                  <tr>
+                    <td class="w">신부</td>
+                    <td>bride</td>
+                  </tr>
+                  <tr>
+                    <td class="w">축의금을 내다</td>
+                    <td>to give a congratulatory gift of money</td>
+                  </tr>
+                  <tr>
+                    <td class="w">피로연을 하다</td>
+                    <td>to hold a wedding reception</td>
+                  </tr>
+                  <tr>
+                    <td class="w">폐백을 하다</td>
+                    <td>to perform the pyebaek (bow to in-laws)</td>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Funeral (장례식)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">빈소</td>
+                    <td>funeral wake room</td>
+                  </tr>
+                  <tr>
+                    <td class="w">장례식장</td>
+                    <td>funeral hall</td>
+                  </tr>
+                  <tr>
+                    <td class="w">고인</td>
+                    <td>the deceased</td>
+                  </tr>
+                  <tr>
+                    <td class="w">영정</td>
+                    <td>portrait of the deceased</td>
+                  </tr>
+                  <tr>
+                    <td class="w">조문객</td>
+                    <td>mourner, condolence visitor</td>
+                  </tr>
+                  <tr>
+                    <td class="w">상주</td>
+                    <td>chief mourner</td>
+                  </tr>
+                  <tr>
+                    <td class="w">조문하다</td>
+                    <td>to offer condolences</td>
+                  </tr>
+                  <tr>
+                    <td class="w">조의금을 내다</td>
+                    <td>to give condolence money</td>
+                  </tr>
+                  <tr>
+                    <td class="w">상을 당하다</td>
+                    <td>to suffer a bereavement</td>
+                  </tr>
+                  <tr>
+                    <td class="w">상복을 입다</td>
+                    <td>to wear mourning clothes</td>
+                  </tr>
+                </table>
+              </div>
+            </section>
+
+            <section class="lesson" id="l5">
+              <div class="lesson-head"><span class="lesson-num">LESSON 5</span><span class="topic-kr">문화유산</span><span
+                  class="topic-en">Cultural Heritage</span></div>
+              <div class="gram">
+                <h3 class="gram-form">얼마나 -(으)ㄴ/는지 모르다 <span class="gloss">— "you can't imagine how…"</span></h3>
+                <p class="meta"><span class="tag">Form</span> 얼마나 + V/A + -(으)ㄴ지/는지 모르다 (A: -(으)ㄴ지 · V: -는지)</p>
+                <p class="def">An emphatic expression stressing a high degree — "(it's) incredibly / you wouldn't
+                  believe how (much)…". The 모르다 keeps its literal "don't know" only loosely; the meaning is strong
+                  emphasis.</p>
+                <div class="ex">
+                  <p class="k">경복궁이 얼마나 아름다운지 몰라요.</p>
+                  <p class="e">You can't imagine how beautiful Gyeongbokgung is.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">그 공연을 보고 얼마나 감동했는지 몰라요.</p>
+                  <p class="e">I was moved by that performance more than words can say.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">한글이 얼마나 과학적인지 몰라요.</p>
+                  <p class="e">You'd be amazed how scientific Hangul is.</p>
+                </div>
+              </div>
+              <div class="gram">
+                <h3 class="gram-form">-든지 <span class="gloss">— "whether… or / no matter (which)"</span></h3>
+                <p class="meta"><span class="tag">Form</span> V/A + 든지 (… 든지) · often with question words 누구, 무엇, 어디든지
+                </p>
+                <p class="def">Indicates a free choice or that the result is the same regardless of which option. Often
+                  paired (X든지 Y든지) or used with question words for "any-".</p>
+                <div class="ex">
+                  <p class="k">박물관에 가든지 고궁에 가든지 한 곳을 정합시다.</p>
+                  <p class="e">Whether we go to a museum or a palace, let's pick one place.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">무엇을 하든지 최선을 다하세요.</p>
+                  <p class="e">Whatever you do, do your best.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">언제든지 편하게 연락하세요.</p>
+                  <p class="e">Feel free to contact me anytime.</p>
+                </div>
+              </div>
+              <div class="vocab">
+                <h3>어휘 <span class="en">Cultural heritage</span></h3>
+                <table class="voc">
+                  <tr>
+                    <th style="width:38%">Korean</th>
+                    <th>English</th>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Types of cultural heritage (문화유산의 종류)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">문화유산</td>
+                    <td>cultural heritage</td>
+                  </tr>
+                  <tr>
+                    <td class="w">자연 유산</td>
+                    <td>natural heritage</td>
+                  </tr>
+                  <tr>
+                    <td class="w">무형 유산</td>
+                    <td>intangible heritage</td>
+                  </tr>
+                  <tr>
+                    <td class="w">기록 유산</td>
+                    <td>documentary heritage</td>
+                  </tr>
+                  <tr>
+                    <td class="w">문화재</td>
+                    <td>cultural property</td>
+                  </tr>
+                  <tr>
+                    <td class="w">유적지</td>
+                    <td>historic site</td>
+                  </tr>
+                  <tr>
+                    <td class="w">유물</td>
+                    <td>relic, artifact</td>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Describing heritage sites (문화유산 소개)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">조선 시대의 궁궐</td>
+                    <td>palace of the Joseon era</td>
+                  </tr>
+                  <tr>
+                    <td class="w">산 정상에 있는 호수</td>
+                    <td>lake at the top of a mountain</td>
+                  </tr>
+                  <tr>
+                    <td class="w">신라 시대의 사찰</td>
+                    <td>temple of the Silla era</td>
+                  </tr>
+                  <tr>
+                    <td class="w">왕의 제사를 모신 곳</td>
+                    <td>place for royal ancestral rites</td>
+                  </tr>
+                  <tr>
+                    <td class="w">조선 시대 왕의 무덤</td>
+                    <td>tomb of a Joseon king</td>
+                  </tr>
+                  <tr>
+                    <td class="w">바다 위의 큰 화산섬</td>
+                    <td>large volcanic island on the sea</td>
+                  </tr>
+                  <tr>
+                    <td class="w">조선 시대의 성곽</td>
+                    <td>fortress of the Joseon era</td>
+                  </tr>
+                </table>
+              </div>
+            </section>
+
+            <section class="lesson" id="l6">
+              <div class="lesson-head"><span class="lesson-num">LESSON 6</span><span class="topic-kr">국제화 시대</span><span
+                  class="topic-en">The Age of Globalization</span></div>
+              <div class="gram">
+                <h3 class="gram-form">-던 <span class="gloss">— "(the one) that used to / was being…"</span></h3>
+                <p class="meta"><span class="tag">Form</span> Verb / Adjective stem + 던 + N (recalled, ongoing or
+                  incomplete past)</p>
+                <p class="def">A past modifier recalling something habitual or unfinished in the past. Contrast with
+                  -았/었던 (a completed, more distant past state).</p>
+                <div class="ex">
+                  <p class="k">어렸을 때 자주 부르던 노래가 생각나요.</p>
+                  <p class="e">I remember a song I used to sing often as a child.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">제가 마시던 커피가 어디 갔지요?</p>
+                  <p class="e">Where did the coffee I was drinking go?</p>
+                </div>
+                <div class="ex">
+                  <p class="k">예전에 조용하던 동네가 많이 변했어요.</p>
+                  <p class="e">The neighborhood that used to be quiet has changed a lot.</p>
+                </div>
+              </div>
+              <div class="gram">
+                <h3 class="gram-form">-(으)ㄹ 정도로 <span class="gloss">— "to the point/extent that"</span></h3>
+                <p class="meta"><span class="tag">Form</span> Verb / Adjective stem + -(으)ㄹ 정도로 (also N + 정도로)</p>
+                <p class="def">Describes the degree of something by giving a comparable extent — "so much that…, to the
+                  point of…".</p>
+                <div class="ex">
+                  <p class="k">눈물이 날 정도로 고향이 그리웠어요.</p>
+                  <p class="e">I missed my hometown to the point of tears.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">발음이 한국 사람이라고 해도 될 정도로 좋아요.</p>
+                  <p class="e">Your pronunciation is good enough to pass for a Korean's.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">셀 수 없을 정도로 많은 외국인이 한국에 살아요.</p>
+                  <p class="e">More foreigners than can be counted live in Korea.</p>
+                </div>
+              </div>
+              <div class="vocab">
+                <h3>어휘 <span class="en">Globalization</span></h3>
+                <table class="voc">
+                  <tr>
+                    <th style="width:38%">Korean</th>
+                    <th>English</th>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Modern international society (현대 국제 사회)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">국제 협력 단체가 늘어나다</td>
+                    <td>international cooperation groups increase</td>
+                  </tr>
+                  <tr>
+                    <td class="w">국제 교류가 활발해지다</td>
+                    <td>international exchange becomes active</td>
+                  </tr>
+                  <tr>
+                    <td class="w">다문화 사회가 되다</td>
+                    <td>to become a multicultural society</td>
+                  </tr>
+                  <tr>
+                    <td class="w">국제 분쟁을 해결하다</td>
+                    <td>to resolve international disputes</td>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">What nations &amp; individuals can do (국가와 개인이 할 수 있는 일)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">국제기구에 가입하다</td>
+                    <td>to join an international organization</td>
+                  </tr>
+                  <tr>
+                    <td class="w">외교 관계를 맺다</td>
+                    <td>to establish diplomatic relations</td>
+                  </tr>
+                  <tr>
+                    <td class="w">세계 평화 유지에 힘쓰다</td>
+                    <td>to work for world peace</td>
+                  </tr>
+                  <tr>
+                    <td class="w">문화 교류를 추진하다</td>
+                    <td>to promote cultural exchange</td>
+                  </tr>
+                  <tr>
+                    <td class="w">다국적 기업이 증가하다</td>
+                    <td>multinational companies increase</td>
+                  </tr>
+                  <tr>
+                    <td class="w">해외 지사를 늘리다</td>
+                    <td>to expand overseas branches</td>
+                  </tr>
+                  <tr>
+                    <td class="w">국가 간 스포츠 교류를 활발히 하다</td>
+                    <td>to actively pursue sports exchange between nations</td>
+                  </tr>
+                  <tr>
+                    <td class="w">외국어에 능통하다</td>
+                    <td>to be fluent in foreign languages</td>
+                  </tr>
+                  <tr>
+                    <td class="w">해외 봉사 단체에 지원하다</td>
+                    <td>to apply to an overseas volunteer group</td>
+                  </tr>
+                  <tr>
+                    <td class="w">세계 시민 의식을 가지다</td>
+                    <td>to have a sense of global citizenship</td>
+                  </tr>
+                  <tr>
+                    <td class="w">해외 지사에서 근무하다</td>
+                    <td>to work at an overseas branch</td>
+                  </tr>
+                </table>
+              </div>
+            </section>
+
+            <section class="lesson" id="l7">
+              <div class="lesson-head"><span class="lesson-num">LESSON 7</span><span class="topic-kr">현대인의
+                  질병</span><span class="topic-en">Illnesses of Modern Life</span></div>
+              <div class="gram">
+                <h3 class="gram-form">-되 <span class="gloss">— "do… but / provided that (formal)"</span></h3>
+                <p class="meta"><span class="tag">Form</span> Verb stem + 되 (literary/formal; gives permission with a
+                  condition)</p>
+                <p class="def">Allows or accepts the first action while attaching a condition or qualification in the
+                  second clause. Common in written or formal speech: "you may do X, but/provided Y."</p>
+                <div class="ex">
+                  <p class="k">운동을 하되 무리하지 마세요.</p>
+                  <p class="e">Do exercise, but don't overdo it.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">약을 먹되 정해진 양을 지켜야 합니다.</p>
+                  <p class="e">You may take the medicine, but you must keep to the prescribed dose.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">의견을 말하되 근거를 함께 제시하세요.</p>
+                  <p class="e">State your opinion, but present your reasons along with it.</p>
+                </div>
+              </div>
+              <div class="gram">
+                <h3 class="gram-form">-았/었더니 <span class="gloss">— "(I did)… and then (found/result)"</span></h3>
+                <p class="meta"><span class="tag">Form</span> Verb stem + 았더니 / 었더니 (1st-person past action → discovery
+                  or result)</p>
+                <p class="def">The speaker did something, and as a result discovered something or a consequence
+                  followed. The first clause is the speaker's own past action.</p>
+                <div class="ex">
+                  <p class="k">며칠 무리했더니 몸살이 났어요.</p>
+                  <p class="e">I overexerted myself for a few days, and then came down with body aches.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">아침을 거르고 일했더니 어지러웠어요.</p>
+                  <p class="e">I worked through breakfast and ended up feeling dizzy.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">꾸준히 운동했더니 건강이 좋아졌어요.</p>
+                  <p class="e">I exercised steadily, and my health improved.</p>
+                </div>
+              </div>
+              <div class="vocab">
+                <h3>어휘 <span class="en">Modern illness &amp; health</span></h3>
+                <table class="voc">
+                  <tr>
+                    <th style="width:38%">Korean</th>
+                    <th>English</th>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Symptoms (몸의 증상)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">고열이 나다</td>
+                    <td>to run a high fever</td>
+                  </tr>
+                  <tr>
+                    <td class="w">재채기를 하다</td>
+                    <td>to sneeze</td>
+                  </tr>
+                  <tr>
+                    <td class="w">목이 따끔거리다</td>
+                    <td>to have a sore, scratchy throat</td>
+                  </tr>
+                  <tr>
+                    <td class="w">속이 쓰리다</td>
+                    <td>to have heartburn, a sore stomach</td>
+                  </tr>
+                  <tr>
+                    <td class="w">배가 더부룩하다</td>
+                    <td>to feel bloated</td>
+                  </tr>
+                  <tr>
+                    <td class="w">얼굴에 뭐가 나다</td>
+                    <td>to break out on one's face</td>
+                  </tr>
+                  <tr>
+                    <td class="w">어지럽다</td>
+                    <td>to be dizzy</td>
+                  </tr>
+                  <tr>
+                    <td class="w">다리가 붓다</td>
+                    <td>one's legs swell</td>
+                  </tr>
+                  <tr>
+                    <td class="w">혈압이 높다</td>
+                    <td>to have high blood pressure</td>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Organs &amp; diseases (신체 기관과 질병)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">비염</td>
+                    <td>rhinitis</td>
+                  </tr>
+                  <tr>
+                    <td class="w">기관지염</td>
+                    <td>bronchitis</td>
+                  </tr>
+                  <tr>
+                    <td class="w">위염</td>
+                    <td>gastritis</td>
+                  </tr>
+                  <tr>
+                    <td class="w">장염</td>
+                    <td>enteritis</td>
+                  </tr>
+                </table>
+              </div>
+            </section>
+
+            <section class="lesson" id="l8">
+              <div class="lesson-head"><span class="lesson-num">LESSON 8</span><span class="topic-kr">정보화 사회</span><span
+                  class="topic-en">The Information Society</span></div>
+              <div class="gram">
+                <h3 class="gram-form">-는다면서요? / -(으)ㄴ다면서요? <span class="gloss">— "I hear (that)…, right?"</span></h3>
+                <p class="meta"><span class="tag">Form</span> V + -ㄴ/는다면서요? · A + 다면서요? · N + (이)라면서요? (confirming
+                  hearsay)</p>
+                <p class="def">Confirms something the speaker has heard from someone else, asking the listener to
+                  verify. "I heard that…, is that true?"</p>
+                <div class="ex">
+                  <p class="k">요즘은 은행에 안 가고 휴대폰으로 송금한다면서요?</p>
+                  <p class="e">I hear that these days you transfer money by phone instead of going to the bank, right?
+                  </p>
+                </div>
+                <div class="ex">
+                  <p class="k">그 앱이 정말 편리하다면서요?</p>
+                  <p class="e">I heard that app is really convenient — is it?</p>
+                </div>
+                <div class="ex">
+                  <p class="k">다음 주부터 휴가라면서요?</p>
+                  <p class="e">I hear you're on vacation from next week, right?</p>
+                </div>
+              </div>
+              <div class="gram">
+                <h3 class="gram-form">-(으)ㄹ 겸 (-(으)ㄹ 겸) <span class="gloss">— "in order to… and also (dual
+                    purpose)"</span></h3>
+                <p class="meta"><span class="tag">Form</span> Verb stem + -(으)ㄹ 겸 (often doubled: A-(으)ㄹ 겸 B-(으)ㄹ 겸)</p>
+                <p class="def">States that an action serves two purposes at once. Often used in pairs to list both aims.
+                </p>
+                <div class="ex">
+                  <p class="k">정보도 찾을 겸 친구도 만날 겸 카페에 갔어요.</p>
+                  <p class="e">I went to the café both to look up information and to meet a friend.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">바람도 쐴 겸 산책을 나갔어요.</p>
+                  <p class="e">I went out for a walk, partly to get some fresh air.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">운동도 할 겸 지하철역까지 걸어가요.</p>
+                  <p class="e">I walk to the subway station, partly as exercise.</p>
+                </div>
+              </div>
+              <div class="vocab">
+                <h3>어휘 <span class="en">Information society</span></h3>
+                <table class="voc">
+                  <tr>
+                    <th style="width:38%">Korean</th>
+                    <th>English</th>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Where to get information (정보를 얻는 곳)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">인터넷 포털 사이트</td>
+                    <td>internet portal site</td>
+                  </tr>
+                  <tr>
+                    <td class="w">뉴스를 보다</td>
+                    <td>to read the news</td>
+                  </tr>
+                  <tr>
+                    <td class="w">검색을 하다</td>
+                    <td>to search</td>
+                  </tr>
+                  <tr>
+                    <td class="w">이메일을 주고받다</td>
+                    <td>to exchange emails</td>
+                  </tr>
+                  <tr>
+                    <td class="w">스마트폰 채팅 앱</td>
+                    <td>smartphone chat app</td>
+                  </tr>
+                  <tr>
+                    <td class="w">대화하다</td>
+                    <td>to chat, converse</td>
+                  </tr>
+                  <tr>
+                    <td class="w">사진/동영상을 전송하다</td>
+                    <td>to send photos/videos</td>
+                  </tr>
+                  <tr>
+                    <td class="w">단톡방을 만들다</td>
+                    <td>to make a group chat room</td>
+                  </tr>
+                  <tr>
+                    <td class="w">에스엔에스(SNS)</td>
+                    <td>social media (SNS)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">글/사진/동영상을 올리다</td>
+                    <td>to post text/photos/videos</td>
+                  </tr>
+                  <tr>
+                    <td class="w">댓글을 달다</td>
+                    <td>to leave a comment</td>
+                  </tr>
+                  <tr>
+                    <td class="w">동영상 재생 사이트</td>
+                    <td>video streaming site</td>
+                  </tr>
+                  <tr>
+                    <td class="w">동영상을 보다</td>
+                    <td>to watch videos</td>
+                  </tr>
+                  <tr>
+                    <td class="w">동영상을 올리다</td>
+                    <td>to upload videos</td>
+                  </tr>
+                  <tr>
+                    <td class="w">드라마/영화를 보다</td>
+                    <td>to watch dramas/movies</td>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Internet activities (인터넷 접속 활동)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">인터넷에 접속하다</td>
+                    <td>to connect to the internet</td>
+                  </tr>
+                  <tr>
+                    <td class="w">검색창에 검색어를 입력하다</td>
+                    <td>to type a search term in the search box</td>
+                  </tr>
+                  <tr>
+                    <td class="w">회원 가입을 하다</td>
+                    <td>to sign up for membership</td>
+                  </tr>
+                  <tr>
+                    <td class="w">개인 정보를 입력하다</td>
+                    <td>to enter personal information</td>
+                  </tr>
+                  <tr>
+                    <td class="w">개인 정보 이용에 동의하다</td>
+                    <td>to consent to use of personal information</td>
+                  </tr>
+                  <tr>
+                    <td class="w">사진/동영상을 다운로드하다</td>
+                    <td>to download photos/videos</td>
+                  </tr>
+                  <tr>
+                    <td class="w">필요한 자료를 복사하다</td>
+                    <td>to copy needed material</td>
+                  </tr>
+                  <tr>
+                    <td class="w">자료를 저장하다</td>
+                    <td>to save data</td>
+                  </tr>
+                  <tr>
+                    <td class="w">정보를 다른 사람과 공유하다</td>
+                    <td>to share information with others</td>
+                  </tr>
+                </table>
+              </div>
+            </section>
+
+            <section class="lesson" id="l9">
+              <div class="lesson-head"><span class="lesson-num">LESSON 9</span><span class="topic-kr">사건과 사고</span><span
+                  class="topic-en">Incidents &amp; Accidents</span></div>
+              <div class="gram">
+                <h3 class="gram-form">-(으)ㄹ 뻔하다 <span class="gloss">— "almost / nearly (happened)"</span></h3>
+                <p class="meta"><span class="tag">Form</span> Verb stem + -(으)ㄹ 뻔하다 (always past: 뻔했다)</p>
+                <p class="def">Something nearly happened but didn't — usually a narrowly avoided negative event. Always
+                  used in the past tense, often with 하마터면 ("almost / nearly").</p>
+                <div class="ex">
+                  <p class="k">빙판길에서 넘어질 뻔했어요.</p>
+                  <p class="e">I almost slipped on the icy road.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">하마터면 큰 사고가 날 뻔했어요.</p>
+                  <p class="e">A serious accident nearly happened.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">늦잠을 자서 회의에 늦을 뻔했어요.</p>
+                  <p class="e">I overslept and almost was late for the meeting.</p>
+                </div>
+              </div>
+              <div class="gram">
+                <h3 class="gram-form">N(으)로 인해(서) <span class="gloss">— "due to / because of (formal)"</span></h3>
+                <p class="meta"><span class="tag">Form</span> Noun + (으)로 인해(서) · before a noun: (으)로 인한 + N</p>
+                <p class="def">A formal way to state a cause, common in news and writing. The cause is a noun; the
+                  result is usually significant or objective.</p>
+                <div class="ex">
+                  <p class="k">폭우로 인해 도로가 통제되었어요.</p>
+                  <p class="e">Due to heavy rain, the road was closed.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">부주의로 인한 사고가 많이 발생해요.</p>
+                  <p class="e">Many accidents occur because of carelessness.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">화재로 인해 큰 피해를 입었어요.</p>
+                  <p class="e">They suffered great damage because of the fire.</p>
+                </div>
+              </div>
+              <div class="vocab">
+                <h3>어휘 <span class="en">Incidents &amp; accidents</span></h3>
+                <table class="voc">
+                  <tr>
+                    <th style="width:38%">Korean</th>
+                    <th>English</th>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Accident situations (사고가 나는 상황)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">넘어지다</td>
+                    <td>to fall over, trip</td>
+                  </tr>
+                  <tr>
+                    <td class="w">미끄러지다</td>
+                    <td>to slip</td>
+                  </tr>
+                  <tr>
+                    <td class="w">물에 빠지다</td>
+                    <td>to fall into water</td>
+                  </tr>
+                  <tr>
+                    <td class="w">떨어지다</td>
+                    <td>to fall down</td>
+                  </tr>
+                  <tr>
+                    <td class="w">물건에 맞다</td>
+                    <td>to be hit by an object</td>
+                  </tr>
+                  <tr>
+                    <td class="w">차에 치이다</td>
+                    <td>to be hit by a car</td>
+                  </tr>
+                  <tr>
+                    <td class="w">베이다</td>
+                    <td>to get cut</td>
+                  </tr>
+                  <tr>
+                    <td class="w">데다</td>
+                    <td>to get burned</td>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Injuries &amp; treatment (사고 후 처치)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">뼈가 부러지다</td>
+                    <td>to break a bone</td>
+                  </tr>
+                  <tr>
+                    <td class="w">이마가 찢어지다</td>
+                    <td>to cut one's forehead open</td>
+                  </tr>
+                  <tr>
+                    <td class="w">발목이 삐다</td>
+                    <td>to sprain one's ankle</td>
+                  </tr>
+                  <tr>
+                    <td class="w">손을 데다</td>
+                    <td>to burn one's hand</td>
+                  </tr>
+                  <tr>
+                    <td class="w">치료를 받다</td>
+                    <td>to receive treatment</td>
+                  </tr>
+                  <tr>
+                    <td class="w">깁스를 하다</td>
+                    <td>to put on a cast</td>
+                  </tr>
+                  <tr>
+                    <td class="w">목발을 짚다</td>
+                    <td>to use crutches</td>
+                  </tr>
+                  <tr>
+                    <td class="w">꿰매다</td>
+                    <td>to get stitches</td>
+                  </tr>
+                </table>
+              </div>
+            </section>
+
+            <section class="lesson" id="l10">
+              <div class="lesson-head"><span class="lesson-num">LESSON 10</span><span class="topic-kr">언어생활</span><span
+                  class="topic-en">Language Life</span></div>
+              <div class="gram">
+                <h3 class="gram-form">-고 말다 <span class="gloss">— "end up (doing) / finally (regret)"</span></h3>
+                <p class="meta"><span class="tag">Form</span> Verb stem + 고 말다 (usually past: 고 말았다)</p>
+                <p class="def">An action reaches an unintended or regrettable conclusion — "ended up happening" —
+                  sometimes with a sense of determination. Often carries disappointment.</p>
+                <div class="ex">
+                  <p class="k">실수로 비밀을 말하고 말았어요.</p>
+                  <p class="e">I ended up letting the secret slip by mistake.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">참으려고 했지만 결국 울고 말았어요.</p>
+                  <p class="e">I tried to hold it in, but in the end I cried.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">올해는 꼭 자격증을 따고 말겠어요.</p>
+                  <p class="e">This year I'll get that certificate, no matter what.</p>
+                </div>
+              </div>
+              <div class="gram">
+                <h3 class="gram-form">-(으)ㄴ/는 척하다 <span class="gloss">— "to pretend (to)"</span></h3>
+                <p class="meta"><span class="tag">Form</span> V + 는 척하다 (present) · A / V past + -(으)ㄴ 척하다 (also 체하다)
+                </p>
+                <p class="def">Pretending or feigning a state or action that isn't real.</p>
+                <div class="ex">
+                  <p class="k">못 들은 척하고 그냥 지나갔어요.</p>
+                  <p class="e">I pretended not to hear and just walked past.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">사실은 모르면서 아는 척했어요.</p>
+                  <p class="e">I acted like I knew, when I actually didn't.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">바쁜 척하지 말고 좀 도와주세요.</p>
+                  <p class="e">Stop pretending to be busy and help me.</p>
+                </div>
+              </div>
+              <div class="vocab">
+                <h3>어휘 <span class="en">Language life</span></h3>
+                <table class="voc">
+                  <tr>
+                    <th style="width:38%">Korean</th>
+                    <th>English</th>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Correct language use (올바른 언어생활)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">언어 예절을 지키다</td>
+                    <td>to observe language etiquette</td>
+                  </tr>
+                  <tr>
+                    <td class="w">올바른 언어를 사용하다</td>
+                    <td>to use correct language</td>
+                  </tr>
+                  <tr>
+                    <td class="w">때와 장소에 맞게 말하다</td>
+                    <td>to speak suitably to time and place</td>
+                  </tr>
+                  <tr>
+                    <td class="w">표준어를 구사하다</td>
+                    <td>to use standard language</td>
+                  </tr>
+                  <tr>
+                    <td class="w">정확하게 발음하다</td>
+                    <td>to pronounce accurately</td>
+                  </tr>
+                  <tr>
+                    <td class="w">적절한 호칭을 쓰다</td>
+                    <td>to use proper forms of address</td>
+                  </tr>
+                  <tr>
+                    <td class="w">비속어를 사용하지 않다</td>
+                    <td>to not use slang or vulgar words</td>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Difficulties speaking Korean (한국어로 말할 때의 어려움)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">맞춤법이 틀리다</td>
+                    <td>to make spelling mistakes</td>
+                  </tr>
+                  <tr>
+                    <td class="w">띄어쓰기를 잘못하다</td>
+                    <td>to make spacing errors</td>
+                  </tr>
+                  <tr>
+                    <td class="w">발음이 부정확하다</td>
+                    <td>one's pronunciation is inaccurate</td>
+                  </tr>
+                  <tr>
+                    <td class="w">억양이 부자연스럽다</td>
+                    <td>one's intonation is unnatural</td>
+                  </tr>
+                  <tr>
+                    <td class="w">속담 활용이 어렵다</td>
+                    <td>using proverbs is difficult</td>
+                  </tr>
+                  <tr>
+                    <td class="w">신조어/유행어를 따라 하다</td>
+                    <td>to follow neologisms/buzzwords</td>
+                  </tr>
+                  <tr>
+                    <td class="w">단어가 잘 안 떠오르다</td>
+                    <td>words don't come to mind</td>
+                  </tr>
+                  <tr>
+                    <td class="w">모국어를 섞어 쓰다</td>
+                    <td>to mix in one's native language</td>
+                  </tr>
+                  <tr>
+                    <td class="w">높임말이 헷갈리다</td>
+                    <td>to get confused by honorifics</td>
+                  </tr>
+                  <tr>
+                    <td class="w">사투리를 쓰다</td>
+                    <td>to use dialect</td>
+                  </tr>
+                  <tr>
+                    <td class="w">동문서답하다</td>
+                    <td>to give an irrelevant answer</td>
+                  </tr>
+                  <tr>
+                    <td class="w">의도한 대로 말이 잘 안 나오다</td>
+                    <td>to be unable to speak as intended</td>
+                  </tr>
+                </table>
+              </div>
+            </section>
+
+            <section class="lesson" id="l11">
+              <div class="lesson-head"><span class="lesson-num">LESSON 11</span><span class="topic-kr">교육 제도</span><span
+                  class="topic-en">The Education System</span></div>
+              <div class="gram">
+                <h3 class="gram-form">조차 <span class="gloss">— "even (not even)"</span></h3>
+                <p class="meta"><span class="tag">Form</span> Noun + 조차 (adds an extreme, often unexpected case; usually
+                  negative)</p>
+                <p class="def">"Even (this)" — includes something you'd least expect, usually in a negative sentence.
+                  Stronger and more surprising than 도.</p>
+                <div class="ex">
+                  <p class="k">너무 바빠서 밥 먹을 시간조차 없어요.</p>
+                  <p class="e">I'm so busy I don't even have time to eat.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">그 사실은 가족조차 몰랐어요.</p>
+                  <p class="e">Even my family didn't know that fact.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">기본적인 인사조차 못 했어요.</p>
+                  <p class="e">I couldn't even manage a basic greeting.</p>
+                </div>
+              </div>
+              <div class="gram">
+                <h3 class="gram-form">-기 마련이다 <span class="gloss">— "be bound to / naturally tends to"</span></h3>
+                <p class="meta"><span class="tag">Form</span> Verb / Adjective stem + 기 마련이다 (= 게 마련이다)</p>
+                <p class="def">States that something is natural, inevitable, or to be expected — a general truth about
+                  how things go.</p>
+                <div class="ex">
+                  <p class="k">노력하면 실력이 늘기 마련이에요.</p>
+                  <p class="e">If you make an effort, your skills are bound to improve.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">처음에는 누구나 실수하기 마련이에요.</p>
+                  <p class="e">Everyone makes mistakes at first — it's only natural.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">시간이 지나면 잊히기 마련이에요.</p>
+                  <p class="e">With time, things naturally get forgotten.</p>
+                </div>
+              </div>
+              <div class="vocab">
+                <h3>어휘 <span class="en">Education system</span></h3>
+                <table class="voc">
+                  <tr>
+                    <th style="width:38%">Korean</th>
+                    <th>English</th>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Schools &amp; types of education (학교와 교육의 종류)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">국립/공립 학교</td>
+                    <td>national/public school</td>
+                  </tr>
+                  <tr>
+                    <td class="w">사립 학교</td>
+                    <td>private school</td>
+                  </tr>
+                  <tr>
+                    <td class="w">대안 학교</td>
+                    <td>alternative school</td>
+                  </tr>
+                  <tr>
+                    <td class="w">공교육</td>
+                    <td>public education</td>
+                  </tr>
+                  <tr>
+                    <td class="w">사교육</td>
+                    <td>private education</td>
+                  </tr>
+                  <tr>
+                    <td class="w">교육열</td>
+                    <td>zeal for education</td>
+                  </tr>
+                  <tr>
+                    <td class="w">주입식 교육</td>
+                    <td>rote, cramming education</td>
+                  </tr>
+                  <tr>
+                    <td class="w">창의 교육</td>
+                    <td>creative education</td>
+                  </tr>
+                  <tr>
+                    <td class="w">인성 교육</td>
+                    <td>character education</td>
+                  </tr>
+                </table>
+              </div>
+            </section>
+
+            <section class="lesson" id="l12">
+              <div class="lesson-head"><span class="lesson-num">LESSON 12</span><span class="topic-kr">선거와
+                  투표</span><span class="topic-en">Elections &amp; Voting</span></div>
+              <div class="gram">
+                <h3 class="gram-form">-나 보다 / -(으)ㄴ가 보다 <span class="gloss">— "(I guess / it seems) that…"</span></h3>
+                <p class="meta"><span class="tag">Form</span> V + 나 보다 · A + -(으)ㄴ가 보다 · N + 인가 보다 (a guess from
+                  evidence)</p>
+                <p class="def">A supposition based on something the speaker observes — "it looks like / I guess". Not
+                  used for the speaker's own actions or feelings.</p>
+                <div class="ex">
+                  <p class="k">사람들이 많이 모인 걸 보니 투표를 하나 봐요.</p>
+                  <p class="e">Seeing the crowd, I guess they're voting.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">후보자가 아주 인기가 많은가 봐요.</p>
+                  <p class="e">The candidate seems to be very popular.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">밖이 시끄러운 걸 보니 선거 유세 중인가 봐요.</p>
+                  <p class="e">It's noisy outside — I guess there's a campaign rally.</p>
+                </div>
+              </div>
+              <div class="gram">
+                <h3 class="gram-form">N(이)야말로 <span class="gloss">— "(this) is precisely / indeed"</span></h3>
+                <p class="meta"><span class="tag">Form</span> Noun + (이)야말로 (singles a noun out for emphasis)</p>
+                <p class="def">Emphatically points to one noun as the very thing that matters — "X is exactly the one
+                  that…".</p>
+                <div class="ex">
+                  <p class="k">투표야말로 국민의 가장 중요한 권리예요.</p>
+                  <p class="e">Voting is precisely the citizen's most important right.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">건강이야말로 가장 큰 재산이에요.</p>
+                  <p class="e">Health, indeed, is one's greatest asset.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">노력이야말로 성공의 비결이에요.</p>
+                  <p class="e">Effort is exactly the secret to success.</p>
+                </div>
+              </div>
+              <div class="vocab">
+                <h3>어휘 <span class="en">Elections &amp; voting</span></h3>
+                <table class="voc">
+                  <tr>
+                    <th style="width:38%">Korean</th>
+                    <th>English</th>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Types of elections (선거의 종류)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">대선</td>
+                    <td>presidential election</td>
+                  </tr>
+                  <tr>
+                    <td class="w">대통령</td>
+                    <td>president</td>
+                  </tr>
+                  <tr>
+                    <td class="w">총선</td>
+                    <td>general (legislative) election</td>
+                  </tr>
+                  <tr>
+                    <td class="w">국회 의원</td>
+                    <td>National Assembly member</td>
+                  </tr>
+                  <tr>
+                    <td class="w">교육감</td>
+                    <td>superintendent of education</td>
+                  </tr>
+                  <tr>
+                    <td class="w">지방 선거</td>
+                    <td>local election</td>
+                  </tr>
+                  <tr>
+                    <td class="w">광역 단체장(시장, 도지사)</td>
+                    <td>metropolitan head (mayor, governor)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">기초 단체장(시장, 군수)</td>
+                    <td>basic local head (city mayor, county head)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">광역 의원(시 의원, 도 의원)</td>
+                    <td>metropolitan councilor (city, provincial)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">지역구 의원(시 의원, 군 의원)</td>
+                    <td>district councilor (city, county)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">비례 대표 광역 의원</td>
+                    <td>proportional-representation metropolitan councilor</td>
+                  </tr>
+                  <tr>
+                    <td class="w">비례 대표 기초 의원</td>
+                    <td>proportional-representation basic councilor</td>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Election activities (선거 활동)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">후보자</td>
+                    <td>candidate</td>
+                  </tr>
+                  <tr>
+                    <td class="w">선거 운동을 하다</td>
+                    <td>to campaign</td>
+                  </tr>
+                  <tr>
+                    <td class="w">선거 공약을 하다</td>
+                    <td>to make a campaign pledge</td>
+                  </tr>
+                  <tr>
+                    <td class="w">선거 포스터</td>
+                    <td>election poster</td>
+                  </tr>
+                  <tr>
+                    <td class="w">지지하다</td>
+                    <td>to support, back</td>
+                  </tr>
+                  <tr>
+                    <td class="w">유권자</td>
+                    <td>voter</td>
+                  </tr>
+                  <tr>
+                    <td class="w">신분증을 확인하다</td>
+                    <td>to check ID</td>
+                  </tr>
+                  <tr>
+                    <td class="w">투표용지를 받다</td>
+                    <td>to receive a ballot</td>
+                  </tr>
+                  <tr>
+                    <td class="w">기표소</td>
+                    <td>voting booth</td>
+                  </tr>
+                  <tr>
+                    <td class="w">투표하다</td>
+                    <td>to vote</td>
+                  </tr>
+                  <tr>
+                    <td class="w">투표함에 넣다</td>
+                    <td>to put into the ballot box</td>
+                  </tr>
+                  <tr>
+                    <td class="w">개표하다</td>
+                    <td>to count votes</td>
+                  </tr>
+                  <tr>
+                    <td class="w">지지율이 높다/낮다</td>
+                    <td>support rate is high/low</td>
+                  </tr>
+                  <tr>
+                    <td class="w">득표율이 높다/낮다</td>
+                    <td>vote share is high/low</td>
+                  </tr>
+                  <tr>
+                    <td class="w">당선되다</td>
+                    <td>to be elected</td>
+                  </tr>
+                </table>
+              </div>
+            </section>
+
+            <section class="lesson" id="l13">
+              <div class="lesson-head"><span class="lesson-num">LESSON 13</span><span class="topic-kr">환경 보호</span><span
+                  class="topic-en">Environmental Protection</span></div>
+              <div class="gram">
+                <h3 class="gram-form">-는 한 <span class="gloss">— "as long as / so long as"</span></h3>
+                <p class="meta"><span class="tag">Form</span> Verb stem + 는 한 (states a condition that must hold)</p>
+                <p class="def">The result in the main clause holds true only while/if the condition in the first clause
+                  is met — "as long as X (is the case)".</p>
+                <div class="ex">
+                  <p class="k">일회용품을 계속 쓰는 한 환경 문제는 해결되지 않아요.</p>
+                  <p class="e">As long as we keep using disposables, the environmental problem won't be solved.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">건강이 허락하는 한 계속 일하고 싶어요.</p>
+                  <p class="e">As long as my health allows, I want to keep working.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">규칙을 지키는 한 문제가 없을 거예요.</p>
+                  <p class="e">As long as you follow the rules, there will be no problem.</p>
+                </div>
+              </div>
+              <div class="gram">
+                <h3 class="gram-form">-도록 <span class="gloss">— "so that / in order that / until"</span></h3>
+                <p class="meta"><span class="tag">Form</span> Verb stem + 도록 (purpose, result, or extent)</p>
+                <p class="def">Expresses a goal or result the action aims at ("so that…"), an instruction, or an extent
+                  ("to the point that…").</p>
+                <div class="ex">
+                  <p class="k">환경이 오염되지 않도록 노력해야 해요.</p>
+                  <p class="e">We must make an effort so the environment isn't polluted.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">목이 아프도록 응원했어요.</p>
+                  <p class="e">I cheered until my throat was sore.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">다른 사람이 알 수 있도록 안내문을 붙였어요.</p>
+                  <p class="e">I posted a notice so that others would know.</p>
+                </div>
+              </div>
+              <div class="vocab">
+                <h3>어휘 <span class="en">Environmental protection</span></h3>
+                <table class="voc">
+                  <tr>
+                    <th style="width:38%">Korean</th>
+                    <th>English</th>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Environmental problems (환경 문제)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">미세 먼지가 심하다</td>
+                    <td>fine dust is severe</td>
+                  </tr>
+                  <tr>
+                    <td class="w">대기 오염이 발생하다</td>
+                    <td>air pollution occurs</td>
+                  </tr>
+                  <tr>
+                    <td class="w">환경이 오염되다</td>
+                    <td>the environment gets polluted</td>
+                  </tr>
+                  <tr>
+                    <td class="w">수질 오염이 심각하다</td>
+                    <td>water pollution is serious</td>
+                  </tr>
+                  <tr>
+                    <td class="w">물고기가 떼죽음을 당하다</td>
+                    <td>fish die en masse</td>
+                  </tr>
+                  <tr>
+                    <td class="w">농약에 중독되다</td>
+                    <td>to be poisoned by pesticides</td>
+                  </tr>
+                  <tr>
+                    <td class="w">토양 오염을 일으키다</td>
+                    <td>to cause soil pollution</td>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Protecting the environment (환경 보호 실천)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">배기가스를 줄이다</td>
+                    <td>to reduce exhaust gas</td>
+                  </tr>
+                  <tr>
+                    <td class="w">차량 2부제를 실시하다</td>
+                    <td>to enforce alternate-day driving</td>
+                  </tr>
+                  <tr>
+                    <td class="w">대체 에너지를 개발하다</td>
+                    <td>to develop alternative energy</td>
+                  </tr>
+                  <tr>
+                    <td class="w">농약 사용을 줄이다</td>
+                    <td>to reduce pesticide use</td>
+                  </tr>
+                  <tr>
+                    <td class="w">쓰레기 종량제를 실시하다</td>
+                    <td>to enforce volume-based waste fees</td>
+                  </tr>
+                  <tr>
+                    <td class="w">일회용품 사용을 줄이다</td>
+                    <td>to reduce use of disposables</td>
+                  </tr>
+                  <tr>
+                    <td class="w">생활 하수 정화 처리를 하다</td>
+                    <td>to treat household sewage</td>
+                  </tr>
+                  <tr>
+                    <td class="w">폐수를 무단으로 버리지 않다</td>
+                    <td>to not dump wastewater illegally</td>
+                  </tr>
+                  <tr>
+                    <td class="w">친환경 세제를 사용하다</td>
+                    <td>to use eco-friendly detergent</td>
+                  </tr>
+                </table>
+              </div>
+            </section>
+
+            <section class="lesson" id="l14">
+              <div class="lesson-head"><span class="lesson-num">LESSON 14</span><span class="topic-kr">생활과
+                  경제</span><span class="topic-en">Living &amp; the Economy</span></div>
+              <div class="gram">
+                <h3 class="gram-form">-(으)므로 <span class="gloss">— "because / since (formal written)"</span></h3>
+                <p class="meta"><span class="tag">Form</span> Verb / Adjective stem + -(으)므로 · N + (이)므로</p>
+                <p class="def">A formal, written reason connector (reports, notices, essays). Cannot take a
+                  command/suggestion in the second clause.</p>
+                <div class="ex">
+                  <p class="k">물가가 올랐으므로 가계 부담이 커졌어요.</p>
+                  <p class="e">Because prices rose, the household burden grew.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">예산이 부족하므로 지출을 줄여야 합니다.</p>
+                  <p class="e">Since the budget is insufficient, spending must be cut.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">성실히 일했으므로 좋은 결과를 얻었어요.</p>
+                  <p class="e">Because they worked diligently, they got good results.</p>
+                </div>
+              </div>
+              <div class="gram">
+                <h3 class="gram-form">은/는커녕 <span class="gloss">— "far from / let alone"</span></h3>
+                <p class="meta"><span class="tag">Form</span> Noun + 은/는커녕 · also V/A + -기는커녕 (denies even the lesser
+                  case)</p>
+                <p class="def">Not only is the bigger thing impossible — even a smaller, easier one is too. Strongly
+                  negative, often with 도 in the second clause.</p>
+                <div class="ex">
+                  <p class="k">저축은커녕 생활비도 부족해요.</p>
+                  <p class="e">Far from saving, I don't even have enough for living costs.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">칭찬은커녕 혼만 났어요.</p>
+                  <p class="e">Far from praise, I only got scolded.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">쉬기는커녕 밥 먹을 시간도 없었어요.</p>
+                  <p class="e">Let alone resting, I didn't even have time to eat.</p>
+                </div>
+              </div>
+              <div class="vocab">
+                <h3>어휘 <span class="en">Living &amp; the economy</span></h3>
+                <table class="voc">
+                  <tr>
+                    <th style="width:38%">Korean</th>
+                    <th>English</th>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Economic situations (경제 상황)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">물가가 상승하다</td>
+                    <td>prices rise</td>
+                  </tr>
+                  <tr>
+                    <td class="w">물가가 하락하다</td>
+                    <td>prices fall</td>
+                  </tr>
+                  <tr>
+                    <td class="w">실업률이 감소하다</td>
+                    <td>the unemployment rate falls</td>
+                  </tr>
+                  <tr>
+                    <td class="w">실업률이 증가하다</td>
+                    <td>the unemployment rate rises</td>
+                  </tr>
+                  <tr>
+                    <td class="w">경기가 호황이다</td>
+                    <td>the economy is booming</td>
+                  </tr>
+                  <tr>
+                    <td class="w">경기가 불황이다</td>
+                    <td>the economy is in recession</td>
+                  </tr>
+                  <tr>
+                    <td class="w">환율이 내리다</td>
+                    <td>the exchange rate falls</td>
+                  </tr>
+                  <tr>
+                    <td class="w">환율이 오르다</td>
+                    <td>the exchange rate rises</td>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Economic phenomena &amp; effects (경제 현상과 영향)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">개인 소비 증가</td>
+                    <td>increase in personal consumption</td>
+                  </tr>
+                  <tr>
+                    <td class="w">원재료 가격 인상</td>
+                    <td>rise in raw-material prices</td>
+                  </tr>
+                  <tr>
+                    <td class="w">환율 변동</td>
+                    <td>exchange-rate fluctuation</td>
+                  </tr>
+                  <tr>
+                    <td class="w">부동산 가격 급등</td>
+                    <td>surge in real-estate prices</td>
+                  </tr>
+                  <tr>
+                    <td class="w">수요 증가</td>
+                    <td>increase in demand</td>
+                  </tr>
+                  <tr>
+                    <td class="w">공급 증가</td>
+                    <td>increase in supply</td>
+                  </tr>
+                  <tr>
+                    <td class="w">일자리 감소</td>
+                    <td>reduction in jobs</td>
+                  </tr>
+                  <tr>
+                    <td class="w">경기 침체</td>
+                    <td>economic slump</td>
+                  </tr>
+                </table>
+              </div>
+            </section>
+
+            <section class="lesson" id="l15">
+              <div class="lesson-head"><span class="lesson-num">LESSON 15</span><span class="topic-kr">법과 질서</span><span
+                  class="topic-en">Law &amp; Order</span></div>
+              <div class="gram">
+                <h3 class="gram-form">-다시피 <span class="gloss">— "as (you know / see)"</span></h3>
+                <p class="meta"><span class="tag">Form</span> Verb stem + 다시피 (esp. 알다, 보다, 듣다: 알다시피, 보다시피)</p>
+                <p class="def">Refers to what the listener already knows or can see — "as you know, as you can see".
+                  Mostly with perception/cognition verbs.</p>
+                <div class="ex">
+                  <p class="k">여러분도 알다시피 법은 모두가 지켜야 해요.</p>
+                  <p class="e">As you all know, the law must be obeyed by everyone.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">보다시피 여기는 주차 금지 구역이에요.</p>
+                  <p class="e">As you can see, this is a no-parking zone.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">앞에서 말했다시피 규칙이 바뀌었어요.</p>
+                  <p class="e">As I said earlier, the rules have changed.</p>
+                </div>
+              </div>
+              <div class="gram">
+                <h3 class="gram-form">-는 법이다 <span class="gloss">— "it is the way / it is natural that"</span></h3>
+                <p class="meta"><span class="tag">Form</span> Verb stem + 는 법이다 · Adjective + -(으)ㄴ 법이다</p>
+                <p class="def">States a general truth or principle — "that's how it works; it's only natural". Similar
+                  to 기 마련이다 but stresses a rule/principle.</p>
+                <div class="ex">
+                  <p class="k">죄를 지으면 벌을 받는 법이에요.</p>
+                  <p class="e">If you commit a crime, you get punished — that's the way it is.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">노력한 만큼 얻는 법이에요.</p>
+                  <p class="e">You gain in proportion to your effort — that's how it works.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">급하게 서두르면 실수하는 법이에요.</p>
+                  <p class="e">When you rush, you naturally make mistakes.</p>
+                </div>
+              </div>
+              <div class="vocab">
+                <h3>어휘 <span class="en">Law &amp; order</span></h3>
+                <table class="voc">
+                  <tr>
+                    <th style="width:38%">Korean</th>
+                    <th>English</th>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Law &amp; order behaviour (법과 질서 관련 행동)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">질서를 지키다</td>
+                    <td>to keep order</td>
+                  </tr>
+                  <tr>
+                    <td class="w">범죄를 저지르다</td>
+                    <td>to commit a crime</td>
+                  </tr>
+                  <tr>
+                    <td class="w">법/법규를 위반하다</td>
+                    <td>to violate the law/regulations</td>
+                  </tr>
+                  <tr>
+                    <td class="w">범칙금/벌금을 내다</td>
+                    <td>to pay a fine/penalty</td>
+                  </tr>
+                  <tr>
+                    <td class="w">처벌을 받다</td>
+                    <td>to be punished</td>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Prohibition notices (금지 안내문)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">불법 촬영</td>
+                    <td>illegal filming</td>
+                  </tr>
+                  <tr>
+                    <td class="w">영화 불법 촬영(저작권법 위반)</td>
+                    <td>illegal movie recording (copyright violation)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">불법 주정차 금지 구역</td>
+                    <td>no-illegal-parking zone</td>
+                  </tr>
+                  <tr>
+                    <td class="w">쓰레기 불법 투기 단속</td>
+                    <td>crackdown on illegal trash dumping</td>
+                  </tr>
+                </table>
+              </div>
+            </section>
+
+            <section class="lesson" id="l16">
+              <div class="lesson-head"><span class="lesson-num">LESSON 16</span><span class="topic-kr">이민 생활</span><span
+                  class="topic-en">Immigrant Life</span></div>
+              <div class="gram">
+                <h3 class="gram-form">-(으)ㄹ지도 모르다 <span class="gloss">— "might / may possibly"</span></h3>
+                <p class="meta"><span class="tag">Form</span> V/A + -(으)ㄹ지도 모르다 (past: -았/었을지도 모르다)</p>
+                <p class="def">Expresses a possibility the speaker is uncertain about — "it might be that…, perhaps".
+                </p>
+                <div class="ex">
+                  <p class="k">서류가 더 필요할지도 몰라요.</p>
+                  <p class="e">You might need more documents.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">그분은 벌써 귀화했을지도 몰라요.</p>
+                  <p class="e">He may have already been naturalized.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">내일은 날씨가 추울지도 모르니까 옷을 챙기세요.</p>
+                  <p class="e">It might be cold tomorrow, so pack warm clothes.</p>
+                </div>
+              </div>
+              <div class="gram">
+                <h3 class="gram-form">N치고 <span class="gloss">— "for a…/considering it's a… (every / exception)"</span>
+                </h3>
+                <p class="meta"><span class="tag">Form</span> Noun + 치고 (two senses: "every N without exception" or
+                  "(unusual) for an N")</p>
+                <p class="def">Either "every N is…" (치고 + negative = no exception), or "considering it's an N,
+                  (unexpectedly)…" with 치고는.</p>
+                <div class="ex">
+                  <p class="k">외국인치고 한국어를 정말 잘하시네요.</p>
+                  <p class="e">For a foreigner, you speak Korean really well.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">초보치고는 운전을 잘하는 편이에요.</p>
+                  <p class="e">For a beginner, he drives quite well.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">부모치고 자식 걱정 안 하는 사람 없어요.</p>
+                  <p class="e">There's no parent who doesn't worry about their child.</p>
+                </div>
+              </div>
+              <div class="vocab">
+                <h3>어휘 <span class="en">Immigrant life</span></h3>
+                <table class="voc">
+                  <tr>
+                    <th style="width:38%">Korean</th>
+                    <th>English</th>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Difficulties in Korean life (한국 생활의 어려움)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">의사소통에 어려움이 있다</td>
+                    <td>to have difficulty communicating</td>
+                  </tr>
+                  <tr>
+                    <td class="w">대화가 잘 통하지 않아 답답하다</td>
+                    <td>to feel frustrated when conversation doesn't flow</td>
+                  </tr>
+                  <tr>
+                    <td class="w">한국의 돈 단위가 익숙하지 않다</td>
+                    <td>to be unfamiliar with Korean currency units</td>
+                  </tr>
+                  <tr>
+                    <td class="w">물건을 살 때 힘들다</td>
+                    <td>to struggle when buying things</td>
+                  </tr>
+                  <tr>
+                    <td class="w">주변 사람들과 사고방식이 달라 갈등을 겪다</td>
+                    <td>to have conflict from differing ways of thinking</td>
+                  </tr>
+                  <tr>
+                    <td class="w">외국인이라서 차별 대우를 당하다</td>
+                    <td>to face discrimination as a foreigner</td>
+                  </tr>
+                  <tr>
+                    <td class="w">한국 문화를 잘 몰라서 실수하다</td>
+                    <td>to make mistakes from not knowing Korean culture</td>
+                  </tr>
+                  <tr>
+                    <td class="w">문화가 달라서 문화 충격을 경험하다</td>
+                    <td>to experience culture shock from cultural differences</td>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Overcoming difficulties (어려움을 극복하는 방법)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">극복하다</td>
+                    <td>to overcome</td>
+                  </tr>
+                  <tr>
+                    <td class="w">주변에 도움을 청하다</td>
+                    <td>to ask those around you for help</td>
+                  </tr>
+                  <tr>
+                    <td class="w">법에 호소하다</td>
+                    <td>to appeal to the law</td>
+                  </tr>
+                  <tr>
+                    <td class="w">포기하다</td>
+                    <td>to give up</td>
+                  </tr>
+                  <tr>
+                    <td class="w">혼자 고민하다</td>
+                    <td>to worry alone</td>
+                  </tr>
+                  <tr>
+                    <td class="w">불의에 타협하다</td>
+                    <td>to compromise with injustice</td>
+                  </tr>
+                  <tr>
+                    <td class="w">모르는 말은 그때그때 물어보다</td>
+                    <td>to ask about unknown words right away</td>
+                  </tr>
+                  <tr>
+                    <td class="w">내가 들은 게 맞는지 바로 확인하다</td>
+                    <td>to immediately confirm what one heard</td>
+                  </tr>
+                  <tr>
+                    <td class="w">합리적으로 소비를 하다</td>
+                    <td>to consume rationally</td>
+                  </tr>
+                  <tr>
+                    <td class="w">상대방의 입장을 이해하려고 노력하다</td>
+                    <td>to try to understand the other's position</td>
+                  </tr>
+                  <tr>
+                    <td class="w">적극적으로 소통하면서 해결 방안을 찾다</td>
+                    <td>to find solutions through active communication</td>
+                  </tr>
+                  <tr>
+                    <td class="w">문화 간 차이를 극복하려고 노력하다</td>
+                    <td>to try to overcome cultural differences</td>
+                  </tr>
+                  <tr>
+                    <td class="w">다양한 문화에 대해 이해하는 시간을 가지다</td>
+                    <td>to take time to understand diverse cultures</td>
+                  </tr>
+                </table>
+              </div>
+            </section>
+
+            <!--LESSONS-->
+
+            <hr class="rule">
+            <p class="part-head" id="index">Appendix</p>
+            <h2 class="part-title">Grammar Index</h2>
+            <div class="vocab">
+              <h3>All grammar patterns by lesson</h3>
+              <table class="voc">
+                <tr>
+                  <th style="width:10%">Lesson</th>
+                  <th style="width:36%">Pattern</th>
+                  <th>Meaning</th>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td class="w">-느라고</td>
+                  <td>because of (doing); occupied with</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td class="w">-(으)ㄹ수록</td>
+                  <td>the more… the more…</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td class="w">-(으)ㄹ 뿐만 아니라</td>
+                  <td>not only… but also</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td class="w">-(으)ㄹ 수밖에 없다</td>
+                  <td>have no choice but to</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td class="w">-(으)ㄴ/는 줄 알다/모르다</td>
+                  <td>to (mistakenly) think / not know that</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td class="w">-곤 하다</td>
+                  <td>used to / tend to do</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td class="w">-더니</td>
+                  <td>(observed) and then / so now</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td class="w">-(으)ㄴ 나머지</td>
+                  <td>as a result of (extreme)…</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td class="w">얼마나 -(으)ㄴ/는지 모르다</td>
+                  <td>you can't imagine how…</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td class="w">-든지</td>
+                  <td>whether… or / no matter</td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td class="w">-던</td>
+                  <td>(the one) that used to / was being…</td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td class="w">-(으)ㄹ 정도로</td>
+                  <td>to the point/extent that</td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td class="w">-되</td>
+                  <td>do… but / provided that (formal)</td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td class="w">-았/었더니</td>
+                  <td>(I did)… and then (result)</td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td class="w">-는다면서요?</td>
+                  <td>I hear (that)…, right?</td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td class="w">-(으)ㄹ 겸</td>
+                  <td>in order to… and also (dual purpose)</td>
+                </tr>
+                <tr>
+                  <td>9</td>
+                  <td class="w">-(으)ㄹ 뻔하다</td>
+                  <td>almost / nearly (happened)</td>
+                </tr>
+                <tr>
+                  <td>9</td>
+                  <td class="w">N(으)로 인해(서)</td>
+                  <td>due to / because of (formal)</td>
+                </tr>
+                <tr>
+                  <td>10</td>
+                  <td class="w">-고 말다</td>
+                  <td>end up (doing) / finally</td>
+                </tr>
+                <tr>
+                  <td>10</td>
+                  <td class="w">-(으)ㄴ/는 척하다</td>
+                  <td>to pretend (to)</td>
+                </tr>
+                <tr>
+                  <td>11</td>
+                  <td class="w">조차</td>
+                  <td>even (not even)</td>
+                </tr>
+                <tr>
+                  <td>11</td>
+                  <td class="w">-기 마련이다</td>
+                  <td>be bound to / naturally tends to</td>
+                </tr>
+                <tr>
+                  <td>12</td>
+                  <td class="w">-나 보다 / -(으)ㄴ가 보다</td>
+                  <td>(I guess / it seems) that…</td>
+                </tr>
+                <tr>
+                  <td>12</td>
+                  <td class="w">N(이)야말로</td>
+                  <td>(this) is precisely / indeed</td>
+                </tr>
+                <tr>
+                  <td>13</td>
+                  <td class="w">-는 한</td>
+                  <td>as long as / so long as</td>
+                </tr>
+                <tr>
+                  <td>13</td>
+                  <td class="w">-도록</td>
+                  <td>so that / in order that / until</td>
+                </tr>
+                <tr>
+                  <td>14</td>
+                  <td class="w">-(으)므로</td>
+                  <td>because / since (formal written)</td>
+                </tr>
+                <tr>
+                  <td>14</td>
+                  <td class="w">은/는커녕</td>
+                  <td>far from / let alone</td>
+                </tr>
+                <tr>
+                  <td>15</td>
+                  <td class="w">-다시피</td>
+                  <td>as (you know / see)</td>
+                </tr>
+                <tr>
+                  <td>15</td>
+                  <td class="w">-는 법이다</td>
+                  <td>it is the way / it is natural that</td>
+                </tr>
+                <tr>
+                  <td>16</td>
+                  <td class="w">-(으)ㄹ지도 모르다</td>
+                  <td>might / may possibly</td>
+                </tr>
+                <tr>
+                  <td>16</td>
+                  <td class="w">N치고</td>
+                  <td>for a… / every… (without exception)</td>
+                </tr>
+              </table>
+            </div>
+            <hr class="rule">
+            <p style="text-align:center; color:var(--faint); font-size:13px; font-style:italic; margin-top:24px;">End of
+              reference · KIIP Level 4 — 한국어와 한국문화 중급 2 · 화이팅!</p>
+            <!--INDEX-->
+
+          </td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td class="ftr-space"></td>
+        </tr>
+      </tfoot>
+    </table>
+  </main>
+</body>
+
+</html>

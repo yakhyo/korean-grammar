@@ -1,0 +1,41 @@
+name: Deploy to GitHub Pages
+
+# Manual trigger. In the "Run workflow" dialog, use the branch dropdown
+# ("Use workflow from") to select the branch — that branch is deployed.
+on:
+  workflow_dispatch:
+
+# Permissions required by the GitHub Pages deploy action.
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow one Pages deployment at a time; don't cancel a run in progress.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      # Default checkout uses the branch you selected when dispatching.
+      - name: Checkout ${{ github.ref_name }}
+        uses: actions/checkout@v4
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload site artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # Static site lives at the repo root.
+          path: .
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

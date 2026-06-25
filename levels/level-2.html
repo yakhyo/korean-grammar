@@ -1,0 +1,3163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KIIP Level 2 — Grammar & Vocabulary</title>
+  <meta name="description" content="Grammar and vocabulary reference for KIIP Level 2 (한국어와 한국문화 초급 2).">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Noto+Serif+KR:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;700&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --bg: #fdfcfa;
+      --surface: #ffffff;
+      --ink: #211e1b;
+      --ink-strong: #1a1815;
+      --muted: #6b6560;
+      --soft: #4a4540;
+      --faint: #9a938b;
+      --line: #d8d2ca;
+      --line-strong: #ddd5c8;
+      --zebra: #f4f7f4;
+      --accent: #2f5c8f;
+      --accent-ink: #2f5c8f;
+      --accent-bg: #eef2f7;
+      --accent-line: #d2dded;
+      --shadow: rgba(0, 0, 0, .05);
+      --shadow-hover: rgba(0, 0, 0, .10);
+    }
+
+    :root[data-theme="dark"] {
+      --bg: #16140f;
+      --surface: #211d18;
+      --ink: #ece6da;
+      --ink-strong: #f3ede2;
+      --muted: #a79f92;
+      --soft: #c4bcae;
+      --faint: #8a8276;
+      --line: #322d25;
+      --line-strong: #453f34;
+      --zebra: #1c1a16;
+      --accent: #3a6aa0;
+      --accent-ink: #8fb6e0;
+      --accent-bg: #1a2230;
+      --accent-line: #2e3f54;
+      --shadow: rgba(0, 0, 0, .30);
+      --shadow-hover: rgba(0, 0, 0, .45);
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      transition: background-color .25s ease, color .25s ease;
+    }
+
+    .page-controls {
+      position: fixed;
+      top: 16px;
+      right: 16px;
+      display: flex;
+      gap: 8px;
+      z-index: 60;
+    }
+
+    .ctrl {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      height: 36px;
+      padding: 0 13px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: var(--surface);
+      color: var(--ink);
+      cursor: pointer;
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      box-shadow: 0 1px 3px var(--shadow);
+      transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+    }
+
+    .ctrl:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 16px var(--shadow-hover);
+      border-color: var(--line-strong);
+    }
+
+    .ctrl svg { display: block; }
+    .theme-toggle { padding: 0 11px; }
+    .theme-toggle .i-moon { display: none; }
+    :root[data-theme="dark"] .theme-toggle .i-sun { display: none; }
+    :root[data-theme="dark"] .theme-toggle .i-moon { display: inline; }
+
+    .ctrl-group { position: relative; }
+    .level-switch .chev { transition: transform .15s ease; }
+    .level-switch[aria-expanded="true"] .chev { transform: rotate(180deg); }
+
+    .level-menu {
+      position: absolute;
+      top: calc(100% + 8px);
+      right: 0;
+      min-width: 192px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      box-shadow: 0 12px 30px var(--shadow-hover);
+      padding: 6px;
+      z-index: 70;
+    }
+
+    .level-menu[hidden] { display: none; }
+
+    .level-menu a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      padding: 8px 12px;
+      border-radius: 6px;
+      text-decoration: none;
+      color: var(--ink);
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .level-menu a:hover { background: var(--accent-bg, var(--line)); color: var(--accent-ink, var(--ink)); }
+    .level-menu a[aria-current="page"] { color: var(--accent-ink, var(--ink)); }
+    .level-menu a[aria-current="page"]::after { content: "✓"; font-size: 11px; }
+    .level-menu .menu-sep { height: 1px; background: var(--line); margin: 4px 2px; }
+
+    @media (max-width: 520px) {
+      .ctrl span { display: none; }
+      .ctrl { padding: 0 10px; }
+    }
+
+    .doc {
+      box-sizing: border-box;
+      max-width: 8.5in;
+      margin: 0 auto;
+      background: inherit;
+      padding: 56px clamp(24px, 5vw, 0.85in) 110px;
+      color: var(--ink);
+      font-family: 'Noto Serif', 'Noto Serif KR', Georgia, serif;
+      font-size: 15px;
+      line-height: 1.62;
+      font-feature-settings: "kern" 1, "liga" 1;
+    }
+
+    .doc-frame {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .doc-frame td {
+      padding: 0;
+    }
+
+    .running-hdr,
+    .running-ftr,
+    .hdr-space,
+    .ftr-space {
+      display: none;
+    }
+
+    .kr,
+    .gram-form,
+    .vocab-kr,
+    .topic-kr,
+    .ex .k,
+    .legend .k {
+      font-family: 'Noto Serif KR', 'Noto Serif', serif;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      text-wrap: balance;
+      color: var(--ink-strong);
+    }
+
+    p,
+    li,
+    td,
+    th {
+      text-wrap: pretty;
+    }
+
+    .doc h1 {
+      font-size: 38px;
+      line-height: 1.12;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      margin: 0 0 6px;
+    }
+
+    .subtitle {
+      font-size: 16px;
+      color: var(--muted);
+      font-style: italic;
+      margin: 0 0 26px;
+      font-weight: 400;
+    }
+
+    .part-head {
+      margin: 0 0 4px;
+      padding-top: 8px;
+      font-size: 13px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent-ink);
+      font-weight: 600;
+      font-family: 'Noto Sans KR', sans-serif;
+    }
+
+    h2.part-title {
+      font-size: 26px;
+      font-weight: 700;
+      margin: 2px 0 18px;
+      letter-spacing: -0.01em;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--ink);
+    }
+
+    .lesson {
+      margin: 34px 0 0;
+    }
+
+    .lesson-head {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      flex-wrap: wrap;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 8px;
+      margin-bottom: 4px;
+    }
+
+    .lesson-num {
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      color: #fff;
+      background: var(--accent);
+      padding: 3px 9px;
+      border-radius: 2px;
+      white-space: nowrap;
+      align-self: center;
+    }
+
+    .topic-kr {
+      font-size: 21px;
+      font-weight: 600;
+    }
+
+    .topic-en {
+      font-size: 15px;
+      color: var(--muted);
+      font-style: italic;
+    }
+
+    .gram {
+      margin: 22px 0 0;
+    }
+
+    .gram-form {
+      font-size: 20px;
+      font-weight: 600;
+      margin: 0 0 2px;
+      color: var(--ink-strong);
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .gram-form .gloss {
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--accent-ink);
+      font-style: italic;
+      font-family: 'Noto Serif', serif;
+    }
+
+    .meta {
+      font-size: 13px;
+      color: var(--muted);
+      margin: 0 0 8px;
+    }
+
+    .meta .tag,
+    .note .tag {
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: var(--accent-ink);
+      margin-right: 7px;
+    }
+
+    .def {
+      margin: 0 0 12px;
+    }
+
+    table.conj {
+      border-collapse: collapse;
+      margin: 0 0 14px;
+      width: auto;
+      font-size: 14px;
+    }
+
+    table.conj th,
+    table.conj td {
+      border: 1px solid var(--line);
+      padding: 6px 14px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    table.conj th {
+      background: var(--accent-bg);
+      font-weight: 600;
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 12.5px;
+    }
+
+    table.conj .k {
+      font-family: 'Noto Serif KR', serif;
+    }
+
+    .ex {
+      margin: 0 0 9px;
+      padding-left: 15px;
+      border-left: 2px solid var(--accent-line);
+      break-inside: avoid;
+    }
+
+    .ex .k {
+      font-family: 'Noto Serif KR', serif;
+      font-size: 15.5px;
+      margin: 0;
+      color: var(--ink);
+    }
+
+    .ex .e {
+      font-size: 13.5px;
+      color: var(--muted);
+      margin: 1px 0 0;
+      font-style: italic;
+    }
+
+    .note {
+      background: var(--accent-bg);
+      border: 1px solid var(--accent-line);
+      border-radius: 3px;
+      padding: 10px 14px;
+      margin: 12px 0 0;
+      font-size: 14px;
+      break-inside: avoid;
+    }
+
+    .note p {
+      margin: 0;
+    }
+
+    .vocab {
+      margin: 26px 0 0;
+    }
+
+    .vocab h3 {
+      font-size: 18px;
+      font-weight: 600;
+      margin: 0 0 4px;
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .vocab h3 .en {
+      font-size: 13.5px;
+      color: var(--muted);
+      font-style: italic;
+      font-weight: 400;
+    }
+
+    table.voc {
+      border-collapse: collapse;
+      width: 100%;
+      font-size: 14px;
+      margin-top: 8px;
+    }
+
+    table.voc th {
+      background: var(--ink);
+      color: var(--bg);
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-align: left;
+      padding: 7px 12px;
+    }
+
+    table.voc td {
+      border-bottom: 1px solid var(--line);
+      padding: 6px 12px;
+      vertical-align: top;
+    }
+
+    table.voc tr:nth-child(even) td {
+      background: var(--zebra);
+    }
+
+    table.voc .w {
+      font-family: 'Noto Serif KR', serif;
+      font-size: 15px;
+      line-height: 1.4;
+    }
+
+    table.voc tr.grp td {
+      background: var(--accent-bg) !important;
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--accent-ink);
+      padding: 5px 12px;
+    }
+
+    .intro {
+      font-size: 15.5px;
+    }
+
+    .legend {
+      background: var(--accent-bg);
+      border: 1px solid var(--accent-line);
+      border-radius: 4px;
+      padding: 16px 20px;
+      margin: 22px 0;
+    }
+
+    .legend h4 {
+      margin: 0 0 8px;
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-family: 'Noto Sans KR', sans-serif;
+      color: var(--accent-ink);
+    }
+
+    .legend dl {
+      margin: 0;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 4px 14px;
+      font-size: 14px;
+    }
+
+    .legend dt {
+      font-family: 'Noto Sans KR', sans-serif;
+      font-weight: 600;
+      color: var(--ink-strong);
+    }
+
+    .legend dd {
+      margin: 0;
+      color: var(--soft);
+    }
+
+    nav.toc {
+      margin: 8px 0 0;
+      columns: 2;
+      column-gap: 36px;
+      font-size: 14px;
+    }
+
+    nav.toc a {
+      color: var(--ink);
+      text-decoration: none;
+      display: block;
+      padding: 3px 0;
+      border-bottom: 1px dotted var(--line);
+      break-inside: avoid;
+    }
+
+    nav.toc a .n {
+      color: var(--accent-ink);
+      font-family: 'Noto Sans KR', sans-serif;
+      font-weight: 600;
+      font-size: 12px;
+      margin-right: 8px;
+    }
+
+    nav.toc a:hover {
+      color: var(--accent-ink);
+    }
+
+    hr.rule {
+      border: none;
+      border-top: 1px solid var(--line);
+      margin: 30px 0;
+    }
+
+    @page {
+      size: letter;
+      margin: 0;
+    }
+
+    @media print {
+      .page-controls { display: none !important; }
+
+      :root[data-theme="dark"] {
+        --bg: #fdfcfa;
+        --surface: #ffffff;
+        --ink: #211e1b;
+        --ink-strong: #1a1815;
+        --muted: #6b6560;
+        --soft: #4a4540;
+        --faint: #9a938b;
+        --line: #d8d2ca;
+        --zebra: #f4f7f4;
+        --accent: #2f5c8f;
+        --accent-ink: #2f5c8f;
+        --accent-bg: #eef2f7;
+        --accent-line: #d2dded;
+      }
+
+      html {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      .doc {
+        max-width: none !important;
+        margin: 0 !important;
+        padding: 0 0.75in !important;
+        box-shadow: none !important;
+        border: none !important;
+      }
+
+      #dc-root,
+      .sc-host {
+        height: auto !important;
+      }
+
+      .hdr-space,
+      .ftr-space {
+        display: table-cell;
+        height: 0.7in !important;
+      }
+
+      .running-hdr,
+      .running-ftr {
+        display: flex !important;
+        justify-content: space-between;
+        align-items: baseline;
+        position: fixed !important;
+        left: 0;
+        right: 0;
+        margin: 0 !important;
+        font-size: 10px;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--faint);
+        font-family: 'Noto Sans KR', sans-serif;
+      }
+
+      .running-hdr {
+        top: 0;
+        padding: 0.3in 0.75in 0 !important;
+      }
+
+      .running-ftr {
+        bottom: 0;
+        padding: 0 0.75in 0.3in !important;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4 {
+        break-after: avoid;
+      }
+
+      .ex,
+      table.conj,
+      table.voc,
+      .note,
+      .lesson-head,
+      .vocab h3,
+      tr {
+        break-inside: avoid;
+      }
+
+      .gram {
+        break-inside: avoid;
+      }
+
+      p,
+      li {
+        orphans: 3;
+        widows: 3;
+      }
+
+      .screen-only {
+        display: none !important;
+      }
+    }
+  </style>
+  <script>
+    (function () {
+      var root = document.documentElement, KEY = 'kiip-theme';
+      var mq = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)');
+      function setTheme(t) { root.setAttribute('data-theme', t); }
+      var saved = null;
+      try { saved = localStorage.getItem(KEY); } catch (e) { }
+      setTheme(saved || (mq && mq.matches ? 'dark' : 'light'));
+      function closeMenu() {
+        var m = document.querySelector('.level-menu'), b = document.querySelector('.level-switch');
+        if (m) m.hidden = true;
+        if (b) b.setAttribute('aria-expanded', 'false');
+      }
+      document.addEventListener('click', function (e) {
+        if (e.target.closest('.theme-toggle')) {
+          var t = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+          setTheme(t);
+          try { localStorage.setItem(KEY, t); } catch (e) { }
+          return;
+        }
+        var sw = e.target.closest('.level-switch');
+        if (sw) {
+          var open = sw.getAttribute('aria-expanded') === 'true';
+          var m = document.querySelector('.level-menu');
+          sw.setAttribute('aria-expanded', String(!open));
+          if (m) m.hidden = open;
+          return;
+        }
+        if (!e.target.closest('.level-menu')) closeMenu();
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeMenu();
+      });
+    })();
+  </script>
+</head>
+
+<body>
+  <div class="page-controls">
+    <div class="ctrl-group">
+      <button class="ctrl level-switch" type="button" aria-haspopup="true" aria-expanded="false"
+        aria-label="Switch level">
+        Level 2
+        <svg class="chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M6 9l6 6 6-6" />
+        </svg>
+      </button>
+      <div class="level-menu" role="menu" hidden>
+        <a role="menuitem" href="../index.html">Home</a>
+        <div class="menu-sep"></div>
+        <a role="menuitem" href="level-1.html">Level 1 · 초급 1</a>
+        <a role="menuitem" href="level-2.html" aria-current="page">Level 2 · 초급 2</a>
+        <a role="menuitem" href="level-3.html">Level 3 · 중급 1</a>
+        <a role="menuitem" href="level-4.html">Level 4 · 중급 2</a>
+        <a role="menuitem" href="level-5.html">Level 5 · 한국사회</a>
+      </div>
+    </div>
+    <a class="ctrl" href="https://github.com/yakhyo/korean-grammar" target="_blank" rel="noopener"
+      aria-label="Star this project on GitHub" title="Star this project on GitHub">
+      <svg width="15" height="15" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path
+          d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.75.75 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Z" />
+      </svg>
+      <span>Star</span>
+    </a>
+    <button class="ctrl theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
+      <svg class="i-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="4" />
+        <path
+          d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
+      </svg>
+      <svg class="i-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+      </svg>
+    </button>
+  </div>
+  <main class="doc">
+    <table class="doc-frame" role="presentation">
+      <thead>
+        <tr>
+          <td class="hdr-space"></td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+
+            <div class="running-hdr"><span>KIIP Level 2 · Grammar &amp; Vocabulary</span><span>한국어와 한국문화 · 초급 2</span>
+            </div>
+            <div class="running-ftr"><span>Self-study reference</span><span>사회통합프로그램</span></div>
+
+            <h1>KIIP Level 2 — Grammar &amp; Vocabulary</h1>
+            <p class="subtitle">A self-study reference for 한국어와 한국문화 초급 2 (18-unit edition) · Korea Immigration &amp;
+              Integration Program</p>
+
+            <div class="intro">
+              <p>This reference follows the <strong>KIIP Level 2 textbook</strong> (한국어와 한국문화 초급 2) — the high-beginner
+                stage of the Social Integration Program. It is organized into the book's <strong>18 units</strong>. Each
+                unit introduces its everyday topic, the two grammar patterns taught in it (with form, meaning, and
+                example sentences), and the matching vocabulary. A grammar index closes the book. This builds directly
+                on the particles and basic endings learned in Level 1.</p>
+            </div>
+
+            <div class="legend">
+              <h4>How to read each entry</h4>
+              <dl>
+                <dt>V</dt>
+                <dd>Verb (동사) — e.g. 가다, 먹다</dd>
+                <dt>A</dt>
+                <dd>Adjective / descriptive verb (형용사) — e.g. 크다, 예쁘다</dd>
+                <dt>N</dt>
+                <dd>Noun (명사) — e.g. 사람, 학교</dd>
+                <dt class="k">-(으)</dt>
+                <dd>Use <strong>-으</strong> after a consonant-final stem; drop it after a vowel-final stem</dd>
+                <dt class="k">아 / 어</dt>
+                <dd>Choose 아 after ㅏ/ㅗ stem vowels, otherwise 어 (하다 → 해)</dd>
+              </dl>
+            </div>
+
+            <h2 class="part-title" style="border:none; margin-bottom:6px; padding-bottom:0;">Contents — 18 Units</h2>
+            <nav class="toc">
+              <a href="#u1"><span class="n">U1</span>고향 소개 · Hometown</a>
+              <a href="#u2"><span class="n">U2</span>집안일 · Housework</a>
+              <a href="#u3"><span class="n">U3</span>옷, 신발 · Clothes &amp; Shoes</a>
+              <a href="#u4"><span class="n">U4</span>전화 · Phone Calls</a>
+              <a href="#u5"><span class="n">U5</span>약, 증상 · Medicine &amp; Illness</a>
+              <a href="#u6"><span class="n">U6</span>기분, 감정 · Feelings</a>
+              <a href="#u7"><span class="n">U7</span>초대와 방문 · Invitations</a>
+              <a href="#u8"><span class="n">U8</span>수업 신청 · Class Sign-up</a>
+              <a href="#u9"><span class="n">U9</span>맛, 식당 · Restaurants</a>
+              <a href="#u10"><span class="n">U10</span>길 안내 · Directions</a>
+              <a href="#u11"><span class="n">U11</span>명절 · Holidays</a>
+              <a href="#u12"><span class="n">U12</span>실수 · Mistakes</a>
+              <a href="#u13"><span class="n">U13</span>우체국, 은행 · Post &amp; Bank</a>
+              <a href="#u14"><span class="n">U14</span>비자 연장 · Public Offices</a>
+              <a href="#u15"><span class="n">U15</span>업무 · Work Tasks</a>
+              <a href="#u16"><span class="n">U16</span>행사, 축제 · Events</a>
+              <a href="#u17"><span class="n">U17</span>건강한 생활 · Healthy Living</a>
+              <a href="#u18"><span class="n">U18</span>문화 센터 · Cultural Center</a>
+              <a href="#index"><span class="n">▦</span>Grammar Index</a>
+            </nav>
+
+            <hr class="rule">
+            <p class="part-head" id="part1">Part I</p>
+            <h2 class="part-title">Units 1–18 — Grammar &amp; Vocabulary</h2>
+
+            <section class="lesson" id="u1">
+              <div class="lesson-head"><span class="lesson-num">UNIT 1</span><span class="topic-kr">고향 소개</span><span
+                  class="topic-en">Introducing Your Hometown</span></div>
+              <div class="gram">
+                <h3 class="gram-form">N + (이)라고 하다 <span class="gloss">— "to be called / named"</span></h3>
+                <p class="meta"><span class="tag">Form</span> consonant-final N + 이라고 하다 · vowel-final N + 라고 하다</p>
+                <p class="def">Used to state a name or what something is called, including when introducing yourself.
+                </p>
+                <div class="ex">
+                  <p class="k">제 고향은 부산이라고 해요.</p>
+                  <p class="e">My hometown is called Busan.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">저는 흐엉이라고 해요.</p>
+                  <p class="e">I'm called Huong.</p>
+                </div>
+              </div>
+              <div class="gram">
+                <h3 class="gram-form">A + (으)ㄴ + N <span class="gloss">— "adjective describing a noun"</span></h3>
+                <p class="meta"><span class="tag">Form</span> consonant adj-stem + 은 · vowel adj-stem + ㄴ, before a noun
+                </p>
+                <p class="def">Turns an adjective into a modifier placed before a noun ("a beautiful place").</p>
+                <div class="ex">
+                  <p class="k">경치가 아름다운 곳이에요.</p>
+                  <p class="e">It's a place with beautiful scenery.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">조용한 동네에 살아요.</p>
+                  <p class="e">I live in a quiet neighborhood.</p>
+                </div>
+              </div>
+              <div class="vocab">
+                <h3>어휘 <span class="en">Hometown</span></h3>
+                <table class="voc">
+                  <tr>
+                    <th style="width:38%">Korean</th>
+                    <th>English</th>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">What a city is famous for (무엇이 유명해요?)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">오래된 건물</td>
+                    <td>old buildings</td>
+                  </tr>
+                  <tr>
+                    <td class="w">호수</td>
+                    <td>lake</td>
+                  </tr>
+                  <tr>
+                    <td class="w">맥주</td>
+                    <td>beer</td>
+                  </tr>
+                  <tr>
+                    <td class="w">박물관</td>
+                    <td>museum</td>
+                  </tr>
+                  <tr>
+                    <td class="w">벚꽃</td>
+                    <td>cherry blossoms</td>
+                  </tr>
+                  <tr>
+                    <td class="w">절(사원)</td>
+                    <td>temple</td>
+                  </tr>
+                  <tr>
+                    <td class="w">한강</td>
+                    <td>the Han River</td>
+                  </tr>
+                  <tr>
+                    <td class="w">아오자이, 쌀국수</td>
+                    <td>ao dai, rice noodles</td>
+                  </tr>
+                  <tr>
+                    <td class="w">해산물, 생선회</td>
+                    <td>seafood, raw fish</td>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Describing your hometown (고향 모습)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">건물이 높다 / 낮다</td>
+                    <td>buildings are tall / low</td>
+                  </tr>
+                  <tr>
+                    <td class="w">야경이 아름답다</td>
+                    <td>the night view is beautiful</td>
+                  </tr>
+                  <tr>
+                    <td class="w">박물관이 많다</td>
+                    <td>there are many museums</td>
+                  </tr>
+                  <tr>
+                    <td class="w">교통이 편리하다</td>
+                    <td>transportation is convenient</td>
+                  </tr>
+                  <tr>
+                    <td class="w">길이 복잡하다</td>
+                    <td>the streets are crowded</td>
+                  </tr>
+                  <tr>
+                    <td class="w">차가 많다</td>
+                    <td>there are many cars</td>
+                  </tr>
+                  <tr>
+                    <td class="w">사람이 많다</td>
+                    <td>there are many people</td>
+                  </tr>
+                  <tr>
+                    <td class="w">산과 강이 있다</td>
+                    <td>there are mountains and rivers</td>
+                  </tr>
+                  <tr>
+                    <td class="w">공기가 깨끗하다</td>
+                    <td>the air is clean</td>
+                  </tr>
+                  <tr>
+                    <td class="w">물이 깨끗하다</td>
+                    <td>the water is clean</td>
+                  </tr>
+                  <tr>
+                    <td class="w">한적하다</td>
+                    <td>to be quiet, secluded</td>
+                  </tr>
+                  <tr>
+                    <td class="w">조용하다</td>
+                    <td>to be quiet</td>
+                  </tr>
+                  <tr>
+                    <td class="w">경치가 아름답다</td>
+                    <td>the scenery is beautiful</td>
+                  </tr>
+                </table>
+              </div>
+            </section>
+
+            <section class="lesson" id="u2">
+              <div class="lesson-head"><span class="lesson-num">UNIT 2</span><span class="topic-kr">집안일</span><span
+                  class="topic-en">Doing Housework</span></div>
+              <div class="gram">
+                <h3 class="gram-form">V + (으)ㄹ게요 <span class="gloss">— "I'll (do) — offer / intention"</span></h3>
+                <p class="meta"><span class="tag">Form</span> consonant stem + 을게요 · vowel stem + ㄹ게요 (1st person only)
+                </p>
+                <p class="def">Expresses the speaker's will or a promise/offer, responding to the situation or listener.
+                </p>
+                <div class="ex">
+                  <p class="k">쓰레기는 제가 버릴게요.</p>
+                  <p class="e">I'll take out the trash.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">제가 설거지를 할게요.</p>
+                  <p class="e">I'll do the dishes.</p>
+                </div>
+              </div>
+              <div class="gram">
+                <h3 class="gram-form">V + (으)ㄴ 다음에 <span class="gloss">— "after doing"</span></h3>
+                <p class="meta"><span class="tag">Form</span> consonant stem + 은 다음에 · vowel stem + ㄴ 다음에 (= 후에)</p>
+                <p class="def">Says that the second action happens after the first is finished.</p>
+                <div class="ex">
+                  <p class="k">청소한 다음에 쉴 거예요.</p>
+                  <p class="e">I'll rest after cleaning.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">밥을 먹은 다음에 약을 드세요.</p>
+                  <p class="e">Take the medicine after eating.</p>
+                </div>
+              </div>
+              <div class="vocab">
+                <h3>어휘 <span class="en">Housework</span></h3>
+                <table class="voc">
+                  <tr>
+                    <th style="width:38%">Korean</th>
+                    <th>English</th>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Household chores (집안일)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">청소하다</td>
+                    <td>to clean</td>
+                  </tr>
+                  <tr>
+                    <td class="w">빨래하다</td>
+                    <td>to do laundry</td>
+                  </tr>
+                  <tr>
+                    <td class="w">요리하다</td>
+                    <td>to cook</td>
+                  </tr>
+                  <tr>
+                    <td class="w">책장을 정리하다</td>
+                    <td>to organize the bookshelf</td>
+                  </tr>
+                  <tr>
+                    <td class="w">방을 닦다</td>
+                    <td>to wipe the floor / room</td>
+                  </tr>
+                  <tr>
+                    <td class="w">청소기를 돌리다</td>
+                    <td>to run the vacuum cleaner</td>
+                  </tr>
+                  <tr>
+                    <td class="w">쓰레기를 버리다</td>
+                    <td>to take out the trash</td>
+                  </tr>
+                  <tr>
+                    <td class="w">방을 치우다</td>
+                    <td>to tidy up the room</td>
+                  </tr>
+                  <tr>
+                    <td class="w">방을 쓸다</td>
+                    <td>to sweep the room</td>
+                  </tr>
+                  <tr>
+                    <td class="w">분리수거를 하다</td>
+                    <td>to sort the recycling</td>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Laundry &amp; kitchen (빨래·주방)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">빨래를 널다</td>
+                    <td>to hang up laundry</td>
+                  </tr>
+                  <tr>
+                    <td class="w">빨래를 개다</td>
+                    <td>to fold laundry</td>
+                  </tr>
+                  <tr>
+                    <td class="w">세탁기를 돌리다</td>
+                    <td>to run the washing machine</td>
+                  </tr>
+                  <tr>
+                    <td class="w">다림질을 하다</td>
+                    <td>to do the ironing</td>
+                  </tr>
+                  <tr>
+                    <td class="w">손빨래를 하다</td>
+                    <td>to wash by hand</td>
+                  </tr>
+                  <tr>
+                    <td class="w">설거지하다</td>
+                    <td>to wash the dishes</td>
+                  </tr>
+                  <tr>
+                    <td class="w">음식을 만들다</td>
+                    <td>to make food</td>
+                  </tr>
+                </table>
+              </div>
+            </section>
+
+            <section class="lesson" id="u3">
+              <div class="lesson-head"><span class="lesson-num">UNIT 3</span><span class="topic-kr">옷, 신발</span><span
+                  class="topic-en">Trying On Clothes</span></div>
+              <div class="gram">
+                <h3 class="gram-form">N + (이)나 <span class="gloss">— "or"</span></h3>
+                <p class="meta"><span class="tag">Form</span> consonant-final N + 이나 · vowel-final N + 나</p>
+                <p class="def">Joins two nouns as alternatives ("A or B"). (After verbs, use -거나.)</p>
+                <div class="ex">
+                  <p class="k">치마나 바지를 입어요.</p>
+                  <p class="e">I wear a skirt or pants.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">커피나 차를 마셔요.</p>
+                  <p class="e">I drink coffee or tea.</p>
+                </div>
+              </div>
+              <div class="gram">
+                <h3 class="gram-form">V + 아 / 어 보다 <span class="gloss">— "try doing"</span></h3>
+                <p class="meta"><span class="tag">Form</span> ㅏ/ㅗ stem + 아 보다 · other stems + 어 보다</p>
+                <p class="def">Means to try / attempt an action. In the past (아/어 봤다) it means "have done before".</p>
+                <div class="ex">
+                  <p class="k">이거 한번 입어 보세요.</p>
+                  <p class="e">Try wearing this.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">한국 음식을 먹어 봤어요.</p>
+                  <p class="e">I've tried Korean food.</p>
+                </div>
+              </div>
+              <div class="vocab">
+                <h3>어휘 <span class="en">Clothes &amp; shoes</span></h3>
+                <table class="voc">
+                  <tr>
+                    <th style="width:38%">Korean</th>
+                    <th>English</th>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Worn on head/face — 쓰다 (쓰다)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">모자</td>
+                    <td>hat, cap</td>
+                  </tr>
+                  <tr>
+                    <td class="w">헬멧</td>
+                    <td>helmet</td>
+                  </tr>
+                  <tr>
+                    <td class="w">안전모</td>
+                    <td>safety helmet</td>
+                  </tr>
+                  <tr>
+                    <td class="w">안경</td>
+                    <td>glasses</td>
+                  </tr>
+                  <tr>
+                    <td class="w">선글라스</td>
+                    <td>sunglasses</td>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Footwear — 신다 (신다)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">운동화</td>
+                    <td>sneakers</td>
+                  </tr>
+                  <tr>
+                    <td class="w">구두</td>
+                    <td>dress shoes</td>
+                  </tr>
+                  <tr>
+                    <td class="w">슬리퍼</td>
+                    <td>slippers</td>
+                  </tr>
+                  <tr>
+                    <td class="w">샌들</td>
+                    <td>sandals</td>
+                  </tr>
+                  <tr>
+                    <td class="w">부츠</td>
+                    <td>boots</td>
+                  </tr>
+                  <tr>
+                    <td class="w">작업화</td>
+                    <td>work shoes</td>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Clothing — 입다 (입다)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">티셔츠</td>
+                    <td>T-shirt</td>
+                  </tr>
+                  <tr>
+                    <td class="w">셔츠</td>
+                    <td>shirt</td>
+                  </tr>
+                  <tr>
+                    <td class="w">블라우스</td>
+                    <td>blouse</td>
+                  </tr>
+                  <tr>
+                    <td class="w">코트</td>
+                    <td>coat</td>
+                  </tr>
+                  <tr>
+                    <td class="w">바지</td>
+                    <td>pants</td>
+                  </tr>
+                  <tr>
+                    <td class="w">청바지</td>
+                    <td>jeans</td>
+                  </tr>
+                  <tr>
+                    <td class="w">치마</td>
+                    <td>skirt</td>
+                  </tr>
+                  <tr>
+                    <td class="w">원피스</td>
+                    <td>dress</td>
+                  </tr>
+                  <tr>
+                    <td class="w">점퍼</td>
+                    <td>jumper, jacket</td>
+                  </tr>
+                  <tr>
+                    <td class="w">조끼</td>
+                    <td>vest</td>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Accessories — 하다 (하다)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">스카프</td>
+                    <td>scarf</td>
+                  </tr>
+                  <tr>
+                    <td class="w">목도리</td>
+                    <td>muffler, neck scarf</td>
+                  </tr>
+                  <tr>
+                    <td class="w">귀걸이</td>
+                    <td>earrings</td>
+                  </tr>
+                  <tr>
+                    <td class="w">목걸이</td>
+                    <td>necklace</td>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Describing clothes/shoes (옷·신발 묘사)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">치수(사이즈)가 작다 / 크다</td>
+                    <td>the size is small / big</td>
+                  </tr>
+                  <tr>
+                    <td class="w">치수(사이즈)가 잘 맞다</td>
+                    <td>the size fits well</td>
+                  </tr>
+                  <tr>
+                    <td class="w">굽이 높다</td>
+                    <td>to have a high heel</td>
+                  </tr>
+                  <tr>
+                    <td class="w">길이가 짧다 / 길다</td>
+                    <td>to be short / long (in length)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">편하다</td>
+                    <td>to be comfortable</td>
+                  </tr>
+                  <tr>
+                    <td class="w">디자인이 마음에 들다</td>
+                    <td>to like the design</td>
+                  </tr>
+                </table>
+              </div>
+            </section>
+
+            <section class="lesson" id="u4">
+              <div class="lesson-head"><span class="lesson-num">UNIT 4</span><span class="topic-kr">전화</span><span
+                  class="topic-en">Making a Phone Call</span></div>
+              <div class="gram">
+                <h3 class="gram-form">V + (으)ㄹ 수 있다 / 없다 <span class="gloss">— "can / cannot"</span></h3>
+                <p class="meta"><span class="tag">Form</span> consonant stem + 을 수 있다/없다 · vowel stem + ㄹ 수 있다/없다</p>
+                <p class="def">Expresses ability or possibility (있다) and inability or impossibility (없다).</p>
+                <div class="ex">
+                  <p class="k">지금 통화할 수 있어요?</p>
+                  <p class="e">Can you talk now?</p>
+                </div>
+                <div class="ex">
+                  <p class="k">한국 노래를 부를 수 있어요.</p>
+                  <p class="e">I can sing Korean songs.</p>
+                </div>
+              </div>
+              <div class="gram">
+                <h3 class="gram-form">반말 <span class="gloss">— "informal (casual) speech"</span></h3>
+                <p class="meta"><span class="tag">Form</span> drop 요 from the 아/어요 form (먹어요 → 먹어 · 가요 → 가)</p>
+                <p class="def">Casual speech used between close friends and to those younger. Use polite speech with
+                  strangers and elders.</p>
+                <div class="ex">
+                  <p class="k">내일 같이 갈래?</p>
+                  <p class="e">Want to go together tomorrow?</p>
+                </div>
+                <div class="ex">
+                  <p class="k">밥 먹었어?</p>
+                  <p class="e">Did you eat?</p>
+                </div>
+              </div>
+              <div class="vocab">
+                <h3>어휘 <span class="en">Phone expressions</span></h3>
+                <table class="voc">
+                  <tr>
+                    <th style="width:38%">Korean</th>
+                    <th>English</th>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Using a phone (휴대 전화로 하는 일)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">전화를 걸다</td>
+                    <td>to make a call</td>
+                  </tr>
+                  <tr>
+                    <td class="w">전화를 받다</td>
+                    <td>to answer a call</td>
+                  </tr>
+                  <tr>
+                    <td class="w">전화를 끊다</td>
+                    <td>to hang up</td>
+                  </tr>
+                  <tr>
+                    <td class="w">문자를 보내다</td>
+                    <td>to send a text</td>
+                  </tr>
+                  <tr>
+                    <td class="w">문자를 받다</td>
+                    <td>to receive a text</td>
+                  </tr>
+                  <tr>
+                    <td class="w">문자를 지우다</td>
+                    <td>to delete a text</td>
+                  </tr>
+                  <tr>
+                    <td class="w">전화를 바꾸다</td>
+                    <td>to put someone else on the line</td>
+                  </tr>
+                  <tr>
+                    <td class="w">국제 전화를 하다</td>
+                    <td>to make an international call</td>
+                  </tr>
+                  <tr>
+                    <td class="w">영상 통화를 하다</td>
+                    <td>to make a video call</td>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Phone situations (전화 상황)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">여보세요?</td>
+                    <td>hello? (on the phone)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">지금 안 계세요.</td>
+                    <td>(He/She) is not here now.</td>
+                  </tr>
+                  <tr>
+                    <td class="w">전화를 잘못 걸었어요.</td>
+                    <td>You dialed the wrong number.</td>
+                  </tr>
+                  <tr>
+                    <td class="w">전화 왔어요.</td>
+                    <td>There's a call (for you).</td>
+                  </tr>
+                  <tr>
+                    <td class="w">통화 중이에요.</td>
+                    <td>The line is busy.</td>
+                  </tr>
+                  <tr>
+                    <td class="w">전화번호가 몇 번이에요?</td>
+                    <td>What's your phone number?</td>
+                  </tr>
+                  <tr>
+                    <td class="w">매너 모드로 해요 / 진동으로 해요.</td>
+                    <td>to put it on silent / vibrate</td>
+                  </tr>
+                  <tr>
+                    <td class="w">답장이 없어요.</td>
+                    <td>There's no reply.</td>
+                  </tr>
+                  <tr>
+                    <td class="w">휴대 전화 배터리가 없어요.</td>
+                    <td>The phone battery is dead.</td>
+                  </tr>
+                </table>
+              </div>
+            </section>
+
+            <section class="lesson" id="u5">
+              <div class="lesson-head"><span class="lesson-num">UNIT 5</span><span class="topic-kr">약, 증상</span><span
+                  class="topic-en">Medicine &amp; Illness</span></div>
+              <div class="gram">
+                <h3 class="gram-form">A/V + (으)면 <span class="gloss">— "if / when"</span></h3>
+                <p class="meta"><span class="tag">Form</span> consonant stem + 으면 · vowel stem + 면</p>
+                <p class="def">Sets up a condition — "if / when X (happens), then Y".</p>
+                <div class="ex">
+                  <p class="k">많이 아프면 이 약을 드세요.</p>
+                  <p class="e">If it hurts a lot, take this medicine.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">시간이 있으면 같이 가요.</p>
+                  <p class="e">If you have time, let's go together.</p>
+                </div>
+              </div>
+              <div class="gram">
+                <h3 class="gram-form">V + 아 / 어서 <span class="gloss">— "because / and then"</span></h3>
+                <p class="meta"><span class="tag">Form</span> ㅏ/ㅗ stem + 아서 · other stems + 어서 · 하다 → 해서</p>
+                <p class="def">Links a reason to its result, or two closely-connected actions in sequence. No tense on
+                  the first clause.</p>
+                <div class="ex">
+                  <p class="k">감기에 걸려서 병원에 갔어요.</p>
+                  <p class="e">I went to the hospital because I caught a cold.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">친구를 만나서 같이 밥을 먹었어요.</p>
+                  <p class="e">I met my friend and we ate together.</p>
+                </div>
+              </div>
+              <div class="vocab">
+                <h3>어휘 <span class="en">Medicine &amp; symptoms</span></h3>
+                <table class="voc">
+                  <tr>
+                    <th style="width:38%">Korean</th>
+                    <th>English</th>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Symptoms (증상)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">열이 나다</td>
+                    <td>to have a fever</td>
+                  </tr>
+                  <tr>
+                    <td class="w">머리가 아프다</td>
+                    <td>to have a headache</td>
+                  </tr>
+                  <tr>
+                    <td class="w">이가 아프다</td>
+                    <td>to have a toothache</td>
+                  </tr>
+                  <tr>
+                    <td class="w">배가 아프다 / 설사를 하다</td>
+                    <td>to have a stomachache / diarrhea</td>
+                  </tr>
+                  <tr>
+                    <td class="w">콧물이 나다</td>
+                    <td>to have a runny nose</td>
+                  </tr>
+                  <tr>
+                    <td class="w">기침을 하다</td>
+                    <td>to cough</td>
+                  </tr>
+                  <tr>
+                    <td class="w">목이 붓다</td>
+                    <td>to have a swollen throat</td>
+                  </tr>
+                  <tr>
+                    <td class="w">팔이 부러지다</td>
+                    <td>to break one's arm</td>
+                  </tr>
+                  <tr>
+                    <td class="w">다리를 다치다</td>
+                    <td>to injure one's leg</td>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Medicine &amp; treatment (약·치료)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">해열제</td>
+                    <td>fever reducer</td>
+                  </tr>
+                  <tr>
+                    <td class="w">두통약</td>
+                    <td>headache medicine</td>
+                  </tr>
+                  <tr>
+                    <td class="w">감기약</td>
+                    <td>cold medicine</td>
+                  </tr>
+                  <tr>
+                    <td class="w">소화제</td>
+                    <td>digestive medicine</td>
+                  </tr>
+                  <tr>
+                    <td class="w">파스를 붙이다</td>
+                    <td>to put on a medicated patch</td>
+                  </tr>
+                  <tr>
+                    <td class="w">밴드를 붙이다</td>
+                    <td>to put on a bandage</td>
+                  </tr>
+                  <tr>
+                    <td class="w">소독약을 바르다</td>
+                    <td>to apply antiseptic</td>
+                  </tr>
+                  <tr>
+                    <td class="w">연고를 바르다</td>
+                    <td>to apply ointment</td>
+                  </tr>
+                </table>
+              </div>
+            </section>
+
+            <section class="lesson" id="u6">
+              <div class="lesson-head"><span class="lesson-num">UNIT 6</span><span class="topic-kr">기분, 감정</span><span
+                  class="topic-en">Feelings &amp; Emotions</span></div>
+              <div class="gram">
+                <h3 class="gram-form">A/V + 겠 <span class="gloss">— "will / I bet (intention, conjecture)"</span></h3>
+                <p class="meta"><span class="tag">Form</span> Verb / Adjective stem + 겠 + ending (-겠어요, -겠습니다)</p>
+                <p class="def">Shows the speaker's intention/will, or a guess about a situation.</p>
+                <div class="ex">
+                  <p class="k">내일부터 열심히 하겠어요.</p>
+                  <p class="e">I'll work hard from tomorrow.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">시험이 어렵겠어요.</p>
+                  <p class="e">The exam looks like it'll be hard.</p>
+                </div>
+              </div>
+              <div class="gram">
+                <h3 class="gram-form">A/V + (으)ㄹ 때 <span class="gloss">— "when"</span></h3>
+                <p class="meta"><span class="tag">Form</span> consonant stem + 을 때 · vowel stem + ㄹ 때 (past: -았/었을 때)
+                </p>
+                <p class="def">Marks the time or occasion when something happens.</p>
+                <div class="ex">
+                  <p class="k">맛있는 음식을 먹을 때 행복해요.</p>
+                  <p class="e">I'm happy when I eat delicious food.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">어렸을 때 시골에서 살았어요.</p>
+                  <p class="e">When I was young, I lived in the countryside.</p>
+                </div>
+              </div>
+              <div class="vocab">
+                <h3>어휘 <span class="en">Mood &amp; emotion</span></h3>
+                <table class="voc">
+                  <tr>
+                    <th style="width:38%">Korean</th>
+                    <th>English</th>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Good feelings (기분이 좋다)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">기쁘다</td>
+                    <td>to be glad</td>
+                  </tr>
+                  <tr>
+                    <td class="w">신나다</td>
+                    <td>to be excited, thrilled</td>
+                  </tr>
+                  <tr>
+                    <td class="w">행복하다</td>
+                    <td>to be happy</td>
+                  </tr>
+                  <tr>
+                    <td class="w">즐겁다</td>
+                    <td>to be enjoyable, pleasant</td>
+                  </tr>
+                  <tr>
+                    <td class="w">반갑다</td>
+                    <td>to be glad (to meet)</td>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Bad feelings (기분이 안 좋다)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">슬프다</td>
+                    <td>to be sad</td>
+                  </tr>
+                  <tr>
+                    <td class="w">걱정되다</td>
+                    <td>to be worried</td>
+                  </tr>
+                  <tr>
+                    <td class="w">외롭다</td>
+                    <td>to be lonely</td>
+                  </tr>
+                  <tr>
+                    <td class="w">화나다</td>
+                    <td>to be angry</td>
+                  </tr>
+                  <tr>
+                    <td class="w">짜증나다</td>
+                    <td>to be irritated, annoyed</td>
+                  </tr>
+                  <tr>
+                    <td class="w">답답하다</td>
+                    <td>to feel frustrated, stifled</td>
+                  </tr>
+                </table>
+              </div>
+            </section>
+
+            <section class="lesson" id="u7">
+              <div class="lesson-head"><span class="lesson-num">UNIT 7</span><span class="topic-kr">초대와 방문</span><span
+                  class="topic-en">Invitations &amp; Visiting</span></div>
+              <div class="gram">
+                <h3 class="gram-form">V + (으)ㄹ래요? <span class="gloss">— "would you like to…?"</span></h3>
+                <p class="meta"><span class="tag">Form</span> consonant stem + 을래요? · vowel stem + ㄹ래요?</p>
+                <p class="def">Casually asks the listener's intention or makes a friendly suggestion; as a statement,
+                  expresses one's own wish.</p>
+                <div class="ex">
+                  <p class="k">같이 저녁 먹을래요?</p>
+                  <p class="e">Would you like to have dinner together?</p>
+                </div>
+                <div class="ex">
+                  <p class="k">저는 집에서 쉴래요.</p>
+                  <p class="e">I think I'll rest at home.</p>
+                </div>
+              </div>
+              <div class="gram">
+                <h3 class="gram-form">A/V + (으)니까 <span class="gloss">— "because / since"</span></h3>
+                <p class="meta"><span class="tag">Form</span> consonant stem + 으니까 · vowel stem + 니까</p>
+                <p class="def">Gives a reason — and unlike -아/어서, it CAN be followed by a command or suggestion.</p>
+                <div class="ex">
+                  <p class="k">집들이니까 휴지를 가져갈게요.</p>
+                  <p class="e">Since it's a housewarming, I'll bring tissues.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">비가 오니까 우산을 가져가세요.</p>
+                  <p class="e">It's raining, so take an umbrella.</p>
+                </div>
+              </div>
+              <div class="vocab">
+                <h3>어휘 <span class="en">Invitations &amp; visiting</span></h3>
+                <table class="voc">
+                  <tr>
+                    <th style="width:38%">Korean</th>
+                    <th>English</th>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Hosting guests (손님 초대)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">집들이</td>
+                    <td>housewarming party</td>
+                  </tr>
+                  <tr>
+                    <td class="w">손님을 맞이하다</td>
+                    <td>to greet/receive a guest</td>
+                  </tr>
+                  <tr>
+                    <td class="w">음식을 차리다</td>
+                    <td>to set out food</td>
+                  </tr>
+                  <tr>
+                    <td class="w">손님을 대접하다</td>
+                    <td>to entertain/serve a guest</td>
+                  </tr>
+                  <tr>
+                    <td class="w">선물을 가져가다</td>
+                    <td>to bring a gift (along)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">휴지</td>
+                    <td>tissue, toilet paper</td>
+                  </tr>
+                  <tr>
+                    <td class="w">세제</td>
+                    <td>detergent</td>
+                  </tr>
+                  <tr>
+                    <td class="w">돌잔치</td>
+                    <td>first birthday party</td>
+                  </tr>
+                  <tr>
+                    <td class="w">장난감</td>
+                    <td>toy</td>
+                  </tr>
+                  <tr>
+                    <td class="w">금반지</td>
+                    <td>gold ring</td>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Visiting etiquette (방문 예절)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">미리 연락하다</td>
+                    <td>to contact in advance</td>
+                  </tr>
+                  <tr>
+                    <td class="w">약속 시간을 정하다</td>
+                    <td>to set an appointment time</td>
+                  </tr>
+                  <tr>
+                    <td class="w">늦지 않게 도착하다</td>
+                    <td>to arrive on time</td>
+                  </tr>
+                  <tr>
+                    <td class="w">노크를 하다</td>
+                    <td>to knock</td>
+                  </tr>
+                  <tr>
+                    <td class="w">인사를 나누다</td>
+                    <td>to exchange greetings</td>
+                  </tr>
+                  <tr>
+                    <td class="w">명함을 건네다</td>
+                    <td>to hand over a business card</td>
+                  </tr>
+                </table>
+              </div>
+            </section>
+
+            <section class="lesson" id="u8">
+              <div class="lesson-head"><span class="lesson-num">UNIT 8</span><span class="topic-kr">한국어 수업
+                  신청</span><span class="topic-en">Signing Up for Class</span></div>
+              <div class="gram">
+                <h3 class="gram-form">V + 기 전에 <span class="gloss">— "before doing"</span></h3>
+                <p class="meta"><span class="tag">Form</span> Verb stem + 기 전에 · Noun + 전에</p>
+                <p class="def">Says the main action happens before the stated action or time.</p>
+                <div class="ex">
+                  <p class="k">수업을 듣기 전에 신청해요.</p>
+                  <p class="e">I register before taking the class.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">자기 전에 이를 닦아요.</p>
+                  <p class="e">I brush my teeth before sleeping.</p>
+                </div>
+              </div>
+              <div class="gram">
+                <h3 class="gram-form">V + 기로 하다 <span class="gloss">— "decide / agree to do"</span></h3>
+                <p class="meta"><span class="tag">Form</span> Verb stem + 기로 하다 (past 기로 했다 = decided)</p>
+                <p class="def">Expresses a decision or an agreement to do something.</p>
+                <div class="ex">
+                  <p class="k">9월부터 한국어 수업을 듣기로 했어요.</p>
+                  <p class="e">I decided to take Korean classes from September.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">친구하고 주말에 만나기로 했어요.</p>
+                  <p class="e">I arranged to meet my friend on the weekend.</p>
+                </div>
+              </div>
+              <div class="vocab">
+                <h3>어휘 <span class="en">Class registration</span></h3>
+                <table class="voc">
+                  <tr>
+                    <th style="width:38%">Korean</th>
+                    <th>English</th>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Course information (과정 정보)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">과정명</td>
+                    <td>course name</td>
+                  </tr>
+                  <tr>
+                    <td class="w">강사명</td>
+                    <td>instructor name</td>
+                  </tr>
+                  <tr>
+                    <td class="w">과정 기간</td>
+                    <td>course period</td>
+                  </tr>
+                  <tr>
+                    <td class="w">신청 인원 / 정원</td>
+                    <td>enrolled / capacity</td>
+                  </tr>
+                  <tr>
+                    <td class="w">신청 기간</td>
+                    <td>application period</td>
+                  </tr>
+                  <tr>
+                    <td class="w">과정 시간</td>
+                    <td>course hours</td>
+                  </tr>
+                  <tr>
+                    <td class="w">과정 장소</td>
+                    <td>course location</td>
+                  </tr>
+                  <tr>
+                    <td class="w">날짜</td>
+                    <td>date</td>
+                  </tr>
+                  <tr>
+                    <td class="w">요일</td>
+                    <td>day of the week</td>
+                  </tr>
+                  <tr>
+                    <td class="w">인정 시간</td>
+                    <td>recognized (credit) hours</td>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Completing a level (단계 수료)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">단계</td>
+                    <td>level, stage</td>
+                  </tr>
+                  <tr>
+                    <td class="w">이수 기준</td>
+                    <td>completion criteria</td>
+                  </tr>
+                  <tr>
+                    <td class="w">인정 출석</td>
+                    <td>recognized attendance</td>
+                  </tr>
+                  <tr>
+                    <td class="w">평가</td>
+                    <td>assessment, test</td>
+                  </tr>
+                  <tr>
+                    <td class="w">합격 / 불합격</td>
+                    <td>pass / fail</td>
+                  </tr>
+                  <tr>
+                    <td class="w">재응시</td>
+                    <td>retake (the test)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">재수료</td>
+                    <td>repeat the course</td>
+                  </tr>
+                  <tr>
+                    <td class="w">승급</td>
+                    <td>moving up a level</td>
+                  </tr>
+                  <tr>
+                    <td class="w">중간 평가(KLCT)</td>
+                    <td>mid-level evaluation (KLCT)</td>
+                  </tr>
+                </table>
+              </div>
+            </section>
+
+            <section class="lesson" id="u9">
+              <div class="lesson-head"><span class="lesson-num">UNIT 9</span><span class="topic-kr">맛, 식당</span><span
+                  class="topic-en">Favorite Restaurants</span></div>
+              <div class="gram">
+                <h3 class="gram-form">A/V + (으)ㄹ 것 같다 <span class="gloss">— "seems / probably"</span></h3>
+                <p class="meta"><span class="tag">Form</span> 을/ㄹ 것 같다 (guess about future) · 는/(으)ㄴ 것 같다 (present/past)
+                </p>
+                <p class="def">Expresses a guess or impression — "it seems / looks like / probably".</p>
+                <div class="ex">
+                  <p class="k">이 식당은 맛있을 것 같아요.</p>
+                  <p class="e">This restaurant seems like it'll be tasty.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">밖에 비가 오는 것 같아요.</p>
+                  <p class="e">It seems to be raining outside.</p>
+                </div>
+              </div>
+              <div class="gram">
+                <h3 class="gram-form">V + 는 + N <span class="gloss">— "the N that … (present relative clause)"</span>
+                </h3>
+                <p class="meta"><span class="tag">Form</span> Verb stem + 는 + Noun</p>
+                <p class="def">Lets a verb clause describe a following noun, in present tense ("a restaurant I go to").
+                </p>
+                <div class="ex">
+                  <p class="k">제가 자주 가는 식당이에요.</p>
+                  <p class="e">It's a restaurant I often go to.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">한국어를 배우는 사람이 많아요.</p>
+                  <p class="e">There are many people who learn Korean.</p>
+                </div>
+              </div>
+              <div class="vocab">
+                <h3>어휘 <span class="en">Taste &amp; restaurants</span></h3>
+                <table class="voc">
+                  <tr>
+                    <th style="width:38%">Korean</th>
+                    <th>English</th>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Taste &amp; flavor (맛)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">달다</td>
+                    <td>to be sweet</td>
+                  </tr>
+                  <tr>
+                    <td class="w">쓰다</td>
+                    <td>to be bitter</td>
+                  </tr>
+                  <tr>
+                    <td class="w">시다</td>
+                    <td>to be sour</td>
+                  </tr>
+                  <tr>
+                    <td class="w">짜다</td>
+                    <td>to be salty</td>
+                  </tr>
+                  <tr>
+                    <td class="w">맵다 / 매콤하다</td>
+                    <td>to be spicy / pleasantly spicy</td>
+                  </tr>
+                  <tr>
+                    <td class="w">짭짤하다</td>
+                    <td>to be savory-salty</td>
+                  </tr>
+                  <tr>
+                    <td class="w">싱겁다</td>
+                    <td>to be bland</td>
+                  </tr>
+                  <tr>
+                    <td class="w">달콤하다</td>
+                    <td>to be sweet (and nice)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">새콤하다</td>
+                    <td>to be pleasantly sour</td>
+                  </tr>
+                  <tr>
+                    <td class="w">조미료가 들어가다</td>
+                    <td>to contain seasoning (MSG)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">재료가 신선하다</td>
+                    <td>the ingredients are fresh</td>
+                  </tr>
+                  <tr>
+                    <td class="w">국물이 시원하다</td>
+                    <td>the broth is refreshing</td>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Restaurant features (식당의 특징)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">맛집으로 유명하다</td>
+                    <td>to be famous as a great eatery</td>
+                  </tr>
+                  <tr>
+                    <td class="w">자리가 없다</td>
+                    <td>to have no seats available</td>
+                  </tr>
+                  <tr>
+                    <td class="w">줄을 서다</td>
+                    <td>to line up, queue</td>
+                  </tr>
+                  <tr>
+                    <td class="w">양이 많다</td>
+                    <td>the portions are big</td>
+                  </tr>
+                  <tr>
+                    <td class="w">밑반찬이 많이 나오다</td>
+                    <td>many side dishes are served</td>
+                  </tr>
+                  <tr>
+                    <td class="w">서비스가 좋다</td>
+                    <td>the service is good</td>
+                  </tr>
+                  <tr>
+                    <td class="w">분위기가 좋다</td>
+                    <td>the atmosphere is nice</td>
+                  </tr>
+                  <tr>
+                    <td class="w">칸막이가 있다</td>
+                    <td>to have partitions (private booths)</td>
+                  </tr>
+                </table>
+              </div>
+            </section>
+
+            <section class="lesson" id="u10">
+              <div class="lesson-head"><span class="lesson-num">UNIT 10</span><span class="topic-kr">길 안내</span><span
+                  class="topic-en">Giving Directions</span></div>
+              <div class="gram">
+                <h3 class="gram-form">A/V + 는데 <span class="gloss">— "background / and / but"</span></h3>
+                <p class="meta"><span class="tag">Form</span> Verb + 는데 · Adjective + -(으)ㄴ데 · N + 인데</p>
+                <p class="def">Provides background or context before the main clause, or a soft contrast.</p>
+                <div class="ex">
+                  <p class="k">시청 옆에 있는데 가까워요.</p>
+                  <p class="e">It's next to City Hall, and it's close.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">이 옷이 예쁜데 좀 비싸요.</p>
+                  <p class="e">These clothes are pretty, but a bit expensive.</p>
+                </div>
+              </div>
+              <div class="gram">
+                <h3 class="gram-form">A/V + 기 때문에 <span class="gloss">— "because of"</span></h3>
+                <p class="meta"><span class="tag">Form</span> Verb / Adjective stem + 기 때문에 · Noun + 때문에</p>
+                <p class="def">States a clear reason or cause. Cannot be followed by a command or suggestion.</p>
+                <div class="ex">
+                  <p class="k">길이 막히기 때문에 지하철을 타요.</p>
+                  <p class="e">Because of the traffic, I take the subway.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">비 때문에 행사가 취소됐어요.</p>
+                  <p class="e">The event was canceled because of the rain.</p>
+                </div>
+              </div>
+              <div class="vocab">
+                <h3>어휘 <span class="en">Directions</span></h3>
+                <table class="voc">
+                  <tr>
+                    <th style="width:38%">Korean</th>
+                    <th>English</th>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Places &amp; directions (근처에 있는 곳)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">육교</td>
+                    <td>pedestrian overpass</td>
+                  </tr>
+                  <tr>
+                    <td class="w">신호등</td>
+                    <td>traffic light</td>
+                  </tr>
+                  <tr>
+                    <td class="w">횡단보도</td>
+                    <td>crosswalk</td>
+                  </tr>
+                  <tr>
+                    <td class="w">사거리</td>
+                    <td>intersection</td>
+                  </tr>
+                  <tr>
+                    <td class="w">지하철역</td>
+                    <td>subway station</td>
+                  </tr>
+                  <tr>
+                    <td class="w">버스 정류장</td>
+                    <td>bus stop</td>
+                  </tr>
+                  <tr>
+                    <td class="w">왼쪽으로 가다</td>
+                    <td>to go to the left</td>
+                  </tr>
+                  <tr>
+                    <td class="w">오른쪽으로 가다</td>
+                    <td>to go to the right</td>
+                  </tr>
+                  <tr>
+                    <td class="w">쭉 가다 / 똑바로 가다</td>
+                    <td>to go straight</td>
+                  </tr>
+                  <tr>
+                    <td class="w">맞은편에 있다</td>
+                    <td>to be across the way</td>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Getting there (대중교통 이용)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">버스를 타다</td>
+                    <td>to take a bus</td>
+                  </tr>
+                  <tr>
+                    <td class="w">교통 카드로 요금을 내다</td>
+                    <td>to pay the fare with a transit card</td>
+                  </tr>
+                  <tr>
+                    <td class="w">버스에서 내리다</td>
+                    <td>to get off the bus</td>
+                  </tr>
+                  <tr>
+                    <td class="w">지하철로 갈아타다</td>
+                    <td>to transfer to the subway</td>
+                  </tr>
+                  <tr>
+                    <td class="w">1번 출구로 나가다</td>
+                    <td>to go out through exit 1</td>
+                  </tr>
+                  <tr>
+                    <td class="w">회사가 보이다</td>
+                    <td>the company comes into view</td>
+                  </tr>
+                </table>
+              </div>
+            </section>
+
+            <section class="lesson" id="u11">
+              <div class="lesson-head"><span class="lesson-num">UNIT 11</span><span class="topic-kr">명절</span><span
+                  class="topic-en">Celebrating Holidays</span></div>
+              <div class="gram">
+                <h3 class="gram-form">A + 게 <span class="gloss">— "adverb form (in a … way)"</span></h3>
+                <p class="meta"><span class="tag">Form</span> Adjective stem + 게 (turns an adjective into an adverb)</p>
+                <p class="def">Makes an adjective describe <em>how</em> an action is done (맛있다 → 맛있게 "deliciously").</p>
+                <div class="ex">
+                  <p class="k">음식을 맛있게 먹었어요.</p>
+                  <p class="e">I ate the food with relish (deliciously).</p>
+                </div>
+                <div class="ex">
+                  <p class="k">방을 깨끗하게 청소했어요.</p>
+                  <p class="e">I cleaned the room thoroughly.</p>
+                </div>
+              </div>
+              <div class="gram">
+                <h3 class="gram-form">V + (으)면서 <span class="gloss">— "while doing (at the same time)"</span></h3>
+                <p class="meta"><span class="tag">Form</span> consonant stem + 으면서 · vowel stem + 면서 (same subject)</p>
+                <p class="def">Two actions by the same person happening at the same time.</p>
+                <div class="ex">
+                  <p class="k">보름달을 보면서 소원을 빌어요.</p>
+                  <p class="e">I make a wish while looking at the full moon.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">음악을 들으면서 공부해요.</p>
+                  <p class="e">I study while listening to music.</p>
+                </div>
+              </div>
+              <div class="vocab">
+                <h3>어휘 <span class="en">Holidays</span></h3>
+                <table class="voc">
+                  <tr>
+                    <th style="width:38%">Korean</th>
+                    <th>English</th>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">What you do on holidays (명절에 하는 일)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">고향에 내려가다</td>
+                    <td>to go down to one's hometown</td>
+                  </tr>
+                  <tr>
+                    <td class="w">친척</td>
+                    <td>relatives</td>
+                  </tr>
+                  <tr>
+                    <td class="w">가족이 모이다</td>
+                    <td>family gathers</td>
+                  </tr>
+                  <tr>
+                    <td class="w">서로 안부를 묻다</td>
+                    <td>to ask after each other</td>
+                  </tr>
+                  <tr>
+                    <td class="w">차례를 지내다</td>
+                    <td>to hold ancestral rites</td>
+                  </tr>
+                  <tr>
+                    <td class="w">성묘를 하다</td>
+                    <td>to visit ancestors' graves</td>
+                  </tr>
+                  <tr>
+                    <td class="w">윷놀이</td>
+                    <td>yut-nori (board game)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">연날리기</td>
+                    <td>kite flying</td>
+                  </tr>
+                  <tr>
+                    <td class="w">제기차기</td>
+                    <td>jegi-chagi (shuttlecock kicking)</td>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Korean holidays (한국의 명절)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">설날 (음력 1월 1일)</td>
+                    <td>Lunar New Year (1st day of 1st lunar month)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">세배를 하다 / 받다</td>
+                    <td>to make / receive a New Year's bow</td>
+                  </tr>
+                  <tr>
+                    <td class="w">떡국</td>
+                    <td>tteokguk (rice cake soup)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">추석 (음력 8월 15일)</td>
+                    <td>Chuseok (15th day of 8th lunar month)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">송편을 빚다</td>
+                    <td>to make songpyeon (rice cakes)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">보름달</td>
+                    <td>full moon</td>
+                  </tr>
+                  <tr>
+                    <td class="w">소원을 빌다</td>
+                    <td>to make a wish</td>
+                  </tr>
+                </table>
+              </div>
+            </section>
+
+            <section class="lesson" id="u12">
+              <div class="lesson-head"><span class="lesson-num">UNIT 12</span><span class="topic-kr">실수</span><span
+                  class="topic-en">Making Mistakes</span></div>
+              <div class="gram">
+                <h3 class="gram-form">V + (으)ㄴ 적이 있다 <span class="gloss">— "have (ever) done"</span></h3>
+                <p class="meta"><span class="tag">Form</span> consonant stem + 은 적이 있다/없다 · vowel stem + ㄴ 적이 있다/없다</p>
+                <p class="def">Talks about past experience — whether you have or haven't ever done something.</p>
+                <div class="ex">
+                  <p class="k">한국에서 길을 잃은 적이 있어요.</p>
+                  <p class="e">I've gotten lost in Korea before.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">제주도에 가 본 적이 없어요.</p>
+                  <p class="e">I've never been to Jeju Island.</p>
+                </div>
+              </div>
+              <div class="gram">
+                <h3 class="gram-form">A/V + 는 편이다 <span class="gloss">— "tend to / be rather"</span></h3>
+                <p class="meta"><span class="tag">Form</span> Verb + 는 편이다 · Adjective + -(으)ㄴ 편이다</p>
+                <p class="def">Says something is generally the case or leans a certain way, without being absolute.</p>
+                <div class="ex">
+                  <p class="k">저는 실수를 자주 하는 편이에요.</p>
+                  <p class="e">I tend to make mistakes often.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">이 동네는 조용한 편이에요.</p>
+                  <p class="e">This neighborhood is rather quiet.</p>
+                </div>
+              </div>
+              <div class="vocab">
+                <h3>어휘 <span class="en">Mistakes &amp; habits</span></h3>
+                <table class="voc">
+                  <tr>
+                    <th style="width:38%">Korean</th>
+                    <th>English</th>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Feelings about mistakes (그때 기분)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">당황하다</td>
+                    <td>to be flustered</td>
+                  </tr>
+                  <tr>
+                    <td class="w">창피하다</td>
+                    <td>to be embarrassed</td>
+                  </tr>
+                  <tr>
+                    <td class="w">무섭다</td>
+                    <td>to be scared</td>
+                  </tr>
+                  <tr>
+                    <td class="w">속상하다</td>
+                    <td>to be upset, distressed</td>
+                  </tr>
+                  <tr>
+                    <td class="w">우울하다</td>
+                    <td>to be depressed</td>
+                  </tr>
+                  <tr>
+                    <td class="w">그립다</td>
+                    <td>to miss, long for</td>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Mistakes in Korea (한국에서의 실수)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">윗사람에게 반말을 하다</td>
+                    <td>to speak informally to an elder</td>
+                  </tr>
+                  <tr>
+                    <td class="w">윗사람의 이름을 부르다</td>
+                    <td>to call an elder by their name</td>
+                  </tr>
+                  <tr>
+                    <td class="w">한 손으로 물건을 드리다</td>
+                    <td>to hand something with one hand</td>
+                  </tr>
+                  <tr>
+                    <td class="w">높임말을 잘못 사용하다</td>
+                    <td>to misuse honorific speech</td>
+                  </tr>
+                  <tr>
+                    <td class="w">한국 사람 이야기를 못 알아듣다</td>
+                    <td>to not understand what Koreans say</td>
+                  </tr>
+                  <tr>
+                    <td class="w">글자를 잘못 읽다</td>
+                    <td>to read letters wrong</td>
+                  </tr>
+                  <tr>
+                    <td class="w">잘못 발음하다</td>
+                    <td>to mispronounce</td>
+                  </tr>
+                  <tr>
+                    <td class="w">신발을 신고 들어가다</td>
+                    <td>to go in with shoes on</td>
+                  </tr>
+                  <tr>
+                    <td class="w">노약자석에 앉다</td>
+                    <td>to sit in a priority seat</td>
+                  </tr>
+                  <tr>
+                    <td class="w">사람을 잘못 보다</td>
+                    <td>to mistake someone for another</td>
+                  </tr>
+                </table>
+              </div>
+            </section>
+
+            <section class="lesson" id="u13">
+              <div class="lesson-head"><span class="lesson-num">UNIT 13</span><span class="topic-kr">우체국, 은행</span><span
+                  class="topic-en">Post Office &amp; Bank</span></div>
+              <div class="gram">
+                <h3 class="gram-form">V + (으)려고 하다 <span class="gloss">— "intend / plan to"</span></h3>
+                <p class="meta"><span class="tag">Form</span> consonant stem + 으려고 하다 · vowel stem + 려고 하다</p>
+                <p class="def">Expresses an intention or plan to do something (often soon).</p>
+                <div class="ex">
+                  <p class="k">소포를 보내려고 해요.</p>
+                  <p class="e">I'm planning to send a parcel.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">돈을 찾으려고 은행에 왔어요.</p>
+                  <p class="e">I came to the bank to withdraw money.</p>
+                </div>
+              </div>
+              <div class="gram">
+                <h3 class="gram-form">V + 아 / 어야 되다 <span class="gloss">— "must / have to"</span></h3>
+                <p class="meta"><span class="tag">Form</span> ㅏ/ㅗ stem + 아야 되다 · other stems + 어야 되다 (= 어야 하다)</p>
+                <p class="def">States an obligation or necessity — something that must be done.</p>
+                <div class="ex">
+                  <p class="k">통장을 만들어야 돼요.</p>
+                  <p class="e">I have to open a bank account.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">신분증을 가져와야 돼요.</p>
+                  <p class="e">You must bring an ID.</p>
+                </div>
+              </div>
+              <div class="vocab">
+                <h3>어휘 <span class="en">Post office &amp; bank</span></h3>
+                <table class="voc">
+                  <tr>
+                    <th style="width:38%">Korean</th>
+                    <th>English</th>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">At the post office (우체국)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">소포를 보내다</td>
+                    <td>to send a parcel</td>
+                  </tr>
+                  <tr>
+                    <td class="w">편지를 보내다</td>
+                    <td>to send a letter</td>
+                  </tr>
+                  <tr>
+                    <td class="w">택배를 보내다</td>
+                    <td>to send a courier package</td>
+                  </tr>
+                  <tr>
+                    <td class="w">등기</td>
+                    <td>registered mail</td>
+                  </tr>
+                  <tr>
+                    <td class="w">국제 특급 우편(EMS)</td>
+                    <td>international express mail (EMS)</td>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Sending a letter (편지를 보낼 때)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">주소를 쓰다</td>
+                    <td>to write the address</td>
+                  </tr>
+                  <tr>
+                    <td class="w">우표를 붙이다</td>
+                    <td>to put on a stamp</td>
+                  </tr>
+                  <tr>
+                    <td class="w">편지 봉투</td>
+                    <td>envelope</td>
+                  </tr>
+                  <tr>
+                    <td class="w">우편 번호를 쓰다</td>
+                    <td>to write the postal code</td>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">At the bank (은행)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">입금하다 (돈을 넣다)</td>
+                    <td>to deposit (put in money)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">출금하다 (돈을 찾다)</td>
+                    <td>to withdraw (take out money)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">계좌를 개설하다 (통장을 만들다)</td>
+                    <td>to open an account (make a bankbook)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">돈을 바꾸다 (환전하다)</td>
+                    <td>to exchange money</td>
+                  </tr>
+                  <tr>
+                    <td class="w">돈을 보내다 (송금하다)</td>
+                    <td>to send money (transfer)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">현금 자동 인출기(ATM)를 이용하다</td>
+                    <td>to use an ATM</td>
+                  </tr>
+                  <tr>
+                    <td class="w">신용 카드 / 체크 카드를 만들다</td>
+                    <td>to get a credit / debit card</td>
+                  </tr>
+                  <tr>
+                    <td class="w">공과금을 납부하다</td>
+                    <td>to pay utility bills</td>
+                  </tr>
+                </table>
+              </div>
+            </section>
+
+            <section class="lesson" id="u14">
+              <div class="lesson-head"><span class="lesson-num">UNIT 14</span><span class="topic-kr">비자 연장 (공공
+                  기관)</span><span class="topic-en">Visa Extension &amp; Public Offices</span></div>
+              <div class="gram">
+                <h3 class="gram-form">V + 아 / 어도 되다 <span class="gloss">— "may / be allowed to"</span></h3>
+                <p class="meta"><span class="tag">Form</span> ㅏ/ㅗ stem + 아도 되다 · other stems + 어도 되다</p>
+                <p class="def">Asks for or grants permission — "is it okay to…? / you may…".</p>
+                <div class="ex">
+                  <p class="k">여기 앉아도 돼요?</p>
+                  <p class="e">May I sit here?</p>
+                </div>
+                <div class="ex">
+                  <p class="k">사진을 찍어도 돼요.</p>
+                  <p class="e">You may take photos.</p>
+                </div>
+              </div>
+              <div class="gram">
+                <h3 class="gram-form">V + (으)려면 <span class="gloss">— "if you intend / want to…"</span></h3>
+                <p class="meta"><span class="tag">Form</span> consonant stem + 으려면 · vowel stem + 려면</p>
+                <p class="def">Sets up a goal, then gives the condition or step needed to reach it.</p>
+                <div class="ex">
+                  <p class="k">비자를 연장하려면 신청서를 내세요.</p>
+                  <p class="e">To extend your visa, submit an application.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">은행 계좌를 만들려면 여권이 필요해요.</p>
+                  <p class="e">To open a bank account, you need a passport.</p>
+                </div>
+              </div>
+              <div class="vocab">
+                <h3>어휘 <span class="en">Public institutions</span></h3>
+                <table class="voc">
+                  <tr>
+                    <th style="width:38%">Korean</th>
+                    <th>English</th>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">At the community center (구청 / 행정 복지 센터)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">출생 신고를 하다</td>
+                    <td>to register a birth</td>
+                  </tr>
+                  <tr>
+                    <td class="w">주소 변경 신고를 하다</td>
+                    <td>to report a change of address</td>
+                  </tr>
+                  <tr>
+                    <td class="w">혼인 신고를 하다</td>
+                    <td>to register a marriage</td>
+                  </tr>
+                  <tr>
+                    <td class="w">증명서를 받다</td>
+                    <td>to get a certificate</td>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">At the health center (보건소)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">건강 검진을 받다</td>
+                    <td>to get a health checkup</td>
+                  </tr>
+                  <tr>
+                    <td class="w">예방 주사를 맞다</td>
+                    <td>to get a vaccination</td>
+                  </tr>
+                  <tr>
+                    <td class="w">건강 진단서를 받다</td>
+                    <td>to get a medical certificate</td>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">At the immigration office (출입국·외국인청)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">외국인 등록증</td>
+                    <td>alien registration card</td>
+                  </tr>
+                  <tr>
+                    <td class="w">영주권</td>
+                    <td>permanent residency</td>
+                  </tr>
+                  <tr>
+                    <td class="w">국적 취득 / 귀화</td>
+                    <td>acquiring nationality / naturalization</td>
+                  </tr>
+                  <tr>
+                    <td class="w">통합 신청서 (신고서)</td>
+                    <td>integrated application (report) form</td>
+                  </tr>
+                  <tr>
+                    <td class="w">외국인 등록</td>
+                    <td>alien registration</td>
+                  </tr>
+                  <tr>
+                    <td class="w">등록증 재발급</td>
+                    <td>reissue of registration card</td>
+                  </tr>
+                  <tr>
+                    <td class="w">체류 기간 연장</td>
+                    <td>extension of stay</td>
+                  </tr>
+                  <tr>
+                    <td class="w">체류 자격 변경</td>
+                    <td>change of residence status</td>
+                  </tr>
+                </table>
+              </div>
+            </section>
+
+            <section class="lesson" id="u15">
+              <div class="lesson-head"><span class="lesson-num">UNIT 15</span><span class="topic-kr">업무 (무역
+                  회사)</span><span class="topic-en">Work Tasks</span></div>
+              <div class="gram">
+                <h3 class="gram-form">V + 고 있다 <span class="gloss">— "be doing (in progress)"</span></h3>
+                <p class="meta"><span class="tag">Form</span> Verb stem + 고 있다 (honorific: 고 계시다)</p>
+                <p class="def">The present continuous — an action in progress right now or these days.</p>
+                <div class="ex">
+                  <p class="k">무역 회사에서 일하고 있어요.</p>
+                  <p class="e">I'm working at a trading company.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">지금 보고서를 쓰고 있어요.</p>
+                  <p class="e">I'm writing a report now.</p>
+                </div>
+              </div>
+              <div class="gram">
+                <h3 class="gram-form">V + (으)ㄴ + N <span class="gloss">— "the N that … (past relative clause)"</span>
+                </h3>
+                <p class="meta"><span class="tag">Form</span> consonant stem + 은 + N · vowel stem + ㄴ + N</p>
+                <p class="def">Lets a past-tense verb clause describe a following noun ("the document I made").</p>
+                <div class="ex">
+                  <p class="k">어제 만든 서류예요.</p>
+                  <p class="e">It's the document I made yesterday.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">제가 보낸 이메일을 받으셨어요?</p>
+                  <p class="e">Did you receive the email I sent?</p>
+                </div>
+              </div>
+              <div class="vocab">
+                <h3>어휘 <span class="en">Work tasks</span></h3>
+                <table class="voc">
+                  <tr>
+                    <th style="width:38%">Korean</th>
+                    <th>English</th>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Things at work (일하는 곳)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">서류</td>
+                    <td>documents</td>
+                  </tr>
+                  <tr>
+                    <td class="w">명함</td>
+                    <td>business card</td>
+                  </tr>
+                  <tr>
+                    <td class="w">사원증</td>
+                    <td>employee ID card</td>
+                  </tr>
+                  <tr>
+                    <td class="w">복사기</td>
+                    <td>copier</td>
+                  </tr>
+                  <tr>
+                    <td class="w">프린터</td>
+                    <td>printer</td>
+                  </tr>
+                  <tr>
+                    <td class="w">출근부</td>
+                    <td>attendance record</td>
+                  </tr>
+                  <tr>
+                    <td class="w">안전모, 안전화</td>
+                    <td>safety helmet, safety shoes</td>
+                  </tr>
+                  <tr>
+                    <td class="w">기계</td>
+                    <td>machine</td>
+                  </tr>
+                  <tr>
+                    <td class="w">공구</td>
+                    <td>tools</td>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Office work (사무실 업무)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">서류를 작성하다</td>
+                    <td>to write up documents</td>
+                  </tr>
+                  <tr>
+                    <td class="w">서류를 번역하다</td>
+                    <td>to translate documents</td>
+                  </tr>
+                  <tr>
+                    <td class="w">서류를 출력하다</td>
+                    <td>to print documents</td>
+                  </tr>
+                  <tr>
+                    <td class="w">서류를 복사하다</td>
+                    <td>to copy documents</td>
+                  </tr>
+                  <tr>
+                    <td class="w">팩스를 보내다</td>
+                    <td>to send a fax</td>
+                  </tr>
+                  <tr>
+                    <td class="w">이메일을 보내다</td>
+                    <td>to send an email</td>
+                  </tr>
+                  <tr>
+                    <td class="w">확인 전화를 하다</td>
+                    <td>to make a confirmation call</td>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Factory / manual work (공장 업무)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">기계를 켜다 / 끄다</td>
+                    <td>to turn a machine on / off</td>
+                  </tr>
+                  <tr>
+                    <td class="w">물건을 들다 / 올리다 / 싣다</td>
+                    <td>to lift / raise / load goods</td>
+                  </tr>
+                  <tr>
+                    <td class="w">물건을 내리다</td>
+                    <td>to unload goods</td>
+                  </tr>
+                  <tr>
+                    <td class="w">물건을 만들다</td>
+                    <td>to make goods</td>
+                  </tr>
+                  <tr>
+                    <td class="w">물건을 옮기다</td>
+                    <td>to move goods</td>
+                  </tr>
+                </table>
+              </div>
+            </section>
+
+            <section class="lesson" id="u16">
+              <div class="lesson-head"><span class="lesson-num">UNIT 16</span><span class="topic-kr">행사, 축제</span><span
+                  class="topic-en">Events &amp; Festivals</span></div>
+              <div class="gram">
+                <h3 class="gram-form">V + (으)ㄹ + N <span class="gloss">— "the N that will … (future modifier)"</span>
+                </h3>
+                <p class="meta"><span class="tag">Form</span> consonant stem + 을 + N · vowel stem + ㄹ + N (often with
+                  사람, 계획, 생각)</p>
+                <p class="def">A verb clause describing a noun in the future — used for plans and intentions.</p>
+                <div class="ex">
+                  <p class="k">행사에 참가할 사람 있어요?</p>
+                  <p class="e">Is there anyone who will join the event?</p>
+                </div>
+                <div class="ex">
+                  <p class="k">다음 달에 이사할 생각이에요.</p>
+                  <p class="e">I'm thinking of moving next month.</p>
+                </div>
+              </div>
+              <div class="gram">
+                <h3 class="gram-form">A/V + 거든요 <span class="gloss">— "(it's) because… (explaining)"</span></h3>
+                <p class="meta"><span class="tag">Form</span> Verb / Adjective stem + 거든요 (spoken)</p>
+                <p class="def">Gives a reason or background the listener doesn't yet know, usually answering a question.
+                </p>
+                <div class="ex">
+                  <p class="k">엘리베이터를 점검해서 이용할 수 없거든요.</p>
+                  <p class="e">It's because the elevator is under inspection, so it can't be used.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">오늘 일찍 일어났거든요. 그래서 피곤해요.</p>
+                  <p class="e">I woke up early today, you see — that's why I'm tired.</p>
+                </div>
+              </div>
+              <div class="vocab">
+                <h3>어휘 <span class="en">Events &amp; festivals</span></h3>
+                <table class="voc">
+                  <tr>
+                    <th style="width:38%">Korean</th>
+                    <th>English</th>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Event poster (행사 포스터)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">축제</td>
+                    <td>festival</td>
+                  </tr>
+                  <tr>
+                    <td class="w">대상</td>
+                    <td>target, eligible participants</td>
+                  </tr>
+                  <tr>
+                    <td class="w">참가비</td>
+                    <td>participation fee</td>
+                  </tr>
+                  <tr>
+                    <td class="w">준비물</td>
+                    <td>things to bring</td>
+                  </tr>
+                  <tr>
+                    <td class="w">문화 공연</td>
+                    <td>cultural performance</td>
+                  </tr>
+                  <tr>
+                    <td class="w">체험거리</td>
+                    <td>hands-on activities</td>
+                  </tr>
+                  <tr>
+                    <td class="w">장소</td>
+                    <td>place, venue</td>
+                  </tr>
+                  <tr>
+                    <td class="w">오시는 길</td>
+                    <td>directions (how to get there)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">신청 및 문의</td>
+                    <td>application &amp; inquiry</td>
+                  </tr>
+                  <tr>
+                    <td class="w">주최</td>
+                    <td>host, organizer</td>
+                  </tr>
+                  <tr>
+                    <td class="w">후원</td>
+                    <td>sponsor</td>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Bulletin board notices (게시판)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">주민 모임이 열리다</td>
+                    <td>a residents' meeting is held</td>
+                  </tr>
+                  <tr>
+                    <td class="w">엘리베이터를 이용할 수 없다</td>
+                    <td>the elevator can't be used</td>
+                  </tr>
+                  <tr>
+                    <td class="w">단수가 되다</td>
+                    <td>water is cut off</td>
+                  </tr>
+                  <tr>
+                    <td class="w">동호회 회원을 모집하다</td>
+                    <td>to recruit club members</td>
+                  </tr>
+                  <tr>
+                    <td class="w">잃어버린 물건을 찾다</td>
+                    <td>to look for a lost item</td>
+                  </tr>
+                  <tr>
+                    <td class="w">직원을 뽑다</td>
+                    <td>to hire staff</td>
+                  </tr>
+                </table>
+              </div>
+            </section>
+
+            <section class="lesson" id="u17">
+              <div class="lesson-head"><span class="lesson-num">UNIT 17</span><span class="topic-kr">건강한 생활</span><span
+                  class="topic-en">Staying Healthy</span></div>
+              <div class="gram">
+                <h3 class="gram-form">A/V + (으)면 좋겠다 <span class="gloss">— "I hope / wish that…"</span></h3>
+                <p class="meta"><span class="tag">Form</span> stem + 으면/면 좋겠다 (also -았/었으면 좋겠다)</p>
+                <p class="def">Expresses a hope or wish about something not yet true.</p>
+                <div class="ex">
+                  <p class="k">잠을 푹 자면 좋겠어요.</p>
+                  <p class="e">I hope I sleep well.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">빨리 건강해졌으면 좋겠어요.</p>
+                  <p class="e">I wish I'd get healthy soon.</p>
+                </div>
+              </div>
+              <div class="gram">
+                <h3 class="gram-form">N + 에 <span class="gloss">— "per (frequency / rate)"</span></h3>
+                <p class="meta"><span class="tag">Form</span> time/unit N + 에 + number + counter</p>
+                <p class="def">Here 에 marks a rate or frequency — "X times per (day / week)".</p>
+                <div class="ex">
+                  <p class="k">하루에 30분씩 운동해요.</p>
+                  <p class="e">I exercise 30 minutes a day.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">일주일에 세 번 수업이 있어요.</p>
+                  <p class="e">There are classes three times a week.</p>
+                </div>
+              </div>
+              <div class="vocab">
+                <h3>어휘 <span class="en">Healthy living</span></h3>
+                <table class="voc">
+                  <tr>
+                    <th style="width:38%">Korean</th>
+                    <th>English</th>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Healthy habits (건강한 생활)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">잠을 충분히 자다</td>
+                    <td>to get enough sleep</td>
+                  </tr>
+                  <tr>
+                    <td class="w">음식을 골고루 먹다</td>
+                    <td>to eat a balanced diet</td>
+                  </tr>
+                  <tr>
+                    <td class="w">식사를 규칙적으로 하다</td>
+                    <td>to eat meals regularly</td>
+                  </tr>
+                  <tr>
+                    <td class="w">운동을 꾸준히 하다</td>
+                    <td>to exercise steadily</td>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Unhealthy habits (안 좋은 습관)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">잠이 부족하다</td>
+                    <td>to lack sleep</td>
+                  </tr>
+                  <tr>
+                    <td class="w">편식이 심하다</td>
+                    <td>to be a very picky eater</td>
+                  </tr>
+                  <tr>
+                    <td class="w">식사가 불규칙하다</td>
+                    <td>to eat irregularly</td>
+                  </tr>
+                  <tr>
+                    <td class="w">운동을 거의 하지 않다</td>
+                    <td>to hardly exercise</td>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">When unwell (몸이 안 좋을 때)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">안색이 안 좋다</td>
+                    <td>to look pale, unwell</td>
+                  </tr>
+                  <tr>
+                    <td class="w">힘(기운)이 없다</td>
+                    <td>to have no energy</td>
+                  </tr>
+                  <tr>
+                    <td class="w">입맛이 없다</td>
+                    <td>to have no appetite</td>
+                  </tr>
+                  <tr>
+                    <td class="w">어지럽다</td>
+                    <td>to be dizzy</td>
+                  </tr>
+                  <tr>
+                    <td class="w">얼굴에 뭐가 나다</td>
+                    <td>to break out on the face</td>
+                  </tr>
+                  <tr>
+                    <td class="w">열이 나다</td>
+                    <td>to have a fever</td>
+                  </tr>
+                  <tr>
+                    <td class="w">소화가 안 되다</td>
+                    <td>to have indigestion</td>
+                  </tr>
+                  <tr>
+                    <td class="w">몸살이 나다</td>
+                    <td>to ache all over (from illness)</td>
+                  </tr>
+                </table>
+              </div>
+            </section>
+
+            <section class="lesson" id="u18">
+              <div class="lesson-head"><span class="lesson-num">UNIT 18</span><span class="topic-kr">문화 센터
+                  수업</span><span class="topic-en">Choosing a Course</span></div>
+              <div class="gram">
+                <h3 class="gram-form">V + 는 게 어때요? <span class="gloss">— "how about doing…?"</span></h3>
+                <p class="meta"><span class="tag">Form</span> Verb stem + 는 게 어때요? (는 게 = 는 것이)</p>
+                <p class="def">A friendly way to make a suggestion or give a recommendation.</p>
+                <div class="ex">
+                  <p class="k">이 수업을 신청하는 게 어때요?</p>
+                  <p class="e">How about signing up for this class?</p>
+                </div>
+                <div class="ex">
+                  <p class="k">택시를 타는 게 어때요?</p>
+                  <p class="e">How about taking a taxi?</p>
+                </div>
+              </div>
+              <div class="gram">
+                <h3 class="gram-form">A + 아 / 어 보이다 <span class="gloss">— "looks / seems (by appearance)"</span></h3>
+                <p class="meta"><span class="tag">Form</span> ㅏ/ㅗ adj-stem + 아 보이다 · other adj-stems + 어 보이다</p>
+                <p class="def">Says how something looks or seems based on its appearance.</p>
+                <div class="ex">
+                  <p class="k">그 옷이 따뜻해 보여요.</p>
+                  <p class="e">Those clothes look warm.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">오늘 기분이 좋아 보여요.</p>
+                  <p class="e">You look like you're in a good mood today.</p>
+                </div>
+              </div>
+              <div class="vocab">
+                <h3>어휘 <span class="en">Cultural center courses</span></h3>
+                <table class="voc">
+                  <tr>
+                    <th style="width:38%">Korean</th>
+                    <th>English</th>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Course recruitment notice (회원 모집)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">문화 센터</td>
+                    <td>cultural center</td>
+                  </tr>
+                  <tr>
+                    <td class="w">학기</td>
+                    <td>semester, term</td>
+                  </tr>
+                  <tr>
+                    <td class="w">회원 모집</td>
+                    <td>member recruitment</td>
+                  </tr>
+                  <tr>
+                    <td class="w">접수 기간</td>
+                    <td>registration period</td>
+                  </tr>
+                  <tr>
+                    <td class="w">수강 기간</td>
+                    <td>course period</td>
+                  </tr>
+                  <tr>
+                    <td class="w">신청 방법</td>
+                    <td>how to apply</td>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Types of courses (수업 종류)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">요가</td>
+                    <td>yoga</td>
+                  </tr>
+                  <tr>
+                    <td class="w">웰빙 댄스</td>
+                    <td>well-being dance</td>
+                  </tr>
+                  <tr>
+                    <td class="w">천연 비누 만들기</td>
+                    <td>natural soap making</td>
+                  </tr>
+                  <tr>
+                    <td class="w">도자기 만들기</td>
+                    <td>pottery making</td>
+                  </tr>
+                  <tr>
+                    <td class="w">어학 자격증</td>
+                    <td>language certification</td>
+                  </tr>
+                  <tr>
+                    <td class="w">미용 자격증</td>
+                    <td>beauty certification</td>
+                  </tr>
+                  <tr>
+                    <td class="w">노래 교실</td>
+                    <td>singing class</td>
+                  </tr>
+                  <tr>
+                    <td class="w">음악 교실</td>
+                    <td>music class</td>
+                  </tr>
+                  <tr>
+                    <td class="w">요리 교실</td>
+                    <td>cooking class</td>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Registering online (수강 신청)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">인터넷으로 알아보다</td>
+                    <td>to look up online</td>
+                  </tr>
+                  <tr>
+                    <td class="w">프로그램을 선택하다</td>
+                    <td>to select a program</td>
+                  </tr>
+                  <tr>
+                    <td class="w">시간을 확인하다</td>
+                    <td>to check the time</td>
+                  </tr>
+                  <tr>
+                    <td class="w">홈페이지에서 회원 가입을 하다</td>
+                    <td>to sign up on the website</td>
+                  </tr>
+                  <tr>
+                    <td class="w">수강 신청을 하다</td>
+                    <td>to register for a course</td>
+                  </tr>
+                  <tr>
+                    <td class="w">수강료를 결제하다</td>
+                    <td>to pay the course fee</td>
+                  </tr>
+                  <tr>
+                    <td class="w">수업을 듣다</td>
+                    <td>to take a class</td>
+                  </tr>
+                </table>
+              </div>
+            </section>
+
+            <!--LESSONS-->
+
+            <hr class="rule">
+            <p class="part-head" id="index">Appendix</p>
+            <h2 class="part-title">Grammar Index</h2>
+            <div class="vocab">
+              <h3>All grammar patterns by unit</h3>
+              <table class="voc">
+                <tr>
+                  <th style="width:10%">Unit</th>
+                  <th style="width:34%">Pattern</th>
+                  <th>Meaning</th>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td class="w">N + (이)라고 하다</td>
+                  <td>to be called / named</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td class="w">A + (으)ㄴ + N</td>
+                  <td>adjective modifying a noun</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td class="w">V + (으)ㄹ게요</td>
+                  <td>I'll (offer / intention)</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td class="w">V + (으)ㄴ 다음에</td>
+                  <td>after doing</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td class="w">N + (이)나</td>
+                  <td>or</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td class="w">V + 아/어 보다</td>
+                  <td>try doing</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td class="w">V + (으)ㄹ 수 있다/없다</td>
+                  <td>can / cannot</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td class="w">반말</td>
+                  <td>informal (casual) speech</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td class="w">A/V + (으)면</td>
+                  <td>if / when</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td class="w">V + 아/어서</td>
+                  <td>because / and then</td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td class="w">A/V + 겠</td>
+                  <td>will / conjecture</td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td class="w">A/V + (으)ㄹ 때</td>
+                  <td>when</td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td class="w">V + (으)ㄹ래요?</td>
+                  <td>would you like to…?</td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td class="w">A/V + (으)니까</td>
+                  <td>because / since</td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td class="w">V + 기 전에</td>
+                  <td>before doing</td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td class="w">V + 기로 하다</td>
+                  <td>decide to do</td>
+                </tr>
+                <tr>
+                  <td>9</td>
+                  <td class="w">A/V + (으)ㄹ 것 같다</td>
+                  <td>seems / probably</td>
+                </tr>
+                <tr>
+                  <td>9</td>
+                  <td class="w">V + 는 + N</td>
+                  <td>present relative clause</td>
+                </tr>
+                <tr>
+                  <td>10</td>
+                  <td class="w">A/V + 는데</td>
+                  <td>background / contrast</td>
+                </tr>
+                <tr>
+                  <td>10</td>
+                  <td class="w">A/V + 기 때문에</td>
+                  <td>because of</td>
+                </tr>
+                <tr>
+                  <td>11</td>
+                  <td class="w">A + 게</td>
+                  <td>adverb form (in a … way)</td>
+                </tr>
+                <tr>
+                  <td>11</td>
+                  <td class="w">V + (으)면서</td>
+                  <td>while doing</td>
+                </tr>
+                <tr>
+                  <td>12</td>
+                  <td class="w">V + (으)ㄴ 적이 있다</td>
+                  <td>have (ever) done</td>
+                </tr>
+                <tr>
+                  <td>12</td>
+                  <td class="w">A/V + 는 편이다</td>
+                  <td>tend to / be rather</td>
+                </tr>
+                <tr>
+                  <td>13</td>
+                  <td class="w">V + (으)려고 하다</td>
+                  <td>intend / plan to</td>
+                </tr>
+                <tr>
+                  <td>13</td>
+                  <td class="w">V + 아/어야 되다</td>
+                  <td>must / have to</td>
+                </tr>
+                <tr>
+                  <td>14</td>
+                  <td class="w">V + 아/어도 되다</td>
+                  <td>may / be allowed to</td>
+                </tr>
+                <tr>
+                  <td>14</td>
+                  <td class="w">V + (으)려면</td>
+                  <td>if you intend to</td>
+                </tr>
+                <tr>
+                  <td>15</td>
+                  <td class="w">V + 고 있다</td>
+                  <td>be doing (progressive)</td>
+                </tr>
+                <tr>
+                  <td>15</td>
+                  <td class="w">V + (으)ㄴ + N</td>
+                  <td>past relative clause</td>
+                </tr>
+                <tr>
+                  <td>16</td>
+                  <td class="w">V + (으)ㄹ + N</td>
+                  <td>future modifier (will…)</td>
+                </tr>
+                <tr>
+                  <td>16</td>
+                  <td class="w">A/V + 거든요</td>
+                  <td>giving a reason / background</td>
+                </tr>
+                <tr>
+                  <td>17</td>
+                  <td class="w">A/V + (으)면 좋겠다</td>
+                  <td>I hope / wish</td>
+                </tr>
+                <tr>
+                  <td>17</td>
+                  <td class="w">N + 에</td>
+                  <td>per (frequency / rate)</td>
+                </tr>
+                <tr>
+                  <td>18</td>
+                  <td class="w">V + 는 게 어때요?</td>
+                  <td>how about doing…?</td>
+                </tr>
+                <tr>
+                  <td>18</td>
+                  <td class="w">A + 아/어 보이다</td>
+                  <td>looks / seems</td>
+                </tr>
+              </table>
+            </div>
+            <hr class="rule">
+            <p style="text-align:center; color:var(--faint); font-size:13px; font-style:italic; margin-top:24px;">End of
+              reference · KIIP Level 2 — 한국어와 한국문화 초급 2 · 화이팅!</p>
+            <!--INDEX-->
+
+          </td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td class="ftr-space"></td>
+        </tr>
+      </tfoot>
+    </table>
+  </main>
+</body>
+
+</html>
