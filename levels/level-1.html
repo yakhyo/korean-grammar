@@ -4,6 +4,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="KIIP Grammar &amp; Vocabulary">
+  <meta property="og:url" content="https://yakhyo.github.io/korean-grammar/levels/level-1.html">
+  <meta property="og:title" content="KIIP Level 1 — Grammar &amp; Vocabulary">
+  <meta property="og:description" content="Grammar and vocabulary reference for KIIP Level 1 (한국어와 한국문화 초급 1).">
+  <meta property="og:image" content="https://yakhyo.github.io/korean-grammar/og-image.png">
+  <meta property="og:image:width" content="2400">
+  <meta property="og:image:height" content="1260">
+  <meta property="og:image:alt" content="KIIP Grammar &amp; Vocabulary — Levels 1 to 5">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="KIIP Level 1 — Grammar &amp; Vocabulary">
+  <meta name="twitter:description" content="Grammar and vocabulary reference for KIIP Level 1 (한국어와 한국문화 초급 1).">
+  <meta name="twitter:image" content="https://yakhyo.github.io/korean-grammar/og-image.png">
   <title>KIIP Level 1 — Grammar & Vocabulary</title>
   <meta name="description" content="Grammar and vocabulary reference for KIIP Level 1 (한국어와 한국문화 초급 1).">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -96,15 +109,37 @@
       border-color: var(--line-strong);
     }
 
-    .ctrl svg { display: block; }
-    .theme-toggle { padding: 0 11px; }
-    .theme-toggle .i-moon { display: none; }
-    :root[data-theme="dark"] .theme-toggle .i-sun { display: none; }
-    :root[data-theme="dark"] .theme-toggle .i-moon { display: inline; }
+    .ctrl svg {
+      display: block;
+    }
 
-    .ctrl-group { position: relative; }
-    .level-switch .chev { transition: transform .15s ease; }
-    .level-switch[aria-expanded="true"] .chev { transform: rotate(180deg); }
+    .theme-toggle {
+      padding: 0 11px;
+    }
+
+    .theme-toggle .i-moon {
+      display: none;
+    }
+
+    :root[data-theme="dark"] .theme-toggle .i-sun {
+      display: none;
+    }
+
+    :root[data-theme="dark"] .theme-toggle .i-moon {
+      display: inline;
+    }
+
+    .ctrl-group {
+      position: relative;
+    }
+
+    .level-switch .chev {
+      transition: transform .15s ease;
+    }
+
+    .level-switch[aria-expanded="true"] .chev {
+      transform: rotate(180deg);
+    }
 
     .level-menu {
       position: absolute;
@@ -119,7 +154,9 @@
       z-index: 70;
     }
 
-    .level-menu[hidden] { display: none; }
+    .level-menu[hidden] {
+      display: none;
+    }
 
     .level-menu a {
       display: flex;
@@ -136,14 +173,34 @@
       white-space: nowrap;
     }
 
-    .level-menu a:hover { background: var(--accent-bg, var(--line)); color: var(--accent-ink, var(--ink)); }
-    .level-menu a[aria-current="page"] { color: var(--accent-ink, var(--ink)); }
-    .level-menu a[aria-current="page"]::after { content: "✓"; font-size: 11px; }
-    .level-menu .menu-sep { height: 1px; background: var(--line); margin: 4px 2px; }
+    .level-menu a:hover {
+      background: var(--accent-bg, var(--line));
+      color: var(--accent-ink, var(--ink));
+    }
+
+    .level-menu a[aria-current="page"] {
+      color: var(--accent-ink, var(--ink));
+    }
+
+    .level-menu a[aria-current="page"]::after {
+      content: "✓";
+      font-size: 11px;
+    }
+
+    .level-menu .menu-sep {
+      height: 1px;
+      background: var(--line);
+      margin: 4px 2px;
+    }
 
     @media (max-width: 520px) {
-      .ctrl span { display: none; }
-      .ctrl { padding: 0 10px; }
+      .ctrl span {
+        display: none;
+      }
+
+      .ctrl {
+        padding: 0 10px;
+      }
     }
 
     .doc {
@@ -524,7 +581,9 @@
     }
 
     @media print {
-      .page-controls { display: none !important; }
+      .page-controls {
+        display: none !important;
+      }
 
       :root[data-theme="dark"] {
         --bg: #fdfcfa;

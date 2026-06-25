@@ -4,9 +4,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="KIIP Grammar &amp; Vocabulary">
+  <meta property="og:url" content="https://yakhyo.github.io/korean-grammar/">
+  <meta property="og:title" content="KIIP Grammar &amp; Vocabulary">
+  <meta property="og:description"
+    content="Self-study grammar &amp; vocabulary reference for the Korea Immigration &amp; Integration Program (KIIP) — Levels 1–5.">
+  <meta property="og:image" content="https://yakhyo.github.io/korean-grammar/og-image.png">
+  <meta property="og:image:width" content="2400">
+  <meta property="og:image:height" content="1260">
+  <meta property="og:image:alt" content="KIIP Grammar &amp; Vocabulary — Levels 1 to 5">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="KIIP Grammar &amp; Vocabulary">
+  <meta name="twitter:description"
+    content="Self-study grammar &amp; vocabulary reference for the KIIP curriculum — Levels 1–5.">
+  <meta name="twitter:image" content="https://yakhyo.github.io/korean-grammar/og-image.png">
   <title>KIIP Grammar &amp; Vocabulary — Self-Study Reference</title>
   <meta name="description"
-    content="Grammar and vocabulary references for the Korea Immigration & Integration Program (KIIP) Levels 1, 2, and 3.">
+    content="Grammar and vocabulary references for the Korea Immigration & Integration Program (KIIP) — Levels 1–5.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -45,13 +60,30 @@
       --shadow-hover: rgba(0, 0, 0, .45);
     }
 
-    :root[data-theme="dark"] .lv1 .open { color: #7cb79b; }
-    :root[data-theme="dark"] .lv2 .open { color: #7ea8d8; }
-    :root[data-theme="dark"] .lv3 .open { color: #d59488; }
-    :root[data-theme="dark"] .lv4 .open { color: #cf8fac; }
-    :root[data-theme="dark"] .lv5 .open { color: #74bdb6; }
+    :root[data-theme="dark"] .lv1 .open {
+      color: #7cb79b;
+    }
 
-    html, body { transition: background-color .25s ease, color .25s ease; }
+    :root[data-theme="dark"] .lv2 .open {
+      color: #7ea8d8;
+    }
+
+    :root[data-theme="dark"] .lv3 .open {
+      color: #d59488;
+    }
+
+    :root[data-theme="dark"] .lv4 .open {
+      color: #cf8fac;
+    }
+
+    :root[data-theme="dark"] .lv5 .open {
+      color: #74bdb6;
+    }
+
+    html,
+    body {
+      transition: background-color .25s ease, color .25s ease;
+    }
 
     .page-controls {
       position: fixed;
@@ -87,15 +119,37 @@
       border-color: var(--line-strong);
     }
 
-    .ctrl svg { display: block; }
-    .theme-toggle { padding: 0 11px; }
-    .theme-toggle .i-moon { display: none; }
-    :root[data-theme="dark"] .theme-toggle .i-sun { display: none; }
-    :root[data-theme="dark"] .theme-toggle .i-moon { display: inline; }
+    .ctrl svg {
+      display: block;
+    }
 
-    .ctrl-group { position: relative; }
-    .level-switch .chev { transition: transform .15s ease; }
-    .level-switch[aria-expanded="true"] .chev { transform: rotate(180deg); }
+    .theme-toggle {
+      padding: 0 11px;
+    }
+
+    .theme-toggle .i-moon {
+      display: none;
+    }
+
+    :root[data-theme="dark"] .theme-toggle .i-sun {
+      display: none;
+    }
+
+    :root[data-theme="dark"] .theme-toggle .i-moon {
+      display: inline;
+    }
+
+    .ctrl-group {
+      position: relative;
+    }
+
+    .level-switch .chev {
+      transition: transform .15s ease;
+    }
+
+    .level-switch[aria-expanded="true"] .chev {
+      transform: rotate(180deg);
+    }
 
     .level-menu {
       position: absolute;
@@ -110,7 +164,9 @@
       z-index: 70;
     }
 
-    .level-menu[hidden] { display: none; }
+    .level-menu[hidden] {
+      display: none;
+    }
 
     .level-menu a {
       display: flex;
@@ -127,18 +183,40 @@
       white-space: nowrap;
     }
 
-    .level-menu a:hover { background: var(--accent-bg, var(--line)); color: var(--accent-ink, var(--ink)); }
-    .level-menu a[aria-current="page"] { color: var(--accent-ink, var(--ink)); }
-    .level-menu a[aria-current="page"]::after { content: "✓"; font-size: 11px; }
-    .level-menu .menu-sep { height: 1px; background: var(--line); margin: 4px 2px; }
+    .level-menu a:hover {
+      background: var(--accent-bg, var(--line));
+      color: var(--accent-ink, var(--ink));
+    }
+
+    .level-menu a[aria-current="page"] {
+      color: var(--accent-ink, var(--ink));
+    }
+
+    .level-menu a[aria-current="page"]::after {
+      content: "✓";
+      font-size: 11px;
+    }
+
+    .level-menu .menu-sep {
+      height: 1px;
+      background: var(--line);
+      margin: 4px 2px;
+    }
 
     @media (max-width: 520px) {
-      .ctrl span { display: none; }
-      .ctrl { padding: 0 10px; }
+      .ctrl span {
+        display: none;
+      }
+
+      .ctrl {
+        padding: 0 10px;
+      }
     }
 
     @media print {
-      .page-controls { display: none !important; }
+      .page-controls {
+        display: none !important;
+      }
     }
 
     * {
