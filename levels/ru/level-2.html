@@ -1,0 +1,2917 @@
+<!DOCTYPE html>
+<html lang="ru" class="lv2">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="KIIP Grammar &amp; Vocabulary">
+  <meta property="og:url" content="https://yakhyo.github.io/korean-grammar/levels/ru/level-2.html">
+  <meta property="og:title" content="KIIP Уровень 2 — Грамматика и лексика">
+  <meta property="og:description" content="Справочник по грамматике и лексике для KIIP Уровень 2 (한국어와 한국문화 초급 2).">
+  <meta property="og:image" content="https://yakhyo.github.io/korean-grammar/assets/og-image-ru.png">
+  <meta property="og:image:width" content="2400">
+  <meta property="og:image:height" content="1260">
+  <meta property="og:image:alt" content="KIIP Грамматика и лексика — Уровни с 1 по 5">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="KIIP Уровень 2 — Грамматика и лексика">
+  <meta name="twitter:description" content="Справочник по грамматике и лексике для KIIP Уровень 2 (한국어와 한국문화 초급 2).">
+  <meta name="twitter:image" content="https://yakhyo.github.io/korean-grammar/assets/og-image-ru.png">
+  <title>KIIP Уровень 2 — Грамматика и лексика</title>
+  <meta name="description" content="Справочник по грамматике и лексике для KIIP Уровень 2 (한국어와 한국문화 초급 2).">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Noto+Serif+KR:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/levels.css">
+  <script>
+    (function () {
+      var root = document.documentElement, KEY = 'kiip-theme';
+      var mq = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)');
+      function setTheme(t) { root.setAttribute('data-theme', t); }
+      var saved = null;
+      try { saved = localStorage.getItem(KEY); } catch (e) { }
+      setTheme(saved || (mq && mq.matches ? 'dark' : 'light'));
+      function closeMenu() {
+        var menus = document.querySelectorAll('.level-menu');
+        for (var i = 0; i < menus.length; i++) menus[i].hidden = true;
+        var btns = document.querySelectorAll('.level-switch');
+        for (var j = 0; j < btns.length; j++) btns[j].setAttribute('aria-expanded', 'false');
+      }
+      document.addEventListener('click', function (e) {
+        if (e.target.closest('.theme-toggle')) {
+          var t = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+          setTheme(t);
+          try { localStorage.setItem(KEY, t); } catch (e) { }
+          return;
+        }
+        var sw = e.target.closest('.level-switch');
+        if (sw) {
+          var open = sw.getAttribute('aria-expanded') === 'true';
+          var m = sw.parentNode.querySelector('.level-menu');
+          closeMenu();
+          sw.setAttribute('aria-expanded', String(!open));
+          if (m) m.hidden = open;
+          return;
+        }
+        if (!e.target.closest('.level-menu')) closeMenu();
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeMenu();
+      });
+    })();
+  </script>
+</head>
+
+<body>
+  <div class="page-controls">
+    <div class="ctrl-group">
+      <button class="ctrl level-switch" type="button" aria-haspopup="true" aria-expanded="false"
+        aria-label="Сменить уровень">
+        Уровень 2
+        <svg class="chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M6 9l6 6 6-6" />
+        </svg>
+      </button>
+      <div class="level-menu" role="menu" hidden>
+        <a role="menuitem" href="../../index-ru.html">Главная</a>
+        <div class="menu-sep"></div>
+        <a role="menuitem" href="level-1.html">Уровень 1 · 초급 1</a>
+        <a role="menuitem" href="level-2.html" aria-current="page">Уровень 2 · 초급 2</a>
+        <a role="menuitem" href="level-3.html">Уровень 3 · 중급 1</a>
+        <a role="menuitem" href="level-4.html">Уровень 4 · 중급 2</a>
+        <a role="menuitem" href="level-5.html">Уровень 5 · 한국사회</a>
+      </div>
+    </div>
+    <!-- langswitch:start -->
+    <div class="ctrl-group">
+      <button class="ctrl level-switch lang-switch" type="button" aria-haspopup="true" aria-expanded="false"
+        aria-label="Language">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="9" />
+          <path d="M3 12h18" />
+          <path d="M12 3c2.6 2.7 2.6 15.3 0 18M12 3c-2.6 2.7-2.6 15.3 0 18" />
+        </svg>
+        <span>RU</span>
+        <svg class="chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M6 9l6 6 6-6" />
+        </svg>
+      </button>
+      <div class="level-menu lang-menu" role="menu" hidden>
+        <a role="menuitem" href="../level-2.html">English</a>
+        <a role="menuitem" href="../uz/level-2.html">Oʻzbekcha</a>
+        <a role="menuitem" href="level-2.html" aria-current="page">Русский</a>
+      </div>
+    </div>
+    <!-- langswitch:end -->
+    <a class="ctrl" href="https://github.com/yakhyo/korean-grammar" target="_blank" rel="noopener"
+      aria-label="Отметить проект звездой на GitHub" title="Отметить проект звездой на GitHub">
+      <svg width="15" height="15" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path
+          d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.75.75 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Z" />
+      </svg>
+      <span>Звезда</span>
+    </a>
+    <button class="ctrl theme-toggle" type="button" aria-label="Переключить тёмный режим"
+      title="Переключить тёмный режим">
+      <svg class="i-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="4" />
+        <path
+          d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
+      </svg>
+      <svg class="i-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+      </svg>
+    </button>
+  </div>
+  <main class="doc">
+    <table class="doc-frame" role="presentation">
+      <thead>
+        <tr>
+          <td class="hdr-space"></td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+
+            <div class="running-hdr"><span>KIIP Уровень 2 · Грамматика и лексика</span><span>한국어와 한국문화 · 초급 2</span>
+            </div>
+            <div class="running-ftr"><span>Справочник для самостоятельного изучения</span><span>사회통합프로그램</span></div>
+
+            <h1>KIIP Уровень 2 — Грамматика и лексика</h1>
+            <p class="subtitle">Справочник для самостоятельного изучения по 한국어와 한국문화 초급 2 (издание из 18 разделов) ·
+              Программа социальной интеграции иммигрантов Кореи (KIIP)</p>
+
+            <div class="intro">
+              <p>Этот справочник следует за <strong>учебником KIIP Уровень 2</strong> (한국어와 한국문화 초급 2) — это базовый
+                этап Программы социальной интеграции. Он построен по <strong>18 разделам</strong> учебника. Каждый
+                раздел знакомит с повседневной темой, двумя грамматическими конструкциями, которые в нём изучаются (с
+                формой, значением и
+                примерами предложений), и соответствующей лексикой. Завершает книгу указатель грамматики. Этот материал
+                напрямую
+                опирается на частицы и базовые окончания, изученные на Уровне 1.</p>
+            </div>
+
+            <div class="legend">
+              <h4>Как читать словарную статью</h4>
+              <dl>
+                <dt>V</dt>
+                <dd>Глагол (동사) — напр. 가다, 먹다</dd>
+                <dt>A</dt>
+                <dd>Прилагательное (предикативное прилагательное) (형용사) — напр. 크다, 예쁘다</dd>
+                <dt>N</dt>
+                <dd>Существительное (명사) — напр. 사람, 학교</dd>
+                <dt class="k">-(으)</dt>
+                <dd>Используйте <strong>-으</strong> после основы, оканчивающейся на согласный; опускайте его после
+                  основы, оканчивающейся на гласный</dd>
+                <dt class="k">아 / 어</dt>
+                <dd>Выбирайте 아 после гласных основы ㅏ/ㅗ, иначе 어 (하다 → 해)</dd>
+              </dl>
+            </div>
+
+            <h2 class="part-title" style="border:none; margin-bottom:6px; padding-bottom:0;">Содержание — 18 разделов
+            </h2>
+            <nav class="toc">
+              <a href="#u1"><span class="n">U1</span>고향 소개 · Родной город</a>
+              <a href="#u2"><span class="n">U2</span>집안일 · Домашние дела</a>
+              <a href="#u3"><span class="n">U3</span>옷, 신발 · Одежда и обувь</a>
+              <a href="#u4"><span class="n">U4</span>전화 · Телефонные звонки</a>
+              <a href="#u5"><span class="n">U5</span>약, 증상 · Лекарства и болезни</a>
+              <a href="#u6"><span class="n">U6</span>기분, 감정 · Чувства</a>
+              <a href="#u7"><span class="n">U7</span>초대와 방문 · Приглашения</a>
+              <a href="#u8"><span class="n">U8</span>수업 신청 · Запись на курс</a>
+              <a href="#u9"><span class="n">U9</span>맛, 식당 · Рестораны</a>
+              <a href="#u10"><span class="n">U10</span>길 안내 · Как пройти</a>
+              <a href="#u11"><span class="n">U11</span>명절 · Праздники</a>
+              <a href="#u12"><span class="n">U12</span>실수 · Ошибки</a>
+              <a href="#u13"><span class="n">U13</span>우체국, 은행 · Почта и банк</a>
+              <a href="#u14"><span class="n">U14</span>비자 연장 · Госучреждения</a>
+              <a href="#u15"><span class="n">U15</span>업무 · Рабочие задачи</a>
+              <a href="#u16"><span class="n">U16</span>행사, 축제 · Мероприятия</a>
+              <a href="#u17"><span class="n">U17</span>건강한 생활 · Здоровый образ жизни</a>
+              <a href="#u18"><span class="n">U18</span>문화 센터 · Культурный центр</a>
+              <a href="#index"><span class="n">▦</span>Указатель грамматики</a>
+            </nav>
+
+            <hr class="rule">
+            <p class="part-head" id="part1">Часть I</p>
+            <h2 class="part-title">Разделы 1–18 — Грамматика и лексика</h2>
+
+            <section class="lesson" id="u1">
+              <div class="lesson-head"><span class="lesson-num">РАЗДЕЛ 1</span><span class="topic-kr">고향 소개</span><span
+                  class="topic-en">Рассказ о родном городе</span></div>
+              <div class="gram">
+                <h3 class="gram-form">N + (이)라고 하다 <span class="gloss">— «называться / именоваться»</span></h3>
+                <p class="meta"><span class="tag">Форма</span> N на согласный + 이라고 하다 · N на гласный + 라고 하다</p>
+                <p class="def">Используется, чтобы назвать имя или то, как что-то называется, в том числе при знакомстве
+                  с собой.
+                </p>
+                <div class="ex">
+                  <p class="k">제 고향은 부산이라고 해요.</p>
+                  <p class="e">Мой родной город называется Пусан.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">저는 흐엉이라고 해요.</p>
+                  <p class="e">Меня зовут Хыонг.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">이 음식은 한국말로 김치찌개라고 해요.</p>
+                  <p class="e">Это блюдо по-корейски называется кимчи-ччигэ.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">제 딸 이름은 민지라고 해요.</p>
+                  <p class="e">Мою дочь зовут Минджи.</p>
+                </div>
+              </div>
+              <div class="gram">
+                <h3 class="gram-form">A + (으)ㄴ + N <span class="gloss">— «прилагательное, определяющее
+                    существительное»</span></h3>
+                <p class="meta"><span class="tag">Форма</span> основа прилаг. на согласный + 은 · основа прилаг. на
+                  гласный + ㄴ, перед существительным
+                </p>
+                <p class="def">Превращает прилагательное в определение, которое ставится перед существительным
+                  («красивое место»).</p>
+                <div class="ex">
+                  <p class="k">경치가 아름다운 곳이에요.</p>
+                  <p class="e">Это место с красивыми пейзажами.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">조용한 동네에 살아요.</p>
+                  <p class="e">Я живу в тихом районе.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">우리 고향은 공기가 깨끗한 곳이라서 살기 좋아요.</p>
+                  <p class="e">Мой родной город — это место с чистым воздухом, поэтому там приятно жить.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">날씨가 좋은 날에는 공원에서 산책해요.</p>
+                  <p class="e">В дни с хорошей погодой я гуляю в парке.</p>
+                </div>
+              </div>
+              <div class="vocab">
+                <h3>어휘 <span class="en">Родной город</span></h3>
+                <table class="voc">
+                  <tr>
+                    <th style="width:38%">Корейский</th>
+                    <th>Русский</th>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Чем знаменит город (무엇이 유명해요?)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">오래된 건물</td>
+                    <td>старинные здания</td>
+                  </tr>
+                  <tr>
+                    <td class="w">호수</td>
+                    <td>озеро</td>
+                  </tr>
+                  <tr>
+                    <td class="w">맥주</td>
+                    <td>пиво</td>
+                  </tr>
+                  <tr>
+                    <td class="w">박물관</td>
+                    <td>музей</td>
+                  </tr>
+                  <tr>
+                    <td class="w">벚꽃</td>
+                    <td>цветы вишни</td>
+                  </tr>
+                  <tr>
+                    <td class="w">절(사원)</td>
+                    <td>храм</td>
+                  </tr>
+                  <tr>
+                    <td class="w">한강</td>
+                    <td>река Ханган</td>
+                  </tr>
+                  <tr>
+                    <td class="w">아오자이, 쌀국수</td>
+                    <td>аозай, рисовая лапша</td>
+                  </tr>
+                  <tr>
+                    <td class="w">해산물, 생선회</td>
+                    <td>морепродукты, сырая рыба</td>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Описание родного города (고향 모습)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">건물이 높다 / 낮다</td>
+                    <td>здания высокие / низкие</td>
+                  </tr>
+                  <tr>
+                    <td class="w">야경이 아름답다</td>
+                    <td>ночной вид красивый</td>
+                  </tr>
+                  <tr>
+                    <td class="w">박물관이 많다</td>
+                    <td>много музеев</td>
+                  </tr>
+                  <tr>
+                    <td class="w">교통이 편리하다</td>
+                    <td>транспорт удобный</td>
+                  </tr>
+                  <tr>
+                    <td class="w">길이 복잡하다</td>
+                    <td>на улицах много народу, оживлённо</td>
+                  </tr>
+                  <tr>
+                    <td class="w">차가 많다</td>
+                    <td>много машин</td>
+                  </tr>
+                  <tr>
+                    <td class="w">사람이 많다</td>
+                    <td>много людей</td>
+                  </tr>
+                  <tr>
+                    <td class="w">산과 강이 있다</td>
+                    <td>есть горы и реки</td>
+                  </tr>
+                  <tr>
+                    <td class="w">공기가 깨끗하다</td>
+                    <td>воздух чистый</td>
+                  </tr>
+                  <tr>
+                    <td class="w">물이 깨끗하다</td>
+                    <td>вода чистая</td>
+                  </tr>
+                  <tr>
+                    <td class="w">한적하다</td>
+                    <td>быть тихим, уединённым</td>
+                  </tr>
+                  <tr>
+                    <td class="w">조용하다</td>
+                    <td>быть тихим</td>
+                  </tr>
+                  <tr>
+                    <td class="w">경치가 아름답다</td>
+                    <td>пейзаж красивый</td>
+                  </tr>
+                </table>
+              </div>
+            </section>
+
+            <section class="lesson" id="u2">
+              <div class="lesson-head"><span class="lesson-num">РАЗДЕЛ 2</span><span class="topic-kr">집안일</span><span
+                  class="topic-en">Домашние дела</span></div>
+              <div class="gram">
+                <h3 class="gram-form">V + (으)ㄹ게요 <span class="gloss">— «я сделаю — предложение / намерение»</span></h3>
+                <p class="meta"><span class="tag">Форма</span> основа на согласный + 을게요 · основа на гласный + ㄹ게요
+                  (только 1-е лицо)
+                </p>
+                <p class="def">Выражает волю говорящего или обещание/предложение в ответ на ситуацию или собеседника.
+                </p>
+                <div class="ex">
+                  <p class="k">쓰레기는 제가 버릴게요.</p>
+                  <p class="e">Я вынесу мусор.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">제가 설거지를 할게요.</p>
+                  <p class="e">Я помою посуду.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">빨래는 제가 갤게요. 청소기는 남편이 돌려요.</p>
+                  <p class="e">Я сложу бельё. А пылесосит муж.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">늦지 않게 내일 일찍 올게요.</p>
+                  <p class="e">Завтра приду пораньше, чтобы не опоздать.</p>
+                </div>
+              </div>
+              <div class="gram">
+                <h3 class="gram-form">V + (으)ㄴ 다음에 <span class="gloss">— «после того как сделаешь»</span></h3>
+                <p class="meta"><span class="tag">Форма</span> основа на согласный + 은 다음에 · основа на гласный + ㄴ 다음에
+                  (= 후에)</p>
+                <p class="def">Показывает, что второе действие происходит после завершения первого.</p>
+                <div class="ex">
+                  <p class="k">청소한 다음에 쉴 거예요.</p>
+                  <p class="e">После уборки я отдохну.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">밥을 먹은 다음에 약을 드세요.</p>
+                  <p class="e">Примите лекарство после еды.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">손을 씻은 다음에 요리를 시작해요.</p>
+                  <p class="e">Я начинаю готовить после того, как помою руки.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">빨래를 한 다음에 마트에 갈 거예요.</p>
+                  <p class="e">После стирки я пойду в супермаркет.</p>
+                </div>
+              </div>
+              <div class="vocab">
+                <h3>어휘 <span class="en">Домашние дела</span></h3>
+                <table class="voc">
+                  <tr>
+                    <th style="width:38%">Корейский</th>
+                    <th>Русский</th>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Домашние дела (집안일)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">청소하다</td>
+                    <td>убираться</td>
+                  </tr>
+                  <tr>
+                    <td class="w">빨래하다</td>
+                    <td>стирать</td>
+                  </tr>
+                  <tr>
+                    <td class="w">요리하다</td>
+                    <td>готовить</td>
+                  </tr>
+                  <tr>
+                    <td class="w">책장을 정리하다</td>
+                    <td>наводить порядок на книжной полке</td>
+                  </tr>
+                  <tr>
+                    <td class="w">방을 닦다</td>
+                    <td>протирать пол / комнату</td>
+                  </tr>
+                  <tr>
+                    <td class="w">청소기를 돌리다</td>
+                    <td>пылесосить</td>
+                  </tr>
+                  <tr>
+                    <td class="w">쓰레기를 버리다</td>
+                    <td>выносить мусор</td>
+                  </tr>
+                  <tr>
+                    <td class="w">방을 치우다</td>
+                    <td>прибираться в комнате</td>
+                  </tr>
+                  <tr>
+                    <td class="w">방을 쓸다</td>
+                    <td>подметать комнату</td>
+                  </tr>
+                  <tr>
+                    <td class="w">분리수거를 하다</td>
+                    <td>сортировать вторсырьё</td>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Стирка и кухня (빨래·주방)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">빨래를 널다</td>
+                    <td>развешивать бельё</td>
+                  </tr>
+                  <tr>
+                    <td class="w">빨래를 개다</td>
+                    <td>складывать бельё</td>
+                  </tr>
+                  <tr>
+                    <td class="w">세탁기를 돌리다</td>
+                    <td>включать стиральную машину</td>
+                  </tr>
+                  <tr>
+                    <td class="w">다림질을 하다</td>
+                    <td>гладить</td>
+                  </tr>
+                  <tr>
+                    <td class="w">손빨래를 하다</td>
+                    <td>стирать вручную</td>
+                  </tr>
+                  <tr>
+                    <td class="w">설거지하다</td>
+                    <td>мыть посуду</td>
+                  </tr>
+                  <tr>
+                    <td class="w">음식을 만들다</td>
+                    <td>готовить еду</td>
+                  </tr>
+                </table>
+              </div>
+            </section>
+
+            <section class="lesson" id="u3">
+              <div class="lesson-head"><span class="lesson-num">РАЗДЕЛ 3</span><span class="topic-kr">옷, 신발</span><span
+                  class="topic-en">Примерка одежды</span></div>
+              <div class="gram">
+                <h3 class="gram-form">N + (이)나 <span class="gloss">— «или»</span></h3>
+                <p class="meta"><span class="tag">Форма</span> N на согласный + 이나 · N на гласный + 나</p>
+                <p class="def">Соединяет два существительных как варианты выбора («A или B»). (После глаголов
+                  используется -거나.)</p>
+                <div class="ex">
+                  <p class="k">치마나 바지를 입어요.</p>
+                  <p class="e">Я ношу юбку или брюки.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">커피나 차를 마셔요.</p>
+                  <p class="e">Я пью кофе или чай.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">주말에는 운동화나 샌들을 신어요.</p>
+                  <p class="e">По выходным я ношу кроссовки или сандалии.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">선물로 스카프나 목걸이를 사려고 해요.</p>
+                  <p class="e">Я собираюсь купить в подарок шарф или ожерелье.</p>
+                </div>
+              </div>
+              <div class="gram">
+                <h3 class="gram-form">V + 아 / 어 보다 <span class="gloss">— «попробовать сделать»</span></h3>
+                <p class="meta"><span class="tag">Форма</span> основа ㅏ/ㅗ + 아 보다 · прочие основы + 어 보다</p>
+                <p class="def">Означает попробовать / попытаться совершить действие. В прошедшем времени (아/어 봤다)
+                  означает «доводилось делать раньше».</p>
+                <div class="ex">
+                  <p class="k">이거 한번 입어 보세요.</p>
+                  <p class="e">Примерьте это.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">한국 음식을 먹어 봤어요.</p>
+                  <p class="e">Я пробовал корейскую еду.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">이 신발이 편한지 한번 신어 보세요.</p>
+                  <p class="e">Примерьте эту обувь, чтобы проверить, удобная ли она.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">작년에 한복을 입어 봤는데 정말 예뻤어요.</p>
+                  <p class="e">В прошлом году я примерил ханбок, и он был очень красивым.</p>
+                </div>
+              </div>
+              <div class="vocab">
+                <h3>어휘 <span class="en">Одежда и обувь</span></h3>
+                <table class="voc">
+                  <tr>
+                    <th style="width:38%">Корейский</th>
+                    <th>Русский</th>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Носят на голове/лице — 쓰다 (쓰다)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">모자</td>
+                    <td>шляпа, кепка</td>
+                  </tr>
+                  <tr>
+                    <td class="w">헬멧</td>
+                    <td>шлем</td>
+                  </tr>
+                  <tr>
+                    <td class="w">안전모</td>
+                    <td>защитная каска</td>
+                  </tr>
+                  <tr>
+                    <td class="w">안경</td>
+                    <td>очки</td>
+                  </tr>
+                  <tr>
+                    <td class="w">선글라스</td>
+                    <td>солнцезащитные очки</td>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Обувь — 신다 (신다)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">운동화</td>
+                    <td>кроссовки</td>
+                  </tr>
+                  <tr>
+                    <td class="w">구두</td>
+                    <td>туфли</td>
+                  </tr>
+                  <tr>
+                    <td class="w">슬리퍼</td>
+                    <td>тапочки</td>
+                  </tr>
+                  <tr>
+                    <td class="w">샌들</td>
+                    <td>сандалии</td>
+                  </tr>
+                  <tr>
+                    <td class="w">부츠</td>
+                    <td>сапоги</td>
+                  </tr>
+                  <tr>
+                    <td class="w">작업화</td>
+                    <td>рабочая обувь</td>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Одежда — 입다 (입다)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">티셔츠</td>
+                    <td>футболка</td>
+                  </tr>
+                  <tr>
+                    <td class="w">셔츠</td>
+                    <td>рубашка</td>
+                  </tr>
+                  <tr>
+                    <td class="w">블라우스</td>
+                    <td>блузка</td>
+                  </tr>
+                  <tr>
+                    <td class="w">코트</td>
+                    <td>пальто</td>
+                  </tr>
+                  <tr>
+                    <td class="w">바지</td>
+                    <td>брюки</td>
+                  </tr>
+                  <tr>
+                    <td class="w">청바지</td>
+                    <td>джинсы</td>
+                  </tr>
+                  <tr>
+                    <td class="w">치마</td>
+                    <td>юбка</td>
+                  </tr>
+                  <tr>
+                    <td class="w">원피스</td>
+                    <td>платье</td>
+                  </tr>
+                  <tr>
+                    <td class="w">점퍼</td>
+                    <td>куртка, ветровка</td>
+                  </tr>
+                  <tr>
+                    <td class="w">조끼</td>
+                    <td>жилет</td>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Аксессуары — 하다 (하다)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">스카프</td>
+                    <td>шарф</td>
+                  </tr>
+                  <tr>
+                    <td class="w">목도리</td>
+                    <td>тёплый шарф, кашне</td>
+                  </tr>
+                  <tr>
+                    <td class="w">귀걸이</td>
+                    <td>серьги</td>
+                  </tr>
+                  <tr>
+                    <td class="w">목걸이</td>
+                    <td>ожерелье</td>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Описание одежды/обуви (옷·신발 묘사)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">치수(사이즈)가 작다 / 크다</td>
+                    <td>размер мал / велик</td>
+                  </tr>
+                  <tr>
+                    <td class="w">치수(사이즈)가 잘 맞다</td>
+                    <td>размер хорошо подходит</td>
+                  </tr>
+                  <tr>
+                    <td class="w">굽이 높다</td>
+                    <td>иметь высокий каблук</td>
+                  </tr>
+                  <tr>
+                    <td class="w">길이가 짧다 / 길다</td>
+                    <td>быть коротким / длинным (по длине)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">편하다</td>
+                    <td>быть удобным</td>
+                  </tr>
+                  <tr>
+                    <td class="w">디자인이 마음에 들다</td>
+                    <td>дизайн нравится</td>
+                  </tr>
+                </table>
+              </div>
+            </section>
+
+            <section class="lesson" id="u4">
+              <div class="lesson-head"><span class="lesson-num">РАЗДЕЛ 4</span><span class="topic-kr">전화</span><span
+                  class="topic-en">Телефонный звонок</span></div>
+              <div class="gram">
+                <h3 class="gram-form">V + (으)ㄹ 수 있다 / 없다 <span class="gloss">— «мочь / не мочь»</span></h3>
+                <p class="meta"><span class="tag">Форма</span> основа на согласный + 을 수 있다/없다 · основа на гласный + ㄹ 수
+                  있다/없다</p>
+                <p class="def">Выражает способность или возможность (있다) и неспособность или невозможность (없다).</p>
+                <div class="ex">
+                  <p class="k">지금 통화할 수 있어요?</p>
+                  <p class="e">Можете сейчас говорить?</p>
+                </div>
+                <div class="ex">
+                  <p class="k">한국 노래를 부를 수 있어요.</p>
+                  <p class="e">Я умею петь корейские песни.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">지금 회의 중이라서 전화를 받을 수 없어요.</p>
+                  <p class="e">Сейчас я на совещании, поэтому не могу ответить на звонок.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">문자로 주소를 보내 줄 수 있어요?</p>
+                  <p class="e">Можете прислать мне адрес сообщением?</p>
+                </div>
+              </div>
+              <div class="gram">
+                <h3 class="gram-form">반말 <span class="gloss">— «неформальная (фамильярная) речь»</span></h3>
+                <p class="meta"><span class="tag">Форма</span> отбросьте 요 от формы на 아/어요 (먹어요 → 먹어 · 가요 → 가)</p>
+                <p class="def">Фамильярная речь, используемая между близкими друзьями и по отношению к младшим. С
+                  незнакомыми
+                  людьми и старшими используйте вежливый стиль речи.</p>
+                <div class="ex">
+                  <p class="k">내일 같이 갈래?</p>
+                  <p class="e">Пойдём завтра вместе?</p>
+                </div>
+                <div class="ex">
+                  <p class="k">밥 먹었어?</p>
+                  <p class="e">Ты поел?</p>
+                </div>
+                <div class="ex">
+                  <p class="k">지금 어디야? 나 좀 늦을 것 같아.</p>
+                  <p class="e">Ты сейчас где? Кажется, я немного опоздаю.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">이따가 전화할게. 끊어.</p>
+                  <p class="e">Я перезвоню попозже. Пока.</p>
+                </div>
+              </div>
+              <div class="vocab">
+                <h3>어휘 <span class="en">Телефонные выражения</span></h3>
+                <table class="voc">
+                  <tr>
+                    <th style="width:38%">Корейский</th>
+                    <th>Русский</th>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Пользование телефоном (휴대 전화로 하는 일)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">전화를 걸다</td>
+                    <td>звонить</td>
+                  </tr>
+                  <tr>
+                    <td class="w">전화를 받다</td>
+                    <td>отвечать на звонок</td>
+                  </tr>
+                  <tr>
+                    <td class="w">전화를 끊다</td>
+                    <td>класть трубку</td>
+                  </tr>
+                  <tr>
+                    <td class="w">문자를 보내다</td>
+                    <td>отправлять сообщение</td>
+                  </tr>
+                  <tr>
+                    <td class="w">문자를 받다</td>
+                    <td>получать сообщение</td>
+                  </tr>
+                  <tr>
+                    <td class="w">문자를 지우다</td>
+                    <td>удалять сообщение</td>
+                  </tr>
+                  <tr>
+                    <td class="w">전화를 바꾸다</td>
+                    <td>передавать трубку другому</td>
+                  </tr>
+                  <tr>
+                    <td class="w">국제 전화를 하다</td>
+                    <td>звонить за границу</td>
+                  </tr>
+                  <tr>
+                    <td class="w">영상 통화를 하다</td>
+                    <td>совершать видеозвонок</td>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Ситуации по телефону (전화 상황)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">여보세요?</td>
+                    <td>алло? (по телефону)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">지금 안 계세요.</td>
+                    <td>Его/её сейчас нет.</td>
+                  </tr>
+                  <tr>
+                    <td class="w">전화를 잘못 걸었어요.</td>
+                    <td>Вы ошиблись номером.</td>
+                  </tr>
+                  <tr>
+                    <td class="w">전화 왔어요.</td>
+                    <td>Вам звонят.</td>
+                  </tr>
+                  <tr>
+                    <td class="w">통화 중이에요.</td>
+                    <td>Линия занята.</td>
+                  </tr>
+                  <tr>
+                    <td class="w">전화번호가 몇 번이에요?</td>
+                    <td>Какой у вас номер телефона?</td>
+                  </tr>
+                  <tr>
+                    <td class="w">매너 모드로 해요 / 진동으로 해요.</td>
+                    <td>ставить на беззвучный режим / на вибрацию</td>
+                  </tr>
+                  <tr>
+                    <td class="w">답장이 없어요.</td>
+                    <td>Ответа нет.</td>
+                  </tr>
+                  <tr>
+                    <td class="w">휴대 전화 배터리가 없어요.</td>
+                    <td>Телефон разрядился.</td>
+                  </tr>
+                </table>
+              </div>
+            </section>
+
+            <section class="lesson" id="u5">
+              <div class="lesson-head"><span class="lesson-num">РАЗДЕЛ 5</span><span class="topic-kr">약, 증상</span><span
+                  class="topic-en">Лекарства и болезни</span></div>
+              <div class="gram">
+                <h3 class="gram-form">A/V + (으)면 <span class="gloss">— «если / когда»</span></h3>
+                <p class="meta"><span class="tag">Форма</span> основа на согласный + 으면 · основа на гласный + 면</p>
+                <p class="def">Задаёт условие — «если / когда происходит X, то Y».</p>
+                <div class="ex">
+                  <p class="k">많이 아프면 이 약을 드세요.</p>
+                  <p class="e">Если сильно болит, примите это лекарство.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">시간이 있으면 같이 가요.</p>
+                  <p class="e">Если у вас есть время, пойдёмте вместе.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">열이 안 내리면 내일 다시 병원에 오세요.</p>
+                  <p class="e">Если температура не спадёт, приходите в больницу завтра ещё раз.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">약을 먹으면 좀 괜찮아질 거예요.</p>
+                  <p class="e">Если примете лекарство, вам станет немного легче.</p>
+                </div>
+              </div>
+              <div class="gram">
+                <h3 class="gram-form">V + 아 / 어서 <span class="gloss">— «потому что / и затем»</span></h3>
+                <p class="meta"><span class="tag">Форма</span> основа ㅏ/ㅗ + 아서 · прочие основы + 어서 · 하다 → 해서</p>
+                <p class="def">Связывает причину с её результатом или два тесно связанных действия по порядку. Время в
+                  первом придаточном предложении не ставится.</p>
+                <div class="ex">
+                  <p class="k">감기에 걸려서 병원에 갔어요.</p>
+                  <p class="e">Я пошёл в больницу, потому что простудился.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">친구를 만나서 같이 밥을 먹었어요.</p>
+                  <p class="e">Я встретился с другом, и мы вместе поели.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">머리가 너무 아파서 약국에서 두통약을 샀어요.</p>
+                  <p class="e">У меня так сильно болела голова, что я купил в аптеке таблетки от головной боли.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">은행에 가서 통장을 만들었어요.</p>
+                  <p class="e">Я пошёл в банк и открыл счёт.</p>
+                </div>
+              </div>
+              <div class="vocab">
+                <h3>어휘 <span class="en">Лекарства и симптомы</span></h3>
+                <table class="voc">
+                  <tr>
+                    <th style="width:38%">Корейский</th>
+                    <th>Русский</th>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Симптомы (증상)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">열이 나다</td>
+                    <td>иметь температуру</td>
+                  </tr>
+                  <tr>
+                    <td class="w">머리가 아프다</td>
+                    <td>иметь головную боль</td>
+                  </tr>
+                  <tr>
+                    <td class="w">이가 아프다</td>
+                    <td>иметь зубную боль</td>
+                  </tr>
+                  <tr>
+                    <td class="w">배가 아프다 / 설사를 하다</td>
+                    <td>иметь боль в животе / понос</td>
+                  </tr>
+                  <tr>
+                    <td class="w">콧물이 나다</td>
+                    <td>иметь насморк</td>
+                  </tr>
+                  <tr>
+                    <td class="w">기침을 하다</td>
+                    <td>кашлять</td>
+                  </tr>
+                  <tr>
+                    <td class="w">목이 붓다</td>
+                    <td>иметь воспалённое горло</td>
+                  </tr>
+                  <tr>
+                    <td class="w">팔이 부러지다</td>
+                    <td>сломать руку</td>
+                  </tr>
+                  <tr>
+                    <td class="w">다리를 다치다</td>
+                    <td>повредить ногу</td>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Лекарства и лечение (약·치료)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">해열제</td>
+                    <td>жаропонижающее</td>
+                  </tr>
+                  <tr>
+                    <td class="w">두통약</td>
+                    <td>таблетки от головной боли</td>
+                  </tr>
+                  <tr>
+                    <td class="w">감기약</td>
+                    <td>лекарство от простуды</td>
+                  </tr>
+                  <tr>
+                    <td class="w">소화제</td>
+                    <td>лекарство для пищеварения</td>
+                  </tr>
+                  <tr>
+                    <td class="w">파스를 붙이다</td>
+                    <td>наклеивать лечебный пластырь</td>
+                  </tr>
+                  <tr>
+                    <td class="w">밴드를 붙이다</td>
+                    <td>наклеивать бактерицидный пластырь</td>
+                  </tr>
+                  <tr>
+                    <td class="w">소독약을 바르다</td>
+                    <td>наносить антисептик</td>
+                  </tr>
+                  <tr>
+                    <td class="w">연고를 바르다</td>
+                    <td>наносить мазь</td>
+                  </tr>
+                </table>
+              </div>
+            </section>
+
+            <section class="lesson" id="u6">
+              <div class="lesson-head"><span class="lesson-num">РАЗДЕЛ 6</span><span class="topic-kr">기분, 감정</span><span
+                  class="topic-en">Чувства и эмоции</span></div>
+              <div class="gram">
+                <h3 class="gram-form">A/V + 겠 <span class="gloss">— «буду / должно быть (намерение,
+                    предположение)»</span></h3>
+                <p class="meta"><span class="tag">Форма</span> основа глагола / прилагательного + 겠 + окончание (-겠어요,
+                  -겠습니다)</p>
+                <p class="def">Показывает намерение/волю говорящего или предположение о ситуации.</p>
+                <div class="ex">
+                  <p class="k">내일부터 열심히 하겠어요.</p>
+                  <p class="e">С завтрашнего дня буду стараться.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">시험이 어렵겠어요.</p>
+                  <p class="e">Экзамен, похоже, будет трудным.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">합격해서 정말 기쁘시겠어요.</p>
+                  <p class="e">Вы, должно быть, очень рады, что сдали.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">이번 일은 제가 책임지고 하겠습니다.</p>
+                  <p class="e">Я возьму на себя ответственность за это дело и выполню его.</p>
+                </div>
+              </div>
+              <div class="gram">
+                <h3 class="gram-form">A/V + (으)ㄹ 때 <span class="gloss">— «когда»</span></h3>
+                <p class="meta"><span class="tag">Форма</span> основа на согласный + 을 때 · основа на гласный + ㄹ 때
+                  (прош.: -았/었을 때)
+                </p>
+                <p class="def">Указывает на время или случай, когда что-то происходит.</p>
+                <div class="ex">
+                  <p class="k">맛있는 음식을 먹을 때 행복해요.</p>
+                  <p class="e">Я счастлив, когда ем вкусную еду.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">어렸을 때 시골에서 살았어요.</p>
+                  <p class="e">В детстве я жил в деревне.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">고향 생각이 날 때 가족에게 전화해요.</p>
+                  <p class="e">Когда я скучаю по родному городу, я звоню семье.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">기분이 안 좋을 때 음악을 들어요.</p>
+                  <p class="e">Когда у меня плохое настроение, я слушаю музыку.</p>
+                </div>
+              </div>
+              <div class="vocab">
+                <h3>어휘 <span class="en">Настроение и эмоции</span></h3>
+                <table class="voc">
+                  <tr>
+                    <th style="width:38%">Корейский</th>
+                    <th>Русский</th>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Хорошие чувства (기분이 좋다)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">기쁘다</td>
+                    <td>радоваться</td>
+                  </tr>
+                  <tr>
+                    <td class="w">신나다</td>
+                    <td>быть в восторге, воодушевлённым</td>
+                  </tr>
+                  <tr>
+                    <td class="w">행복하다</td>
+                    <td>быть счастливым</td>
+                  </tr>
+                  <tr>
+                    <td class="w">즐겁다</td>
+                    <td>быть весёлым, приятным</td>
+                  </tr>
+                  <tr>
+                    <td class="w">반갑다</td>
+                    <td>быть рад (встрече)</td>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Плохие чувства (기분이 안 좋다)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">슬프다</td>
+                    <td>быть грустным</td>
+                  </tr>
+                  <tr>
+                    <td class="w">걱정되다</td>
+                    <td>беспокоиться</td>
+                  </tr>
+                  <tr>
+                    <td class="w">외롭다</td>
+                    <td>быть одиноким</td>
+                  </tr>
+                  <tr>
+                    <td class="w">화나다</td>
+                    <td>злиться</td>
+                  </tr>
+                  <tr>
+                    <td class="w">짜증나다</td>
+                    <td>раздражаться</td>
+                  </tr>
+                  <tr>
+                    <td class="w">답답하다</td>
+                    <td>чувствовать досаду, стеснение</td>
+                  </tr>
+                </table>
+              </div>
+            </section>
+
+            <section class="lesson" id="u7">
+              <div class="lesson-head"><span class="lesson-num">РАЗДЕЛ 7</span><span class="topic-kr">초대와 방문</span><span
+                  class="topic-en">Приглашения и визиты</span></div>
+              <div class="gram">
+                <h3 class="gram-form">V + (으)ㄹ래요? <span class="gloss">— «не хотите ли…?»</span></h3>
+                <p class="meta"><span class="tag">Форма</span> основа на согласный + 을래요? · основа на гласный + ㄹ래요?</p>
+                <p class="def">Непринуждённо спрашивает о намерении собеседника или делает дружеское предложение; в
+                  утвердительной форме
+                  выражает собственное желание.</p>
+                <div class="ex">
+                  <p class="k">같이 저녁 먹을래요?</p>
+                  <p class="e">Не хотите вместе поужинать?</p>
+                </div>
+                <div class="ex">
+                  <p class="k">저는 집에서 쉴래요.</p>
+                  <p class="e">Я, пожалуй, отдохну дома.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">이번 주말에 우리 집들이에 올래요?</p>
+                  <p class="e">Не хотите прийти ко мне на новоселье в эти выходные?</p>
+                </div>
+                <div class="ex">
+                  <p class="k">커피 한잔 마시면서 이야기할래요?</p>
+                  <p class="e">Поговорим за чашкой кофе?</p>
+                </div>
+              </div>
+              <div class="gram">
+                <h3 class="gram-form">A/V + (으)니까 <span class="gloss">— «потому что / поскольку»</span></h3>
+                <p class="meta"><span class="tag">Форма</span> основа на согласный + 으니까 · основа на гласный + 니까</p>
+                <p class="def">Указывает причину — и, в отличие от -아/어서, ПОСЛЕ него может стоять повеление или
+                  предложение.</p>
+                <div class="ex">
+                  <p class="k">집들이니까 휴지를 가져갈게요.</p>
+                  <p class="e">Раз это новоселье, я принесу туалетную бумагу.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">비가 오니까 우산을 가져가세요.</p>
+                  <p class="e">Идёт дождь, поэтому возьмите зонт.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">손님이 오시니까 음식을 미리 차립시다.</p>
+                  <p class="e">Раз приходят гости, давайте накроем стол заранее.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">길이 머니까 일찍 출발하세요.</p>
+                  <p class="e">Поскольку дорога дальняя, выезжайте пораньше.</p>
+                </div>
+              </div>
+              <div class="vocab">
+                <h3>어휘 <span class="en">Приглашения и визиты</span></h3>
+                <table class="voc">
+                  <tr>
+                    <th style="width:38%">Корейский</th>
+                    <th>Русский</th>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Приём гостей (손님 초대)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">집들이</td>
+                    <td>новоселье</td>
+                  </tr>
+                  <tr>
+                    <td class="w">손님을 맞이하다</td>
+                    <td>встречать/принимать гостя</td>
+                  </tr>
+                  <tr>
+                    <td class="w">음식을 차리다</td>
+                    <td>накрывать на стол</td>
+                  </tr>
+                  <tr>
+                    <td class="w">손님을 대접하다</td>
+                    <td>угощать/потчевать гостя</td>
+                  </tr>
+                  <tr>
+                    <td class="w">선물을 가져가다</td>
+                    <td>приносить подарок (с собой)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">휴지</td>
+                    <td>салфетки, туалетная бумага</td>
+                  </tr>
+                  <tr>
+                    <td class="w">세제</td>
+                    <td>моющее средство</td>
+                  </tr>
+                  <tr>
+                    <td class="w">돌잔치</td>
+                    <td>праздник первого дня рождения</td>
+                  </tr>
+                  <tr>
+                    <td class="w">장난감</td>
+                    <td>игрушка</td>
+                  </tr>
+                  <tr>
+                    <td class="w">금반지</td>
+                    <td>золотое кольцо</td>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Этикет визита (방문 예절)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">미리 연락하다</td>
+                    <td>связываться заранее</td>
+                  </tr>
+                  <tr>
+                    <td class="w">약속 시간을 정하다</td>
+                    <td>назначать время встречи</td>
+                  </tr>
+                  <tr>
+                    <td class="w">늦지 않게 도착하다</td>
+                    <td>приходить вовремя</td>
+                  </tr>
+                  <tr>
+                    <td class="w">노크를 하다</td>
+                    <td>стучать</td>
+                  </tr>
+                  <tr>
+                    <td class="w">인사를 나누다</td>
+                    <td>обмениваться приветствиями</td>
+                  </tr>
+                  <tr>
+                    <td class="w">명함을 건네다</td>
+                    <td>вручать визитную карточку</td>
+                  </tr>
+                </table>
+              </div>
+            </section>
+
+            <section class="lesson" id="u8">
+              <div class="lesson-head"><span class="lesson-num">РАЗДЕЛ 8</span><span class="topic-kr">한국어 수업
+                  신청</span><span class="topic-en">Запись на курс</span></div>
+              <div class="gram">
+                <h3 class="gram-form">V + 기 전에 <span class="gloss">— «прежде чем сделать»</span></h3>
+                <p class="meta"><span class="tag">Форма</span> основа глагола + 기 전에 · существительное + 전에</p>
+                <p class="def">Показывает, что главное действие происходит раньше указанного действия или времени.</p>
+                <div class="ex">
+                  <p class="k">수업을 듣기 전에 신청해요.</p>
+                  <p class="e">Я записываюсь, прежде чем посещать занятия.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">자기 전에 이를 닦아요.</p>
+                  <p class="e">Я чищу зубы перед сном.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">신청하기 전에 과정 시간을 꼭 확인하세요.</p>
+                  <p class="e">Прежде чем записаться, обязательно проверьте часы курса.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">밥을 먹기 전에 손을 깨끗이 씻어요.</p>
+                  <p class="e">Я тщательно мою руки перед едой.</p>
+                </div>
+              </div>
+              <div class="gram">
+                <h3 class="gram-form">V + 기로 하다 <span class="gloss">— «решить / договориться сделать»</span></h3>
+                <p class="meta"><span class="tag">Форма</span> основа глагола + 기로 하다 (прош. 기로 했다 = решил)</p>
+                <p class="def">Выражает решение или договорённость что-то сделать.</p>
+                <div class="ex">
+                  <p class="k">9월부터 한국어 수업을 듣기로 했어요.</p>
+                  <p class="e">Я решил с сентября ходить на курсы корейского.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">친구하고 주말에 만나기로 했어요.</p>
+                  <p class="e">Я договорился встретиться с другом на выходных.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">건강을 위해서 매일 운동하기로 했어요.</p>
+                  <p class="e">Ради здоровья я решил заниматься спортом каждый день.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">올해는 담배를 끊기로 했어요.</p>
+                  <p class="e">В этом году я решил бросить курить.</p>
+                </div>
+              </div>
+              <div class="vocab">
+                <h3>어휘 <span class="en">Запись на курс</span></h3>
+                <table class="voc">
+                  <tr>
+                    <th style="width:38%">Корейский</th>
+                    <th>Русский</th>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Информация о курсе (과정 정보)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">과정명</td>
+                    <td>название курса</td>
+                  </tr>
+                  <tr>
+                    <td class="w">강사명</td>
+                    <td>имя преподавателя</td>
+                  </tr>
+                  <tr>
+                    <td class="w">과정 기간</td>
+                    <td>срок курса</td>
+                  </tr>
+                  <tr>
+                    <td class="w">신청 인원 / 정원</td>
+                    <td>записавшиеся / места</td>
+                  </tr>
+                  <tr>
+                    <td class="w">신청 기간</td>
+                    <td>период приёма заявок</td>
+                  </tr>
+                  <tr>
+                    <td class="w">과정 시간</td>
+                    <td>часы курса</td>
+                  </tr>
+                  <tr>
+                    <td class="w">과정 장소</td>
+                    <td>место проведения курса</td>
+                  </tr>
+                  <tr>
+                    <td class="w">날짜</td>
+                    <td>дата</td>
+                  </tr>
+                  <tr>
+                    <td class="w">요일</td>
+                    <td>день недели</td>
+                  </tr>
+                  <tr>
+                    <td class="w">인정 시간</td>
+                    <td>зачётные часы</td>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Завершение ступени (단계 수료)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">단계</td>
+                    <td>уровень, ступень</td>
+                  </tr>
+                  <tr>
+                    <td class="w">이수 기준</td>
+                    <td>критерии завершения</td>
+                  </tr>
+                  <tr>
+                    <td class="w">인정 출석</td>
+                    <td>зачётная посещаемость</td>
+                  </tr>
+                  <tr>
+                    <td class="w">평가</td>
+                    <td>оценивание, тест</td>
+                  </tr>
+                  <tr>
+                    <td class="w">합격 / 불합격</td>
+                    <td>сдал / не сдал</td>
+                  </tr>
+                  <tr>
+                    <td class="w">재응시</td>
+                    <td>пересдача (теста)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">재수료</td>
+                    <td>повторное прохождение курса</td>
+                  </tr>
+                  <tr>
+                    <td class="w">승급</td>
+                    <td>переход на следующий уровень</td>
+                  </tr>
+                  <tr>
+                    <td class="w">중간 평가(KLCT)</td>
+                    <td>промежуточная оценка (KLCT)</td>
+                  </tr>
+                </table>
+              </div>
+            </section>
+
+            <section class="lesson" id="u9">
+              <div class="lesson-head"><span class="lesson-num">РАЗДЕЛ 9</span><span class="topic-kr">맛, 식당</span><span
+                  class="topic-en">Любимые рестораны</span></div>
+              <div class="gram">
+                <h3 class="gram-form">A/V + (으)ㄹ 것 같다 <span class="gloss">— «кажется / вероятно»</span></h3>
+                <p class="meta"><span class="tag">Форма</span> 을/ㄹ 것 같다 (предположение о будущем) · 는/(으)ㄴ 것 같다
+                  (настоящее/прошедшее)
+                </p>
+                <p class="def">Выражает предположение или впечатление — «кажется / похоже / вероятно».</p>
+                <div class="ex">
+                  <p class="k">이 식당은 맛있을 것 같아요.</p>
+                  <p class="e">Этот ресторан, кажется, вкусный.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">밖에 비가 오는 것 같아요.</p>
+                  <p class="e">Похоже, на улице идёт дождь.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">사람이 많아서 한참 기다려야 할 것 같아요.</p>
+                  <p class="e">Много людей, так что, похоже, придётся долго ждать.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">이 김치찌개가 좀 매울 것 같아요.</p>
+                  <p class="e">Этот кимчи-ччигэ, похоже, будет немного острым.</p>
+                </div>
+              </div>
+              <div class="gram">
+                <h3 class="gram-form">V + 는 + N <span class="gloss">— «существительное, которое… (определительное
+                    придаточное наст. вр.)»</span>
+                </h3>
+                <p class="meta"><span class="tag">Форма</span> основа глагола + 는 + существительное</p>
+                <p class="def">Позволяет глагольному придаточному определять следующее за ним существительное, в
+                  настоящем времени («ресторан, в который я хожу»).
+                </p>
+                <div class="ex">
+                  <p class="k">제가 자주 가는 식당이에요.</p>
+                  <p class="e">Это ресторан, в который я часто хожу.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">한국어를 배우는 사람이 많아요.</p>
+                  <p class="e">Много людей, которые изучают корейский.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">제가 좋아하는 음식은 불고기예요.</p>
+                  <p class="e">Блюдо, которое я люблю, — это пулькоги.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">저기 줄을 서는 곳이 그 유명한 맛집이에요.</p>
+                  <p class="e">То место, где люди стоят в очереди, — это та знаменитая закусочная.</p>
+                </div>
+              </div>
+              <div class="vocab">
+                <h3>어휘 <span class="en">Вкус и рестораны</span></h3>
+                <table class="voc">
+                  <tr>
+                    <th style="width:38%">Корейский</th>
+                    <th>Русский</th>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Вкус (맛)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">달다</td>
+                    <td>быть сладким</td>
+                  </tr>
+                  <tr>
+                    <td class="w">쓰다</td>
+                    <td>быть горьким</td>
+                  </tr>
+                  <tr>
+                    <td class="w">시다</td>
+                    <td>быть кислым</td>
+                  </tr>
+                  <tr>
+                    <td class="w">짜다</td>
+                    <td>быть солёным</td>
+                  </tr>
+                  <tr>
+                    <td class="w">맵다 / 매콤하다</td>
+                    <td>быть острым / приятно острым</td>
+                  </tr>
+                  <tr>
+                    <td class="w">짭짤하다</td>
+                    <td>быть пикантно-солоноватым</td>
+                  </tr>
+                  <tr>
+                    <td class="w">싱겁다</td>
+                    <td>быть пресным</td>
+                  </tr>
+                  <tr>
+                    <td class="w">달콤하다</td>
+                    <td>быть сладким (и приятным)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">새콤하다</td>
+                    <td>быть приятно кисловатым</td>
+                  </tr>
+                  <tr>
+                    <td class="w">조미료가 들어가다</td>
+                    <td>содержать приправу (глутамат)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">재료가 신선하다</td>
+                    <td>ингредиенты свежие</td>
+                  </tr>
+                  <tr>
+                    <td class="w">국물이 시원하다</td>
+                    <td>бульон освежающий</td>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Особенности ресторана (식당의 특징)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">맛집으로 유명하다</td>
+                    <td>славиться как отличная закусочная</td>
+                  </tr>
+                  <tr>
+                    <td class="w">자리가 없다</td>
+                    <td>не иметь свободных мест</td>
+                  </tr>
+                  <tr>
+                    <td class="w">줄을 서다</td>
+                    <td>стоять в очереди</td>
+                  </tr>
+                  <tr>
+                    <td class="w">양이 많다</td>
+                    <td>порции большие</td>
+                  </tr>
+                  <tr>
+                    <td class="w">밑반찬이 많이 나오다</td>
+                    <td>подают много закусок</td>
+                  </tr>
+                  <tr>
+                    <td class="w">서비스가 좋다</td>
+                    <td>обслуживание хорошее</td>
+                  </tr>
+                  <tr>
+                    <td class="w">분위기가 좋다</td>
+                    <td>атмосфера приятная</td>
+                  </tr>
+                  <tr>
+                    <td class="w">칸막이가 있다</td>
+                    <td>иметь перегородки (отдельные кабинки)</td>
+                  </tr>
+                </table>
+              </div>
+            </section>
+
+            <section class="lesson" id="u10">
+              <div class="lesson-head"><span class="lesson-num">РАЗДЕЛ 10</span><span class="topic-kr">길 안내</span><span
+                  class="topic-en">Как объяснить дорогу</span></div>
+              <div class="gram">
+                <h3 class="gram-form">A/V + 는데 <span class="gloss">— «контекст / и / но»</span></h3>
+                <p class="meta"><span class="tag">Форма</span> глагол + 는데 · прилагательное + -(으)ㄴ데 · N + 인데</p>
+                <p class="def">Даёт фон или контекст перед главным придаточным предложением либо мягкое
+                  противопоставление.</p>
+                <div class="ex">
+                  <p class="k">시청 옆에 있는데 가까워요.</p>
+                  <p class="e">Это рядом с мэрией, совсем близко.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">이 옷이 예쁜데 좀 비싸요.</p>
+                  <p class="e">Эта одежда красивая, но немного дорогая.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">지금 은행에 가는데 같이 갈래요?</p>
+                  <p class="e">Я сейчас иду в банк — хотите пойти со мной?</p>
+                </div>
+                <div class="ex">
+                  <p class="k">지하철역이 가까운데 버스 정류장은 좀 멀어요.</p>
+                  <p class="e">Станция метро близко, но автобусная остановка немного далеко.</p>
+                </div>
+              </div>
+              <div class="gram">
+                <h3 class="gram-form">A/V + 기 때문에 <span class="gloss">— «из-за того что»</span></h3>
+                <p class="meta"><span class="tag">Форма</span> основа глагола / прилагательного + 기 때문에 ·
+                  существительное + 때문에</p>
+                <p class="def">Указывает чёткую причину. После него не может стоять повеление или предложение.</p>
+                <div class="ex">
+                  <p class="k">길이 막히기 때문에 지하철을 타요.</p>
+                  <p class="e">Из-за пробок я езжу на метро.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">비 때문에 행사가 취소됐어요.</p>
+                  <p class="e">Мероприятие отменили из-за дождя.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">길이 복잡하기 때문에 약속에 늦었어요.</p>
+                  <p class="e">Я опоздал на встречу, потому что улицы были переполнены.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">한국어를 잘 못하기 때문에 가끔 실수를 해요.</p>
+                  <p class="e">Поскольку я плохо знаю корейский, я иногда делаю ошибки.</p>
+                </div>
+              </div>
+              <div class="vocab">
+                <h3>어휘 <span class="en">Как пройти</span></h3>
+                <table class="voc">
+                  <tr>
+                    <th style="width:38%">Корейский</th>
+                    <th>Русский</th>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Места и направления (근처에 있는 곳)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">육교</td>
+                    <td>пешеходный мост</td>
+                  </tr>
+                  <tr>
+                    <td class="w">신호등</td>
+                    <td>светофор</td>
+                  </tr>
+                  <tr>
+                    <td class="w">횡단보도</td>
+                    <td>пешеходный переход</td>
+                  </tr>
+                  <tr>
+                    <td class="w">사거리</td>
+                    <td>перекрёсток</td>
+                  </tr>
+                  <tr>
+                    <td class="w">지하철역</td>
+                    <td>станция метро</td>
+                  </tr>
+                  <tr>
+                    <td class="w">버스 정류장</td>
+                    <td>автобусная остановка</td>
+                  </tr>
+                  <tr>
+                    <td class="w">왼쪽으로 가다</td>
+                    <td>идти налево</td>
+                  </tr>
+                  <tr>
+                    <td class="w">오른쪽으로 가다</td>
+                    <td>идти направо</td>
+                  </tr>
+                  <tr>
+                    <td class="w">쭉 가다 / 똑바로 가다</td>
+                    <td>идти прямо</td>
+                  </tr>
+                  <tr>
+                    <td class="w">맞은편에 있다</td>
+                    <td>находиться напротив</td>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Как добраться (대중교통 이용)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">버스를 타다</td>
+                    <td>садиться на автобус</td>
+                  </tr>
+                  <tr>
+                    <td class="w">교통 카드로 요금을 내다</td>
+                    <td>оплачивать проезд транспортной картой</td>
+                  </tr>
+                  <tr>
+                    <td class="w">버스에서 내리다</td>
+                    <td>выходить из автобуса</td>
+                  </tr>
+                  <tr>
+                    <td class="w">지하철로 갈아타다</td>
+                    <td>пересаживаться на метро</td>
+                  </tr>
+                  <tr>
+                    <td class="w">1번 출구로 나가다</td>
+                    <td>выходить через выход № 1</td>
+                  </tr>
+                  <tr>
+                    <td class="w">회사가 보이다</td>
+                    <td>видно здание компании</td>
+                  </tr>
+                </table>
+              </div>
+            </section>
+
+            <section class="lesson" id="u11">
+              <div class="lesson-head"><span class="lesson-num">РАЗДЕЛ 11</span><span class="topic-kr">명절</span><span
+                  class="topic-en">Празднование праздников</span></div>
+              <div class="gram">
+                <h3 class="gram-form">A + 게 <span class="gloss">— «наречная форма (каким-то образом)»</span></h3>
+                <p class="meta"><span class="tag">Форма</span> основа прилагательного + 게 (превращает прилагательное в
+                  наречие)</p>
+                <p class="def">Заставляет прилагательное описывать, <em>как</em> выполняется действие (맛있다 → 맛있게 «с
+                  аппетитом»).</p>
+                <div class="ex">
+                  <p class="k">음식을 맛있게 먹었어요.</p>
+                  <p class="e">Я с аппетитом поел.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">방을 깨끗하게 청소했어요.</p>
+                  <p class="e">Я тщательно убрал комнату.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">글씨를 크게 써 주세요.</p>
+                  <p class="e">Пожалуйста, пишите буквы крупно.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">명절을 가족과 함께 즐겁게 보냈어요.</p>
+                  <p class="e">Я весело провёл праздник вместе с семьёй.</p>
+                </div>
+              </div>
+              <div class="gram">
+                <h3 class="gram-form">V + (으)면서 <span class="gloss">— «делая что-то одновременно»</span></h3>
+                <p class="meta"><span class="tag">Форма</span> основа на согласный + 으면서 · основа на гласный + 면서 (один
+                  и тот же субъект)</p>
+                <p class="def">Два действия одного и того же человека, происходящие одновременно.</p>
+                <div class="ex">
+                  <p class="k">보름달을 보면서 소원을 빌어요.</p>
+                  <p class="e">Я загадываю желание, глядя на полную луну.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">음악을 들으면서 공부해요.</p>
+                  <p class="e">Я учусь, слушая музыку.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">송편을 빚으면서 이야기를 나눠요.</p>
+                  <p class="e">Мы беседуем, пока лепим сонпхён.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">텔레비전을 보면서 빨래를 개요.</p>
+                  <p class="e">Я складываю бельё, смотря телевизор.</p>
+                </div>
+              </div>
+              <div class="vocab">
+                <h3>어휘 <span class="en">Праздники</span></h3>
+                <table class="voc">
+                  <tr>
+                    <th style="width:38%">Корейский</th>
+                    <th>Русский</th>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Что делают в праздники (명절에 하는 일)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">고향에 내려가다</td>
+                    <td>ехать в родной город</td>
+                  </tr>
+                  <tr>
+                    <td class="w">친척</td>
+                    <td>родственники</td>
+                  </tr>
+                  <tr>
+                    <td class="w">가족이 모이다</td>
+                    <td>семья собирается</td>
+                  </tr>
+                  <tr>
+                    <td class="w">서로 안부를 묻다</td>
+                    <td>справляться о делах друг друга</td>
+                  </tr>
+                  <tr>
+                    <td class="w">차례를 지내다</td>
+                    <td>проводить обряд поминовения предков</td>
+                  </tr>
+                  <tr>
+                    <td class="w">성묘를 하다</td>
+                    <td>посещать могилы предков</td>
+                  </tr>
+                  <tr>
+                    <td class="w">윷놀이</td>
+                    <td>ютнори (настольная игра)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">연날리기</td>
+                    <td>запуск воздушных змеев</td>
+                  </tr>
+                  <tr>
+                    <td class="w">제기차기</td>
+                    <td>чеги-чхаги (игра с воланом ногой)</td>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Корейские праздники (한국의 명절)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">설날 (음력 1월 1일)</td>
+                    <td>Лунный Новый год (1-й день 1-го лунного месяца)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">세배를 하다 / 받다</td>
+                    <td>совершать / принимать новогодний поклон</td>
+                  </tr>
+                  <tr>
+                    <td class="w">떡국</td>
+                    <td>ттоккук (суп с рисовыми хлебцами)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">추석 (음력 8월 15일)</td>
+                    <td>Чхусок (15-й день 8-го лунного месяца)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">송편을 빚다</td>
+                    <td>лепить сонпхён (рисовые хлебцы)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">보름달</td>
+                    <td>полная луна</td>
+                  </tr>
+                  <tr>
+                    <td class="w">소원을 빌다</td>
+                    <td>загадывать желание</td>
+                  </tr>
+                </table>
+              </div>
+            </section>
+
+            <section class="lesson" id="u12">
+              <div class="lesson-head"><span class="lesson-num">РАЗДЕЛ 12</span><span class="topic-kr">실수</span><span
+                  class="topic-en">Совершение ошибок</span></div>
+              <div class="gram">
+                <h3 class="gram-form">V + (으)ㄴ 적이 있다 <span class="gloss">— «доводилось (когда-либо) делать»</span></h3>
+                <p class="meta"><span class="tag">Форма</span> основа на согласный + 은 적이 있다/없다 · основа на гласный + ㄴ
+                  적이 있다/없다</p>
+                <p class="def">Говорит о прошлом опыте — приходилось вам или нет когда-либо что-то делать.</p>
+                <div class="ex">
+                  <p class="k">한국에서 길을 잃은 적이 있어요.</p>
+                  <p class="e">Мне доводилось заблудиться в Корее.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">제주도에 가 본 적이 없어요.</p>
+                  <p class="e">Я никогда не был на острове Чеджу.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">버스에서 노약자석에 앉은 적이 있어요.</p>
+                  <p class="e">Однажды я сел в автобусе на место для пожилых.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">윗사람에게 실수로 반말을 한 적이 있어요.</p>
+                  <p class="e">Однажды я по ошибке обратился к старшему на «ты».</p>
+                </div>
+              </div>
+              <div class="gram">
+                <h3 class="gram-form">A/V + 는 편이다 <span class="gloss">— «скорее склонен / довольно»</span></h3>
+                <p class="meta"><span class="tag">Форма</span> глагол + 는 편이다 · прилагательное + -(으)ㄴ 편이다</p>
+                <p class="def">Говорит, что что-то в целом так или склоняется в определённую сторону, не утверждая
+                  категорично.</p>
+                <div class="ex">
+                  <p class="k">저는 실수를 자주 하는 편이에요.</p>
+                  <p class="e">Я довольно часто делаю ошибки.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">이 동네는 조용한 편이에요.</p>
+                  <p class="e">Этот район довольно тихий.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">저는 매운 음식을 잘 먹는 편이에요.</p>
+                  <p class="e">Я довольно неплохо переношу острую еду.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">이 식당은 값이 좀 비싼 편이에요.</p>
+                  <p class="e">Этот ресторан скорее дороговат.</p>
+                </div>
+              </div>
+              <div class="vocab">
+                <h3>어휘 <span class="en">Ошибки и привычки</span></h3>
+                <table class="voc">
+                  <tr>
+                    <th style="width:38%">Корейский</th>
+                    <th>Русский</th>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Чувства при ошибках (그때 기분)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">당황하다</td>
+                    <td>растеряться</td>
+                  </tr>
+                  <tr>
+                    <td class="w">창피하다</td>
+                    <td>смущаться, стыдиться</td>
+                  </tr>
+                  <tr>
+                    <td class="w">무섭다</td>
+                    <td>бояться</td>
+                  </tr>
+                  <tr>
+                    <td class="w">속상하다</td>
+                    <td>расстраиваться, огорчаться</td>
+                  </tr>
+                  <tr>
+                    <td class="w">우울하다</td>
+                    <td>быть подавленным</td>
+                  </tr>
+                  <tr>
+                    <td class="w">그립다</td>
+                    <td>скучать, тосковать</td>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Ошибки в Корее (한국에서의 실수)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">윗사람에게 반말을 하다</td>
+                    <td>обращаться к старшему на «ты»</td>
+                  </tr>
+                  <tr>
+                    <td class="w">윗사람의 이름을 부르다</td>
+                    <td>называть старшего по имени</td>
+                  </tr>
+                  <tr>
+                    <td class="w">한 손으로 물건을 드리다</td>
+                    <td>подавать что-либо одной рукой</td>
+                  </tr>
+                  <tr>
+                    <td class="w">높임말을 잘못 사용하다</td>
+                    <td>неправильно использовать вежливую речь</td>
+                  </tr>
+                  <tr>
+                    <td class="w">한국 사람 이야기를 못 알아듣다</td>
+                    <td>не понимать, что говорят корейцы</td>
+                  </tr>
+                  <tr>
+                    <td class="w">글자를 잘못 읽다</td>
+                    <td>неправильно читать буквы</td>
+                  </tr>
+                  <tr>
+                    <td class="w">잘못 발음하다</td>
+                    <td>неправильно произносить</td>
+                  </tr>
+                  <tr>
+                    <td class="w">신발을 신고 들어가다</td>
+                    <td>заходить в обуви</td>
+                  </tr>
+                  <tr>
+                    <td class="w">노약자석에 앉다</td>
+                    <td>садиться на место для пожилых</td>
+                  </tr>
+                  <tr>
+                    <td class="w">사람을 잘못 보다</td>
+                    <td>принять одного человека за другого</td>
+                  </tr>
+                </table>
+              </div>
+            </section>
+
+            <section class="lesson" id="u13">
+              <div class="lesson-head"><span class="lesson-num">РАЗДЕЛ 13</span><span class="topic-kr">우체국,
+                  은행</span><span class="topic-en">Почта и банк</span></div>
+              <div class="gram">
+                <h3 class="gram-form">V + (으)려고 하다 <span class="gloss">— «намереваться / собираться сделать»</span></h3>
+                <p class="meta"><span class="tag">Форма</span> основа на согласный + 으려고 하다 · основа на гласный + 려고 하다
+                </p>
+                <p class="def">Выражает намерение или план что-то сделать (часто в ближайшее время).</p>
+                <div class="ex">
+                  <p class="k">소포를 보내려고 해요.</p>
+                  <p class="e">Я собираюсь отправить посылку.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">돈을 찾으려고 은행에 왔어요.</p>
+                  <p class="e">Я пришёл в банк, чтобы снять деньги.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">고향에 있는 가족에게 송금하려고 해요.</p>
+                  <p class="e">Я собираюсь отправить деньги семье на родину.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">다음 달부터 운동을 시작하려고 해요.</p>
+                  <p class="e">Я намереваюсь начать заниматься спортом со следующего месяца.</p>
+                </div>
+              </div>
+              <div class="gram">
+                <h3 class="gram-form">V + 아 / 어야 되다 <span class="gloss">— «должен / надо»</span></h3>
+                <p class="meta"><span class="tag">Форма</span> основа ㅏ/ㅗ + 아야 되다 · прочие основы + 어야 되다 (= 어야 하다)</p>
+                <p class="def">Выражает обязанность или необходимость — то, что нужно сделать.</p>
+                <div class="ex">
+                  <p class="k">통장을 만들어야 돼요.</p>
+                  <p class="e">Мне нужно открыть банковский счёт.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">신분증을 가져와야 돼요.</p>
+                  <p class="e">Вы должны принести удостоверение личности.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">소포를 보내려면 먼저 주소를 써야 돼요.</p>
+                  <p class="e">Чтобы отправить посылку, сначала нужно написать адрес.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">공과금을 오늘까지 납부해야 돼요.</p>
+                  <p class="e">Мне нужно оплатить коммунальные счета до сегодняшнего дня.</p>
+                </div>
+              </div>
+              <div class="vocab">
+                <h3>어휘 <span class="en">Почта и банк</span></h3>
+                <table class="voc">
+                  <tr>
+                    <th style="width:38%">Корейский</th>
+                    <th>Русский</th>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">На почте (우체국)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">소포를 보내다</td>
+                    <td>отправлять посылку</td>
+                  </tr>
+                  <tr>
+                    <td class="w">편지를 보내다</td>
+                    <td>отправлять письмо</td>
+                  </tr>
+                  <tr>
+                    <td class="w">택배를 보내다</td>
+                    <td>отправлять курьерскую посылку</td>
+                  </tr>
+                  <tr>
+                    <td class="w">등기</td>
+                    <td>заказное письмо</td>
+                  </tr>
+                  <tr>
+                    <td class="w">국제 특급 우편(EMS)</td>
+                    <td>международная экспресс-почта (EMS)</td>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">При отправке письма (편지를 보낼 때)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">주소를 쓰다</td>
+                    <td>писать адрес</td>
+                  </tr>
+                  <tr>
+                    <td class="w">우표를 붙이다</td>
+                    <td>наклеивать марку</td>
+                  </tr>
+                  <tr>
+                    <td class="w">편지 봉투</td>
+                    <td>конверт</td>
+                  </tr>
+                  <tr>
+                    <td class="w">우편 번호를 쓰다</td>
+                    <td>писать почтовый индекс</td>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">В банке (은행)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">입금하다 (돈을 넣다)</td>
+                    <td>вносить деньги (класть на счёт)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">출금하다 (돈을 찾다)</td>
+                    <td>снимать деньги (со счёта)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">계좌를 개설하다 (통장을 만들다)</td>
+                    <td>открывать счёт (заводить сберкнижку)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">돈을 바꾸다 (환전하다)</td>
+                    <td>обменивать деньги</td>
+                  </tr>
+                  <tr>
+                    <td class="w">돈을 보내다 (송금하다)</td>
+                    <td>отправлять деньги (перевод)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">현금 자동 인출기(ATM)를 이용하다</td>
+                    <td>пользоваться банкоматом</td>
+                  </tr>
+                  <tr>
+                    <td class="w">신용 카드 / 체크 카드를 만들다</td>
+                    <td>оформлять кредитную / дебетовую карту</td>
+                  </tr>
+                  <tr>
+                    <td class="w">공과금을 납부하다</td>
+                    <td>оплачивать коммунальные счета</td>
+                  </tr>
+                </table>
+              </div>
+            </section>
+
+            <section class="lesson" id="u14">
+              <div class="lesson-head"><span class="lesson-num">РАЗДЕЛ 14</span><span class="topic-kr">비자 연장 (공공
+                  기관)</span><span class="topic-en">Продление визы и госучреждения</span></div>
+              <div class="gram">
+                <h3 class="gram-form">V + 아 / 어도 되다 <span class="gloss">— «можно / разрешено»</span></h3>
+                <p class="meta"><span class="tag">Форма</span> основа ㅏ/ㅗ + 아도 되다 · прочие основы + 어도 되다</p>
+                <p class="def">Спрашивает или даёт разрешение — «можно ли…? / вам можно…».</p>
+                <div class="ex">
+                  <p class="k">여기 앉아도 돼요?</p>
+                  <p class="e">Можно мне сесть здесь?</p>
+                </div>
+                <div class="ex">
+                  <p class="k">사진을 찍어도 돼요.</p>
+                  <p class="e">Вам можно фотографировать.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">신청서를 연필로 써도 돼요?</p>
+                  <p class="e">Можно заполнить заявление карандашом?</p>
+                </div>
+                <div class="ex">
+                  <p class="k">여기에서는 외국어로 말해도 돼요.</p>
+                  <p class="e">Здесь разрешено говорить на иностранном языке.</p>
+                </div>
+              </div>
+              <div class="gram">
+                <h3 class="gram-form">V + (으)려면 <span class="gloss">— «если намереваешься / хочешь…»</span></h3>
+                <p class="meta"><span class="tag">Форма</span> основа на согласный + 으려면 · основа на гласный + 려면</p>
+                <p class="def">Задаёт цель, а затем приводит условие или шаг, необходимый для её достижения.</p>
+                <div class="ex">
+                  <p class="k">비자를 연장하려면 신청서를 내세요.</p>
+                  <p class="e">Чтобы продлить визу, подайте заявление.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">은행 계좌를 만들려면 여권이 필요해요.</p>
+                  <p class="e">Чтобы открыть банковский счёт, нужен паспорт.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">증명서를 받으려면 행정 복지 센터에 가야 돼요.</p>
+                  <p class="e">Чтобы получить справку, нужно пойти в центр административных услуг.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">국적을 취득하려면 시험에 합격해야 해요.</p>
+                  <p class="e">Если хотите получить гражданство, нужно сдать экзамен.</p>
+                </div>
+              </div>
+              <div class="vocab">
+                <h3>어휘 <span class="en">Государственные учреждения</span></h3>
+                <table class="voc">
+                  <tr>
+                    <th style="width:38%">Корейский</th>
+                    <th>Русский</th>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">В центре административных услуг (구청 / 행정 복지 센터)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">출생 신고를 하다</td>
+                    <td>регистрировать рождение</td>
+                  </tr>
+                  <tr>
+                    <td class="w">주소 변경 신고를 하다</td>
+                    <td>заявлять об изменении адреса</td>
+                  </tr>
+                  <tr>
+                    <td class="w">혼인 신고를 하다</td>
+                    <td>регистрировать брак</td>
+                  </tr>
+                  <tr>
+                    <td class="w">증명서를 받다</td>
+                    <td>получать справку</td>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">В центре здоровья (보건소)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">건강 검진을 받다</td>
+                    <td>проходить медосмотр</td>
+                  </tr>
+                  <tr>
+                    <td class="w">예방 주사를 맞다</td>
+                    <td>делать прививку</td>
+                  </tr>
+                  <tr>
+                    <td class="w">건강 진단서를 받다</td>
+                    <td>получать медицинскую справку</td>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">В иммиграционной службе (출입국·외국인청)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">외국인 등록증</td>
+                    <td>карта регистрации иностранца</td>
+                  </tr>
+                  <tr>
+                    <td class="w">영주권</td>
+                    <td>вид на жительство</td>
+                  </tr>
+                  <tr>
+                    <td class="w">국적 취득 / 귀화</td>
+                    <td>получение гражданства / натурализация</td>
+                  </tr>
+                  <tr>
+                    <td class="w">통합 신청서 (신고서)</td>
+                    <td>единая форма заявления (уведомления)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">외국인 등록</td>
+                    <td>регистрация иностранца</td>
+                  </tr>
+                  <tr>
+                    <td class="w">등록증 재발급</td>
+                    <td>повторная выдача регистрационной карты</td>
+                  </tr>
+                  <tr>
+                    <td class="w">체류 기간 연장</td>
+                    <td>продление срока пребывания</td>
+                  </tr>
+                  <tr>
+                    <td class="w">체류 자격 변경</td>
+                    <td>изменение статуса пребывания</td>
+                  </tr>
+                </table>
+              </div>
+            </section>
+
+            <section class="lesson" id="u15">
+              <div class="lesson-head"><span class="lesson-num">РАЗДЕЛ 15</span><span class="topic-kr">업무 (무역
+                  회사)</span><span class="topic-en">Рабочие задачи</span></div>
+              <div class="gram">
+                <h3 class="gram-form">V + 고 있다 <span class="gloss">— «делать (в процессе)»</span></h3>
+                <p class="meta"><span class="tag">Форма</span> основа глагола + 고 있다 (гоноратив: 고 계시다)</p>
+                <p class="def">Настоящее продолженное — действие, которое происходит прямо сейчас или в эти дни.</p>
+                <div class="ex">
+                  <p class="k">무역 회사에서 일하고 있어요.</p>
+                  <p class="e">Я работаю в торговой компании.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">지금 보고서를 쓰고 있어요.</p>
+                  <p class="e">Сейчас я пишу отчёт.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">부장님이 지금 전화를 하고 계세요.</p>
+                  <p class="e">Начальник отдела сейчас говорит по телефону.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">요즘 퇴근 후에 한국어를 배우고 있어요.</p>
+                  <p class="e">В последнее время я после работы изучаю корейский.</p>
+                </div>
+              </div>
+              <div class="gram">
+                <h3 class="gram-form">V + (으)ㄴ + N <span class="gloss">— «существительное, которое… (определительное
+                    придаточное прош. вр.)»</span>
+                </h3>
+                <p class="meta"><span class="tag">Форма</span> основа на согласный + 은 + N · основа на гласный + ㄴ + N
+                </p>
+                <p class="def">Позволяет глагольному придаточному в прошедшем времени определять следующее за ним
+                  существительное («документ, который я сделал»).</p>
+                <div class="ex">
+                  <p class="k">어제 만든 서류예요.</p>
+                  <p class="e">Это документ, который я сделал вчера.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">제가 보낸 이메일을 받으셨어요?</p>
+                  <p class="e">Вы получили письмо, которое я отправил?</p>
+                </div>
+                <div class="ex">
+                  <p class="k">아까 복사한 서류를 부장님께 드렸어요.</p>
+                  <p class="e">Документы, которые я недавно скопировал, я отдал начальнику отдела.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">지난주에 만난 거래처 직원이 다시 연락했어요.</p>
+                  <p class="e">Сотрудник партнёрской фирмы, с которым я встречался на прошлой неделе, снова связался со
+                    мной.</p>
+                </div>
+              </div>
+              <div class="vocab">
+                <h3>어휘 <span class="en">Рабочие задачи</span></h3>
+                <table class="voc">
+                  <tr>
+                    <th style="width:38%">Корейский</th>
+                    <th>Русский</th>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Вещи на работе (일하는 곳)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">서류</td>
+                    <td>документы</td>
+                  </tr>
+                  <tr>
+                    <td class="w">명함</td>
+                    <td>визитная карточка</td>
+                  </tr>
+                  <tr>
+                    <td class="w">사원증</td>
+                    <td>удостоверение сотрудника</td>
+                  </tr>
+                  <tr>
+                    <td class="w">복사기</td>
+                    <td>копировальный аппарат</td>
+                  </tr>
+                  <tr>
+                    <td class="w">프린터</td>
+                    <td>принтер</td>
+                  </tr>
+                  <tr>
+                    <td class="w">출근부</td>
+                    <td>табель посещаемости</td>
+                  </tr>
+                  <tr>
+                    <td class="w">안전모, 안전화</td>
+                    <td>защитная каска, защитная обувь</td>
+                  </tr>
+                  <tr>
+                    <td class="w">기계</td>
+                    <td>станок, машина</td>
+                  </tr>
+                  <tr>
+                    <td class="w">공구</td>
+                    <td>инструменты</td>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Офисная работа (사무실 업무)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">서류를 작성하다</td>
+                    <td>составлять документы</td>
+                  </tr>
+                  <tr>
+                    <td class="w">서류를 번역하다</td>
+                    <td>переводить документы</td>
+                  </tr>
+                  <tr>
+                    <td class="w">서류를 출력하다</td>
+                    <td>распечатывать документы</td>
+                  </tr>
+                  <tr>
+                    <td class="w">서류를 복사하다</td>
+                    <td>копировать документы</td>
+                  </tr>
+                  <tr>
+                    <td class="w">팩스를 보내다</td>
+                    <td>отправлять факс</td>
+                  </tr>
+                  <tr>
+                    <td class="w">이메일을 보내다</td>
+                    <td>отправлять электронное письмо</td>
+                  </tr>
+                  <tr>
+                    <td class="w">확인 전화를 하다</td>
+                    <td>звонить для подтверждения</td>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Заводская / физическая работа (공장 업무)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">기계를 켜다 / 끄다</td>
+                    <td>включать / выключать станок</td>
+                  </tr>
+                  <tr>
+                    <td class="w">물건을 들다 / 올리다 / 싣다</td>
+                    <td>поднимать / приподнимать / грузить товар</td>
+                  </tr>
+                  <tr>
+                    <td class="w">물건을 내리다</td>
+                    <td>выгружать товар</td>
+                  </tr>
+                  <tr>
+                    <td class="w">물건을 만들다</td>
+                    <td>изготавливать товар</td>
+                  </tr>
+                  <tr>
+                    <td class="w">물건을 옮기다</td>
+                    <td>перемещать товар</td>
+                  </tr>
+                </table>
+              </div>
+            </section>
+
+            <section class="lesson" id="u16">
+              <div class="lesson-head"><span class="lesson-num">РАЗДЕЛ 16</span><span class="topic-kr">행사,
+                  축제</span><span class="topic-en">Мероприятия и фестивали</span></div>
+              <div class="gram">
+                <h3 class="gram-form">V + (으)ㄹ + N <span class="gloss">— «существительное, которое будет… (определитель
+                    буд. вр.)»</span>
+                </h3>
+                <p class="meta"><span class="tag">Форма</span> основа на согласный + 을 + N · основа на гласный + ㄹ + N
+                  (часто с
+                  사람, 계획, 생각)</p>
+                <p class="def">Глагольное придаточное, определяющее существительное в будущем времени — используется для
+                  планов и намерений.</p>
+                <div class="ex">
+                  <p class="k">행사에 참가할 사람 있어요?</p>
+                  <p class="e">Есть кто-нибудь, кто будет участвовать в мероприятии?</p>
+                </div>
+                <div class="ex">
+                  <p class="k">다음 달에 이사할 생각이에요.</p>
+                  <p class="e">Я подумываю переехать в следующем месяце.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">주말에 읽을 책을 한 권 빌렸어요.</p>
+                  <p class="e">Я взял книгу, чтобы почитать на выходных.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">축제 때 입을 옷을 미리 준비했어요.</p>
+                  <p class="e">Я заранее подготовил одежду, которую надену на фестивале.</p>
+                </div>
+              </div>
+              <div class="gram">
+                <h3 class="gram-form">A/V + 거든요 <span class="gloss">— «(это) потому что… (пояснение)»</span></h3>
+                <p class="meta"><span class="tag">Форма</span> основа глагола / прилагательного + 거든요 (разговорное)</p>
+                <p class="def">Сообщает причину или фон, который собеседник ещё не знает, обычно в ответ на вопрос.
+                </p>
+                <div class="ex">
+                  <p class="k">엘리베이터를 점검해서 이용할 수 없거든요.</p>
+                  <p class="e">Дело в том, что лифт на проверке, поэтому им нельзя пользоваться.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">오늘 일찍 일어났거든요. 그래서 피곤해요.</p>
+                  <p class="e">Дело в том, что я сегодня рано встал — вот почему я устал.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">이번 행사에는 못 가요. 그날 일이 있거든요.</p>
+                  <p class="e">Я не смогу прийти на это мероприятие — у меня в тот день дела, понимаете.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">제가 한국 문화에 관심이 많거든요. 그래서 축제에 자주 가요.</p>
+                  <p class="e">Дело в том, что я очень увлекаюсь корейской культурой — поэтому часто хожу на фестивали.
+                  </p>
+                </div>
+              </div>
+              <div class="vocab">
+                <h3>어휘 <span class="en">Мероприятия и фестивали</span></h3>
+                <table class="voc">
+                  <tr>
+                    <th style="width:38%">Корейский</th>
+                    <th>Русский</th>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Афиша мероприятия (행사 포스터)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">축제</td>
+                    <td>фестиваль</td>
+                  </tr>
+                  <tr>
+                    <td class="w">대상</td>
+                    <td>целевая аудитория, кто может участвовать</td>
+                  </tr>
+                  <tr>
+                    <td class="w">참가비</td>
+                    <td>взнос за участие</td>
+                  </tr>
+                  <tr>
+                    <td class="w">준비물</td>
+                    <td>что взять с собой</td>
+                  </tr>
+                  <tr>
+                    <td class="w">문화 공연</td>
+                    <td>культурное выступление</td>
+                  </tr>
+                  <tr>
+                    <td class="w">체험거리</td>
+                    <td>интерактивные занятия</td>
+                  </tr>
+                  <tr>
+                    <td class="w">장소</td>
+                    <td>место, площадка</td>
+                  </tr>
+                  <tr>
+                    <td class="w">오시는 길</td>
+                    <td>как добраться</td>
+                  </tr>
+                  <tr>
+                    <td class="w">신청 및 문의</td>
+                    <td>заявки и справки</td>
+                  </tr>
+                  <tr>
+                    <td class="w">주최</td>
+                    <td>устроитель, организатор</td>
+                  </tr>
+                  <tr>
+                    <td class="w">후원</td>
+                    <td>спонсор</td>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Объявления на доске (게시판)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">주민 모임이 열리다</td>
+                    <td>проводится собрание жильцов</td>
+                  </tr>
+                  <tr>
+                    <td class="w">엘리베이터를 이용할 수 없다</td>
+                    <td>лифтом нельзя пользоваться</td>
+                  </tr>
+                  <tr>
+                    <td class="w">단수가 되다</td>
+                    <td>отключают воду</td>
+                  </tr>
+                  <tr>
+                    <td class="w">동호회 회원을 모집하다</td>
+                    <td>набирать членов клуба по интересам</td>
+                  </tr>
+                  <tr>
+                    <td class="w">잃어버린 물건을 찾다</td>
+                    <td>искать потерянную вещь</td>
+                  </tr>
+                  <tr>
+                    <td class="w">직원을 뽑다</td>
+                    <td>нанимать сотрудников</td>
+                  </tr>
+                </table>
+              </div>
+            </section>
+
+            <section class="lesson" id="u17">
+              <div class="lesson-head"><span class="lesson-num">РАЗДЕЛ 17</span><span class="topic-kr">건강한
+                  생활</span><span class="topic-en">Здоровый образ жизни</span></div>
+              <div class="gram">
+                <h3 class="gram-form">A/V + (으)면 좋겠다 <span class="gloss">— «хотелось бы / надеюсь, что…»</span></h3>
+                <p class="meta"><span class="tag">Форма</span> основа + 으면/면 좋겠다 (также -았/었으면 좋겠다)</p>
+                <p class="def">Выражает надежду или желание о чём-то, что ещё не сбылось.</p>
+                <div class="ex">
+                  <p class="k">잠을 푹 자면 좋겠어요.</p>
+                  <p class="e">Надеюсь, я хорошо высплюсь.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">빨리 건강해졌으면 좋겠어요.</p>
+                  <p class="e">Хотелось бы поскорее выздороветь.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">주말에는 날씨가 맑으면 좋겠어요.</p>
+                  <p class="e">Надеюсь, на выходных будет ясная погода.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">우리 가족이 모두 건강하면 좋겠어요.</p>
+                  <p class="e">Надеюсь, вся моя семья будет здорова.</p>
+                </div>
+              </div>
+              <div class="gram">
+                <h3 class="gram-form">N + 에 <span class="gloss">— «в (частота / периодичность)»</span></h3>
+                <p class="meta"><span class="tag">Форма</span> N времени/единицы + 에 + число + счётное слово</p>
+                <p class="def">Здесь 에 обозначает периодичность или частоту — «X раз в (день / неделю)».</p>
+                <div class="ex">
+                  <p class="k">하루에 30분씩 운동해요.</p>
+                  <p class="e">Я занимаюсь спортом по 30 минут в день.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">일주일에 세 번 수업이 있어요.</p>
+                  <p class="e">Занятия проходят три раза в неделю.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">한 달에 한 번 건강 검진을 받아요.</p>
+                  <p class="e">Я прохожу медосмотр раз в месяц.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">하루에 물을 여덟 잔씩 마셔요.</p>
+                  <p class="e">Я выпиваю по восемь стаканов воды в день.</p>
+                </div>
+              </div>
+              <div class="vocab">
+                <h3>어휘 <span class="en">Здоровый образ жизни</span></h3>
+                <table class="voc">
+                  <tr>
+                    <th style="width:38%">Корейский</th>
+                    <th>Русский</th>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Здоровые привычки (건강한 생활)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">잠을 충분히 자다</td>
+                    <td>высыпаться</td>
+                  </tr>
+                  <tr>
+                    <td class="w">음식을 골고루 먹다</td>
+                    <td>питаться сбалансированно</td>
+                  </tr>
+                  <tr>
+                    <td class="w">식사를 규칙적으로 하다</td>
+                    <td>есть регулярно</td>
+                  </tr>
+                  <tr>
+                    <td class="w">운동을 꾸준히 하다</td>
+                    <td>регулярно заниматься спортом</td>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Вредные привычки (안 좋은 습관)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">잠이 부족하다</td>
+                    <td>недосыпать</td>
+                  </tr>
+                  <tr>
+                    <td class="w">편식이 심하다</td>
+                    <td>быть очень привередливым в еде</td>
+                  </tr>
+                  <tr>
+                    <td class="w">식사가 불규칙하다</td>
+                    <td>питаться нерегулярно</td>
+                  </tr>
+                  <tr>
+                    <td class="w">운동을 거의 하지 않다</td>
+                    <td>почти не заниматься спортом</td>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Когда нездоровится (몸이 안 좋을 때)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">안색이 안 좋다</td>
+                    <td>выглядеть бледным, нездоровым</td>
+                  </tr>
+                  <tr>
+                    <td class="w">힘(기운)이 없다</td>
+                    <td>не иметь сил</td>
+                  </tr>
+                  <tr>
+                    <td class="w">입맛이 없다</td>
+                    <td>не иметь аппетита</td>
+                  </tr>
+                  <tr>
+                    <td class="w">어지럽다</td>
+                    <td>чувствовать головокружение</td>
+                  </tr>
+                  <tr>
+                    <td class="w">얼굴에 뭐가 나다</td>
+                    <td>высыпать на лице</td>
+                  </tr>
+                  <tr>
+                    <td class="w">열이 나다</td>
+                    <td>иметь температуру</td>
+                  </tr>
+                  <tr>
+                    <td class="w">소화가 안 되다</td>
+                    <td>иметь несварение</td>
+                  </tr>
+                  <tr>
+                    <td class="w">몸살이 나다</td>
+                    <td>ломать всё тело (от недомогания)</td>
+                  </tr>
+                </table>
+              </div>
+            </section>
+
+            <section class="lesson" id="u18">
+              <div class="lesson-head"><span class="lesson-num">РАЗДЕЛ 18</span><span class="topic-kr">문화 센터
+                  수업</span><span class="topic-en">Выбор курса</span></div>
+              <div class="gram">
+                <h3 class="gram-form">V + 는 게 어때요? <span class="gloss">— «как насчёт того, чтобы…?»</span></h3>
+                <p class="meta"><span class="tag">Форма</span> основа глагола + 는 게 어때요? (는 게 = 는 것이)</p>
+                <p class="def">Дружелюбный способ дать совет или сделать предложение.</p>
+                <div class="ex">
+                  <p class="k">이 수업을 신청하는 게 어때요?</p>
+                  <p class="e">Как насчёт того, чтобы записаться на этот курс?</p>
+                </div>
+                <div class="ex">
+                  <p class="k">택시를 타는 게 어때요?</p>
+                  <p class="e">Как насчёт того, чтобы взять такси?</p>
+                </div>
+                <div class="ex">
+                  <p class="k">시간이 없으면 인터넷으로 신청하는 게 어때요?</p>
+                  <p class="e">Если нет времени, как насчёт того, чтобы записаться через интернет?</p>
+                </div>
+                <div class="ex">
+                  <p class="k">주말에 요리 교실을 같이 들어 보는 게 어때요?</p>
+                  <p class="e">Как насчёт того, чтобы вместе сходить на кулинарный класс на выходных?</p>
+                </div>
+              </div>
+              <div class="gram">
+                <h3 class="gram-form">A + 아 / 어 보이다 <span class="gloss">— «выглядит / кажется (по виду)»</span></h3>
+                <p class="meta"><span class="tag">Форма</span> основа прилаг. ㅏ/ㅗ + 아 보이다 · прочие основы прилаг. + 어
+                  보이다</p>
+                <p class="def">Говорит, как что-то выглядит или кажется, исходя из внешнего вида.</p>
+                <div class="ex">
+                  <p class="k">그 옷이 따뜻해 보여요.</p>
+                  <p class="e">Эта одежда выглядит тёплой.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">오늘 기분이 좋아 보여요.</p>
+                  <p class="e">Вы сегодня выглядите в хорошем настроении.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">이 요가 수업이 재미있어 보여요.</p>
+                  <p class="e">Этот урок йоги выглядит интересным.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">며칠 못 주무셨어요? 좀 피곤해 보여요.</p>
+                  <p class="e">Вы несколько дней не спали? Вы выглядите немного усталым.</p>
+                </div>
+              </div>
+              <div class="vocab">
+                <h3>어휘 <span class="en">Курсы культурного центра</span></h3>
+                <table class="voc">
+                  <tr>
+                    <th style="width:38%">Корейский</th>
+                    <th>Русский</th>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Объявление о наборе на курс (회원 모집)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">문화 센터</td>
+                    <td>культурный центр</td>
+                  </tr>
+                  <tr>
+                    <td class="w">학기</td>
+                    <td>семестр, учебный период</td>
+                  </tr>
+                  <tr>
+                    <td class="w">회원 모집</td>
+                    <td>набор участников</td>
+                  </tr>
+                  <tr>
+                    <td class="w">접수 기간</td>
+                    <td>период приёма заявок</td>
+                  </tr>
+                  <tr>
+                    <td class="w">수강 기간</td>
+                    <td>срок обучения</td>
+                  </tr>
+                  <tr>
+                    <td class="w">신청 방법</td>
+                    <td>способ записи</td>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Виды курсов (수업 종류)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">요가</td>
+                    <td>йога</td>
+                  </tr>
+                  <tr>
+                    <td class="w">웰빙 댄스</td>
+                    <td>оздоровительные танцы</td>
+                  </tr>
+                  <tr>
+                    <td class="w">천연 비누 만들기</td>
+                    <td>изготовление натурального мыла</td>
+                  </tr>
+                  <tr>
+                    <td class="w">도자기 만들기</td>
+                    <td>изготовление керамики</td>
+                  </tr>
+                  <tr>
+                    <td class="w">어학 자격증</td>
+                    <td>языковой сертификат</td>
+                  </tr>
+                  <tr>
+                    <td class="w">미용 자격증</td>
+                    <td>сертификат косметолога</td>
+                  </tr>
+                  <tr>
+                    <td class="w">노래 교실</td>
+                    <td>класс пения</td>
+                  </tr>
+                  <tr>
+                    <td class="w">음악 교실</td>
+                    <td>класс музыки</td>
+                  </tr>
+                  <tr>
+                    <td class="w">요리 교실</td>
+                    <td>кулинарный класс</td>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Запись онлайн (수강 신청)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">인터넷으로 알아보다</td>
+                    <td>искать информацию в интернете</td>
+                  </tr>
+                  <tr>
+                    <td class="w">프로그램을 선택하다</td>
+                    <td>выбирать программу</td>
+                  </tr>
+                  <tr>
+                    <td class="w">시간을 확인하다</td>
+                    <td>проверять время</td>
+                  </tr>
+                  <tr>
+                    <td class="w">홈페이지에서 회원 가입을 하다</td>
+                    <td>регистрироваться на сайте</td>
+                  </tr>
+                  <tr>
+                    <td class="w">수강 신청을 하다</td>
+                    <td>записываться на курс</td>
+                  </tr>
+                  <tr>
+                    <td class="w">수강료를 결제하다</td>
+                    <td>оплачивать стоимость курса</td>
+                  </tr>
+                  <tr>
+                    <td class="w">수업을 듣다</td>
+                    <td>посещать занятия</td>
+                  </tr>
+                </table>
+              </div>
+            </section>
+
+            <!--LESSONS-->
+
+            <hr class="rule">
+            <p class="part-head" id="index">Приложение</p>
+            <h2 class="part-title">Указатель грамматики</h2>
+            <div class="vocab">
+              <h3>Все грамматические конструкции по разделам</h3>
+              <table class="voc">
+                <tr>
+                  <th style="width:10%">Раздел</th>
+                  <th style="width:34%">Конструкция</th>
+                  <th>Значение</th>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td class="w">N + (이)라고 하다</td>
+                  <td>называться / именоваться</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td class="w">A + (으)ㄴ + N</td>
+                  <td>прилагательное, определяющее существительное</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td class="w">V + (으)ㄹ게요</td>
+                  <td>я сделаю (предложение / намерение)</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td class="w">V + (으)ㄴ 다음에</td>
+                  <td>после того как сделаешь</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td class="w">N + (이)나</td>
+                  <td>или</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td class="w">V + 아/어 보다</td>
+                  <td>попробовать сделать</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td class="w">V + (으)ㄹ 수 있다/없다</td>
+                  <td>мочь / не мочь</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td class="w">반말</td>
+                  <td>неформальная (фамильярная) речь</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td class="w">A/V + (으)면</td>
+                  <td>если / когда</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td class="w">V + 아/어서</td>
+                  <td>потому что / и затем</td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td class="w">A/V + 겠</td>
+                  <td>буду / предположение</td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td class="w">A/V + (으)ㄹ 때</td>
+                  <td>когда</td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td class="w">V + (으)ㄹ래요?</td>
+                  <td>не хотите ли…?</td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td class="w">A/V + (으)니까</td>
+                  <td>потому что / поскольку</td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td class="w">V + 기 전에</td>
+                  <td>прежде чем сделать</td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td class="w">V + 기로 하다</td>
+                  <td>решить сделать</td>
+                </tr>
+                <tr>
+                  <td>9</td>
+                  <td class="w">A/V + (으)ㄹ 것 같다</td>
+                  <td>кажется / вероятно</td>
+                </tr>
+                <tr>
+                  <td>9</td>
+                  <td class="w">V + 는 + N</td>
+                  <td>определительное придаточное наст. вр.</td>
+                </tr>
+                <tr>
+                  <td>10</td>
+                  <td class="w">A/V + 는데</td>
+                  <td>контекст / противопоставление</td>
+                </tr>
+                <tr>
+                  <td>10</td>
+                  <td class="w">A/V + 기 때문에</td>
+                  <td>из-за того что</td>
+                </tr>
+                <tr>
+                  <td>11</td>
+                  <td class="w">A + 게</td>
+                  <td>наречная форма (каким-то образом)</td>
+                </tr>
+                <tr>
+                  <td>11</td>
+                  <td class="w">V + (으)면서</td>
+                  <td>делая что-то одновременно</td>
+                </tr>
+                <tr>
+                  <td>12</td>
+                  <td class="w">V + (으)ㄴ 적이 있다</td>
+                  <td>доводилось (когда-либо) делать</td>
+                </tr>
+                <tr>
+                  <td>12</td>
+                  <td class="w">A/V + 는 편이다</td>
+                  <td>скорее склонен / довольно</td>
+                </tr>
+                <tr>
+                  <td>13</td>
+                  <td class="w">V + (으)려고 하다</td>
+                  <td>намереваться / собираться сделать</td>
+                </tr>
+                <tr>
+                  <td>13</td>
+                  <td class="w">V + 아/어야 되다</td>
+                  <td>должен / надо</td>
+                </tr>
+                <tr>
+                  <td>14</td>
+                  <td class="w">V + 아/어도 되다</td>
+                  <td>можно / разрешено</td>
+                </tr>
+                <tr>
+                  <td>14</td>
+                  <td class="w">V + (으)려면</td>
+                  <td>если намереваешься сделать</td>
+                </tr>
+                <tr>
+                  <td>15</td>
+                  <td class="w">V + 고 있다</td>
+                  <td>делать (продолженное)</td>
+                </tr>
+                <tr>
+                  <td>15</td>
+                  <td class="w">V + (으)ㄴ + N</td>
+                  <td>определительное придаточное прош. вр.</td>
+                </tr>
+                <tr>
+                  <td>16</td>
+                  <td class="w">V + (으)ㄹ + N</td>
+                  <td>определитель буд. вр. (будет…)</td>
+                </tr>
+                <tr>
+                  <td>16</td>
+                  <td class="w">A/V + 거든요</td>
+                  <td>указание причины / фона</td>
+                </tr>
+                <tr>
+                  <td>17</td>
+                  <td class="w">A/V + (으)면 좋겠다</td>
+                  <td>хотелось бы / надеюсь</td>
+                </tr>
+                <tr>
+                  <td>17</td>
+                  <td class="w">N + 에</td>
+                  <td>в (частота / периодичность)</td>
+                </tr>
+                <tr>
+                  <td>18</td>
+                  <td class="w">V + 는 게 어때요?</td>
+                  <td>как насчёт того, чтобы…?</td>
+                </tr>
+                <tr>
+                  <td>18</td>
+                  <td class="w">A + 아/어 보이다</td>
+                  <td>выглядит / кажется</td>
+                </tr>
+              </table>
+            </div>
+            <hr class="rule">
+            <p style="text-align:center; color:var(--faint); font-size:13px; font-style:italic; margin-top:24px;">Конец
+              справочника · KIIP Уровень 2 — 한국어와 한국문화 초급 2 · 화이팅!</p>
+            <!--INDEX-->
+
+          </td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td class="ftr-space"></td>
+        </tr>
+      </tfoot>
+    </table>
+  </main>
+</body>
+
+</html>

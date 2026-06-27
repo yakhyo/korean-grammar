@@ -1,5 +1,7 @@
 # KIIP Grammar &amp; Vocabulary
 
+**English** · [Oʻzbekcha](README.uz.md) · [Русский](README.ru.md)
+
 A self-study reference set for the **Korea Immigration &amp; Integration Program (KIIP / 사회통합프로그램)** Korean curriculum.
 
 🔗 **Live site:** https://yakhyo.github.io/korean-grammar/
@@ -8,38 +10,45 @@ A self-study reference set for the **Korea Immigration &amp; Integration Program
 
 | Level | Book | Focus |
 |-------|------|-------|
-| [Level 1](levels/level-1.html) | 한국어와 한국문화 초급 1 | Beginner — Hangul, core particles, basic verb endings |
-| [Level 2](levels/level-2.html) | 한국어와 한국문화 초급 2 | High Beginner — connectors, conditions, relative clauses |
-| [Level 3](levels/level-3.html) | 한국어와 한국문화 중급 1 | Intermediate — reported speech, supposition, conjugation appendix |
-| [Level 4](levels/level-4.html) | 한국어와 한국문화 중급 2 | Upper Intermediate — society topics, abstract grammar |
-| [Level 5](levels/level-5.html) | 한국사회 이해 (기본·심화) | Understanding Korean Society — civics study guide |
+| Level 1 | 한국어와 한국문화 초급 1 | Beginner — Hangul, core particles, basic verb endings |
+| Level 2 | 한국어와 한국문화 초급 2 | High Beginner — connectors, conditions, relative clauses |
+| Level 3 | 한국어와 한국문화 중급 1 | Intermediate — reported speech, supposition, conjugation appendix |
+| Level 4 | 한국어와 한국문화 중급 2 | Upper Intermediate — society topics, abstract grammar |
+| Level 5 | 한국사회 이해 (기본·심화) | Understanding Korean Society — civics study guide |
 
 ## Features
 
+- 🌐 **Language switcher** — a dropdown on every page to switch between English, Uzbek, and Russian; the Korean stays, only the explanations and translations change.
 - 🧭 **Level switcher** — a dropdown menu on every page to jump straight to any level (or home) without going back.
 - 🌗 **Dark / light mode** — a toggle on every page, remembered across visits and following your system preference by default.
 - ⭐ **Star button** — quick link to star the project on GitHub.
 - 🖨️ **Print-ready** — printing (or saving to PDF) always uses the light theme for clean output, even in dark mode.
-- 📦 **No build, no dependencies** — plain HTML/CSS, works offline.
+- 📦 **No build, no dependencies** — plain HTML + one shared CSS file, works offline.
 
 ## About
 
-- Each page is **fully self-contained** — fonts and styles are inline, so they work offline and print cleanly to PDF (`Ctrl`/`Cmd` + `P`).
+- Styling lives in two shared stylesheets (`assets/home.css` for the landing pages, `assets/levels.css` for every level page); each level page picks its accent colour via an `html.lv1…lv5` class. Pages still work offline and print cleanly to PDF (`Ctrl`/`Cmd` + `P`).
 - Levels 1–4 follow the current KIIP textbook editions; vocabulary lists are expanded thematic references rather than verbatim lesson word lists.
+- Each grammar point carries **four worked example sentences** to show the pattern across different contexts.
 - Level 5 covers the *Understanding Korean Society* course.
+- The Uzbek and Russian editions are full translations of the explanations, examples, and vocabulary; the Korean text itself is identical across all three languages.
 
 ## Project structure
 
 ```
 .
-├── index.html        # Landing page linking to each level
-├── levels/           # One self-contained page per level
-│   ├── level-1.html
-│   ├── level-2.html
-│   ├── level-3.html
-│   ├── level-4.html
-│   └── level-5.html
-└── .nojekyll         # Serve files as-is on GitHub Pages
+├── index.html         # Landing page (English — default)
+├── index-uz.html      # Landing page (Uzbek)
+├── index-ru.html      # Landing page (Russian)
+├── levels/            # One page per level, per language
+│   ├── level-1.html … level-5.html      # English (default)
+│   ├── uz/level-1.html … level-5.html   # Uzbek
+│   └── ru/level-1.html … level-5.html   # Russian
+├── assets/            # Shared stylesheets + social preview images
+│   ├── home.css       # Landing pages
+│   ├── levels.css     # Level pages (accent via html.lvN class)
+│   └── og-image*.png  # Per-language social preview images
+└── .nojekyll          # Serve files as-is on GitHub Pages
 ```
 
 ## Run locally
