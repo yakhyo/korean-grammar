@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="uz" class="lv5">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="KIIP Grammar &amp; Vocabulary">
+  <meta property="og:url" content="https://yakhyo.github.io/korean-grammar/levels/uz/level-5.html">
+  <meta property="og:title" content="KIIP 5-daraja — Koreya jamiyatini tushunish">
+  <meta property="og:description"
+    content="KIIP 5-daraja (한국사회 이해) uchun oʻquv qoʻllanma: geografiya, tarix, davlat boshqaruvi, huquq, iqtisodiyot, jamiyat, madaniyat.">
+  <meta property="og:image" content="https://yakhyo.github.io/korean-grammar/assets/og-image-uz.png">
+  <meta property="og:image:width" content="2400">
+  <meta property="og:image:height" content="1260">
+  <meta property="og:image:alt" content="KIIP Grammar &amp; Vocabulary — Levels 1 to 5">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="KIIP 5-daraja — Koreya jamiyatini tushunish">
+  <meta name="twitter:description"
+    content="KIIP 5-daraja (한국사회 이해) uchun oʻquv qoʻllanma: Koreyaning geografiyasi, tarixi, davlat boshqaruvi, huquqi, iqtisodiyoti, jamiyati va madaniyati.">
+  <meta name="twitter:image" content="https://yakhyo.github.io/korean-grammar/assets/og-image-uz.png">
+  <title>KIIP 5-daraja — Koreya jamiyatini tushunish</title>
+  <meta name="description"
+    content="KIIP 5-daraja (한국사회 이해) uchun oʻquv qoʻllanma: geografiya, tarix, davlat boshqaruvi, huquq, iqtisodiyot, jamiyat, madaniyat.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Noto+Serif+KR:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/levels.css">
+  <script>
+    (function () {
+      var root = document.documentElement, KEY = 'kiip-theme';
+      var mq = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)');
+      function setTheme(t) { root.setAttribute('data-theme', t); }
+      var saved = null;
+      try { saved = localStorage.getItem(KEY); } catch (e) { }
+      setTheme(saved || (mq && mq.matches ? 'dark' : 'light'));
+      function closeMenu() {
+        var menus = document.querySelectorAll('.level-menu');
+        for (var i = 0; i < menus.length; i++) menus[i].hidden = true;
+        var btns = document.querySelectorAll('.level-switch');
+        for (var j = 0; j < btns.length; j++) btns[j].setAttribute('aria-expanded', 'false');
+      }
+      document.addEventListener('click', function (e) {
+        if (e.target.closest('.theme-toggle')) {
+          var t = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+          setTheme(t);
+          try { localStorage.setItem(KEY, t); } catch (e) { }
+          return;
+        }
+        var sw = e.target.closest('.level-switch');
+        if (sw) {
+          var open = sw.getAttribute('aria-expanded') === 'true';
+          var m = sw.parentNode.querySelector('.level-menu');
+          closeMenu();
+          sw.setAttribute('aria-expanded', String(!open));
+          if (m) m.hidden = open;
+          return;
+        }
+        if (!e.target.closest('.level-menu')) closeMenu();
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeMenu();
+      });
+    })();
+  </script>
+</head>
+
+<body>
+  <div class="page-controls">
+    <div class="ctrl-group">
+      <button class="ctrl level-switch" type="button" aria-haspopup="true" aria-expanded="false"
+        aria-label="Darajani almashtirish">
+        5-daraja
+        <svg class="chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M6 9l6 6 6-6" />
+        </svg>
+      </button>
+      <div class="level-menu" role="menu" hidden>
+        <a role="menuitem" href="../../index-uz.html">Bosh sahifa</a>
+        <div class="menu-sep"></div>
+        <a role="menuitem" href="level-1.html">1-daraja · 초급 1</a>
+        <a role="menuitem" href="level-2.html">2-daraja · 초급 2</a>
+        <a role="menuitem" href="level-3.html">3-daraja · 중급 1</a>
+        <a role="menuitem" href="level-4.html">4-daraja · 중급 2</a>
+        <a role="menuitem" href="level-5.html" aria-current="page">5-daraja · 한국사회</a>
+      </div>
+    </div>
+    <!-- langswitch:start -->
+    <div class="ctrl-group">
+      <button class="ctrl level-switch lang-switch" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Language">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M3 12h18" /><path d="M12 3c2.6 2.7 2.6 15.3 0 18M12 3c-2.6 2.7-2.6 15.3 0 18" /></svg>
+        <span>UZ</span>
+        <svg class="chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg>
+      </button>
+      <div class="level-menu lang-menu" role="menu" hidden>
+        <a role="menuitem" href="../level-5.html">English</a>
+        <a role="menuitem" href="level-5.html" aria-current="page">Oʻzbekcha</a>
+        <a role="menuitem" href="../ru/level-5.html">Русский</a>
+      </div>
+    </div>
+    <!-- langswitch:end -->
+    <a class="ctrl" href="https://github.com/yakhyo/korean-grammar" target="_blank" rel="noopener"
+      aria-label="Star this project on GitHub" title="Star this project on GitHub">
+      <svg width="15" height="15" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path
+          d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.75.75 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Z" />
+      </svg>
+      <span>Star</span>
+    </a>
+    <button class="ctrl theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
+      <svg class="i-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="4" />
+        <path
+          d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
+      </svg>
+      <svg class="i-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+      </svg>
+    </button>
+  </div>
+  <main class="doc">
+    <table class="doc-frame" role="presentation">
+      <thead>
+        <tr>
+          <td class="hdr-space"></td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+
+            <div class="running-hdr"><span>KIIP 5-daraja · Koreya jamiyatini tushunish</span><span>한국사회 이해</span></div>
+            <div class="running-ftr"><span>Mustaqil oʻrganish uchun qoʻllanma</span><span>사회통합프로그램</span></div>
+
+            <h1>KIIP 5-daraja — Koreya jamiyatini tushunish</h1>
+            <p class="subtitle">한국사회 이해 (기본·심화) kursini mustaqil oʻrganish uchun qoʻllanma · Koreya migratsiya va
+              integratsiya dasturi
+            </p>
+
+            <div class="callout">
+              <h4>Ushbu daraja haqida</h4>
+              <p>KIIP 5-daraja <strong>koreys tili grammatikasi kursi emas</strong>. Bu — <strong>한국사회 이해
+                  (Koreya jamiyatini tushunish)</strong> bosqichi boʻlib, Koreyaning geografiyasi, tarixi, davlat
+                boshqaruvi, huquqi, iqtisodiyoti, jamiyati va madaniyatini qamrab oladigan asosiy kurs (기본, 70 soat)
+                hamda chuqurlashtirilgan kursdan
+                (심화, 30 soat) iborat.
+                Uning yakuniy baholovidan oʻtganlik fuqarolikka qabul qilish imtihonining bir qismi sifatida eʼtirof
+                etilishi mumkin. Shu sababli ushbu qoʻllanma grammatika darslari emas, balki <strong>mavzular boʻyicha
+                  tartiblangan muhim faktlar va atamalar toʻplami</strong>dir. U mavzularni sodda tilda umumlashtiradi
+                va sizga eng koʻp kerak boʻladigan koreyscha soʻzlarni beradi.
+              </p>
+            </div>
+
+            <div class="intro">
+              <p>Quyidagi boblar “Koreya jamiyatini tushunish” kursining asosiy mazmunini sakkizta mavzuga ajratadi.
+                Har bir bobda bilishingiz lozim boʻlgan narsalar qisqacha tushuntiriladi, soʻngra koreys va oʻzbek
+                tillaridagi muhim atamalar (핵심 용어) jadvali beriladi. Undan 종합평가 (yakuniy baholash)ga tayyorgarlik
+                koʻrishda, shuningdek doimiy yashash va fuqarolikka qabul qilish jarayonlarida zarur boʻladigan
+                fuqarolik soʻz boyligini oshirishda foydalaning.</p>
+            </div>
+
+            <div class="legend">
+              <h4>Qoʻllanma qanday tuzilgan</h4>
+              <dl>
+                <dt>설명</dt>
+                <dd>Mavzuning asosiy jihatlari sodda tilda umumlashtirilgan</dd>
+                <dt>핵심 용어</dt>
+                <dd>Muhim atamalar jadvali — koreyscha atama va uning oʻzbekcha maʼnosi</dd>
+                <dt class="k">기본 / 심화</dt>
+                <dd>Asosiy kurs (poydevor) va chuqurlashtirilgan kurs (fuqarolik hamda huquqqa oid chuqurroq mazmun)
+                </dd>
+              </dl>
+            </div>
+
+            <h2 class="part-title" style="border:none; margin-bottom:6px; padding-bottom:0;">Mundarija — 8 ta mavzu</h2>
+            <nav class="toc">
+              <a href="#t1"><span class="n">01</span>지리 · Geografiya va hududlar</a>
+              <a href="#t2"><span class="n">02</span>역사 · Tarix</a>
+              <a href="#t3"><span class="n">03</span>정치 · Davlat boshqaruvi va demokratiya</a>
+              <a href="#t4"><span class="n">04</span>법 · Huquq va huquqlar</a>
+              <a href="#t5"><span class="n">05</span>경제 · Iqtisodiyot va mehnat</a>
+              <a href="#t6"><span class="n">06</span>사회 · Jamiyat va ijtimoiy taʼminot</a>
+              <a href="#t7"><span class="n">07</span>문화 · Madaniyat va kundalik hayot</a>
+              <a href="#t8"><span class="n">08</span>시민 · Fuqarolik va integratsiya</a>
+            </nav>
+
+            <hr class="rule">
+            <p class="part-head" id="part1">Oʻquv qoʻllanma</p>
+            <h2 class="part-title">Koreya jamiyatining sakkiz mavzusi</h2>
+
+            <section class="unit" id="t1">
+              <div class="unit-head"><span class="unit-num">01-MAVZU</span><span class="topic-kr">지리</span><span
+                  class="topic-en">Geografiya va hududlar</span></div>
+              <div class="sect">
+                <h4>설명 <span class="en">Bilish kerak boʻlgan narsalar</span></h4>
+                <p>Koreya Respublikasi (대한민국) Shimoli-Sharqiy Osiyodagi Koreya yarimorolining janubiy yarmida
+                  joylashgan. Uch tomondan dengiz, shimoldan esa Harbiysizlantirilgan zona (DMZ) orqali Shimoliy Koreya
+                  bilan chegaradosh. Hududning taxminan 70 foizi togʻlik boʻlgani uchun aholining koʻp qismi tekisliklar
+                  va daryo vodiylarida yashaydi — yirik shaharlar ham aynan shu joylarda qad rostlagan. Mamlakatda
+                  shaharlashuv darajasi juda yuqori: aholining qariyb yarmi Seul poytaxt hududida (수도권) istiqomat
+                  qiladi.</p>
+                <ul>
+                  <li><strong>Poytaxt:</strong> Han daryosi (한강) boʻyidagi Seul (서울).</li>
+                  <li><strong>Maʼmuriy birliklar:</strong> maxsus va yirik shaharlar (특별시·광역시) hamda viloyatlar
+                    (도). Masalan: 경기도, 강원특별자치도, 충청도, 전라도, 경상도, 제주특별자치도.</li>
+                  <li><strong>Iqlim:</strong> bir-biridan aniq farq qiladigan toʻrt fasl (사계절) — bahor, yomgʻirli
+                    mavsumi (장마) boʻladigan yoz, kuz va sovuq hamda quruq qish.</li>
+                  <li><strong>Yirik shaharlar:</strong> Seul, Busan (부산, eng yirik port), Incheon (인천, asosiy
+                    aeroport), Daegu, Daejon, Gvanju, Ulsan.</li>
+                </ul>
+                <p class="fact">
+                <p><span class="tag">Muhim faktlar</span> Janubiy Koreya aholisi taxminan 51 million kishini tashkil
+                  etadi, biroq tugʻilish darajasi dunyodagi eng past koʻrsatkichlardan biri boʻlib, jamiyat tez surʼatda
+                  qarib bormoqda (고령화).</p>
+                </p>
+                <table class="terms">
+                  <tr>
+                    <th style="width:30%">Koreyscha</th>
+                    <th>Oʻzbekcha</th>
+                    <th style="width:30%">Koreyscha</th>
+                    <th>Oʻzbekcha</th>
+                  </tr>
+                  <tr>
+                    <td class="term-k">대한민국</td>
+                    <td>Koreya Respublikasi</td>
+                    <td class="term-k">한반도</td>
+                    <td>Koreya yarimoroli</td>
+                  </tr>
+                  <tr>
+                    <td class="term-k">수도</td>
+                    <td>poytaxt</td>
+                    <td class="term-k">수도권</td>
+                    <td>Seul poytaxt hududi</td>
+                  </tr>
+                  <tr>
+                    <td class="term-k">광역시</td>
+                    <td>yirik shahar</td>
+                    <td class="term-k">도</td>
+                    <td>viloyat</td>
+                  </tr>
+                  <tr>
+                    <td class="term-k">반도</td>
+                    <td>yarimorol</td>
+                    <td class="term-k">해안</td>
+                    <td>qirgʻoq</td>
+                  </tr>
+                  <tr>
+                    <td class="term-k">산맥</td>
+                    <td>togʻ tizmasi</td>
+                    <td class="term-k">평야</td>
+                    <td>tekislik</td>
+                  </tr>
+                  <tr>
+                    <td class="term-k">사계절</td>
+                    <td>toʻrt fasl</td>
+                    <td class="term-k">장마</td>
+                    <td>yomgʻirli mavsum (musson)</td>
+                  </tr>
+                  <tr>
+                    <td class="term-k">인구</td>
+                    <td>aholi</td>
+                    <td class="term-k">고령화</td>
+                    <td>aholining qarishi</td>
+                  </tr>
+                  <tr>
+                    <td class="term-k">행정구역</td>
+                    <td>maʼmuriy hudud</td>
+                    <td class="term-k">도시화</td>
+                    <td>shaharlashuv</td>
+                  </tr>
+                </table>
+              </div>
+            </section>
+
+            <section class="unit" id="t2">
+              <div class="unit-head"><span class="unit-num">02-MAVZU</span><span class="topic-kr">역사</span><span
+                  class="topic-en">Tarix</span></div>
+              <div class="sect">
+                <h4>설명 <span class="en">Bilish kerak boʻlgan narsalar</span></h4>
+                <p>Koreya uzoq yozma tarixga ega. Rivoyatga koʻra, dastlabki davlat — Gojoseon (고조선)ga Dangun (단군) asos
+                  solgan. Keyinchalik yarimorol Uch qirollik (삼국 시대) — Goguryeo, Baekje va Silla davriga boʻlinib,
+                  ularni Silla birlashtirgan. “Koreya” nomi kelib chiqqan Goryeo (고려) sulolasidan soʻng 1392-yilda uzoq
+                  davom etgan Joseon (조선) sulolasi oʻrnatildi. Aynan shu davrda, XV asrda Sejong qirol (세종대왕) koreys
+                  yozuvi — Hangulni (한글) yaratdi.</p>
+                <ul>
+                  <li><strong>Yaponiya mustamlakachiligi davri (일제 강점기), 1910–1945-yillar:</strong> Koreya
+                    mustaqilligidan ayrildi; 1919-yilgi 1-mart mustaqillik harakati (3·1 운동) muhim qarshilik boʻldi.
+                  </li>
+                  <li><strong>Ozodlik (광복), 1945-yil,</strong> soʻngra yarimorolning ikkiga boʻlinishi; Koreya
+                    Respublikasi 1948-yilda tashkil etildi.</li>
+                  <li><strong>Koreya urushi (한국 전쟁), 1950–1953-yillar,</strong> sulh bilan tugadi va mamlakat DMZ
+                    chizigʻi boʻylab ikkiga boʻlinib qoldi.</li>
+                  <li><strong>Jadal taraqqiyot:</strong> 1960-yillardan boshlangan tezkor sanoatlashtirish (“Han
+                    daryosidagi moʻjiza” 한강의 기적) va 1980-yillardagi demokratlashtirish harakati bugungi demokratik,
+                    rivojlangan iqtisodiyotga olib keldi.</li>
+                </ul>
+                <p class="fact">
+                <p><span class="tag">Muhim faktlar</span> Hangul kuni (한글날, 9-oktyabr) yozuvning yaratilishini
+                  nishonlaydi; Ozodlik kuni (광복절, 15-avgust) esa mustamlakachilik tugaganini eslatadi.</p>
+                </p>
+                <table class="terms">
+                  <tr>
+                    <th style="width:30%">Koreyscha</th>
+                    <th>Oʻzbekcha</th>
+                    <th style="width:30%">Koreyscha</th>
+                    <th>Oʻzbekcha</th>
+                  </tr>
+                  <tr>
+                    <td class="term-k">고조선</td>
+                    <td>Gojoseon (dastlabki davlat)</td>
+                    <td class="term-k">단군</td>
+                    <td>Dangun (asoschi haqidagi rivoyat)</td>
+                  </tr>
+                  <tr>
+                    <td class="term-k">삼국 시대</td>
+                    <td>Uch qirollik davri</td>
+                    <td class="term-k">통일</td>
+                    <td>birlashuv</td>
+                  </tr>
+                  <tr>
+                    <td class="term-k">고려</td>
+                    <td>Goryeo sulolasi</td>
+                    <td class="term-k">조선</td>
+                    <td>Joseon sulolasi</td>
+                  </tr>
+                  <tr>
+                    <td class="term-k">세종대왕</td>
+                    <td>Buyuk Sejong qirol</td>
+                    <td class="term-k">한글</td>
+                    <td>Hangul (koreys yozuvi)</td>
+                  </tr>
+                  <tr>
+                    <td class="term-k">일제 강점기</td>
+                    <td>Yaponiya mustamlakachiligi davri</td>
+                    <td class="term-k">3·1 운동</td>
+                    <td>1-mart harakati (1919-yil)</td>
+                  </tr>
+                  <tr>
+                    <td class="term-k">독립</td>
+                    <td>mustaqillik</td>
+                    <td class="term-k">광복</td>
+                    <td>Ozodlik (1945-yil)</td>
+                  </tr>
+                  <tr>
+                    <td class="term-k">한국 전쟁</td>
+                    <td>Koreya urushi</td>
+                    <td class="term-k">분단</td>
+                    <td>mamlakatning boʻlinishi</td>
+                  </tr>
+                  <tr>
+                    <td class="term-k">민주화</td>
+                    <td>demokratlashtirish</td>
+                    <td class="term-k">한강의 기적</td>
+                    <td>Han daryosidagi moʻjiza</td>
+                  </tr>
+                </table>
+              </div>
+            </section>
+
+            <section class="unit" id="t3">
+              <div class="unit-head"><span class="unit-num">03-MAVZU</span><span class="topic-kr">정치</span><span
+                  class="topic-en">Davlat boshqaruvi va demokratiya</span></div>
+              <div class="sect">
+                <h4>설명 <span class="en">Bilish kerak boʻlgan narsalar</span></h4>
+                <p>Janubiy Koreya — demokratik respublika (민주공화국) boʻlib, unda hokimiyat xalqqa (국민) tegishli. Hokimiyat
+                  uch tarmoqqa (삼권 분립) ajratilgan: qonun chiqaruvchi, ijro etuvchi va sud hokimiyati. Konstitutsiya (헌법)
+                  — eng oliy qonun boʻlib, fuqarolarning asosiy huquqlarini kafolatlaydi.</p>
+                <ul>
+                  <li><strong>Ijro etuvchi hokimiyat (행정부):</strong> uni davlat rahbari boʻlmish Prezident (대통령)
+                    boshqaradi; u toʻgʻridan toʻgʻri saylov yoʻli bilan, faqat bir marta besh yillik muddatga saylanadi.
+                  </li>
+                  <li><strong>Qonun chiqaruvchi hokimiyat (입법부):</strong> Milliy assambleya (국회) boʻlib, uning aʼzolari
+                    (국회의원) qonun qabul qilish uchun saylanadi.</li>
+                  <li><strong>Sud hokimiyati (사법부):</strong> sudlar (법원) qonunni mustaqil ravishda talqin qiladi va
+                    qoʻllaydi; Konstitutsiyaviy sud (헌법재판소) konstitutsiyaga oid masalalarni koʻrib chiqadi.</li>
+                  <li><strong>Saylovlar (선거):</strong> 18 yoshga toʻlgan fuqarolar ovoz berishi mumkin. Koreyada
+                    prezident, Milliy assambleya va mahalliy saylovlar umumiy, teng, toʻgʻridan toʻgʻri va yashirin ovoz
+                    berish tamoyillari asosida oʻtkaziladi.</li>
+                </ul>
+                <p class="fact">
+                <p><span class="tag">Muhim faktlar</span> Hokimiyatning uch tarmoqqa boʻlinishi (삼권 분립) bironta tarmoq
+                  haddan tashqari kuchayib ketmasligi uchun mavjud — bu Koreya demokratiyasining asosiy tamoyilidir.</p>
+                </p>
+                <table class="terms">
+                  <tr>
+                    <th style="width:30%">Koreyscha</th>
+                    <th>Oʻzbekcha</th>
+                    <th style="width:30%">Koreyscha</th>
+                    <th>Oʻzbekcha</th>
+                  </tr>
+                  <tr>
+                    <td class="term-k">민주주의</td>
+                    <td>demokratiya</td>
+                    <td class="term-k">민주공화국</td>
+                    <td>demokratik respublika</td>
+                  </tr>
+                  <tr>
+                    <td class="term-k">헌법</td>
+                    <td>Konstitutsiya</td>
+                    <td class="term-k">국민</td>
+                    <td>xalq, fuqarolar</td>
+                  </tr>
+                  <tr>
+                    <td class="term-k">삼권 분립</td>
+                    <td>hokimiyatlar boʻlinishi</td>
+                    <td class="term-k">정부</td>
+                    <td>hukumat</td>
+                  </tr>
+                  <tr>
+                    <td class="term-k">대통령</td>
+                    <td>Prezident</td>
+                    <td class="term-k">행정부</td>
+                    <td>ijro etuvchi hokimiyat</td>
+                  </tr>
+                  <tr>
+                    <td class="term-k">국회</td>
+                    <td>Milliy assambleya</td>
+                    <td class="term-k">입법부</td>
+                    <td>qonun chiqaruvchi hokimiyat</td>
+                  </tr>
+                  <tr>
+                    <td class="term-k">법원</td>
+                    <td>sud</td>
+                    <td class="term-k">사법부</td>
+                    <td>sud hokimiyati</td>
+                  </tr>
+                  <tr>
+                    <td class="term-k">헌법재판소</td>
+                    <td>Konstitutsiyaviy sud</td>
+                    <td class="term-k">선거</td>
+                    <td>saylov</td>
+                  </tr>
+                  <tr>
+                    <td class="term-k">투표</td>
+                    <td>ovoz berish</td>
+                    <td class="term-k">정당</td>
+                    <td>siyosiy partiya</td>
+                  </tr>
+                </table>
+              </div>
+            </section>
+
+            <section class="unit" id="t4">
+              <div class="unit-head"><span class="unit-num">04-MAVZU</span><span class="topic-kr">법</span><span
+                  class="topic-en">Huquq va huquqlar</span></div>
+              <div class="sect">
+                <h4>설명 <span class="en">Bilish kerak boʻlgan narsalar</span></h4>
+                <p>Konstitutsiya har bir insonga asosiy huquqlarni (기본권) kafolatlaydi va shu bilan birga majburiyatlarni
+                  (의무) ham belgilaydi. Qonunlar hamma uchun teng amal qiladi, nizolar esa shaxsiy tarzda emas, balki sud
+                  orqali hal etiladi. Muhojirlar uchun kundalik huquqni — mehnat, oila, yashash joyi va roʻyxatdan
+                  oʻtish tartiblarini — bilish ushbu darajaning muhim qismidir.</p>
+                <ul>
+                  <li><strong>Asosiy huquqlar (기본권):</strong> inson qadr-qimmati, tenglik (평등), erkinlik (자유), siyosatda
+                    qatnashish huquqi (참정권) hamda taʼlim va ijtimoiy taʼminot kabi ijtimoiy huquqlar.</li>
+                  <li><strong>Asosiy majburiyatlar (의무):</strong> soliq toʻlash (납세), taʼlim olish (교육), mehnat qilish
+                    (근로), mamlakat mudofaasi (국방) va atrof-muhitni asrash.</li>
+                  <li><strong>Kundalik huquq:</strong> mehnat qonunchiligi ish haqi va ish vaqtini himoya qiladi; oila
+                    huquqi nikoh, ajralish va bolaga vasiylikni qamrab oladi; chet elliklar oʻzlarining roʻyxatdan
+                    oʻtish maʼlumotlarini (외국인 등록) doimo yangilab turishi shart.</li>
+                  <li><strong>Yordam va xabar berish:</strong> favqulodda holatlar — politsiya 112, yongʻin/tez yordam
+                    119; huquqiy yordamni davlat huquqiy yordam xizmatlari orqali olish mumkin.</li>
+                </ul>
+                <p class="fact">
+                <p><span class="tag">Muhim faktlar</span> Huquq va majburiyat bir-biri bilan uzviy bogʻliq:
+                  Konstitutsiya erkinliklaringizni himoya qilish bilan birga, jamiyatning har bir aʼzosidan soliq
+                  toʻlash kabi asosiy majburiyatlarni bajarishni ham talab qiladi.
+                </p>
+                </p>
+                <table class="terms">
+                  <tr>
+                    <th style="width:30%">Koreyscha</th>
+                    <th>Oʻzbekcha</th>
+                    <th style="width:30%">Koreyscha</th>
+                    <th>Oʻzbekcha</th>
+                  </tr>
+                  <tr>
+                    <td class="term-k">법</td>
+                    <td>qonun</td>
+                    <td class="term-k">기본권</td>
+                    <td>asosiy huquqlar</td>
+                  </tr>
+                  <tr>
+                    <td class="term-k">의무</td>
+                    <td>majburiyat, burch</td>
+                    <td class="term-k">권리</td>
+                    <td>huquq</td>
+                  </tr>
+                  <tr>
+                    <td class="term-k">평등</td>
+                    <td>tenglik</td>
+                    <td class="term-k">자유</td>
+                    <td>erkinlik</td>
+                  </tr>
+                  <tr>
+                    <td class="term-k">참정권</td>
+                    <td>siyosatda qatnashish huquqi</td>
+                    <td class="term-k">납세</td>
+                    <td>soliq toʻlash</td>
+                  </tr>
+                  <tr>
+                    <td class="term-k">국방</td>
+                    <td>mamlakat mudofaasi</td>
+                    <td class="term-k">근로</td>
+                    <td>mehnat (burch sifatida)</td>
+                  </tr>
+                  <tr>
+                    <td class="term-k">법원</td>
+                    <td>sud</td>
+                    <td class="term-k">재판</td>
+                    <td>sud jarayoni</td>
+                  </tr>
+                  <tr>
+                    <td class="term-k">변호사</td>
+                    <td>advokat</td>
+                    <td class="term-k">고소 / 고발</td>
+                    <td>shikoyat / ayblov arizasi</td>
+                  </tr>
+                  <tr>
+                    <td class="term-k">외국인 등록</td>
+                    <td>chet ellik fuqaroni roʻyxatga olish</td>
+                    <td class="term-k">위반</td>
+                    <td>qoidabuzarlik</td>
+                  </tr>
+                </table>
+              </div>
+            </section>
+
+            <section class="unit" id="t5">
+              <div class="unit-head"><span class="unit-num">05-MAVZU</span><span class="topic-kr">경제</span><span
+                  class="topic-en">Iqtisodiyot va mehnat</span></div>
+              <div class="sect">
+                <h4>설명 <span class="en">Bilish kerak boʻlgan narsalar</span></h4>
+                <p>Koreya bir necha oʻn yil ichida qishloq xoʻjaligidan sanoatga, soʻngra yuqori texnologiyalarga oʻtib,
+                  dunyodagi eng rivojlangan iqtisodiyotlardan biriga aylandi. Bu — asosini eksport (수출) tashkil etadigan
+                  bozor iqtisodiyoti (시장 경제): yarimoʻtkazgichlar, avtomobillar, kemalar, shuningdek madaniyat (K-pop,
+                  kino) chetga chiqariladi. Pul birligi — von (원).</p>
+                <ul>
+                  <li><strong>Sanoat:</strong> yirik konsernlar (대기업) va koʻplab kichik hamda oʻrta korxonalar (중소기업)
+                    yonma-yon faoliyat yuritadi; Koreya elektronika va avtomobillarning yirik eksportyoridir.</li>
+                  <li><strong>Mehnat hayoti:</strong> mehnat shartnomasi (근로 계약) ish haqi va ish vaqtini belgilaydi; eng
+                    kam ish haqi (최저임금) har yili belgilanadi; toʻrtta asosiy sugʻurta (4대 보험) sogʻliqni saqlash,
+                    pensiya, ish bilan taʼminlanish va baxtsiz hodisalarni qamrab oladi.</li>
+                  <li><strong>Moliya:</strong> banklar hisob raqamlari, pul oʻtkazmalari va kreditlarni yuritadi;
+                    daromaddan soliq (세금) olinadi, xodimlarga esa yil yakunidagi soliq qayta hisob-kitobi (연말정산)
+                    qoʻllaniladi.</li>
+                  <li><strong>Ish izlash:</strong> bandlik markazlari va onlayn portallar ishga joylashishda yordam
+                    beradi; chet elliklar bajarmoqchi boʻlgan ishiga ruxsat beradigan viza maqomiga ega boʻlishi shart.
+                  </li>
+                </ul>
+                <p class="fact">
+                <p><span class="tag">Muhim faktlar</span> Aksariyat xodimlar 4대 보험 (umumxalq sogʻliqni saqlash
+                  sugʻurtasi, umumxalq pensiya sugʻurtasi, ish bilan taʼminlanish sugʻurtasi, ishlab chiqarishdagi
+                  baxtsiz hodisa sugʻurtasi)ga aʼzo boʻladi — bu Koreyada mehnat hayotining asosiy qismidir.</p>
+                </p>
+                <table class="terms">
+                  <tr>
+                    <th style="width:30%">Koreyscha</th>
+                    <th>Oʻzbekcha</th>
+                    <th style="width:30%">Koreyscha</th>
+                    <th>Oʻzbekcha</th>
+                  </tr>
+                  <tr>
+                    <td class="term-k">경제</td>
+                    <td>iqtisodiyot</td>
+                    <td class="term-k">시장 경제</td>
+                    <td>bozor iqtisodiyoti</td>
+                  </tr>
+                  <tr>
+                    <td class="term-k">수출 / 수입</td>
+                    <td>eksport / import</td>
+                    <td class="term-k">원</td>
+                    <td>von (pul birligi)</td>
+                  </tr>
+                  <tr>
+                    <td class="term-k">대기업</td>
+                    <td>yirik konsern</td>
+                    <td class="term-k">중소기업</td>
+                    <td>kichik/oʻrta korxona</td>
+                  </tr>
+                  <tr>
+                    <td class="term-k">근로 계약</td>
+                    <td>mehnat shartnomasi</td>
+                    <td class="term-k">최저임금</td>
+                    <td>eng kam ish haqi</td>
+                  </tr>
+                  <tr>
+                    <td class="term-k">4대 보험</td>
+                    <td>toʻrtta asosiy sugʻurta</td>
+                    <td class="term-k">국민연금</td>
+                    <td>umumxalq pensiyasi</td>
+                  </tr>
+                  <tr>
+                    <td class="term-k">건강보험</td>
+                    <td>sogʻliqni saqlash sugʻurtasi</td>
+                    <td class="term-k">세금</td>
+                    <td>soliq</td>
+                  </tr>
+                  <tr>
+                    <td class="term-k">연말정산</td>
+                    <td>yil yakunidagi soliq qayta hisob-kitobi</td>
+                    <td class="term-k">취업</td>
+                    <td>ishga joylashish</td>
+                  </tr>
+                  <tr>
+                    <td class="term-k">실업</td>
+                    <td>ishsizlik</td>
+                    <td class="term-k">물가</td>
+                    <td>narxlar (turmush qiymati)</td>
+                  </tr>
+                </table>
+              </div>
+            </section>
+
+            <section class="unit" id="t6">
+              <div class="unit-head"><span class="unit-num">06-MAVZU</span><span class="topic-kr">사회</span><span
+                  class="topic-en">Jamiyat va ijtimoiy taʼminot</span></div>
+              <div class="sect">
+                <h4>설명 <span class="en">Bilish kerak boʻlgan narsalar</span></h4>
+                <p>Koreya jamiyati tez oʻzgarmoqda: oilalar kichraymoqda, yolgʻiz yashovchilar koʻpaymoqda, aholi qarib
+                  bormoqda va koʻproq muhojir kelib oʻrnashayotgani sababli Koreya koʻp madaniyatli jamiyatga (다문화 사회)
+                  aylanmoqda. Hukumat ijtimoiy taʼminot (사회 복지) tizimini, shuningdek muhojir oilalarni ham qamrab
+                  oladigan koʻplab yordam xizmatlarini yoʻlga qoʻygan.
+                </p>
+                <ul>
+                  <li><strong>Ijtimoiy himoya tizimi:</strong> toʻrtta sugʻurta, shu bilan birga muhtojlar uchun asosiy
+                    turmush yordami; jamoat sogʻliqni saqlash markazlari (보건소) arzon xizmatlar koʻrsatadi.</li>
+                  <li><strong>Oila va parvarish:</strong> bolalarni parvarish qilish uchun subsidiyalar va muassasalar,
+                    keksalarni qoʻllab-quvvatlash (uzoq muddatli parvarish sugʻurtasi 노인 장기요양보험) hamda nogironlarga
+                    moʻljallangan xizmatlar.</li>
+                  <li><strong>Koʻp madaniyatli oilalarga yordam:</strong> Koʻp madaniyatli oilalarni qoʻllab-quvvatlash
+                    markazlari (다문화가족지원센터) va Ijtimoiy integratsiya dasturi (사회통합프로그램) muhojirlarga koreys tili,
+                    maslahat va joylashishda yordam beradi.</li>
+                  <li><strong>Davlat xizmatlari:</strong> fuqaro/chet ellik roʻyxati tizimi, 정부24 onlayn portali va
+                    maʼmuriy-ijtimoiy xizmat markazlari (행정복지센터) kundalik hujjat ishlarini bajaradi.</li>
+                </ul>
+                <p class="fact">
+                <p><span class="tag">Muhim faktlar</span> 다문화가족지원센터 (Koʻp madaniyatli oilalarni qoʻllab-quvvatlash
+                  markazlari) butun mamlakat boʻylab muhojirlarga bepul koreys tili darslari, tarjima va oilaviy
+                  maslahat xizmatlarini taqdim etadi.</p>
+                </p>
+                <table class="terms">
+                  <tr>
+                    <th style="width:30%">Koreyscha</th>
+                    <th>Oʻzbekcha</th>
+                    <th style="width:30%">Koreyscha</th>
+                    <th>Oʻzbekcha</th>
+                  </tr>
+                  <tr>
+                    <td class="term-k">사회 복지</td>
+                    <td>ijtimoiy taʼminot</td>
+                    <td class="term-k">다문화 사회</td>
+                    <td>koʻp madaniyatli jamiyat</td>
+                  </tr>
+                  <tr>
+                    <td class="term-k">저출산</td>
+                    <td>past tugʻilish darajasi</td>
+                    <td class="term-k">고령 사회</td>
+                    <td>keksaygan jamiyat</td>
+                  </tr>
+                  <tr>
+                    <td class="term-k">복지 제도</td>
+                    <td>ijtimoiy taʼminot tizimi</td>
+                    <td class="term-k">보건소</td>
+                    <td>jamoat sogʻliqni saqlash markazi</td>
+                  </tr>
+                  <tr>
+                    <td class="term-k">노인 장기요양보험</td>
+                    <td>uzoq muddatli parvarish sugʻurtasi</td>
+                    <td class="term-k">육아</td>
+                    <td>bola parvarishi</td>
+                  </tr>
+                  <tr>
+                    <td class="term-k">다문화가족지원센터</td>
+                    <td>Koʻp madaniyatli oilalarni qoʻllab-quvvatlash markazi</td>
+                    <td class="term-k">지원</td>
+                    <td>yordam, koʻmak</td>
+                  </tr>
+                  <tr>
+                    <td class="term-k">행정복지센터</td>
+                    <td>maʼmuriy-ijtimoiy xizmat markazi</td>
+                    <td class="term-k">봉사</td>
+                    <td>koʻngillilik faoliyati</td>
+                  </tr>
+                  <tr>
+                    <td class="term-k">차별</td>
+                    <td>kamsitish</td>
+                    <td class="term-k">평등</td>
+                    <td>tenglik</td>
+                  </tr>
+                  <tr>
+                    <td class="term-k">복지 혜택</td>
+                    <td>ijtimoiy imtiyoz</td>
+                    <td class="term-k">상담</td>
+                    <td>maslahat</td>
+                  </tr>
+                </table>
+              </div>
+            </section>
+
+            <section class="unit" id="t7">
+              <div class="unit-head"><span class="unit-num">07-MAVZU</span><span class="topic-kr">문화</span><span
+                  class="topic-en">Madaniyat va kundalik hayot</span></div>
+              <div class="sect">
+                <h4>설명 <span class="en">Bilish kerak boʻlgan narsalar</span></h4>
+                <p>Koreya madaniyati uzoq anʼanalarni jonli zamonaviy hayot bilan uygʻunlashtiradi. Konfutsiychilik
+                  qadriyatlari hanuzgacha keksalarga hurmat va nutqdagi xushmuomalalikni (높임말) belgilab beradi. Asosiy
+                  anʼanaviy bayramlar — Sollal (설날, oy taqvimi boʻyicha Yangi yil) va Chuseok (추석, hosil bayrami); bu
+                  kunlarda oilalar yigʻiladi, ajdodlar xotirasiga marosim oʻtkazadi va maxsus taomlar yeydi. Zamonaviy
+                  koreys madaniyati — kino, drama va K-pop — butun dunyoda “Koreya toʻlqini” (한류) nomi bilan mashhur.
+                </p>
+                <ul>
+                  <li><strong>Bayramlar:</strong> 설날 (guruchli kulcha boʻlaklaridan tayyorlanadigan shoʻrva — 떡국, Yangi
+                    yil taʼzimi — 세배) va 추석 (songpyeon — 송편, ajdodlar qabrini ziyorat qilish — 성묘).</li>
+                  <li><strong>Odob qoidalari:</strong> biror narsani berish/olishda ikki qoʻlni ishlatish,
+                    salomlashganda taʼzim qilish, uy ichida poyabzalni yechib qoʻyish va keksalar bilan hurmat tilida
+                    gaplashish.</li>
+                  <li><strong>Taom:</strong> guruch, kimchi (김치), shoʻrvalar va asosiy taom yonida tortiladigan yon
+                    taomlar (반찬); birga oʻtirib, fasl mahsulotlaridan ovqatlanish qadrlanadi.</li>
+                  <li><strong>Anʼanaviy sanʼat:</strong> hanbok (한복), hanok uylari (한옥), shuningdek Hangul va qirol
+                    saroylari kabi meros.</li>
+                </ul>
+                <p class="fact">
+                <p><span class="tag">Muhim faktlar</span> 설날 va 추석 — eng yirik ikki bayram; har ikkalasida ham oilalar
+                  yigʻiladi, ajdodlar xotirasiga marosim (차례) oʻtkazadi va tugʻilgan yurtiga yoʻl oladi — bu esa
+                  mamlakat boʻylab eng katta aholi harakatiga sabab boʻladi.
+                </p>
+                </p>
+                <table class="terms">
+                  <tr>
+                    <th style="width:30%">Koreyscha</th>
+                    <th>Oʻzbekcha</th>
+                    <th style="width:30%">Koreyscha</th>
+                    <th>Oʻzbekcha</th>
+                  </tr>
+                  <tr>
+                    <td class="term-k">전통</td>
+                    <td>anʼana</td>
+                    <td class="term-k">명절</td>
+                    <td>anʼanaviy bayram</td>
+                  </tr>
+                  <tr>
+                    <td class="term-k">설날</td>
+                    <td>oy taqvimi boʻyicha Yangi yil</td>
+                    <td class="term-k">추석</td>
+                    <td>Chuseok (hosil bayrami)</td>
+                  </tr>
+                  <tr>
+                    <td class="term-k">차례</td>
+                    <td>ajdodlar xotirasiga marosim</td>
+                    <td class="term-k">세배</td>
+                    <td>Yangi yil taʼzimi</td>
+                  </tr>
+                  <tr>
+                    <td class="term-k">한복</td>
+                    <td>hanbok (anʼanaviy kiyim)</td>
+                    <td class="term-k">한옥</td>
+                    <td>anʼanaviy uy</td>
+                  </tr>
+                  <tr>
+                    <td class="term-k">높임말</td>
+                    <td>hurmat tili</td>
+                    <td class="term-k">예절</td>
+                    <td>odob, axloq qoidalari</td>
+                  </tr>
+                  <tr>
+                    <td class="term-k">김치</td>
+                    <td>kimchi</td>
+                    <td class="term-k">반찬</td>
+                    <td>yon taomlar (banchan)</td>
+                  </tr>
+                  <tr>
+                    <td class="term-k">한류</td>
+                    <td>Koreya toʻlqini (Hallyu)</td>
+                    <td class="term-k">유교</td>
+                    <td>konfutsiychilik</td>
+                  </tr>
+                  <tr>
+                    <td class="term-k">조상</td>
+                    <td>ajdodlar</td>
+                    <td class="term-k">풍습</td>
+                    <td>urf-odat</td>
+                  </tr>
+                </table>
+              </div>
+            </section>
+
+            <section class="unit" id="t8">
+              <div class="unit-head"><span class="unit-num">08-MAVZU</span><span class="topic-kr">시민</span><span
+                  class="topic-en">Fuqarolik va integratsiya</span></div>
+              <div class="sect">
+                <h4>설명 <span class="en">Bilish kerak boʻlgan narsalar</span></h4>
+                <p>Soʻnggi mavzu yuqoridagilarning barchasini Koreya jamiyati aʼzosi sifatidagi hayot bilan bogʻlab
+                  umumlashtiradi. U migratsiya va yashash tizimini, doimiy yashash (영주) hamda fuqarolikka qabul qilinish
+                  (귀화) yoʻlini, shuningdek jamiyatning bir qismi boʻlishdagi fuqarolik majburiyatlarini — huquq berilgan
+                  oʻrinda saylovda qatnashish, soliq toʻlash, oʻzgalarni hurmat qilish va mahalliy hayotda ishtirok
+                  etishni qamrab oladi.</p>
+                <ul>
+                  <li><strong>Maqom va hujjatlar:</strong> chet ellik fuqaro guvohnomasi (외국인 등록증), yashash maqomi (체류
+                    자격), shuningdek doimiy yashash va fuqarolikka qabul qilish uchun ariza berishda qoʻl keladigan
+                    Ijtimoiy integratsiya dasturi (사회통합프로그램).</li>
+                  <li><strong>Doimiy yashash va fuqarolikka qabul qilinish:</strong> 영주권 (doimiy yashash huquqi) va 귀화
+                    (fuqarolikka ega boʻlish); KIIP yakuniy baholovidan (종합평가) oʻtganlik fuqarolik imtihonining bir
+                    qismi oʻrnini bosishi mumkin.</li>
+                  <li><strong>Fuqarolik hayoti:</strong> jamiyat hayotida ishtirok etish, rang-baranglikni hurmat qilish
+                    va qayerdan yordam olishni bilish (행정복지센터, 출입국·외국인청 — migratsiya boshqarmasi).</li>
+                  <li><strong>Yaxshi qoʻshni boʻlish:</strong> jamoat qoidalariga rioya qilish, chiqindilarni ajratib
+                    tashlash, jamoat tartibini saqlash va jamiyat ravnaqiga hissa qoʻshish.</li>
+                </ul>
+                <p class="fact">
+                <p><span class="tag">Muhim faktlar</span> Ijtimoiy integratsiya dasturini (사회통합프로그램) tamomlash va
+                  종합평가dan oʻtish arizachilarni fuqarolikka qabul qilish yozma imtihoni hamda suhbatning bir qismidan
+                  ozod qilishi mumkin.</p>
+                </p>
+                <table class="terms">
+                  <tr>
+                    <th style="width:30%">Koreyscha</th>
+                    <th>Oʻzbekcha</th>
+                    <th style="width:30%">Koreyscha</th>
+                    <th>Oʻzbekcha</th>
+                  </tr>
+                  <tr>
+                    <td class="term-k">시민</td>
+                    <td>fuqaro</td>
+                    <td class="term-k">국적</td>
+                    <td>fuqarolik</td>
+                  </tr>
+                  <tr>
+                    <td class="term-k">영주권</td>
+                    <td>doimiy yashash huquqi</td>
+                    <td class="term-k">귀화</td>
+                    <td>fuqarolikka qabul qilinish</td>
+                  </tr>
+                  <tr>
+                    <td class="term-k">체류 자격</td>
+                    <td>yashash maqomi</td>
+                    <td class="term-k">외국인 등록증</td>
+                    <td>chet ellik fuqaro guvohnomasi</td>
+                  </tr>
+                  <tr>
+                    <td class="term-k">사회통합프로그램</td>
+                    <td>Ijtimoiy integratsiya dasturi</td>
+                    <td class="term-k">종합평가</td>
+                    <td>yakuniy baholash</td>
+                  </tr>
+                  <tr>
+                    <td class="term-k">출입국·외국인청</td>
+                    <td>migratsiya boshqarmasi</td>
+                    <td class="term-k">이민</td>
+                    <td>migratsiya</td>
+                  </tr>
+                  <tr>
+                    <td class="term-k">통합</td>
+                    <td>integratsiya</td>
+                    <td class="term-k">공동체</td>
+                    <td>jamiyat, jamoa</td>
+                  </tr>
+                  <tr>
+                    <td class="term-k">권리와 의무</td>
+                    <td>huquq va majburiyatlar</td>
+                    <td class="term-k">참여</td>
+                    <td>ishtirok etish</td>
+                  </tr>
+                  <tr>
+                    <td class="term-k">정체성</td>
+                    <td>oʻzlik</td>
+                    <td class="term-k">소속감</td>
+                    <td>mansublik hissi</td>
+                  </tr>
+                </table>
+              </div>
+            </section>
+
+            <hr class="rule">
+            <p style="text-align:center; color:var(--faint); font-size:13px; font-style:italic; margin-top:24px;">
+              Qoʻllanma yakuni · KIIP 5-daraja — 한국사회 이해 · 화이팅!</p>
+            <!--UNITS-->
+
+          </td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td class="ftr-space"></td>
+        </tr>
+      </tfoot>
+    </table>
+  </main>
+</body>
+
+</html>
