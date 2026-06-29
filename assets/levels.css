@@ -466,6 +466,37 @@
       font-style: italic;
     }
 
+    /* Highlight the target grammar pattern inside an example.
+       color-mix derives a soft highlighter tint from each level's accent,
+       so it adapts per level and to dark mode, and prints correctly. */
+    .ex .k .hl,
+    .def .hl,
+    .note .hl {
+      font-weight: 600;
+      color: var(--accent-ink);
+      background: color-mix(in srgb, var(--accent) 16%, transparent);
+      border-radius: 2px;
+      padding: 0 2px;
+      -webkit-box-decoration-break: clone;
+      box-decoration-break: clone;
+    }
+
+    .ex .e .hl {
+      font-weight: 600;
+      font-style: italic;
+      color: var(--accent-ink);
+      background: none;
+      padding: 0;
+    }
+
+    /* Small parenthetical hint after a translation (why this form, what changed) */
+    .ex .e .e-note {
+      font-style: normal;
+      color: var(--faint);
+      font-size: 12px;
+      font-family: 'Noto Sans KR', sans-serif;
+    }
+
     .note {
       background: var(--accent-bg);
       border: 1px solid var(--accent-line);
