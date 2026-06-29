@@ -12,18 +12,13 @@
       --shadow: rgba(0, 0, 0, .05);
       --shadow-hover: rgba(0, 0, 0, .10);
       --voc-border: var(--line);
-      /* Floating top-right controls — sized in rem so the bar and the
-         clearance below it scale together with the reader's text size. */
+      /* Top controls — sized in rem so they scale with the reader's text size. */
       --ctrl-h: 2.25rem;        /* control pill height */
-      --ctrl-inset: 1rem;       /* gap from the viewport edges */
-      --bar-space: calc(var(--ctrl-inset) + var(--ctrl-h) + 0.25rem);   /* the controls' band */
-      /* Unit headers pin at the very top at EVERY width, sharing one row with the
-         floating controls (which sit at the right end of it). The header keeps its
-         title on the left; while pinned on screens where the controls overlap it,
-         it reserves room on the right and tucks its chevron/word-count away (see
-         the max-width:1199px block) so the two share one row instead of stacking. */
-      --sticky-top: var(--ctrl-inset);
-      --controls-w: 12rem;   /* live width of the floating controls, measured by levels.js */
+      --ctrl-inset: 1rem;       /* gap from the page edges */
+      /* The level/language selectors live at the top of the page and scroll away
+         with it; they don't float. So a pinned unit header has the top to itself
+         and rests just below the very top edge — nothing to dodge. */
+      --sticky-top: 0.75rem;
     }
 
     :root[data-theme="dark"] {
@@ -132,30 +127,28 @@
       transition: background-color .25s ease, color .25s ease;
     }
 
-    /* Opaque top band: hides page text scrolling up under the floating controls
-       and fills the space all the way down to the pinned header, so nothing peeks
-       through between the controls and the header. It's the same colour as the
-       page, so it's invisible except where it covers scrolling content. Tall
-       enough to reach the header in both layouts (below the controls on narrow
-       screens, at the very top on wide). Below the sticky headers (z 5) and the
-       controls (z 60). */
+    /* Small opaque top strip, the page colour, that masks the sliver of text
+       scrolling up just above a pinned unit header (so nothing peeks over it).
+       Below the sticky headers (z 5). */
     body::before {
       content: "";
       position: fixed;
       top: 0;
       left: 0;
       right: 0;
-      height: max(var(--bar-space), calc(var(--sticky-top) + 0.25rem));
+      height: calc(var(--sticky-top) + 0.5rem);
       z-index: 4;
       pointer-events: none;
       background: var(--bg);
     }
 
-    /* The level + language selectors float on top, always visible. They never
-       hide on scroll — unit headers pin just below them, so the two never fight
-       for the same row (which used to flicker on scroll-up). */
+    /* The level + language selectors sit at the top of the page and scroll away
+       with it — they are NOT fixed. So they're only on screen at the top, and a
+       pinned unit header owns the top edge once you scroll, with nothing to fight.
+       (absolute, not static, so they overlay the top margin without pushing the
+       document down.) */
     .page-controls {
-      position: fixed;
+      position: absolute;
       top: var(--ctrl-inset);
       right: var(--ctrl-inset);
       display: flex;
@@ -970,9 +963,10 @@
       flex-wrap: nowrap;
       align-items: center;
     }
-    /* unit number + Korean title never shrink; only the translation gives way */
-    .lesson-head .lesson-num,
-    .lesson-head .topic-kr { flex-shrink: 0; }
+    /* unit number + Korean title never shrink; only the translation gives way.
+       Both the title and translation stay on one line (truncate, never wrap). */
+    .lesson-head .lesson-num { flex-shrink: 0; }
+    .lesson-head .topic-kr { flex-shrink: 0; white-space: nowrap; }
     .lesson-head .topic-en {
       min-width: 0;
       overflow: hidden;
@@ -1003,20 +997,6 @@
     }
     .lesson-head:hover .lesson-chev { color: var(--accent); }
     .lesson.is-open .lesson-chev { transform: rotate(180deg); }
-
-    /* When a header is pinned on a screen narrow enough that the floating controls
-       sit over its right end (below ~1200px the centred column reaches the corner),
-       reserve room for the controls and tuck the chevron + word-count away, so the
-       header and the controls share ONE row instead of stacking. On wider screens
-       the controls sit out in the right margin, so the pinned header is left as-is
-       (chevron/count keep their normal place). is-stuck is set by levels.js. */
-    @media (max-width: 1199px) {
-      /* reserve the controls' width PLUS their inset from the edge, so the title
-         clears them wherever the header's right edge falls */
-      .lesson-head.is-stuck { padding-right: calc(var(--controls-w) + var(--ctrl-inset) + 0.5rem); }
-      .lesson-head.is-stuck .lesson-count,
-      .lesson-head.is-stuck .lesson-chev { display: none; }
-    }
 
     .lesson-body { display: none; }
     .lesson.is-open .lesson-body { display: block; }
@@ -1178,23 +1158,9 @@
       .reader-theme { width: 2.875rem; height: 2.875rem; }
       /* one column reads cleaner than two cramped, wrapping ones on a phone */
       nav.toc { columns: 1; }
-      /* drop the word-count on phones — the single-line header (global rules) is
-         tight enough; the translation gets that room instead */
+      /* drop the word-count on phones — the single-line header is tight enough
+         and the translation gets that room instead */
       .lesson-count { display: none; }
-      /* compact the control pills (drop the carets) so the single-row header has
-         more room for its title beside them */
-      .page-controls .chev { display: none; }
-      .ctrl { padding: 0 0.625rem; }
-      /* Last-resort fit on a very small phone with wide controls (e.g. RU): the
-         translation collapses first, and only if it still won't fit does the
-         Korean title truncate gracefully — it never slides under the pills. */
-      .lesson-head.is-stuck .topic-en { flex-shrink: 100; }
-      .lesson-head.is-stuck .topic-kr {
-        flex-shrink: 1;
-        min-width: 0;
-        overflow: hidden;
-        text-overflow: ellipsis;
-      }
     }
 
     @media print {

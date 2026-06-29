@@ -194,45 +194,19 @@
       if (e.key === 'Escape') { input.value = ''; clearSearch(); input.blur(); }
     });
 
-    /* ---- 4. Scroll state ---- */
-    /* Reveal the floating reader dock past the intro, and flag the header that is
-       currently pinned to the top (`is-stuck`) so it can tuck its chevron/count
-       away and reserve room for the controls (see levels.css). This is a
-       position-based flag that flips once as a header reaches the top — it does
-       NOT toggle on scroll direction, so it can't flicker the way the old
-       controls-hiding did. */
+    /* ---- 4. Scroll state: reveal the floating reader dock past the intro.
+       The selectors scroll away with the page and unit headers just pin at the
+       top, so there's nothing here that needs per-frame work or can flicker. ---- */
     var ticking = false;
     function updateUI() {
       ticking = false;
       document.body.classList.toggle('reader-ready', window.scrollY > 300);
-      for (var i = 0; i < sections.length; i++) {
-        var sec = sections[i], head = sec.querySelector('.lesson-head');
-        if (!head) continue;
-        var sr = sec.getBoundingClientRect(), hr = head.getBoundingClientRect();
-        // pinned = the header has been pushed off its section's top edge and the
-        // section still occupies the band at the pinned position
-        head.classList.toggle('is-stuck', (hr.top - sr.top) > 1 && sr.bottom > hr.top + 1);
-      }
     }
     function onScroll() {
       if (!ticking) { ticking = true; requestAnimationFrame(updateUI); }
     }
     window.addEventListener('scroll', onScroll, { passive: true });
     window.addEventListener('resize', onScroll, { passive: true });
-
-    /* Measure the floating controls' real width so a pinned header reserves exactly
-       enough room for them (see --controls-w in levels.css). Measured once now and
-       on resize — never per scroll-frame, so it adds nothing to scroll cost. */
-    var controlsEl = document.querySelector('.page-controls');
-    function syncControlsWidth() {
-      if (controlsEl) {
-        document.documentElement.style.setProperty('--controls-w', controlsEl.offsetWidth + 'px');
-      }
-    }
-    syncControlsWidth();
-    window.addEventListener('resize', syncControlsWidth, { passive: true });
-    window.addEventListener('load', syncControlsWidth);
-
     updateUI();
   });
 })();
