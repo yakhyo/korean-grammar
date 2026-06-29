@@ -48,6 +48,8 @@ A self-study reference set for the **Korea Immigration &amp; Integration Program
 │   ├── home.css       # Landing pages
 │   ├── levels.css     # Level pages (accent via html.lvN class)
 │   └── og-image*.png  # Per-language social preview images
+├── tools/             # Maintenance scripts (no dependencies)
+│   └── check-korean-sync.mjs   # Verify Korean matches across EN/UZ/RU
 └── .nojekyll          # Serve files as-is on GitHub Pages
 ```
 
@@ -59,6 +61,23 @@ No build step — just open `index.html` in a browser, or serve the folder:
 python3 -m http.server 8000
 # then visit http://localhost:8000
 ```
+
+## Keeping the translations in sync
+
+The Korean must be byte-identical across the English, Uzbek, and Russian copy of
+every level — same example sentences (including the `<span class="hl">` highlight
+markup), same vocabulary head-words, same unit topics. After editing any level,
+check that the three copies still agree:
+
+```bash
+node tools/check-korean-sync.mjs        # all levels
+node tools/check-korean-sync.mjs 1 3    # only levels 1 and 3
+```
+
+It is read-only and lists every place the Korean has drifted, with the file and
+line in each language. The same check runs in CI before a deploy, so a mismatch
+can't reach the live site. (It only compares the *Korean* between languages — it
+does not judge whether a highlight marks the right morpheme within a single copy.)
 
 ## License
 

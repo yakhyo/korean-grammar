@@ -1,8 +1,11 @@
 name: Deploy to GitHub Pages
 
-# Manual trigger. In the "Run workflow" dialog, use the branch dropdown
-# ("Use workflow from") to select the branch — that branch is deployed.
+# Auto-deploys when `main` is updated. Still manually dispatchable for any
+# branch: in the "Run workflow" dialog use the branch dropdown ("Use workflow
+# from") to select the branch — that branch is deployed.
 on:
+  push:
+    branches: [main]
   workflow_dispatch:
 
 # Permissions required by the GitHub Pages deploy action.
@@ -26,6 +29,11 @@ jobs:
       # Default checkout uses the branch you selected when dispatching.
       - name: Checkout ${{ github.ref_name }}
         uses: actions/checkout@v4
+
+      # Fail the deploy if the Korean has drifted between the EN/UZ/RU copies
+      # of any level (a moved highlight span, a word edited in one file only…).
+      - name: Check Korean is in sync across languages
+        run: node tools/check-korean-sync.mjs
 
       - name: Configure Pages
         uses: actions/configure-pages@v5

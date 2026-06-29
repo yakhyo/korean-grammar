@@ -7,6 +7,11 @@
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="KIIP Grammar &amp; Vocabulary">
   <meta property="og:url" content="https://yakhyo.github.io/korean-grammar/levels/level-3.html">
+  <link rel="canonical" href="https://yakhyo.github.io/korean-grammar/levels/level-3.html">
+  <link rel="alternate" hreflang="en" href="https://yakhyo.github.io/korean-grammar/levels/level-3.html">
+  <link rel="alternate" hreflang="uz" href="https://yakhyo.github.io/korean-grammar/levels/uz/level-3.html">
+  <link rel="alternate" hreflang="ru" href="https://yakhyo.github.io/korean-grammar/levels/ru/level-3.html">
+  <link rel="alternate" hreflang="x-default" href="https://yakhyo.github.io/korean-grammar/levels/level-3.html">
   <meta property="og:title" content="KIIP Level 3 — Grammar &amp; Vocabulary">
   <meta property="og:description" content="Grammar and vocabulary reference for KIIP Level 3 (한국어와 한국문화 중급 1).">
   <meta property="og:image" content="https://yakhyo.github.io/korean-grammar/assets/og-image.png">
@@ -22,46 +27,19 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Noto+Serif+KR:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,600;0,700;1,400&family=Noto+Serif+KR:wght@400;600;700&family=Noto+Sans+KR:wght@400;700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="../assets/levels.css">
   <script>
     (function () {
       var root = document.documentElement, KEY = 'kiip-theme';
       var mq = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)');
-      function setTheme(t) { root.setAttribute('data-theme', t); }
       var saved = null;
       try { saved = localStorage.getItem(KEY); } catch (e) { }
-      setTheme(saved || (mq && mq.matches ? 'dark' : 'light'));
-      function closeMenu() {
-        var menus = document.querySelectorAll('.level-menu');
-        for (var i = 0; i < menus.length; i++) menus[i].hidden = true;
-        var btns = document.querySelectorAll('.level-switch');
-        for (var j = 0; j < btns.length; j++) btns[j].setAttribute('aria-expanded', 'false');
-      }
-      document.addEventListener('click', function (e) {
-        if (e.target.closest('.theme-toggle')) {
-          var t = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-          setTheme(t);
-          try { localStorage.setItem(KEY, t); } catch (e) { }
-          return;
-        }
-        var sw = e.target.closest('.level-switch');
-        if (sw) {
-          var open = sw.getAttribute('aria-expanded') === 'true';
-          var m = sw.parentNode.querySelector('.level-menu');
-          closeMenu();
-          sw.setAttribute('aria-expanded', String(!open));
-          if (m) m.hidden = open;
-          return;
-        }
-        if (!e.target.closest('.level-menu')) closeMenu();
-      });
-      document.addEventListener('keydown', function (e) {
-        if (e.key === 'Escape') closeMenu();
-      });
+      root.setAttribute('data-theme', saved || (mq && mq.matches ? 'dark' : 'light'));
     })();
   </script>
+  <script defer src="../assets/nav.js"></script>
   <script defer src="../assets/levels.js"></script>
 </head>
 
