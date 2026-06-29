@@ -28,7 +28,7 @@ jobs:
     steps:
       # Default checkout uses the branch you selected when dispatching.
       - name: Checkout ${{ github.ref_name }}
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       # Fail the deploy if the Korean has drifted between the EN/UZ/RU copies
       # of any level (a moved highlight span, a word edited in one file only…).
@@ -36,14 +36,14 @@ jobs:
         run: node tools/check-korean-sync.mjs
 
       - name: Configure Pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v6
 
       - name: Upload site artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
         with:
           # Static site lives at the repo root.
           path: .
 
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5

@@ -5,13 +5,19 @@
       --ink-strong: #1a1815;
       --muted: #6b6560;
       --soft: #4a4540;
-      --faint: #9a938b;
+      --faint: #78716a;
       --line: #d8d2ca;
       --line-strong: #ddd5c8;
       --zebra: #f4f7f4;
       --shadow: rgba(0, 0, 0, .05);
       --shadow-hover: rgba(0, 0, 0, .10);
       --voc-border: var(--line);
+      /* Floating top-right controls — sized in rem so the bar and the
+         clearance below it scale together with the reader's text size. */
+      --ctrl-h: 2.25rem;        /* control pill height */
+      --ctrl-inset: 1rem;       /* gap from the viewport edges */
+      --bar-space: calc(var(--ctrl-inset) + var(--ctrl-h) + 0.25rem);   /* the controls' band — used for the top fade */
+      --sticky-top: calc(var(--ctrl-inset) + var(--ctrl-h) + 0.75rem);  /* where a pinned unit header rests below the visible controls */
     }
 
     :root[data-theme="dark"] {
@@ -120,28 +126,54 @@
       transition: background-color .25s ease, color .25s ease;
     }
 
+    /* Soft fade so page text dissolves into the background as it scrolls up to
+       the floating controls, instead of bleeding through the gaps between the
+       pills. Sits above body text but below the sticky unit headers (z 5) and
+       the controls (z 60). */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: var(--bar-space);
+      z-index: 4;
+      pointer-events: none;
+      background: linear-gradient(var(--bg) 88%, transparent);
+    }
+
     .page-controls {
       position: fixed;
-      top: 16px;
-      right: 16px;
+      top: var(--ctrl-inset);
+      right: var(--ctrl-inset);
       display: flex;
-      gap: 8px;
+      gap: 0.5rem;
       z-index: 60;
+      transition: transform .25s ease, opacity .2s ease;
+    }
+
+    /* While reading (scrolling down) the controls slide away so the pinned unit
+       title owns the top of the screen; scrolling up brings them back. Toggled
+       by assets/levels.js. */
+    body.controls-hidden .page-controls {
+      transform: translateY(calc(-100% - var(--ctrl-inset)));
+      opacity: 0;
+      pointer-events: none;
     }
 
     .ctrl {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
-      height: 36px;
-      padding: 0 13px;
+      gap: 0.375rem;
+      height: var(--ctrl-h);
+      padding: 0 0.8125rem;
       border-radius: 999px;
       border: 1px solid var(--line);
       background: var(--surface);
       color: var(--ink);
       cursor: pointer;
       font-family: 'Noto Sans KR', sans-serif;
-      font-size: 13px;
+      font-size: 0.8125rem;
       font-weight: 600;
       text-decoration: none;
       box-shadow: 0 1px 3px var(--shadow);
@@ -159,7 +191,7 @@
     }
 
     .theme-toggle {
-      padding: 0 11px;
+      padding: 0 0.6875rem;
     }
 
     .theme-toggle .i-moon {
@@ -244,7 +276,7 @@
       }
 
       .ctrl {
-        padding: 0 10px;
+        padding: 0 0.625rem;
       }
     }
 
@@ -339,6 +371,7 @@
 
     .lesson {
       margin: 34px 0 0;
+      scroll-margin-top: var(--sticky-top);
     }
 
     .lesson-head {
@@ -661,6 +694,10 @@
         display: none !important;
       }
 
+      body::before {
+        display: none !important;
+      }
+
       :root[data-theme="dark"] {
         --bg: #fdfcfa;
         --surface: #ffffff;
@@ -668,7 +705,7 @@
         --ink-strong: #1a1815;
         --muted: #6b6560;
         --soft: #4a4540;
-        --faint: #9a938b;
+        --faint: #78716a;
         --line: #d8d2ca;
         --zebra: #f4f7f4;
       }
@@ -820,6 +857,7 @@
 
     .unit {
       margin: 34px 0 0;
+      scroll-margin-top: var(--sticky-top);
     }
 
     .unit-head {
@@ -919,13 +957,17 @@
       -webkit-user-select: none;
       user-select: none;
       position: sticky;
-      top: 0;
+      top: var(--sticky-top);
       z-index: 5;
       background: var(--bg);
       padding-top: 9px;
       box-shadow: 0 1px 0 var(--line);
-      transition: border-color .15s ease, box-shadow .15s ease;
+      transition: border-color .15s ease, box-shadow .15s ease, top .25s ease;
     }
+    /* once the controls slide away, the pinned header rises to the top edge */
+    body.controls-hidden .lesson-head { top: 0.5rem; }
+    body.controls-hidden .lesson,
+    body.controls-hidden .unit { scroll-margin-top: 0.75rem; }
     /* the open unit's header sits above neighbouring collapsed headers while pinned */
     .lesson.is-open .lesson-head { z-index: 6; }
     .lesson-head:hover { border-color: var(--accent-line, var(--line-strong)); }
@@ -964,14 +1006,14 @@
     .reader-bar {
       position: fixed;
       left: 50%;
-      bottom: 18px;
+      bottom: 1.125rem;
       transform: translate(-50%, 140%);
       z-index: 70;
       display: flex;
       align-items: center;
-      gap: 6px;
-      padding: 6px 8px;
-      max-width: min(560px, calc(100vw - 24px));
+      gap: 0.375rem;
+      padding: 0.375rem 0.5rem;
+      max-width: min(35rem, calc(100vw - 1.5rem));
       width: max-content;
       background: var(--surface);
       border: 1px solid var(--line);
@@ -988,21 +1030,21 @@
       opacity: 1;
       pointer-events: auto;
     }
-    .reader-ico { display: inline-flex; color: var(--faint); padding-left: 6px; }
+    .reader-ico { display: inline-flex; color: var(--faint); padding-left: 0.375rem; }
     .reader-search {
       flex: 1 1 auto;
-      min-width: 120px;
+      min-width: 7.5rem;
       border: 0;
       background: transparent;
       color: var(--ink);
-      font-size: 14px;
+      font-size: 0.875rem;
       font-family: inherit;
-      padding: 7px 2px;
+      padding: 0.5rem 0.125rem;
       outline: none;
     }
     .reader-search::placeholder { color: var(--faint); }
     .reader-count {
-      font-size: 11px;
+      font-size: 0.6875rem;
       font-weight: 600;
       color: var(--faint);
       white-space: nowrap;
@@ -1010,14 +1052,14 @@
     .reader-units {
       display: inline-flex;
       align-items: center;
-      gap: 3px;
-      height: 32px;
-      padding: 0 11px;
+      gap: 0.1875rem;
+      height: 2.5rem;
+      padding: 0 0.75rem;
       border-radius: 999px;
       border: 1px solid var(--line);
       background: var(--bg);
       color: var(--ink);
-      font: 600 13px/1 'Noto Sans KR', sans-serif;
+      font: 600 0.8125rem/1 'Noto Sans KR', sans-serif;
       cursor: pointer;
       white-space: nowrap;
     }
@@ -1027,8 +1069,8 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      width: 32px;
-      height: 32px;
+      width: 2.5rem;
+      height: 2.5rem;
       flex: 0 0 auto;
       border-radius: 999px;
       border: 1px solid var(--line);
@@ -1042,43 +1084,45 @@
     .reader-pop {
       position: fixed;
       left: 50%;
-      bottom: 70px;
+      bottom: 4.75rem;
       transform: translateX(-50%);
       z-index: 71;
-      width: min(560px, calc(100vw - 24px));
+      width: min(35rem, calc(100vw - 1.5rem));
       max-height: 56vh;
       overflow-y: auto;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 2px;
-      padding: 8px;
+      gap: 0.125rem;
+      padding: 0.5rem;
       background: var(--surface);
       border: 1px solid var(--line);
-      border-radius: 16px;
+      border-radius: 1rem;
       box-shadow: 0 12px 40px var(--shadow-hover);
     }
     .reader-pop[hidden] { display: none; }
     .reader-pop a {
       display: block;
-      padding: 8px 10px;
-      border-radius: 8px;
+      padding: 0.5rem 0.625rem;
+      border-radius: 0.5rem;
       color: var(--ink);
       text-decoration: none;
-      font: 500 13px/1.35 'Noto Sans KR', sans-serif;
+      font: 500 0.8125rem/1.35 'Noto Sans KR', sans-serif;
     }
     .reader-pop a .n {
       display: inline-block;
-      min-width: 30px;
+      min-width: 1.875rem;
       font-weight: 700;
-      font-size: 11px;
+      font-size: 0.6875rem;
       color: var(--accent-ink, var(--accent));
     }
     .reader-pop a:hover { background: var(--accent-bg, var(--zebra)); color: var(--accent-ink, var(--accent)); }
 
     @media (max-width: 520px) {
       .reader-pop { grid-template-columns: 1fr; }
-      .reader-units { padding: 0 9px; }
-      .reader-bar { bottom: 12px; gap: 4px; }
+      .reader-units { padding: 0 0.5625rem; }
+      .reader-bar { bottom: 0.75rem; gap: 0.25rem; }
+      /* one column reads cleaner than two cramped, wrapping ones on a phone */
+      nav.toc { columns: 1; }
     }
 
     @media print {

@@ -181,9 +181,18 @@
        header currently pinned to the top so its outline aids (word count +
        chevron) hide while it sits under the top-right controls ---- */
     var ticking = false;
+    var lastY = window.scrollY;
     function updateUI() {
       ticking = false;
-      document.body.classList.toggle('reader-ready', window.scrollY > 300);
+      var y = window.scrollY;
+      document.body.classList.toggle('reader-ready', y > 300);
+      /* Hide the top-right controls while reading downward so the pinned unit
+         title gets the top to itself; reveal them on scroll up or near the top.
+         The small deadzone (4px) keeps them from flickering on tiny scrolls. */
+      if (y < 90) document.body.classList.remove('controls-hidden');
+      else if (y > lastY + 4) document.body.classList.add('controls-hidden');
+      else if (y < lastY - 4) document.body.classList.remove('controls-hidden');
+      lastY = y;
       for (var i = 0; i < sections.length; i++) {
         var sec = sections[i], head = sec.querySelector('.lesson-head');
         if (!head) continue;
