@@ -62,14 +62,26 @@
     }
     function toggle(sec) { setOpen(sec, !sec.classList.contains('is-open')); }
 
-    function expandTarget(id) {
+    function expandTarget(id, smooth) {
       if (!id) return;
       var sec = document.getElementById(id);
       if (!sec || !sec.classList.contains('lesson')) return;
       setOpen(sec, true);
       requestAnimationFrame(function () {
-        sec.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        sec.scrollIntoView({ behavior: smooth === false ? 'auto' : 'smooth', block: 'start' });
       });
+    }
+
+    /* The unit the reader is currently on — the last one whose top has reached the
+       top of the reading area. Used to carry the reading position across a
+       language switch. Empty when still up in the intro (so it opens at the top). */
+    function currentUnitId() {
+      var id = '';
+      for (var i = 0; i < sections.length; i++) {
+        if (sections[i].getBoundingClientRect().top <= 90) id = sections[i].id;
+        else break; // sections are in document order
+      }
+      return id;
     }
 
     /* clicking a Table-of-Contents link expands + scrolls to that unit */
@@ -77,7 +89,9 @@
       a.addEventListener('click', function () { expandTarget(a.getAttribute('href').slice(1)); });
     });
     window.addEventListener('hashchange', function () { expandTarget(location.hash.slice(1)); });
-    if (location.hash) expandTarget(location.hash.slice(1));
+    // On load, jump straight to the hashed unit (no smooth scroll) — e.g. when a
+    // language switch lands here, open that unit immediately instead of the top.
+    if (location.hash) expandTarget(location.hash.slice(1), false);
 
     /* ---- 2. Floating reader bar: search · units · top ---- */
     var bar = document.createElement('div');
@@ -90,22 +104,48 @@
       '<span class="reader-units-chev" aria-hidden="true">' + CHEV + '</span></button>' +
       '<button class="reader-top" type="button" aria-label="Back to top" title="Back to top"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>';
 
-    /* Dock the bar together with a separate light/dark button so the two sit
-       side by side ([ search · units · top ] [theme]) and slide in and out
-       together. */
+    /* Dock the bar together with the light/dark toggle and the language switcher,
+       so the reading-time controls sit side by side ([ search · units · top ]
+       [theme] [language]) and slide in and out together. The level switcher stays
+       at the top of the page (it navigates to other levels — orientation, not a
+       reading-time tool). */
     var dock = document.createElement('div');
     dock.className = 'reader-dock';
     dock.appendChild(bar);
 
-    /* Move the light/dark toggle out of the top controls and dock it as its own
-       round button beside the bar — not inside it. The click handler in nav.js is
-       delegated off the .theme-toggle class, so it keeps working after the move. */
+    /* A second pill beside the search bar holds the light/dark toggle and the
+       language switcher (the two "reading-time" settings). Both are moved out of
+       the top controls; their click handlers in nav.js are delegated off the
+       .theme-toggle / .level-switch classes, so they keep working after the move. */
+    var tools = document.createElement('div');
+    tools.className = 'reader-tools';
     var themeBtn = document.querySelector('.page-controls .theme-toggle');
     if (themeBtn) {
       themeBtn.classList.remove('ctrl');
       themeBtn.classList.add('reader-theme');
-      dock.appendChild(themeBtn);
+      tools.appendChild(themeBtn);
     }
+    /* the language menu is restyled to open upward (see .reader-lang in
+       levels.css) since the dock sits at the bottom of the screen */
+    var langBtn = document.querySelector('.page-controls .lang-switch');
+    var langGroup = langBtn && langBtn.closest('.ctrl-group');
+    if (langGroup) {
+      langBtn.classList.remove('ctrl');
+      langGroup.classList.add('reader-lang');
+      tools.appendChild(langGroup);
+      /* Carry the unit being read across the language switch: rewrite the picked
+         language link to <other-language-page>#<currentUnit> just before it
+         navigates, so the new language opens at the same place rather than the top.
+         Unit ids (#u1, #u2 …) are identical across languages. */
+      langGroup.addEventListener('click', function (e) {
+        var a = e.target.closest('a[href]');
+        if (!a) return;
+        var id = currentUnitId();
+        var base = a.getAttribute('href').split('#')[0];
+        a.setAttribute('href', id ? base + '#' + id : base);
+      });
+    }
+    if (tools.children.length) dock.appendChild(tools);
     document.body.appendChild(dock);
 
     /* units popover, built from the Table of Contents */
