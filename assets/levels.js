@@ -12,6 +12,68 @@
 
   var CHEV = '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>';
 
+  /* ---- Masthead level nav -----------------------------------------------
+     Turns the old floating "Level N ▾" pill into a header navigation menu above
+     the page title: Home on the left, then Level 1–5 (the current one
+     highlighted in the level's accent). Built from the existing level menu so
+     there's no per-file HTML to edit, and run in its own ready() (not the
+     reader-mode one, which bails out on the lesson-less level-5). It scrolls away
+     with the masthead. */
+  function buildLevelRail() {
+    var levelSwitch = document.querySelector('.page-controls .level-switch:not(.lang-switch)');
+    var group = levelSwitch && levelSwitch.closest('.ctrl-group');
+    var menu = group && group.querySelector('.level-menu');
+    var h1 = document.querySelector('.doc h1');
+    if (!menu || !h1) return;
+
+    // localized word for "level" — used to name the nav landmark
+    var word = (levelSwitch.textContent || '').replace(/[0-9.·–—-]/g, '').trim() || 'Level';
+
+    var nav = document.createElement('nav');
+    nav.className = 'level-nav';
+    nav.setAttribute('aria-label', word);
+
+    var levels = document.createElement('ol');
+    levels.className = 'ln-levels';
+
+    Array.prototype.forEach.call(menu.querySelectorAll('a[href]'), function (a) {
+      var href = a.getAttribute('href') || '';
+      var label = a.textContent.trim();
+      if (/index[^/]*\.html$/.test(href)) {       // Home — left side (index / index-ru / index-uz)
+        var home = document.createElement('a');
+        home.className = 'ln-home';
+        home.href = href;
+        home.textContent = label || 'Home';
+        nav.appendChild(home);
+        return;
+      }
+      if (!/level-\d/.test(href)) return;
+      var li = document.createElement('li');
+      var lv = document.createElement('a');
+      lv.className = 'ln-lvl';
+      lv.href = href;
+      if (a.getAttribute('aria-current')) lv.setAttribute('aria-current', 'page');
+      // "Level 1 · 초급 1" -> "Level 1" (the Korean tier stays in the h1)
+      lv.textContent = (label.split('·')[0] || label).trim();
+      li.appendChild(lv);
+      levels.appendChild(li);
+    });
+    nav.appendChild(levels);
+
+    h1.parentNode.insertBefore(nav, h1);
+
+    // the nav now carries the level identity, so drop the redundant
+    // "Level N · " prefix from the title — keep just the Korean tier
+    var m = h1.textContent.match(/·\s*(.+)$/);
+    if (m) h1.textContent = m[1].trim();
+
+    // retire the old level pill; hide the top control cluster only if nothing
+    // else is left in it (on level-5 the theme/language pills still live there)
+    group.parentNode.removeChild(group);
+    var pc = document.querySelector('.page-controls');
+    if (pc && !pc.querySelector('.ctrl-group, .ctrl')) pc.classList.add('is-empty');
+  }
+
   ready(function () {
     var sections = Array.prototype.slice.call(document.querySelectorAll('section.lesson'));
     if (!sections.length) return;
@@ -32,12 +94,17 @@
       }
       sec.appendChild(body);
 
-      // word-count badge + chevron, and make the head a toggle
+      // count badge + chevron, and make the head a toggle. Levels 1-4 count
+      // vocab words; level 5 (society themes) counts its terms instead.
       var nWords = sec.querySelectorAll('table.voc td.w').length;
-      if (nWords) {
+      var nTerms = sec.querySelectorAll('table.terms td.term-k').length;
+      var count = nWords
+        ? nWords + (nWords === 1 ? ' word' : ' words')
+        : (nTerms ? nTerms + (nTerms === 1 ? ' term' : ' terms') : '');
+      if (count) {
         var badge = document.createElement('span');
         badge.className = 'lesson-count';
-        badge.textContent = nWords + (nWords === 1 ? ' word' : ' words');
+        badge.textContent = count;
         head.appendChild(badge);
       }
       var chev = document.createElement('span');
@@ -189,6 +256,7 @@
     var countEl = bar.querySelector('.reader-count');
     var rows = [];
     sections.forEach(function (sec) {
+      // vocab rows (levels 1-4)
       Array.prototype.forEach.call(sec.querySelectorAll('table.voc tr'), function (tr) {
         var w = tr.querySelector('td.w');
         if (!w) return; // skip header + group rows
@@ -197,6 +265,11 @@
           tr: tr, sec: sec,
           text: (w.textContent + ' ' + (tds[1] ? tds[1].textContent : '')).toLowerCase()
         });
+      });
+      // term rows (level 5 — society themes): index the whole row
+      Array.prototype.forEach.call(sec.querySelectorAll('table.terms tr'), function (tr) {
+        if (!tr.querySelector('td.term-k')) return; // skip the header row
+        rows.push({ tr: tr, sec: sec, text: tr.textContent.toLowerCase() });
       });
     });
 
@@ -249,4 +322,9 @@
     window.addEventListener('resize', onScroll, { passive: true });
     updateUI();
   });
+
+  /* Build the masthead level rail after the reader-mode pass above (which, on
+     lesson pages, has already moved the theme + language pills into the dock —
+     so the empty-check below correctly hides the now-bare top control cluster). */
+  ready(buildLevelRail);
 })();
