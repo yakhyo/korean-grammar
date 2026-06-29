@@ -89,7 +89,24 @@
       '<button class="reader-units" type="button" aria-haspopup="true" aria-expanded="false">Units' +
       '<span class="reader-units-chev" aria-hidden="true">' + CHEV + '</span></button>' +
       '<button class="reader-top" type="button" aria-label="Back to top" title="Back to top"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>';
-    document.body.appendChild(bar);
+
+    /* Dock the bar together with a separate light/dark button so the two sit
+       side by side ([ search · units · top ] [theme]) and slide in and out
+       together. */
+    var dock = document.createElement('div');
+    dock.className = 'reader-dock';
+    dock.appendChild(bar);
+
+    /* Move the light/dark toggle out of the top controls and dock it as its own
+       round button beside the bar — not inside it. The click handler in nav.js is
+       delegated off the .theme-toggle class, so it keeps working after the move. */
+    var themeBtn = document.querySelector('.page-controls .theme-toggle');
+    if (themeBtn) {
+      themeBtn.classList.remove('ctrl');
+      themeBtn.classList.add('reader-theme');
+      dock.appendChild(themeBtn);
+    }
+    document.body.appendChild(dock);
 
     /* units popover, built from the Table of Contents */
     var pop = document.createElement('div');
@@ -177,28 +194,24 @@
       if (e.key === 'Escape') { input.value = ''; clearSearch(); input.blur(); }
     });
 
-    /* ---- 4. Scroll state: reveal the bar past the intro, and flag the
-       header currently pinned to the top so its outline aids (word count +
-       chevron) hide while it sits under the top-right controls ---- */
+    /* ---- 4. Scroll state ---- */
+    /* Reveal the floating reader dock past the intro, and flag the header that is
+       currently pinned to the top (`is-stuck`) so it can tuck its chevron/count
+       away and reserve room for the controls (see levels.css). This is a
+       position-based flag that flips once as a header reaches the top — it does
+       NOT toggle on scroll direction, so it can't flicker the way the old
+       controls-hiding did. */
     var ticking = false;
-    var lastY = window.scrollY;
     function updateUI() {
       ticking = false;
-      var y = window.scrollY;
-      document.body.classList.toggle('reader-ready', y > 300);
-      /* Hide the top-right controls while reading downward so the pinned unit
-         title gets the top to itself; reveal them on scroll up or near the top.
-         The small deadzone (4px) keeps them from flickering on tiny scrolls. */
-      if (y < 90) document.body.classList.remove('controls-hidden');
-      else if (y > lastY + 4) document.body.classList.add('controls-hidden');
-      else if (y < lastY - 4) document.body.classList.remove('controls-hidden');
-      lastY = y;
+      document.body.classList.toggle('reader-ready', window.scrollY > 300);
       for (var i = 0; i < sections.length; i++) {
         var sec = sections[i], head = sec.querySelector('.lesson-head');
         if (!head) continue;
-        var r = sec.getBoundingClientRect();
-        // pinned while the section straddles the top edge of the viewport
-        head.classList.toggle('is-stuck', r.top < 0 && r.bottom > 0);
+        var sr = sec.getBoundingClientRect(), hr = head.getBoundingClientRect();
+        // pinned = the header has been pushed off its section's top edge and the
+        // section still occupies the band at the pinned position
+        head.classList.toggle('is-stuck', (hr.top - sr.top) > 1 && sr.bottom > hr.top + 1);
       }
     }
     function onScroll() {
@@ -206,6 +219,20 @@
     }
     window.addEventListener('scroll', onScroll, { passive: true });
     window.addEventListener('resize', onScroll, { passive: true });
+
+    /* Measure the floating controls' real width so a pinned header reserves exactly
+       enough room for them (see --controls-w in levels.css). Measured once now and
+       on resize — never per scroll-frame, so it adds nothing to scroll cost. */
+    var controlsEl = document.querySelector('.page-controls');
+    function syncControlsWidth() {
+      if (controlsEl) {
+        document.documentElement.style.setProperty('--controls-w', controlsEl.offsetWidth + 'px');
+      }
+    }
+    syncControlsWidth();
+    window.addEventListener('resize', syncControlsWidth, { passive: true });
+    window.addEventListener('load', syncControlsWidth);
+
     updateUI();
   });
 })();
