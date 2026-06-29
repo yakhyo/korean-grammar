@@ -7,6 +7,12 @@
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="KIIP Grammar &amp; Vocabulary">
   <meta property="og:url" content="https://yakhyo.github.io/korean-grammar/levels/ru/level-3.html">
+  <link rel="canonical" href="https://yakhyo.github.io/korean-grammar/levels/ru/level-3.html">
+  <link rel="alternate" hreflang="en" href="https://yakhyo.github.io/korean-grammar/levels/level-3.html">
+  <link rel="alternate" hreflang="uz" href="https://yakhyo.github.io/korean-grammar/levels/uz/level-3.html">
+  <link rel="alternate" hreflang="ru" href="https://yakhyo.github.io/korean-grammar/levels/ru/level-3.html">
+  <link rel="alternate" hreflang="id" href="https://yakhyo.github.io/korean-grammar/levels/id/level-3.html">
+  <link rel="alternate" hreflang="x-default" href="https://yakhyo.github.io/korean-grammar/levels/level-3.html">
   <meta property="og:title" content="KIIP Уровень 3 — Грамматика и лексика">
   <meta property="og:description" content="Справочник по грамматике и лексике KIIP Уровень 3 (한국어와 한국문화 중급 1).">
   <meta property="og:image" content="https://yakhyo.github.io/korean-grammar/assets/og-image-ru.png">
@@ -22,46 +28,20 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Noto+Serif+KR:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,600;0,700;1,400&family=Noto+Serif+KR:wght@400;600;700&family=Noto+Sans+KR:wght@400;700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="../../assets/levels.css">
   <script>
     (function () {
       var root = document.documentElement, KEY = 'kiip-theme';
       var mq = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)');
-      function setTheme(t) { root.setAttribute('data-theme', t); }
       var saved = null;
       try { saved = localStorage.getItem(KEY); } catch (e) { }
-      setTheme(saved || (mq && mq.matches ? 'dark' : 'light'));
-      function closeMenu() {
-        var menus = document.querySelectorAll('.level-menu');
-        for (var i = 0; i < menus.length; i++) menus[i].hidden = true;
-        var btns = document.querySelectorAll('.level-switch');
-        for (var j = 0; j < btns.length; j++) btns[j].setAttribute('aria-expanded', 'false');
-      }
-      document.addEventListener('click', function (e) {
-        if (e.target.closest('.theme-toggle')) {
-          var t = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-          setTheme(t);
-          try { localStorage.setItem(KEY, t); } catch (e) { }
-          return;
-        }
-        var sw = e.target.closest('.level-switch');
-        if (sw) {
-          var open = sw.getAttribute('aria-expanded') === 'true';
-          var m = sw.parentNode.querySelector('.level-menu');
-          closeMenu();
-          sw.setAttribute('aria-expanded', String(!open));
-          if (m) m.hidden = open;
-          return;
-        }
-        if (!e.target.closest('.level-menu')) closeMenu();
-      });
-      document.addEventListener('keydown', function (e) {
-        if (e.key === 'Escape') closeMenu();
-      });
+      root.setAttribute('data-theme', saved || (mq && mq.matches ? 'dark' : 'light'));
     })();
   </script>
+  <script defer src="../../assets/nav.js"></script>
+  <script defer src="../../assets/levels.js"></script>
 </head>
 
 <body>
@@ -105,17 +85,10 @@
         <a role="menuitem" href="../level-3.html">English</a>
         <a role="menuitem" href="../uz/level-3.html">Oʻzbekcha</a>
         <a role="menuitem" href="level-3.html" aria-current="page">Русский</a>
+        <a role="menuitem" href="../id/level-3.html">Bahasa Indonesia</a>
       </div>
     </div>
     <!-- langswitch:end -->
-    <a class="ctrl" href="https://github.com/yakhyo/korean-grammar" target="_blank" rel="noopener"
-      aria-label="Отметить проект звездой на GitHub" title="Отметить проект звездой на GitHub">
-      <svg width="15" height="15" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
-        <path
-          d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.75.75 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Z" />
-      </svg>
-      <span>Звезда</span>
-    </a>
     <button class="ctrl theme-toggle" type="button" aria-label="Переключить тёмную тему"
       title="Переключить тёмную тему">
       <svg class="i-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -145,7 +118,7 @@
             </div>
             <div class="running-ftr"><span>Справочник для самостоятельного изучения</span><span>사회통합프로그램</span></div>
 
-            <h1>KIIP Уровень 3 — Грамматика и лексика</h1>
+            <h1>Уровень 3 · 중급 1</h1>
             <p class="subtitle">Справочник для самостоятельного изучения по 한국어와 한국문화 중급 1 (текущее издание из 16
               разделов) · Программа адаптации и интеграции иммигрантов в Корее</p>
 
@@ -217,25 +190,33 @@
                   해서)</p>
                 <p class="def">Называет одну показательную причину из нескольких подразумеваемых — «(отчасти) потому
                   что…, и
-                  поэтому». При удвоении (…-고 …-고 해서) явно перечисляются две и более причины. Главное предложение не
+                  поэтому». При удвоении (…-고 …-<span class="hl">고 해서</span>) явно перечисляются две и более причины.
+                  Главное предложение не
                   может быть
                   командой или предложением.</p>
                 <div class="ex">
-                  <p class="k">공감대도 없고 바쁘고 해서 친해지기가 어려워요.</p>
+                  <p class="k">공감대도 없고 바쁘<span class="hl">고 해서</span> 친해지기가 어려워요.</p>
                   <p class="e">У нас мало общего, и мы оба заняты, поэтому сблизиться трудно.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">일하는 방법도 모르고 해서 직장 생활이 힘들어요.</p>
+                  <p class="k">일하는 방법도 모르<span class="hl">고 해서</span> 직장 생활이 힘들어요.</p>
                   <p class="e">Я толком не знаю, как тут всё устроено, и поэтому на работе мне тяжело.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">월급도 적고 일도 많고 해서 회사를 그만뒀어요.</p>
+                  <p class="k">월급도 적고 일도 많<span class="hl">고 해서</span> 회사를 그만뒀어요.</p>
                   <p class="e">Зарплата была низкой, и работы было много, поэтому (по этим причинам) я уволился из
                     компании.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">날씨도 춥고 해서 오늘은 그냥 집에 있었어요.</p>
+                  <p class="k">날씨도 춥<span class="hl">고 해서</span> 오늘은 그냥 집에 있었어요.</p>
                   <p class="e">Было холодно и всё такое, поэтому сегодня я просто остался дома.</p>
+                </div>
+                <div class="note">
+                  <p><span class="tag">Совет</span> Главное предложение сообщает простой факт или итог в прошлом — оно
+                    не
+                    может быть приказом или предложением. Говорят 그만뒀어요 («я уволился»), а не 그만두세요 («увольняйтесь»).
+                    Чтобы
+                    сказать «так что давайте…», используйте <span class="hl">-(으)니까</span>.</p>
                 </div>
               </div>
 
@@ -247,22 +228,29 @@
                   -(으)면 되다</p>
                 <p class="def">Предлагает простое решение или достаточное условие: сделать столько — уже достаточно.
                   Часто
-                  используется, когда дают необременительный совет или успокаивают.</p>
+                  используется, когда дают необременительный совет или успокаивают. Основа глагола + <span
+                    class="hl">-(으)면 되다</span>.</p>
                 <div class="ex">
-                  <p class="k">웃으면서 먼저 인사하면 돼요.</p>
+                  <p class="k">웃으면서 먼저 인사<span class="hl">하면 돼요</span>.</p>
                   <p class="e">Достаточно просто улыбнуться и поздороваться первым.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">직접 가서 이야기하면 돼요.</p>
+                  <p class="k">직접 가서 이야기<span class="hl">하면 돼요</span>.</p>
                   <p class="e">Всё, что нужно, — пойти и поговорить с ними лично.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">문제도 많이 풀어 보고 단어도 많이 외우면 돼요.</p>
+                  <p class="k">문제도 많이 풀어 보고 단어도 많이 외<span class="hl">우면 돼요</span>.</p>
                   <p class="e">Достаточно прорешать побольше заданий и выучить побольше слов.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">서류는 이메일로 보내 주시면 됩니다.</p>
+                  <p class="k">서류는 이메일로 보내 주<span class="hl">시면 됩니다</span>.</p>
                   <p class="e">Достаточно прислать документы по электронной почте.</p>
+                </div>
+                <div class="note">
+                  <p><span class="tag">Сравните</span> <span class="hl">-(으)면 되다</span> = «этого достаточно»; <span
+                      class="hl">-아/어야 되다</span> = «это обязательно, нужно». 가면 돼요 («можно просто пойти») vs. 가야 돼요
+                    («нужно
+                    пойти»).</p>
                 </div>
               </div>
 
@@ -341,6 +329,193 @@
                     <td class="w">함께 시간을 보내다</td>
                     <td>проводить время вместе</td>
                   </tr>
+                  <tr class="grp">
+                    <td colspan="2">Ключевые слова (핵심 단어)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">선배</td>
+                    <td>старший (по учёбе или работе)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">후배</td>
+                    <td>младший (по учёбе или работе)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">대하다</td>
+                    <td>обращаться, относиться (к кому-л.)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">상사</td>
+                    <td>начальник</td>
+                  </tr>
+                  <tr>
+                    <td class="w">동료</td>
+                    <td>коллега</td>
+                  </tr>
+                  <tr>
+                    <td class="w">부하 직원</td>
+                    <td>подчинённый</td>
+                  </tr>
+                  <tr>
+                    <td class="w">동창</td>
+                    <td>одноклассник, однокурсник</td>
+                  </tr>
+                  <tr>
+                    <td class="w">대통령</td>
+                    <td>президент</td>
+                  </tr>
+                  <tr>
+                    <td class="w">지시</td>
+                    <td>указание, поручение</td>
+                  </tr>
+                  <tr>
+                    <td class="w">거절하다</td>
+                    <td>отказывать(ся)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">요청</td>
+                    <td>просьба</td>
+                  </tr>
+                  <tr>
+                    <td class="w">방법</td>
+                    <td>способ</td>
+                  </tr>
+                  <tr>
+                    <td class="w">솔직하다</td>
+                    <td>быть откровенным, честным</td>
+                  </tr>
+                  <tr>
+                    <td class="w">예의를 지키다</td>
+                    <td>соблюдать вежливость</td>
+                  </tr>
+                  <tr>
+                    <td class="w">공감</td>
+                    <td>сочувствие, понимание</td>
+                  </tr>
+                  <tr>
+                    <td class="w">사귀다</td>
+                    <td>заводить дружбу, общаться</td>
+                  </tr>
+                  <tr>
+                    <td class="w">친해지다</td>
+                    <td>сближаться</td>
+                  </tr>
+                  <tr>
+                    <td class="w">사이</td>
+                    <td>отношения; между</td>
+                  </tr>
+                  <tr>
+                    <td class="w">사이좋다</td>
+                    <td>быть в хороших отношениях</td>
+                  </tr>
+                  <tr>
+                    <td class="w">익숙하다</td>
+                    <td>привыкнуть, быть привычным</td>
+                  </tr>
+                  <tr>
+                    <td class="w">관심을 갖다</td>
+                    <td>проявлять интерес</td>
+                  </tr>
+                  <tr>
+                    <td class="w">위로</td>
+                    <td>утешение</td>
+                  </tr>
+                  <tr>
+                    <td class="w">안부</td>
+                    <td>привет, добрые пожелания (справиться о ком-л.)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">고민</td>
+                    <td>переживание, забота</td>
+                  </tr>
+                  <tr>
+                    <td class="w">조언</td>
+                    <td>совет</td>
+                  </tr>
+                  <tr>
+                    <td class="w">의도</td>
+                    <td>намерение</td>
+                  </tr>
+                  <tr>
+                    <td class="w">편견</td>
+                    <td>предубеждение</td>
+                  </tr>
+                  <tr>
+                    <td class="w">말다툼</td>
+                    <td>ссора, спор</td>
+                  </tr>
+                  <tr>
+                    <td class="w">답답하다</td>
+                    <td>чувствовать досаду, тяжесть на душе</td>
+                  </tr>
+                  <tr>
+                    <td class="w">부족하다</td>
+                    <td>быть недостаточным, не хватать</td>
+                  </tr>
+                  <tr>
+                    <td class="w">내성적이다</td>
+                    <td>быть замкнутым, интровертом</td>
+                  </tr>
+                  <tr>
+                    <td class="w">속도</td>
+                    <td>скорость</td>
+                  </tr>
+                  <tr>
+                    <td class="w">줄이다</td>
+                    <td>сокращать, уменьшать</td>
+                  </tr>
+                  <tr>
+                    <td class="w">외우다</td>
+                    <td>заучивать, запоминать</td>
+                  </tr>
+                  <tr>
+                    <td class="w">적응하다</td>
+                    <td>адаптироваться, приспосабливаться</td>
+                  </tr>
+                  <tr>
+                    <td class="w">노력 중이다</td>
+                    <td>стараться, прилагать усилия</td>
+                  </tr>
+                  <tr>
+                    <td class="w">이야기를 나누다</td>
+                    <td>вести беседу, разговаривать</td>
+                  </tr>
+                  <tr>
+                    <td class="w">주고받다</td>
+                    <td>обмениваться</td>
+                  </tr>
+                  <tr>
+                    <td class="w">문제를 풀다</td>
+                    <td>решать задачу</td>
+                  </tr>
+                  <tr>
+                    <td class="w">동호회</td>
+                    <td>клуб (по интересам)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">친목 활동</td>
+                    <td>совместный досуг, общение</td>
+                  </tr>
+                  <tr>
+                    <td class="w">이직</td>
+                    <td>смена работы</td>
+                  </tr>
+                  <tr>
+                    <td class="w">옮기다</td>
+                    <td>переносить, переходить</td>
+                  </tr>
+                  <tr>
+                    <td class="w">다녀오다</td>
+                    <td>сходить, съездить (и вернуться)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">대부분</td>
+                    <td>большинство, в основном</td>
+                  </tr>
+                  <tr>
+                    <td class="w">주변 사람</td>
+                    <td>окружающие люди</td>
+                  </tr>
                 </table>
               </div>
             </section>
@@ -358,21 +533,24 @@
                   어지다 · 하다 →
                   해지다)</p>
                 <p class="def">Превращает прилагательное в глагол изменения: подлежащее постепенно приобретает это
-                  качество. Используется для изменений характера, настроения, погоды, состояния и т. д.</p>
+                  качество (ㅏ/ㅗ → <span class="hl">아지다</span> · остальные → <span class="hl">어지다</span> · 하다 → <span
+                    class="hl">해지다</span>). Используется для изменений характера, настроения, погоды, состояния и т. д.
+                </p>
                 <div class="ex">
-                  <p class="k">예전에는 실수를 자주 했는데 요즘은 꼼꼼해졌어요.</p>
-                  <p class="e">Раньше я часто ошибался, а теперь стал аккуратным.</p>
+                  <p class="k">예전에는 실수를 자주 했는데 요즘은 꼼꼼<span class="hl">해졌어요</span>.</p>
+                  <p class="e">Раньше я часто ошибался, а теперь стал аккуратным. <span class="e-note">(꼼꼼하다 →
+                      해지다)</span></p>
                 </div>
                 <div class="ex">
-                  <p class="k">태권도를 배운 후부터 아이가 활발해졌어요.</p>
+                  <p class="k">태권도를 배운 후부터 아이가 활발<span class="hl">해졌어요</span>.</p>
                   <p class="e">С тех пор как ребёнок занялся тхэквондо, он стал более общительным.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">그는 성격이 많이 밝아졌어요.</p>
-                  <p class="e">Его характер стал намного светлее.</p>
+                  <p class="k">그는 성격이 많이 밝<span class="hl">아졌어요</span>.</p>
+                  <p class="e">Его характер стал намного светлее. <span class="e-note">(у 밝다 есть ㅏ → 아지다)</span></p>
                 </div>
                 <div class="ex">
-                  <p class="k">취직을 한 후로 표정이 한결 밝아지고 자신감도 생겼어요.</p>
+                  <p class="k">취직을 한 후로 표정이 한결 밝<span class="hl">아지고</span> 자신감도 생겼어요.</p>
                   <p class="e">С тех пор как он устроился на работу, его лицо заметно посветлело, и он обрёл уверенность
                     в себе.</p>
                 </div>
@@ -383,22 +561,24 @@
                 <p class="meta"><span class="tag">Форма</span> Глагол + 는 대신에 · Прилаг. + -(으)ㄴ 대신에 · Существительное +
                   대신에</p>
                 <p class="def">Два употребления: (1) замена одного действия другим («вместо») и (2) компенсация —
-                  один недостаток уравновешивается достоинством («но зато»).</p>
+                  один недостаток уравновешивается достоинством («но зато»). Глагол + <span class="hl">는 대신에</span>,
+                  прилагательное + <span class="hl">-(으)ㄴ 대신에</span>.</p>
                 <div class="ex">
-                  <p class="k">일요일에 일하는 대신에 월요일에 쉬어요.</p>
+                  <p class="k">일요일에 일하<span class="hl">는 대신에</span> 월요일에 쉬어요.</p>
                   <p class="e">Вместо того чтобы работать в воскресенье, я отдыхаю в понедельник.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">이 일은 시간이 오래 걸리는 대신에 실수가 없어요.</p>
+                  <p class="k">이 일은 시간이 오래 걸리<span class="hl">는 대신에</span> 실수가 없어요.</p>
                   <p class="e">Эта работа занимает много времени, но зато в ней нет ошибок.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">밖에서 외식하는 대신에 집에서 직접 요리해서 돈을 아꼈어요.</p>
+                  <p class="k">밖에서 외식하<span class="hl">는 대신에</span> 집에서 직접 요리해서 돈을 아꼈어요.</p>
                   <p class="e">Вместо того чтобы есть в кафе, я сам приготовил дома и сэкономил деньги.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">이 식당은 값이 조금 비싼 대신에 재료가 신선하고 양도 많아요.</p>
-                  <p class="e">Этот ресторан немного дороговат, но зато продукты свежие и порции большие.</p>
+                  <p class="k">이 식당은 값이 조금 비싼 <span class="hl">대신에</span> 재료가 신선하고 양도 많아요.</p>
+                  <p class="e">Этот ресторан немного дороговат, но зато продукты свежие и порции большие. <span
+                      class="e-note">(비싸다 — прилагательное → 비싼 대신에)</span></p>
                 </div>
               </div>
 
@@ -452,6 +632,121 @@
                     <td class="w">(성격이) 급하다</td>
                     <td>быть нетерпеливым, вспыльчивым (по характеру)</td>
                   </tr>
+                  <tr class="grp">
+                    <td colspan="2">Ключевые слова (핵심 단어)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">신중하다</td>
+                    <td>быть осторожным, рассудительным</td>
+                  </tr>
+                  <tr>
+                    <td class="w">활발하다</td>
+                    <td>быть живым, активным</td>
+                  </tr>
+                  <tr>
+                    <td class="w">개방적이다</td>
+                    <td>быть открытым, без предрассудков</td>
+                  </tr>
+                  <tr>
+                    <td class="w">보수적이다</td>
+                    <td>быть консервативным</td>
+                  </tr>
+                  <tr>
+                    <td class="w">예민하다</td>
+                    <td>быть чувствительным, ранимым</td>
+                  </tr>
+                  <tr>
+                    <td class="w">자상하다</td>
+                    <td>быть заботливым, внимательным</td>
+                  </tr>
+                  <tr>
+                    <td class="w">정이 많다</td>
+                    <td>быть душевным, отзывчивым</td>
+                  </tr>
+                  <tr>
+                    <td class="w">책임감이 강하다</td>
+                    <td>с сильным чувством ответственности</td>
+                  </tr>
+                  <tr>
+                    <td class="w">호기심이 많다</td>
+                    <td>быть любознательным</td>
+                  </tr>
+                  <tr>
+                    <td class="w">유머 감각이 많다</td>
+                    <td>с хорошим чувством юмора</td>
+                  </tr>
+                  <tr>
+                    <td class="w">설레다</td>
+                    <td>волноваться, трепетать (от радости)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">시끄럽다</td>
+                    <td>быть шумным</td>
+                  </tr>
+                  <tr>
+                    <td class="w">낯설다</td>
+                    <td>быть незнакомым, непривычным</td>
+                  </tr>
+                  <tr>
+                    <td class="w">낯선</td>
+                    <td>незнакомый (определение, от 낯설다)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">다투다</td>
+                    <td>ссориться, спорить</td>
+                  </tr>
+                  <tr>
+                    <td class="w">눈을 흘기다</td>
+                    <td>косо смотреть, бросать недовольный взгляд</td>
+                  </tr>
+                  <tr>
+                    <td class="w">달라지다</td>
+                    <td>меняться, становиться другим</td>
+                  </tr>
+                  <tr>
+                    <td class="w">동아리</td>
+                    <td>кружок (студенческий)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">동호회</td>
+                    <td>клуб по интересам</td>
+                  </tr>
+                  <tr>
+                    <td class="w">봉사</td>
+                    <td>волонтёрство, служение</td>
+                  </tr>
+                  <tr>
+                    <td class="w">습관</td>
+                    <td>привычка</td>
+                  </tr>
+                  <tr>
+                    <td class="w">장기 자랑</td>
+                    <td>конкурс талантов</td>
+                  </tr>
+                  <tr>
+                    <td class="w">계획을 세우다</td>
+                    <td>составлять план</td>
+                  </tr>
+                  <tr>
+                    <td class="w">앞에 나서다</td>
+                    <td>выходить вперёд, проявлять инициативу</td>
+                  </tr>
+                  <tr>
+                    <td class="w">공무원</td>
+                    <td>госслужащий</td>
+                  </tr>
+                  <tr>
+                    <td class="w">사회 복지사</td>
+                    <td>социальный работник</td>
+                  </tr>
+                  <tr>
+                    <td class="w">네일 아티스트</td>
+                    <td>мастер маникюра</td>
+                  </tr>
+                  <tr>
+                    <td class="w">애</td>
+                    <td>ребёнок, дитя (разг.)</td>
+                  </tr>
                 </table>
               </div>
             </section>
@@ -470,22 +765,24 @@
                 </p>
                 <p class="def">Встраивает вопрос (… ли / что / когда / как…) в качестве дополнения к 알다 (знать) или 모르다
                   (не
-                  знать). Часто сочетается с вопросительными словами 어디, 언제, 어떻게, 무엇.</p>
+                  знать). Глагол + <span class="hl">는지</span>, прилагательное + <span class="hl">-(으)ㄴ지</span>. Часто
+                  сочетается с вопросительными словами 어디, 언제, 어떻게, 무엇.</p>
                 <div class="ex">
-                  <p class="k">외국인도 복지 서비스를 이용할 수 있는지 아는 사람이 많지 않아요.</p>
+                  <p class="k">외국인도 복지 서비스를 이용할 수 있<span class="hl">는지</span> 아는 사람이 많지 않아요.</p>
                   <p class="e">Немногие знают, могут ли иностранцы тоже пользоваться социальными услугами.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">상담 센터가 몇 시에 문을 여는지 몰라서 홈페이지를 찾아봤어요.</p>
+                  <p class="k">상담 센터가 몇 시에 문을 여<span class="hl">는지</span> 몰라서 홈페이지를 찾아봤어요.</p>
                   <p class="e">Я не знал, во сколько открывается консультационный центр, поэтому посмотрел на сайте.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">이 서류를 어디에 제출해야 하는지 아세요?</p>
+                  <p class="k">이 서류를 어디에 제출해야 하<span class="hl">는지</span> 아세요?</p>
                   <p class="e">Вы не знаете, куда нужно подать эти документы?</p>
                 </div>
                 <div class="ex">
-                  <p class="k">신청 방법이 얼마나 복잡한지 몰라서 직접 가서 물어봤어요.</p>
-                  <p class="e">Я не знал, насколько сложна процедура подачи заявки, поэтому пошёл и спросил лично.</p>
+                  <p class="k">신청 방법이 얼마나 복잡<span class="hl">한지</span> 몰라서 직접 가서 물어봤어요.</p>
+                  <p class="e">Я не знал, насколько сложна процедура подачи заявки, поэтому пошёл и спросил лично. <span
+                      class="e-note">(복잡하다 — прилагательное → 복잡한지)</span></p>
                 </div>
               </div>
 
@@ -497,22 +794,31 @@
                 </p>
                 <p class="def">Одно действие происходит, когда оно прекращается и на смену приходит второе, или когда
                   случается
-                  что-то другое. Подразумевает, что первое действие прерывается или меняет ход на середине.</p>
+                  что-то другое. Подразумевает, что первое действие (основа глагола + <span class="hl">다가</span>)
+                  прерывается или меняет ход на середине. У обоих предложений одно и то же подлежащее.</p>
                 <div class="ex">
-                  <p class="k">복지관에 가다가 친구를 만났어요.</p>
+                  <p class="k">복지관에 가<span class="hl">다가</span> 친구를 만났어요.</p>
                   <p class="e">По дороге в центр социальной помощи я случайно встретил друга.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">영화를 보다가 재미없어서 나왔어요.</p>
+                  <p class="k">영화를 보<span class="hl">다가</span> 재미없어서 나왔어요.</p>
                   <p class="e">Я смотрел фильм, но ушёл, потому что было скучно.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">책을 읽다가 친구가 와서 밖에 나갔어요.</p>
+                  <p class="k">책을 읽<span class="hl">다가</span> 친구가 와서 밖에 나갔어요.</p>
                   <p class="e">Я читал книгу, и тут пришёл друг, поэтому я вышел на улицу.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">텔레비전을 보다가 깜빡 잠이 들었어요.</p>
+                  <p class="k">텔레비전을 보<span class="hl">다가</span> 깜빡 잠이 들었어요.</p>
                   <p class="e">Я смотрел телевизор и незаметно для себя задремал.</p>
+                </div>
+                <div class="note">
+                  <p><span class="tag">Сравните</span> <span class="hl">-다가</span> прерывает текущее действие (가다가 = «по
+                    дороге»); <span class="hl">-고 나서</span> ждёт, пока первое действие полностью завершится (가고 나서 =
+                    «после
+                    того как сходил»). Добавление прошедшего времени — <span class="hl">-았/었다가</span> — означает, что
+                    первое
+                    действие завершилось, а затем сменилось обратным: 갔다가 왔어요 («сходил и вернулся»).</p>
                 </div>
               </div>
 
@@ -590,6 +896,125 @@
                     <td class="w">창업</td>
                     <td>открытие бизнеса</td>
                   </tr>
+                  <tr class="grp">
+                    <td colspan="2">Ключевые слова (핵심 단어)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">임금 체불</td>
+                    <td>задержка зарплаты</td>
+                  </tr>
+                  <tr>
+                    <td class="w">산업 재해</td>
+                    <td>производственная травма</td>
+                  </tr>
+                  <tr>
+                    <td class="w">근무 조건</td>
+                    <td>условия труда</td>
+                  </tr>
+                  <tr>
+                    <td class="w">의료 상담</td>
+                    <td>медицинская консультация</td>
+                  </tr>
+                  <tr>
+                    <td class="w">참가 자격</td>
+                    <td>право на участие</td>
+                  </tr>
+                  <tr>
+                    <td class="w">정착</td>
+                    <td>обустройство (на новом месте)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">교류실</td>
+                    <td>комната для общения и обмена</td>
+                  </tr>
+                  <tr>
+                    <td class="w">장</td>
+                    <td>лист, страница (счётное слово)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">활용되다</td>
+                    <td>использоваться, применяться</td>
+                  </tr>
+                  <tr>
+                    <td class="w">고충</td>
+                    <td>трудность, наболевшая проблема</td>
+                  </tr>
+                  <tr>
+                    <td class="w">취업</td>
+                    <td>трудоустройство</td>
+                  </tr>
+                  <tr>
+                    <td class="w">고용 복지</td>
+                    <td>поддержка занятости</td>
+                  </tr>
+                  <tr>
+                    <td class="w">보건소</td>
+                    <td>центр здоровья, поликлиника</td>
+                  </tr>
+                  <tr>
+                    <td class="w">구직</td>
+                    <td>поиск работы</td>
+                  </tr>
+                  <tr>
+                    <td class="w">장난감 은행</td>
+                    <td>библиотека игрушек (прокат)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">요양원</td>
+                    <td>дом престарелых, пансионат</td>
+                  </tr>
+                  <tr>
+                    <td class="w">교육</td>
+                    <td>образование, обучение</td>
+                  </tr>
+                  <tr>
+                    <td class="w">대여하다</td>
+                    <td>брать / давать напрокат</td>
+                  </tr>
+                  <tr>
+                    <td class="w">무료</td>
+                    <td>бесплатно</td>
+                  </tr>
+                  <tr>
+                    <td class="w">독감</td>
+                    <td>грипп</td>
+                  </tr>
+                  <tr>
+                    <td class="w">궁금하다</td>
+                    <td>интересоваться, быть любопытным</td>
+                  </tr>
+                  <tr>
+                    <td class="w">반려동물</td>
+                    <td>домашнее животное, питомец</td>
+                  </tr>
+                  <tr>
+                    <td class="w">검진</td>
+                    <td>медосмотр</td>
+                  </tr>
+                  <tr>
+                    <td class="w">복지 서비스</td>
+                    <td>социальные услуги</td>
+                  </tr>
+                  <tr>
+                    <td class="w">법무부</td>
+                    <td>Министерство юстиции</td>
+                  </tr>
+                  <tr>
+                    <td class="w">넘어지다</td>
+                    <td>падать, спотыкаться</td>
+                  </tr>
+                  <tr>
+                    <td class="w">우연히</td>
+                    <td>случайно</td>
+                  </tr>
+                  <tr>
+                    <td class="w">언제든지</td>
+                    <td>в любое время</td>
+                  </tr>
+                  <tr>
+                    <td class="w">막차</td>
+                    <td>последний автобус / поезд</td>
+                  </tr>
                 </table>
               </div>
             </section>
@@ -606,21 +1031,25 @@
                 </h3>
                 <p class="meta"><span class="tag">Форма</span> Основа глагола + -(으)ㄹ 만하다</p>
                 <p class="def">Указывает, что действие стоит затраченных усилий или что нечто приемлемо / терпимо. Два
-                  оттенка: рекомендация («стоит попробовать») и терпимость («неплохо, сносно»).</p>
+                  оттенка: рекомендация («стоит попробовать») и терпимость («неплохо, сносно»). Основа глагола +
+                  <span class="hl">-(으)ㄹ 만하다</span>.
+                </p>
                 <div class="ex">
-                  <p class="k">물냉면은 맵지 않아서 먹을 만해요.</p>
-                  <p class="e">Холодная лапша не острая, так что её стоит попробовать.</p>
+                  <p class="k">물냉면은 맵지 않아서 먹<span class="hl">을 만해요</span>.</p>
+                  <p class="e">Холодная лапша не острая, так что её стоит попробовать. <span class="e-note">(먹다
+                      оканчивается на согласный → 먹을 만해요)</span></p>
                 </div>
                 <div class="ex">
-                  <p class="k">요즘 볼 만한 영화가 있으면 소개해 주세요.</p>
-                  <p class="e">Если в последнее время есть фильм, который стоит посмотреть, посоветуйте, пожалуйста.</p>
+                  <p class="k">요즘 볼 <span class="hl">만한</span> 영화가 있으면 소개해 주세요.</p>
+                  <p class="e">Если в последнее время есть фильм, который стоит посмотреть, посоветуйте, пожалуйста.
+                    <span class="e-note">(보다 оканчивается на гласный → 볼 만한)</span></p>
                 </div>
                 <div class="ex">
-                  <p class="k">이 가게는 가격도 적당하고 직원도 친절해서 한번 가 볼 만해요.</p>
+                  <p class="k">이 가게는 가격도 적당하고 직원도 친절해서 한번 가 볼 <span class="hl">만해요</span>.</p>
                   <p class="e">В этом магазине умеренные цены и приветливый персонал, так что туда стоит зайти.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">방이 조금 좁기는 하지만 혼자 살기에는 지낼 만해요.</p>
+                  <p class="k">방이 조금 좁기는 하지만 혼자 살기에는 지낼 <span class="hl">만해요</span>.</p>
                   <p class="e">Комната немного тесновата, но для жизни в одиночку вполне сносная.</p>
                 </div>
               </div>
@@ -632,28 +1061,29 @@
                 </p>
                 <p class="def">Разговорный соединитель, связывающий причину/ситуацию с её следствием или одно действие
                   со
-                  следующим. Похоже на -아/어서, но более непринуждённое и разговорное.</p>
+                  следующим (основа на ㅏ/ㅗ + <span class="hl">아 가지고</span> · остальные + <span class="hl">어 가지고</span>).
+                  Похоже на -아/어서, но более непринуждённое и разговорное.</p>
                 <div class="ex">
-                  <p class="k">얼룩이 있어 가지고 환불했어요.</p>
+                  <p class="k">얼룩이 있<span class="hl">어 가지고</span> 환불했어요.</p>
                   <p class="e">На вещи было пятно, поэтому я оформил возврат.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">새 자동차는 너무 비싸 가지고 지금은 못 사요.</p>
+                  <p class="k">새 자동차는 너무 비<span class="hl">싸 가지고</span> 지금은 못 사요.</p>
                   <p class="e">Новая машина слишком дорогая, поэтому сейчас я не могу её купить.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">어제 늦게 자 가지고 오늘 너무 피곤해요.</p>
+                  <p class="k">어제 늦게 <span class="hl">자 가지고</span> 오늘 너무 피곤해요.</p>
                   <p class="e">Вчера я поздно лёг спать, поэтому сегодня очень устал.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">버스를 잘못 타 가지고 약속에 늦었어요.</p>
+                  <p class="k">버스를 잘못 <span class="hl">타 가지고</span> 약속에 늦었어요.</p>
                   <p class="e">Я сел не на тот автобус и поэтому опоздал на встречу.</p>
                 </div>
-                <p class="note">
-                <p><span class="tag">Примечание</span> В основном устное; на письме предпочтительнее -아/어서. Первое и
-                  второе предложения
-                  имеют одно и то же подлежащее.</p>
-                </p>
+                <div class="note">
+                  <p><span class="tag">Примечание</span> В основном устное; на письме предпочтительнее <span
+                      class="hl">-아/어서</span>. Первое и
+                    второе предложения имеют одно и то же подлежащее.</p>
+                </div>
               </div>
 
               <div class="vocab">
@@ -717,6 +1147,105 @@
                     <td class="w">소비자 상담 센터에 상담하다</td>
                     <td>консультироваться в центре защиты прав потребителей</td>
                   </tr>
+                  <tr class="grp">
+                    <td colspan="2">Ключевые слова (핵심 단어)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">상담하다</td>
+                    <td>консультироваться</td>
+                  </tr>
+                  <tr>
+                    <td class="w">치수</td>
+                    <td>размер, мерка</td>
+                  </tr>
+                  <tr>
+                    <td class="w">실수</td>
+                    <td>ошибка</td>
+                  </tr>
+                  <tr>
+                    <td class="w">택배비</td>
+                    <td>стоимость доставки</td>
+                  </tr>
+                  <tr>
+                    <td class="w">추천하다</td>
+                    <td>рекомендовать</td>
+                  </tr>
+                  <tr>
+                    <td class="w">가능하다</td>
+                    <td>быть возможным</td>
+                  </tr>
+                  <tr>
+                    <td class="w">개봉하다</td>
+                    <td>вскрывать (упаковку)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">훼손하다</td>
+                    <td>повреждать, портить</td>
+                  </tr>
+                  <tr>
+                    <td class="w">구입하다</td>
+                    <td>приобретать, покупать</td>
+                  </tr>
+                  <tr>
+                    <td class="w">신선 식품</td>
+                    <td>свежие продукты</td>
+                  </tr>
+                  <tr>
+                    <td class="w">냉동 식품</td>
+                    <td>замороженные продукты</td>
+                  </tr>
+                  <tr>
+                    <td class="w">파손</td>
+                    <td>поломка, повреждение</td>
+                  </tr>
+                  <tr>
+                    <td class="w">수선하다</td>
+                    <td>чинить, ремонтировать (одежду)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">불가능</td>
+                    <td>невозможность</td>
+                  </tr>
+                  <tr>
+                    <td class="w">증정품</td>
+                    <td>бесплатный подарок</td>
+                  </tr>
+                  <tr>
+                    <td class="w">반납하다</td>
+                    <td>возвращать (товар)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">구매점</td>
+                    <td>магазин (место покупки)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">미개봉</td>
+                    <td>невскрытый, в упаковке</td>
+                  </tr>
+                  <tr>
+                    <td class="w">포장하다</td>
+                    <td>упаковывать</td>
+                  </tr>
+                  <tr>
+                    <td class="w">문의하다</td>
+                    <td>обращаться с вопросом, узнавать</td>
+                  </tr>
+                  <tr>
+                    <td class="w">판매자</td>
+                    <td>продавец</td>
+                  </tr>
+                  <tr>
+                    <td class="w">특별하다</td>
+                    <td>быть особенным</td>
+                  </tr>
+                  <tr>
+                    <td class="w">세일 상품</td>
+                    <td>товар со скидкой</td>
+                  </tr>
+                  <tr>
+                    <td class="w">소비자</td>
+                    <td>потребитель</td>
+                  </tr>
                 </table>
               </div>
             </section>
@@ -733,24 +1262,33 @@
                 <p class="meta"><span class="tag">Форма</span> N + 이나 (много — с утвердительным глаголом) · N + 밖에 +
                   отрицательный глагол
                   (всего лишь немного)</p>
-                <p class="def">Контрастная пара для количеств. <strong>이나</strong> выражает удивление, что количество
-                  велико; <strong>밖에</strong> (всегда с отрицательным окончанием) подчёркивает, что количество мало /
+                <p class="def">Контрастная пара для количеств. <strong><span class="hl">이나</span></strong> выражает
+                  удивление, что количество
+                  велико; <strong><span class="hl">밖에</span></strong> (всегда с отрицательным окончанием) подчёркивает,
+                  что количество мало /
                   недостаточно.</p>
                 <div class="ex">
-                  <p class="k">이번 달에 교통비로 12만 원이나 썼어요?</p>
+                  <p class="k">이번 달에 교통비로 12만 원<span class="hl">이나</span> 썼어요?</p>
                   <p class="e">Ты в этом месяце потратил целых 120 000 вон на транспорт?</p>
                 </div>
                 <div class="ex">
-                  <p class="k">산 지 1년밖에 안 됐는데 벌써 고장 났어요.</p>
-                  <p class="e">Прошёл всего лишь год с покупки, а оно уже сломалось.</p>
+                  <p class="k">산 지 1년<span class="hl">밖에</span> 안 됐는데 벌써 고장 났어요.</p>
+                  <p class="e">Прошёл всего лишь год с покупки, а оно уже сломалось. <span class="e-note">(밖에 всегда
+                      требует отрицания — 안 됐다)</span></p>
                 </div>
                 <div class="ex">
-                  <p class="k">친구는 주말에 영화를 세 편이나 봤대요.</p>
+                  <p class="k">친구는 주말에 영화를 세 편<span class="hl">이나</span> 봤대요.</p>
                   <p class="e">Подруга говорит, что за выходные посмотрела целых три фильма.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">월급을 받았는데 통장에 10만 원밖에 안 남았어요.</p>
+                  <p class="k">월급을 받았는데 통장에 10만 원<span class="hl">밖에</span> 안 남았어요.</p>
                   <p class="e">Я получил зарплату, но на счёте осталось всего лишь 100 000 вон.</p>
+                </div>
+                <div class="note">
+                  <p><span class="tag">Совет</span> <span class="hl">밖에</span> должно сочетаться с отрицательным
+                    глаголом (안/못/없다), но
+                    оно уже <em>само по себе</em> означает «только» — не добавляйте 만. Говорят 한 명밖에 없어요, а не 한 명만밖에
+                    없어요.</p>
                 </div>
               </div>
 
@@ -781,22 +1319,31 @@
                 </table>
                 <p class="def">Передаёт чьё-то высказывание косвенно. Цитируемое предложение принимает простые (반말)
                   окончания перед
-                  고 하다. В речи часто сокращается до -대요 (싼대요, 간대요).</p>
+                  <span class="hl">고 하다</span>. В речи часто сокращается до <span class="hl">-대요</span> (싼대요, 간대요).
+                </p>
                 <div class="ex">
-                  <p class="k">중고 매장에 가면 싸게 살 수 있다고 해요.</p>
+                  <p class="k">중고 매장에 가면 싸게 살 수 있<span class="hl">다고 해요</span>.</p>
                   <p class="e">Говорят, что в комиссионных магазинах можно купить вещи дёшево.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">그는 하루에 커피 두 잔밖에 안 마신다고 해요.</p>
-                  <p class="e">Он говорит, что пьёт всего лишь две чашки кофе в день.</p>
+                  <p class="k">그는 하루에 커피 두 잔밖에 안 마신<span class="hl">다고 해요</span>.</p>
+                  <p class="e">Он говорит, что пьёт всего лишь две чашки кофе в день. <span class="e-note">(глагол 마시다 →
+                      마신다고)</span></p>
                 </div>
                 <div class="ex">
-                  <p class="k">일기 예보에서 이번 주말에 비가 많이 온다고 해요.</p>
+                  <p class="k">일기 예보에서 이번 주말에 비가 많이 온<span class="hl">다고 해요</span>.</p>
                   <p class="e">В прогнозе погоды говорят, что в эти выходные будет много дождя.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">친구가 다음 달에 고향으로 돌아간다고 했어요.</p>
+                  <p class="k">친구가 다음 달에 고향으로 돌아간<span class="hl">다고 했어요</span>.</p>
                   <p class="e">Подруга сказала, что в следующем месяце возвращается на родину.</p>
+                </div>
+                <div class="note">
+                  <p><span class="tag">Совет</span> Цитируемое предложение использует настоящую <em>простую</em> форму:
+                    глаголы добавляют
+                    <span class="hl">-ㄴ다/는다</span> (간다고, 먹는다고), но прилагательные и 이다 сохраняют голое <span
+                      class="hl">-다</span> (싸다고, 학생이라고). Частая ошибка — 싸ㄴ다고: прилагательные никогда не принимают ㄴ다.
+                  </p>
                 </div>
               </div>
 
@@ -904,6 +1451,141 @@
                     <td class="w">충동구매를 하지 않다</td>
                     <td>избегать импульсивных покупок</td>
                   </tr>
+                  <tr class="grp">
+                    <td colspan="2">Ключевые слова (핵심 단어)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">지출</td>
+                    <td>расходы, траты</td>
+                  </tr>
+                  <tr>
+                    <td class="w">가계부</td>
+                    <td>книга домашних расходов</td>
+                  </tr>
+                  <tr>
+                    <td class="w">결제하다</td>
+                    <td>оплачивать, рассчитываться</td>
+                  </tr>
+                  <tr>
+                    <td class="w">포인트</td>
+                    <td>бонусные баллы</td>
+                  </tr>
+                  <tr>
+                    <td class="w">쿠폰</td>
+                    <td>купон</td>
+                  </tr>
+                  <tr>
+                    <td class="w">적립하다</td>
+                    <td>накапливать (баллы)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">충동구매</td>
+                    <td>импульсивная покупка</td>
+                  </tr>
+                  <tr>
+                    <td class="w">난방비</td>
+                    <td>расходы на отопление</td>
+                  </tr>
+                  <tr>
+                    <td class="w">수리하다</td>
+                    <td>ремонтировать, чинить</td>
+                  </tr>
+                  <tr>
+                    <td class="w">중고차</td>
+                    <td>подержанный автомобиль</td>
+                  </tr>
+                  <tr>
+                    <td class="w">물려받다</td>
+                    <td>унаследовать, получить «по наследству»</td>
+                  </tr>
+                  <tr>
+                    <td class="w">보일러</td>
+                    <td>бойлер, котёл</td>
+                  </tr>
+                  <tr>
+                    <td class="w">틀다</td>
+                    <td>включать (прибор)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">온도</td>
+                    <td>температура</td>
+                  </tr>
+                  <tr>
+                    <td class="w">통신사</td>
+                    <td>оператор связи</td>
+                  </tr>
+                  <tr>
+                    <td class="w">장을 보다</td>
+                    <td>ходить за продуктами</td>
+                  </tr>
+                  <tr>
+                    <td class="w">공유</td>
+                    <td>совместное пользование</td>
+                  </tr>
+                  <tr>
+                    <td class="w">전시 상품</td>
+                    <td>выставочный образец</td>
+                  </tr>
+                  <tr>
+                    <td class="w">이월 상품</td>
+                    <td>товар прошлого сезона</td>
+                  </tr>
+                  <tr>
+                    <td class="w">합리적이다</td>
+                    <td>быть разумным, рациональным</td>
+                  </tr>
+                  <tr>
+                    <td class="w">비용이 들다</td>
+                    <td>требовать затрат, стоить</td>
+                  </tr>
+                  <tr>
+                    <td class="w">비용이 부담되다</td>
+                    <td>расходы становятся обременительными</td>
+                  </tr>
+                  <tr>
+                    <td class="w">비용이 부담스럽다</td>
+                    <td>расходы кажутся непосильными</td>
+                  </tr>
+                  <tr>
+                    <td class="w">비용을 줄이다</td>
+                    <td>сокращать расходы</td>
+                  </tr>
+                  <tr>
+                    <td class="w">공동구매</td>
+                    <td>совместная (групповая) покупка</td>
+                  </tr>
+                  <tr>
+                    <td class="w">벼룩시장</td>
+                    <td>блошиный рынок</td>
+                  </tr>
+                  <tr>
+                    <td class="w">정반대</td>
+                    <td>полная противоположность</td>
+                  </tr>
+                  <tr>
+                    <td class="w">흠집</td>
+                    <td>царапина, дефект</td>
+                  </tr>
+                  <tr>
+                    <td class="w">육아용품</td>
+                    <td>товары для ухода за ребёнком</td>
+                  </tr>
+                  <tr>
+                    <td class="w">설문 조사</td>
+                    <td>опрос, анкетирование</td>
+                  </tr>
+                  <tr>
+                    <td class="w">실시하다</td>
+                    <td>проводить, осуществлять</td>
+                  </tr>
+                  <tr>
+                    <td class="w">차지하다</td>
+                    <td>занимать, составлять (долю)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">한편</td>
+                    <td>с другой стороны, между тем</td>
+                  </tr>
                 </table>
               </div>
             </section>
@@ -947,24 +1629,34 @@
                     <td>быть прерванным</td>
                   </tr>
                 </table>
-                <p class="def">Страдательные глаголы образуются вставкой -이/히/리/기-. То, на что направлено действие,
+                <p class="def">Страдательные глаголы образуются вставкой <span class="hl">-이/히/리/기-</span>. То, на что
+                  направлено действие,
                   становится подлежащим
                   (이/가); действие происходит с ним, а не совершается им.</p>
                 <div class="ex">
-                  <p class="k">와, 방 안에서 산이 보이네요?</p>
-                  <p class="e">Ого, из комнаты видно горы?</p>
+                  <p class="k">와, 방 안에서 산이 보<span class="hl">이</span>네요?</p>
+                  <p class="e">Ого, из комнаты видно горы? <span class="e-note">(보다 → 보이다)</span></p>
                 </div>
                 <div class="ex">
-                  <p class="k">출근 시간이라서 길이 많이 막혔어요.</p>
-                  <p class="e">Был час пик, поэтому дороги были сильно забиты.</p>
+                  <p class="k">출근 시간이라서 길이 많이 막<span class="hl">혔</span>어요.</p>
+                  <p class="e">Был час пик, поэтому дороги были сильно забиты. <span class="e-note">(막다 → 막히다)</span>
+                  </p>
                 </div>
                 <div class="ex">
-                  <p class="k">친구와 통화 중에 전화가 끊겼어요.</p>
-                  <p class="e">Связь прервалась, пока я разговаривал с другом.</p>
+                  <p class="k">친구와 통화 중에 전화가 끊<span class="hl">겼</span>어요.</p>
+                  <p class="e">Связь прервалась, пока я разговаривал с другом. <span class="e-note">(끊다 → 끊기다)</span>
+                  </p>
                 </div>
                 <div class="ex">
-                  <p class="k">바람이 불어서 갑자기 문이 닫혔어요.</p>
-                  <p class="e">Подул ветер, и дверь внезапно закрылась.</p>
+                  <p class="k">바람이 불어서 갑자기 문이 닫<span class="hl">혔</span>어요.</p>
+                  <p class="e">Подул ветер, и дверь внезапно закрылась. <span class="e-note">(닫다 → 닫히다)</span></p>
+                </div>
+                <div class="note">
+                  <p><span class="tag">Примечание</span> Нет правила, какой инфикс принимает тот или иной глагол, —
+                    каждый запоминается отдельно. Многие
+                    глаголы вместо этого используют <span class="hl">-아/어지다</span> (만들어지다, 켜지다), а у некоторых
+                    страдательного залога нет вовсе, и они
+                    опираются на 되다 (사용되다). Если сомневаетесь, заучивайте страдательную форму как отдельное слово.</p>
                 </div>
               </div>
 
@@ -974,22 +1666,23 @@
                   -지 말자고
                   하다)</p>
                 <p class="def">Передаёт предложение или приглашение, сделанное кем-то (прямая форма — -(으)ㅂ시다 / -자).
-                  В речи сокращается до -재요.</p>
+                  Основа глагола + <span class="hl">자고 하다</span>; в речи сокращается до <span class="hl">-재요</span>.</p>
                 <div class="ex">
-                  <p class="k">친구가 만나자고 해서 약속 장소에 나갔어요.</p>
+                  <p class="k">친구가 만나<span class="hl">자고 해서</span> 약속 장소에 나갔어요.</p>
                   <p class="e">Друг предложил встретиться, поэтому я пришёл на место встречи.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">아내가 같이 저녁을 먹자고 했어요.</p>
+                  <p class="k">아내가 같이 저녁을 먹<span class="hl">자고 했어요</span>.</p>
                   <p class="e">Жена предложила поужинать вместе.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">동료들이 주말에 같이 등산을 가자고 했어요.</p>
+                  <p class="k">동료들이 주말에 같이 등산을 가<span class="hl">자고 했어요</span>.</p>
                   <p class="e">Коллеги предложили в выходные вместе пойти в горы.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">날씨가 더우니까 오늘은 운동하지 말자고 했어요.</p>
-                  <p class="e">Поскольку было жарко, он предложил сегодня не заниматься спортом.</p>
+                  <p class="k">날씨가 더우니까 오늘은 운동하<span class="hl">지 말자고 했어요</span>.</p>
+                  <p class="e">Поскольку было жарко, он предложил сегодня не заниматься спортом. <span
+                      class="e-note">(отрицательное предложение → -지 말자고)</span></p>
                 </div>
               </div>
 
@@ -1078,6 +1771,105 @@
                     <td class="w">하천이 흐르다</td>
                     <td>течёт речка</td>
                   </tr>
+                  <tr class="grp">
+                    <td colspan="2">Ключевые слова (핵심 단어)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">비명 소리</td>
+                    <td>крик, вопль</td>
+                  </tr>
+                  <tr>
+                    <td class="w">지역</td>
+                    <td>район, регион</td>
+                  </tr>
+                  <tr>
+                    <td class="w">범인</td>
+                    <td>преступник</td>
+                  </tr>
+                  <tr>
+                    <td class="w">놀이터</td>
+                    <td>детская площадка</td>
+                  </tr>
+                  <tr>
+                    <td class="w">여쭤보다</td>
+                    <td>спрашивать (вежливо)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">체육 센터</td>
+                    <td>спортивный центр</td>
+                  </tr>
+                  <tr>
+                    <td class="w">정문</td>
+                    <td>главные ворота, парадный вход</td>
+                  </tr>
+                  <tr>
+                    <td class="w">풍경화</td>
+                    <td>пейзаж (картина)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">풍경</td>
+                    <td>пейзаж, вид</td>
+                  </tr>
+                  <tr>
+                    <td class="w">자연 경관</td>
+                    <td>природный ландшафт</td>
+                  </tr>
+                  <tr>
+                    <td class="w">최고급</td>
+                    <td>высший класс, премиум</td>
+                  </tr>
+                  <tr>
+                    <td class="w">실크 로드</td>
+                    <td>Шёлковый путь</td>
+                  </tr>
+                  <tr>
+                    <td class="w">현장</td>
+                    <td>место событий, на месте</td>
+                  </tr>
+                  <tr>
+                    <td class="w">옛날</td>
+                    <td>старые времена, давно</td>
+                  </tr>
+                  <tr>
+                    <td class="w">건축물</td>
+                    <td>сооружение, постройка</td>
+                  </tr>
+                  <tr>
+                    <td class="w">간직하다</td>
+                    <td>хранить, беречь</td>
+                  </tr>
+                  <tr>
+                    <td class="w">평지</td>
+                    <td>равнина</td>
+                  </tr>
+                  <tr>
+                    <td class="w">펼쳐지다</td>
+                    <td>раскинуться, простираться</td>
+                  </tr>
+                  <tr>
+                    <td class="w">언덕</td>
+                    <td>холм</td>
+                  </tr>
+                  <tr>
+                    <td class="w">일정</td>
+                    <td>график, расписание</td>
+                  </tr>
+                  <tr>
+                    <td class="w">포함되다</td>
+                    <td>быть включённым</td>
+                  </tr>
+                  <tr>
+                    <td class="w">건조하다</td>
+                    <td>сухой; сушить</td>
+                  </tr>
+                  <tr>
+                    <td class="w">염소</td>
+                    <td>коза</td>
+                  </tr>
+                  <tr>
+                    <td class="w">풀</td>
+                    <td>трава</td>
+                  </tr>
                 </table>
               </div>
             </section>
@@ -1092,22 +1884,26 @@
               <div class="gram">
                 <h3 class="gram-form">-(으)라고 하다 / -냐고 하다 <span class="gloss">— «велел… / спросил, … ли»</span></h3>
                 <p class="meta"><span class="tag">Форма</span> команда: Глагол + -(으)라고 하다 · вопрос: V/A + -(느)냐고 하다</p>
-                <p class="def">Передаёт команду (прямая форма -(으)세요 / -아라) с помощью -(으)라고 하다 и передаёт вопрос
-                  с помощью -냐고 하다. Разговорные краткие формы: -(으)래요 и -냬요.</p>
+                <p class="def">Передаёт команду (прямая форма -(으)세요 / -아라) с помощью <span class="hl">-(으)라고 하다</span>
+                  и передаёт вопрос
+                  с помощью <span class="hl">-냐고 하다</span>. Разговорные краткие формы: <span class="hl">-(으)래요</span> и
+                  <span class="hl">-냬요</span>.</p>
                 <div class="ex">
-                  <p class="k">직원이 관객들에게 입장하라고 했어요.</p>
-                  <p class="e">Сотрудник велел зрителям заходить.</p>
+                  <p class="k">직원이 관객들에게 입장하<span class="hl">라고 했어요</span>.</p>
+                  <p class="e">Сотрудник велел зрителям заходить. <span class="e-note">(입장하다 оканчивается на гласный →
+                      입장하라고)</span></p>
                 </div>
                 <div class="ex">
-                  <p class="k">공연이 몇 시에 시작하냐고 했어요.</p>
+                  <p class="k">공연이 몇 시에 시작하<span class="hl">냐고 했어요</span>.</p>
                   <p class="e">Он спросил, во сколько начинается представление.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">의사 선생님이 약을 식사 후에 꼭 먹으라고 했어요.</p>
-                  <p class="e">Врач велел мне обязательно принимать лекарство после еды.</p>
+                  <p class="k">의사 선생님이 약을 식사 후에 꼭 먹<span class="hl">으라고 했어요</span>.</p>
+                  <p class="e">Врач велел мне обязательно принимать лекарство после еды. <span class="e-note">(먹다
+                      оканчивается на согласный → 먹으라고)</span></p>
                 </div>
                 <div class="ex">
-                  <p class="k">친구가 저에게 요즘 일이 힘들지 않냐고 물어봤어요.</p>
+                  <p class="k">친구가 저에게 요즘 일이 힘들지 않<span class="hl">냐고</span> 물어봤어요.</p>
                   <p class="e">Друг спросил меня, не тяжело ли мне в последнее время на работе.</p>
                 </div>
               </div>
@@ -1116,24 +1912,26 @@
                 <h3 class="gram-form">N + 만큼 <span class="gloss">— «так же… как / в той же мере, что»</span></h3>
                 <p class="meta"><span class="tag">Форма</span> Существительное + 만큼 · также Глагол/Прилаг. + -(으)ㄹ/-는 만큼
                 </p>
-                <p class="def">Обозначает мерило сравнения — нечто равно по степени существительному. Часто
-                  используется,
-                  чтобы сказать, что две вещи похожи по количеству, качеству или степени.</p>
+                <p class="def">Обозначает мерило сравнения — нечто равно по степени существительному (существительное +
+                  <span class="hl">만큼</span>). Часто используется,
+                  чтобы сказать, что две вещи похожи по количеству, качеству или степени.
+                </p>
                 <div class="ex">
-                  <p class="k">회사 앞 식당은 고향 음식만큼 맛있어요.</p>
+                  <p class="k">회사 앞 식당은 고향 음식<span class="hl">만큼</span> 맛있어요.</p>
                   <p class="e">Ресторан возле работы такой же вкусный, как домашняя еда с родины.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">공연이 기대만큼 재미있었어요.</p>
+                  <p class="k">공연이 기대<span class="hl">만큼</span> 재미있었어요.</p>
                   <p class="e">Представление было таким же интересным, как я ожидал.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">평일은 주말만큼 사람이 많지 않아요.</p>
+                  <p class="k">평일은 주말<span class="hl">만큼</span> 사람이 많지 않아요.</p>
                   <p class="e">В будни людей не так много, как в выходные.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">노력한 만큼 좋은 결과가 나올 거예요.</p>
-                  <p class="e">Вы получите хороший результат соразмерно приложенным усилиям.</p>
+                  <p class="k">노력한 <span class="hl">만큼</span> 좋은 결과가 나올 거예요.</p>
+                  <p class="e">Вы получите хороший результат соразмерно приложенным усилиям. <span class="e-note">(после
+                      глагола: -(으)ㄴ/는 만큼)</span></p>
                 </div>
               </div>
 
@@ -1243,6 +2041,141 @@
                     <td class="w">인상적이다</td>
                     <td>быть впечатляющим</td>
                   </tr>
+                  <tr class="grp">
+                    <td colspan="2">Ключевые слова (핵심 단어)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">공연</td>
+                    <td>представление, выступление</td>
+                  </tr>
+                  <tr>
+                    <td class="w">전시회</td>
+                    <td>выставка</td>
+                  </tr>
+                  <tr>
+                    <td class="w">미술</td>
+                    <td>изобразительное искусство</td>
+                  </tr>
+                  <tr>
+                    <td class="w">사진</td>
+                    <td>фотография</td>
+                  </tr>
+                  <tr>
+                    <td class="w">공예</td>
+                    <td>ремесло, прикладное искусство</td>
+                  </tr>
+                  <tr>
+                    <td class="w">콘서트</td>
+                    <td>концерт</td>
+                  </tr>
+                  <tr>
+                    <td class="w">케이팝</td>
+                    <td>кей-поп</td>
+                  </tr>
+                  <tr>
+                    <td class="w">안내 방송</td>
+                    <td>информационное объявление</td>
+                  </tr>
+                  <tr>
+                    <td class="w">전원을 끄다</td>
+                    <td>выключать питание</td>
+                  </tr>
+                  <tr>
+                    <td class="w">입장하다</td>
+                    <td>входить (на мероприятие)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">택배</td>
+                    <td>курьерская доставка, посылка</td>
+                  </tr>
+                  <tr>
+                    <td class="w">참석하다</td>
+                    <td>присутствовать, участвовать</td>
+                  </tr>
+                  <tr>
+                    <td class="w">유창하다</td>
+                    <td>свободно, бегло говорить</td>
+                  </tr>
+                  <tr>
+                    <td class="w">장면</td>
+                    <td>сцена, эпизод</td>
+                  </tr>
+                  <tr>
+                    <td class="w">표정</td>
+                    <td>выражение лица</td>
+                  </tr>
+                  <tr>
+                    <td class="w">헤어지다</td>
+                    <td>расставаться</td>
+                  </tr>
+                  <tr>
+                    <td class="w">입장권</td>
+                    <td>входной билет</td>
+                  </tr>
+                  <tr>
+                    <td class="w">초대권</td>
+                    <td>пригласительный билет</td>
+                  </tr>
+                  <tr>
+                    <td class="w">예약 번호</td>
+                    <td>номер брони</td>
+                  </tr>
+                  <tr>
+                    <td class="w">할인</td>
+                    <td>скидка</td>
+                  </tr>
+                  <tr>
+                    <td class="w">연령</td>
+                    <td>возраст</td>
+                  </tr>
+                  <tr>
+                    <td class="w">유의 사항</td>
+                    <td>примечания, важная информация</td>
+                  </tr>
+                  <tr>
+                    <td class="w">부담이 없다</td>
+                    <td>необременительно, без напряга</td>
+                  </tr>
+                  <tr>
+                    <td class="w">할인을 받다</td>
+                    <td>получать скидку</td>
+                  </tr>
+                  <tr>
+                    <td class="w">행사</td>
+                    <td>мероприятие</td>
+                  </tr>
+                  <tr>
+                    <td class="w">박물관</td>
+                    <td>музей</td>
+                  </tr>
+                  <tr>
+                    <td class="w">경험이 쌓이다</td>
+                    <td>накапливать опыт</td>
+                  </tr>
+                  <tr>
+                    <td class="w">연기하다</td>
+                    <td>играть (роль), исполнять</td>
+                  </tr>
+                  <tr>
+                    <td class="w">연주하다</td>
+                    <td>играть (на инструменте)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">기억에 남는</td>
+                    <td>памятный, запоминающийся</td>
+                  </tr>
+                  <tr>
+                    <td class="w">예약하다</td>
+                    <td>бронировать</td>
+                  </tr>
+                  <tr>
+                    <td class="w">기회</td>
+                    <td>возможность, шанс</td>
+                  </tr>
+                  <tr>
+                    <td class="w">점</td>
+                    <td>пункт, аспект; точка</td>
+                  </tr>
                 </table>
               </div>
             </section>
@@ -1290,23 +2223,34 @@
                   </tr>
                 </table>
                 <p class="def">Побудительные глаголы означают, что подлежащее <em>заставляет или позволяет</em>
-                  кому-то/чему-то совершить действие.
+                  кому-то/чему-то совершить действие, и образуются с помощью инфиксов <span
+                    class="hl">-이/히/리/기/우/추-</span>.
                   Многие кулинарные глаголы побудительные (끓이다 кипятить, 익히다 доводить до готовности, 식히다 остужать).</p>
                 <div class="ex">
-                  <p class="k">성민은 토끼에게 당근을 먹이고 있어요.</p>
-                  <p class="e">Сонмин кормит кролика морковью.</p>
+                  <p class="k">성민은 토끼에게 당근을 먹<span class="hl">이</span>고 있어요.</p>
+                  <p class="e">Сонмин кормит кролика морковью. <span class="e-note">(먹다 есть → 먹이다 кормить)</span></p>
                 </div>
                 <div class="ex">
-                  <p class="k">물을 끓여서 면을 넣으세요.</p>
-                  <p class="e">Вскипятите воду и добавьте лапшу.</p>
+                  <p class="k">물을 <span class="hl">끓여서</span> 면을 넣으세요.</p>
+                  <p class="e">Вскипятите воду и добавьте лапшу. <span class="e-note">(끓다 кипит → 끓이다 кипятить)</span>
+                  </p>
                 </div>
                 <div class="ex">
-                  <p class="k">음식이 맛있어서 남기지 않고 다 먹었어요.</p>
-                  <p class="e">Еда была вкусной, поэтому я съел всё, не оставив ни кусочка.</p>
+                  <p class="k">우는 아이를 달래려고 재미있는 노래를 불러서 <span class="hl">웃겼어요</span>.</p>
+                  <p class="e">Чтобы успокоить плачущего ребёнка, я спел весёлую песню и рассмешил его. <span
+                      class="e-note">(웃다 смеяться → 웃기다 смешить)</span></p>
                 </div>
                 <div class="ex">
-                  <p class="k">아기가 추울까 봐 두꺼운 옷을 입혔어요.</p>
-                  <p class="e">Я одел малыша в тёплую одежду, чтобы он не замёрз.</p>
+                  <p class="k">아기가 추울까 봐 두꺼운 옷을 입<span class="hl">혔</span>어요.</p>
+                  <p class="e">Я одел малыша в тёплую одежду, чтобы он не замёрз. <span class="e-note">(입다 надевать →
+                      입히다 одевать кого-то)</span></p>
+                </div>
+                <div class="note">
+                  <p><span class="tag">Сравните</span> Некоторые основы принимают инфикс в обоих залогах, но разные:
+                    보다 → 보<span class="hl">이</span>다 может означать и страдательное «быть видимым», и побудительное
+                    «показывать». Различают их по контексту и
+                    дополнению (이/가 vs. 을/를). Для людей <span class="hl">-게 하다</span> (раздел 13) — это
+                    продуктивный способ сказать «заставить кого-то делать».</p>
                 </div>
               </div>
 
@@ -1403,6 +2347,145 @@
                     <td class="w">시금치를 데치다</td>
                     <td>бланшировать шпинат</td>
                   </tr>
+                  <tr class="grp">
+                    <td colspan="2">Ключевые слова (핵심 단어)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">토끼</td>
+                    <td>кролик, заяц</td>
+                  </tr>
+                  <tr>
+                    <td class="w">유모차</td>
+                    <td>детская коляска</td>
+                  </tr>
+                  <tr>
+                    <td class="w">냉동실</td>
+                    <td>морозильная камера</td>
+                  </tr>
+                  <tr>
+                    <td class="w">죽</td>
+                    <td>каша</td>
+                  </tr>
+                  <tr>
+                    <td class="w">익다</td>
+                    <td>поспевать; быть готовым (о еде)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">믹서기</td>
+                    <td>блендер</td>
+                  </tr>
+                  <tr>
+                    <td class="w">환자</td>
+                    <td>пациент, больной</td>
+                  </tr>
+                  <tr>
+                    <td class="w">이유식</td>
+                    <td>детское питание (прикорм)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">뷔페</td>
+                    <td>шведский стол, фуршет</td>
+                  </tr>
+                  <tr>
+                    <td class="w">군침이 돌다</td>
+                    <td>слюнки текут</td>
+                  </tr>
+                  <tr>
+                    <td class="w">간을 맞추다</td>
+                    <td>приправлять по вкусу</td>
+                  </tr>
+                  <tr>
+                    <td class="w">양을 맞추다</td>
+                    <td>регулировать количество</td>
+                  </tr>
+                  <tr>
+                    <td class="w">시간을 맞추다</td>
+                    <td>подгонять по времени</td>
+                  </tr>
+                  <tr>
+                    <td class="w">부침 가루</td>
+                    <td>мука для оладий (смесь)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">식용유를 두르다</td>
+                    <td>смазать сковороду маслом</td>
+                  </tr>
+                  <tr>
+                    <td class="w">절이다</td>
+                    <td>солить, мариновать</td>
+                  </tr>
+                  <tr>
+                    <td class="w">뿌리다</td>
+                    <td>посыпать, разбрызгивать</td>
+                  </tr>
+                  <tr>
+                    <td class="w">채를 썰다</td>
+                    <td>нарезать соломкой</td>
+                  </tr>
+                  <tr>
+                    <td class="w">담다</td>
+                    <td>класть в посуду, накладывать</td>
+                  </tr>
+                  <tr>
+                    <td class="w">얇게 썰다</td>
+                    <td>нарезать тонко</td>
+                  </tr>
+                  <tr>
+                    <td class="w">깍둑썰다</td>
+                    <td>нарезать кубиками</td>
+                  </tr>
+                  <tr>
+                    <td class="w">튀기다</td>
+                    <td>жарить во фритюре</td>
+                  </tr>
+                  <tr>
+                    <td class="w">다지다</td>
+                    <td>измельчать, рубить</td>
+                  </tr>
+                  <tr>
+                    <td class="w">삶다</td>
+                    <td>варить</td>
+                  </tr>
+                  <tr>
+                    <td class="w">끓이다</td>
+                    <td>кипятить, варить</td>
+                  </tr>
+                  <tr>
+                    <td class="w">찌다</td>
+                    <td>готовить на пару</td>
+                  </tr>
+                  <tr>
+                    <td class="w">씻다</td>
+                    <td>мыть</td>
+                  </tr>
+                  <tr>
+                    <td class="w">벗기다</td>
+                    <td>очищать (кожуру)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">썰다</td>
+                    <td>резать, нарезать</td>
+                  </tr>
+                  <tr>
+                    <td class="w">볶다</td>
+                    <td>жарить помешивая, обжаривать</td>
+                  </tr>
+                  <tr>
+                    <td class="w">무치다</td>
+                    <td>заправлять и перемешивать</td>
+                  </tr>
+                  <tr>
+                    <td class="w">굽다</td>
+                    <td>жарить, запекать, печь</td>
+                  </tr>
+                  <tr>
+                    <td class="w">데치다</td>
+                    <td>бланшировать, ошпаривать</td>
+                  </tr>
+                  <tr>
+                    <td class="w">부치다</td>
+                    <td>жарить (блины, оладьи)</td>
+                  </tr>
                 </table>
               </div>
             </section>
@@ -1418,23 +2501,25 @@
                 <h3 class="gram-form">-아/어서 그런지 <span class="gloss">— «может быть, потому что…»</span></h3>
                 <p class="meta"><span class="tag">Форма</span> Основа глагола / прилагательного + 아/어서 그런지</p>
                 <p class="def">Предлагает предположительную, неуверенную причину наблюдаемого результата — «возможно,
-                  это потому что…».
+                  это потому что…»
+                  (основа глагола / прилагательного + <span class="hl">아/어서 그런지</span>).
                   Говорящий лишь догадывается, а не утверждает точную причину.</p>
                 <div class="ex">
-                  <p class="k">더운 나라에서 와서 그런지 한국 겨울이 너무 추워요.</p>
+                  <p class="k">더운 나라에서 <span class="hl">와서 그런지</span> 한국 겨울이 너무 추워요.</p>
                   <p class="e">Может быть, потому что я из жаркой страны, корейские зимы кажутся мне слишком холодными.
                   </p>
                 </div>
                 <div class="ex">
-                  <p class="k">노트북이 오래돼서 그런지 요즘 자꾸 느려져요.</p>
+                  <p class="k">노트북이 오래<span class="hl">돼서 그런지</span> 요즘 자꾸 느려져요.</p>
                   <p class="e">Может быть, потому что ноутбук старый, в последнее время он постоянно тормозит.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">주말이라서 그런지 식당에 사람이 정말 많네요.</p>
-                  <p class="e">Может быть, потому что выходные, в ресторане и правда очень много людей.</p>
+                  <p class="k">주말<span class="hl">이라서 그런지</span> 식당에 사람이 정말 많네요.</p>
+                  <p class="e">Может быть, потому что выходные, в ресторане и правда очень много людей. <span
+                      class="e-note">(существительное 주말 + 이라서 그런지)</span></p>
                 </div>
                 <div class="ex">
-                  <p class="k">요즘 잠을 잘 못 자서 그런지 자꾸 피곤하고 집중이 안 돼요.</p>
+                  <p class="k">요즘 잠을 잘 못 <span class="hl">자서 그런지</span> 자꾸 피곤하고 집중이 안 돼요.</p>
                   <p class="e">Может быть, потому что в последнее время я плохо сплю, я постоянно чувствую усталость и
                     не могу сосредоточиться.</p>
                 </div>
@@ -1443,23 +2528,28 @@
               <div class="gram">
                 <h3 class="gram-form">-나요? / -(으)ㄴ가요? <span class="gloss">— «смягчённый, вежливый вопрос»</span></h3>
                 <p class="meta"><span class="tag">Форма</span> Глагол + 나요? · Прилагательное + -(으)ㄴ가요? · N + 인가요?</p>
-                <p class="def">Более мягкий способ спросить, чем простое -아요/어요?. Смягчает тон — полезно, когда
+                <p class="def">Более мягкий способ спросить, чем простое -아요/어요?. Глагол + <span class="hl">나요?</span>,
+                  прилагательное +
+                  <span class="hl">-(으)ㄴ가요?</span>. Смягчает тон — полезно, когда
                   спрашиваешь
-                  осторожно, обращаешься к незнакомому человеку или вежливо уточняешь.</p>
+                  осторожно, обращаешься к незнакомому человеку или вежливо уточняешь.
+                </p>
                 <div class="ex">
-                  <p class="k">어디가 고장 났나요?</p>
-                  <p class="e">Что именно сломалось?</p>
+                  <p class="k">어디가 고장 났<span class="hl">나요</span>?</p>
+                  <p class="e">Что именно сломалось? <span class="e-note">(глагол 나다 → 났나요)</span></p>
                 </div>
                 <div class="ex">
-                  <p class="k">예방 주사를 맞을 때 많이 아팠나요?</p>
-                  <p class="e">Прививка была очень болезненной?</p>
+                  <p class="k">예방 주사를 맞을 때 많이 아팠<span class="hl">나요</span>?</p>
+                  <p class="e">Прививка была очень болезненной? <span class="e-note">(прошедшее время всегда принимает
+                      나요)</span></p>
                 </div>
                 <div class="ex">
-                  <p class="k">수리비가 많이 비싼가요?</p>
-                  <p class="e">Ремонт обойдётся довольно дорого?</p>
+                  <p class="k">수리비가 많이 비<span class="hl">싼가요</span>?</p>
+                  <p class="e">Ремонт обойдётся довольно дорого? <span class="e-note">(прилагательное 비싸다 → 비싼가요)</span>
+                  </p>
                 </div>
                 <div class="ex">
-                  <p class="k">혹시 이 근처에 약국이 어디에 있나요?</p>
+                  <p class="k">혹시 이 근처에 약국이 어디에 있<span class="hl">나요</span>?</p>
                   <p class="e">Простите, нет ли где-нибудь поблизости аптеки?</p>
                 </div>
               </div>
@@ -1553,6 +2643,93 @@
                     <td class="w">무상 수리를 받다</td>
                     <td>получать бесплатный ремонт</td>
                   </tr>
+                  <tr class="grp">
+                    <td colspan="2">Ключевые слова (핵심 단어)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">딱딱하다</td>
+                    <td>твёрдый, жёсткий</td>
+                  </tr>
+                  <tr>
+                    <td class="w">바닥</td>
+                    <td>пол, дно</td>
+                  </tr>
+                  <tr>
+                    <td class="w">떨어뜨리다</td>
+                    <td>ронять, уронить</td>
+                  </tr>
+                  <tr>
+                    <td class="w">예방 주사</td>
+                    <td>прививка</td>
+                  </tr>
+                  <tr>
+                    <td class="w">냉기</td>
+                    <td>холод, прохлада</td>
+                  </tr>
+                  <tr>
+                    <td class="w">조절하다</td>
+                    <td>регулировать, настраивать</td>
+                  </tr>
+                  <tr>
+                    <td class="w">점검하다</td>
+                    <td>проверять, осматривать</td>
+                  </tr>
+                  <tr>
+                    <td class="w">보험에 가입하다</td>
+                    <td>оформлять страховку</td>
+                  </tr>
+                  <tr>
+                    <td class="w">고객 부담금</td>
+                    <td>доплата клиента</td>
+                  </tr>
+                  <tr>
+                    <td class="w">제외하다</td>
+                    <td>исключать</td>
+                  </tr>
+                  <tr>
+                    <td class="w">환급받다</td>
+                    <td>получать возврат денег</td>
+                  </tr>
+                  <tr>
+                    <td class="w">갈등</td>
+                    <td>конфликт, разногласие</td>
+                  </tr>
+                  <tr>
+                    <td class="w">일시적</td>
+                    <td>временный</td>
+                  </tr>
+                  <tr>
+                    <td class="w">플러그</td>
+                    <td>штекер, вилка</td>
+                  </tr>
+                  <tr>
+                    <td class="w">뽑다</td>
+                    <td>вытаскивать, выдёргивать</td>
+                  </tr>
+                  <tr>
+                    <td class="w">꽂다</td>
+                    <td>вставлять, втыкать</td>
+                  </tr>
+                  <tr>
+                    <td class="w">밸브</td>
+                    <td>клапан, вентиль</td>
+                  </tr>
+                  <tr>
+                    <td class="w">잠그다</td>
+                    <td>запирать; перекрывать (кран)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">종료하다</td>
+                    <td>завершать, прекращать</td>
+                  </tr>
+                  <tr>
+                    <td class="w">뚫다</td>
+                    <td>прочищать, пробивать</td>
+                  </tr>
+                  <tr>
+                    <td class="w">이물질</td>
+                    <td>инородное вещество, мусор</td>
+                  </tr>
                 </table>
               </div>
             </section>
@@ -1568,24 +2745,28 @@
                 <h3 class="gram-form">-기 위해(서) <span class="gloss">— «чтобы / с целью»</span></h3>
                 <p class="meta"><span class="tag">Форма</span> Основа глагола + 기 위해(서) · Существительное + 을/를 위해(서)
                 </p>
-                <p class="def">Указывает цель или назначение действия. Более формально, чем -(으)려고; часто встречается в
+                <p class="def">Указывает цель или назначение действия: основа глагола + <span class="hl">기 위해(서)</span>,
+                  существительное +
+                  <span class="hl">을/를 위해(서)</span>. Более формально, чем -(으)려고; часто встречается в
                   письменной речи,
-                  резюме и объявлениях.</p>
+                  резюме и объявлениях.
+                </p>
                 <div class="ex">
-                  <p class="k">한국 국적을 취득하기 위해 1년 전부터 한국어를 공부하고 있다.</p>
+                  <p class="k">한국 국적을 취득하<span class="hl">기 위해</span> 1년 전부터 한국어를 공부하고 있다.</p>
                   <p class="e">Чтобы получить корейское гражданство, я уже год изучаю корейский язык.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">일하는 엄마들은 아이를 맡길 곳을 찾기 위해 노력하고 있다.</p>
+                  <p class="k">일하는 엄마들은 아이를 맡길 곳을 찾<span class="hl">기 위해</span> 노력하고 있다.</p>
                   <p class="e">Работающие мамы стараются найти, куда пристроить детей.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">건강을 지키기 위해서 매일 아침 30분씩 운동을 한다.</p>
+                  <p class="k">건강을 지키<span class="hl">기 위해서</span> 매일 아침 30분씩 운동을 한다.</p>
                   <p class="e">Чтобы сохранить здоровье, я каждое утро по 30 минут занимаюсь спортом.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">더 나은 미래를 위해 그는 회사를 다니면서 야간 대학에 다닌다.</p>
+                  <p class="k">더 나은 미래<span class="hl">를 위해</span> 그는 회사를 다니면서 야간 대학에 다닌다.</p>
                   <p class="e">Ради лучшего будущего он, работая в компании, посещает вечерние занятия в университете.
+                    <span class="e-note">(существительное 미래 + 를 위해)</span>
                   </p>
                 </div>
               </div>
@@ -1594,23 +2775,32 @@
                 <h3 class="gram-form">-아/어 놓다 <span class="gloss">— «сделать заранее и оставить (результат)»</span></h3>
                 <p class="meta"><span class="tag">Форма</span> основа на ㅏ/ㅗ + 아 놓다 · прочие основы + 어 놓다 · 하다 → 해 놓다
                 </p>
-                <p class="def">Действие завершается заранее, и его результат остаётся наготове на потом. Близко по
-                  значению к -아/어 두다.</p>
+                <p class="def">Действие завершается заранее, и его результат остаётся наготове на потом (основа на ㅏ/ㅗ +
+                  <span class="hl">아 놓다</span> · прочие основы + <span class="hl">어 놓다</span> · 하다 → <span class="hl">해
+                    놓다</span>). Близко по
+                  значению к -아/어 두다.
+                </p>
                 <div class="ex">
-                  <p class="k">면접을 준비하기 위해 자기소개서를 써 놓았어요.</p>
+                  <p class="k">면접을 준비하기 위해 자기소개서를 <span class="hl">써 놓았어요</span>.</p>
                   <p class="e">Чтобы подготовиться к собеседованию, я заранее написал сопроводительное письмо.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">숙제를 미리 해 놓아서 마음이 편해요.</p>
+                  <p class="k">숙제를 미리 <span class="hl">해 놓아서</span> 마음이 편해요.</p>
                   <p class="e">Я заранее сделал домашнее задание, поэтому на душе спокойно.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">손님이 오기 전에 음식을 미리 만들어 놓았어요.</p>
+                  <p class="k">손님이 오기 전에 음식을 미리 <span class="hl">만들어 놓았어요</span>.</p>
                   <p class="e">Я заранее приготовил еду, прежде чем пришли гости.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">중요한 회의가 있어서 알람을 여러 개 맞춰 놓았어요.</p>
+                  <p class="k">중요한 회의가 있어서 알람을 여러 개 <span class="hl">맞춰 놓았어요</span>.</p>
                   <p class="e">У меня важное совещание, поэтому я заранее поставил несколько будильников.</p>
+                </div>
+                <div class="note">
+                  <p><span class="tag">Совет</span> <span class="hl">-아/어 놓다</span> подчёркивает, что результат держат
+                    наготове для использования; <span class="hl">-아/어 두다</span> подчёркивает, что нечто оставляют на
+                    месте
+                    на более долгий срок. В большинстве повседневных предложений они взаимозаменяемы (켜 놓다 ≈ 켜 두다).</p>
                 </div>
               </div>
 
@@ -1686,6 +2876,217 @@
                     <td class="w">합격 통보 문자를 받다</td>
                     <td>получать СМС об успешном прохождении</td>
                   </tr>
+                  <tr class="grp">
+                    <td colspan="2">Ключевые слова (핵심 단어)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">학원 강사</td>
+                    <td>преподаватель частной академии (хагвон)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">다문화 언어 강사</td>
+                    <td>преподаватель языка для мультикультурных семей</td>
+                  </tr>
+                  <tr>
+                    <td class="w">편의점 아르바이트</td>
+                    <td>подработка в круглосуточном магазине</td>
+                  </tr>
+                  <tr>
+                    <td class="w">시간제</td>
+                    <td>почасовая занятость</td>
+                  </tr>
+                  <tr>
+                    <td class="w">사업하다</td>
+                    <td>вести бизнес</td>
+                  </tr>
+                  <tr>
+                    <td class="w">가게를 차리다</td>
+                    <td>открывать магазин</td>
+                  </tr>
+                  <tr>
+                    <td class="w">통역</td>
+                    <td>устный перевод</td>
+                  </tr>
+                  <tr>
+                    <td class="w">번역</td>
+                    <td>письменный перевод</td>
+                  </tr>
+                  <tr>
+                    <td class="w">전문성</td>
+                    <td>профессионализм, специализация</td>
+                  </tr>
+                  <tr>
+                    <td class="w">안정적이다</td>
+                    <td>быть стабильным</td>
+                  </tr>
+                  <tr>
+                    <td class="w">근무 환경</td>
+                    <td>условия работы</td>
+                  </tr>
+                  <tr>
+                    <td class="w">월급</td>
+                    <td>зарплата (ежемесячная)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">출퇴근이 자유롭다</td>
+                    <td>свободный график прихода и ухода</td>
+                  </tr>
+                  <tr>
+                    <td class="w">발전 가능성</td>
+                    <td>перспективы роста</td>
+                  </tr>
+                  <tr>
+                    <td class="w">사회에 기여하다</td>
+                    <td>приносить пользу обществу</td>
+                  </tr>
+                  <tr>
+                    <td class="w">자기 계발</td>
+                    <td>саморазвитие</td>
+                  </tr>
+                  <tr>
+                    <td class="w">보람을 느끼다</td>
+                    <td>чувствовать удовлетворение от дела</td>
+                  </tr>
+                  <tr>
+                    <td class="w">구인 광고</td>
+                    <td>объявление о вакансии</td>
+                  </tr>
+                  <tr>
+                    <td class="w">이력서</td>
+                    <td>резюме</td>
+                  </tr>
+                  <tr>
+                    <td class="w">지원서</td>
+                    <td>заявление, анкета</td>
+                  </tr>
+                  <tr>
+                    <td class="w">분야</td>
+                    <td>сфера, область</td>
+                  </tr>
+                  <tr>
+                    <td class="w">인원</td>
+                    <td>количество человек, штат</td>
+                  </tr>
+                  <tr>
+                    <td class="w">제출</td>
+                    <td>подача (документов)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">문의</td>
+                    <td>запрос, обращение</td>
+                  </tr>
+                  <tr>
+                    <td class="w">지원</td>
+                    <td>заявка; поддержка</td>
+                  </tr>
+                  <tr>
+                    <td class="w">증명서</td>
+                    <td>справка, свидетельство</td>
+                  </tr>
+                  <tr>
+                    <td class="w">사본</td>
+                    <td>копия (документа)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">자격증</td>
+                    <td>сертификат, удостоверение</td>
+                  </tr>
+                  <tr>
+                    <td class="w">작성하다</td>
+                    <td>заполнять, составлять</td>
+                  </tr>
+                  <tr>
+                    <td class="w">모집하다</td>
+                    <td>набирать, вести набор</td>
+                  </tr>
+                  <tr>
+                    <td class="w">취직하다</td>
+                    <td>устраиваться на работу</td>
+                  </tr>
+                  <tr>
+                    <td class="w">개발하다</td>
+                    <td>разрабатывать</td>
+                  </tr>
+                  <tr>
+                    <td class="w">구직하다</td>
+                    <td>искать работу</td>
+                  </tr>
+                  <tr>
+                    <td class="w">판매직</td>
+                    <td>должность продавца</td>
+                  </tr>
+                  <tr>
+                    <td class="w">영업직</td>
+                    <td>должность в продажах (сбыт)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">생산직</td>
+                    <td>производственная должность</td>
+                  </tr>
+                  <tr>
+                    <td class="w">기술직</td>
+                    <td>техническая должность</td>
+                  </tr>
+                  <tr>
+                    <td class="w">연구직</td>
+                    <td>научно-исследовательская должность</td>
+                  </tr>
+                  <tr>
+                    <td class="w">경력</td>
+                    <td>опыт работы, стаж</td>
+                  </tr>
+                  <tr>
+                    <td class="w">따다</td>
+                    <td>получать (права, сертификат)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">직장을 구하다</td>
+                    <td>искать и находить работу</td>
+                  </tr>
+                  <tr>
+                    <td class="w">일회용품</td>
+                    <td>одноразовые товары</td>
+                  </tr>
+                  <tr>
+                    <td class="w">전공</td>
+                    <td>специальность (учёбы)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">구함</td>
+                    <td>«требуется», «ищу» (в объявл.)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">자격</td>
+                    <td>квалификация, право</td>
+                  </tr>
+                  <tr>
+                    <td class="w">배송</td>
+                    <td>доставка</td>
+                  </tr>
+                  <tr>
+                    <td class="w">소지자</td>
+                    <td>владелец, обладатель</td>
+                  </tr>
+                  <tr>
+                    <td class="w">학력</td>
+                    <td>уровень образования</td>
+                  </tr>
+                  <tr>
+                    <td class="w">급여</td>
+                    <td>оплата труда, зарплата</td>
+                  </tr>
+                  <tr>
+                    <td class="w">세금</td>
+                    <td>налог</td>
+                  </tr>
+                  <tr>
+                    <td class="w">근무하다</td>
+                    <td>работать (по найму)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">국적을 취득하다</td>
+                    <td>приобретать гражданство</td>
+                  </tr>
                 </table>
               </div>
             </section>
@@ -1701,23 +3102,25 @@
                 <h3 class="gram-form">-(으)ㄴ/는 데다(가) <span class="gloss">— «вдобавок / более того»</span></h3>
                 <p class="meta"><span class="tag">Форма</span> Глагол + 는 데다가 · Прилаг. + -(으)ㄴ 데다가</p>
                 <p class="def">Добавляет второй факт того же направления, что и первый, — они накладываются друг на
-                  друга. Оба предложения
+                  друга. Глагол + <span class="hl">는 데다가</span>, прилагательное + <span class="hl">-(으)ㄴ 데다가</span>. Оба
+                  предложения
                   либо вместе положительные, либо вместе отрицательные.</p>
                 <div class="ex">
-                  <p class="k">이 집은 교통이 편리한 데다가 주변에 편의시설도 많아요.</p>
-                  <p class="e">У этого жилья удобный транспорт, а вдобавок поблизости много удобств.</p>
+                  <p class="k">이 집은 교통이 편리<span class="hl">한 데다가</span> 주변에 편의시설도 많아요.</p>
+                  <p class="e">У этого жилья удобный транспорт, а вдобавок поблизости много удобств. <span
+                      class="e-note">(прилагательное 편리하다 → 편리한 데다가)</span></p>
                 </div>
                 <div class="ex">
-                  <p class="k">방이 좁은 데다가 어두워서 별로 마음에 안 들어요.</p>
+                  <p class="k">방이 좁<span class="hl">은 데다가</span> 어두워서 별로 마음에 안 들어요.</p>
                   <p class="e">Комната тесная, а вдобавок тёмная, поэтому мне она не очень нравится.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">그 사람은 일도 잘하는 데다가 성격도 좋아서 다들 좋아해요.</p>
+                  <p class="k">그 사람은 일도 잘하<span class="hl">는 데다가</span> 성격도 좋아서 다들 좋아해요.</p>
                   <p class="e">Он хорошо справляется с работой, а вдобавок у него приятный характер, поэтому он всем
-                    нравится.</p>
+                    нравится. <span class="e-note">(глагол 잘하다 → 잘하는 데다가)</span></p>
                 </div>
                 <div class="ex">
-                  <p class="k">오늘은 비가 오는 데다가 바람까지 불어서 정말 추워요.</p>
+                  <p class="k">오늘은 비가 오<span class="hl">는 데다가</span> 바람까지 불어서 정말 추워요.</p>
                   <p class="e">Сегодня идёт дождь, а вдобавок дует ветер, поэтому действительно холодно.</p>
                 </div>
               </div>
@@ -1729,22 +3132,34 @@
                   (이)다</p>
                 <p class="def">Нейтральный письменный стиль для фактов, сообщений, новостей, дневников и объявлений —
                   обращения к
-                  слушателю нет. Глаголы принимают -ㄴ다/는다; прилагательные и 이다 сохраняют словарное -다.</p>
+                  слушателю нет. Глаголы принимают <span class="hl">-ㄴ다/는다</span>; прилагательные и 이다 сохраняют
+                  словарное <span class="hl">-다</span>.</p>
                 <div class="ex">
-                  <p class="k">행복 아파트는 교통이 편리하고 다양한 편의시설이 있다.</p>
-                  <p class="e">У ЖК «Хэнбок» удобный транспорт и разнообразная инфраструктура.</p>
+                  <p class="k">행복 아파트는 교통이 편리하고 다양한 편의시설이 있<span class="hl">다</span>.</p>
+                  <p class="e">У ЖК «Хэнбок» удобный транспорт и разнообразная инфраструктура. <span class="e-note">(있다
+                      сохраняет голое -다)</span></p>
                 </div>
                 <div class="ex">
-                  <p class="k">한국에서 가장 많이 볼 수 있는 집은 아파트다.</p>
-                  <p class="e">Самый распространённый тип жилья в Корее — это квартира в многоэтажке.</p>
+                  <p class="k">한국에서 가장 많이 볼 수 있는 집은 아파트<span class="hl">다</span>.</p>
+                  <p class="e">Самый распространённый тип жилья в Корее — это квартира в многоэтажке. <span
+                      class="e-note">(существительное + 이다 → 아파트다)</span></p>
                 </div>
                 <div class="ex">
-                  <p class="k">요즘 젊은 사람들은 도시의 작은 원룸에서 혼자 산다.</p>
-                  <p class="e">В наши дни молодёжь живёт в одиночку в маленьких студиях в городе.</p>
+                  <p class="k">요즘 젊은 사람들은 도시의 작은 원룸에서 혼자 <span class="hl">산다</span>.</p>
+                  <p class="e">В наши дни молодёжь живёт в одиночку в маленьких студиях в городе. <span
+                      class="e-note">(глагол 살다 → 산다)</span></p>
                 </div>
                 <div class="ex">
-                  <p class="k">올해 겨울은 예년보다 훨씬 춥고 눈도 많이 내린다.</p>
-                  <p class="e">Эта зима намного холоднее обычного, и снега тоже выпадает много.</p>
+                  <p class="k">올해 겨울은 예년보다 훨씬 춥고 눈도 많이 <span class="hl">내린다</span>.</p>
+                  <p class="e">Эта зима намного холоднее обычного, и снега тоже выпадает много. <span
+                      class="e-note">(глагол 내리다 → 내린다)</span></p>
+                </div>
+                <div class="note">
+                  <p><span class="tag">Совет</span> Основы глаголов, оканчивающиеся на согласный, принимают <span
+                      class="hl">-는다</span> (먹는다, 읽는다);
+                    основы на гласный принимают <span class="hl">-ㄴ다</span> (간다, 산다). Прилагательные никогда не
+                    добавляют 는다/ㄴ다 — 춥다 остаётся
+                    춥다, а не 춥는다.</p>
                 </div>
               </div>
 
@@ -1858,6 +3273,89 @@
                     <td class="w">침대 / 책상 / 세탁기 / 냉장고 옵션이 있다 / 없다</td>
                     <td>есть / нет в комплекте кровати / стола / стиральной машины / холодильника</td>
                   </tr>
+                  <tr class="grp">
+                    <td colspan="2">Ключевые слова (핵심 단어)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">기숙사</td>
+                    <td>общежитие</td>
+                  </tr>
+                  <tr>
+                    <td class="w">편의 시설</td>
+                    <td>удобства, инфраструктура</td>
+                  </tr>
+                  <tr>
+                    <td class="w">산책로</td>
+                    <td>дорожка для прогулок</td>
+                  </tr>
+                  <tr>
+                    <td class="w">전망</td>
+                    <td>вид (из окна), перспектива</td>
+                  </tr>
+                  <tr>
+                    <td class="w">햇빛</td>
+                    <td>солнечный свет</td>
+                  </tr>
+                  <tr>
+                    <td class="w">내부</td>
+                    <td>внутренняя часть, интерьер</td>
+                  </tr>
+                  <tr>
+                    <td class="w">환경</td>
+                    <td>окружение, среда</td>
+                  </tr>
+                  <tr>
+                    <td class="w">형태</td>
+                    <td>форма, тип</td>
+                  </tr>
+                  <tr>
+                    <td class="w">선호하다</td>
+                    <td>предпочитать</td>
+                  </tr>
+                  <tr>
+                    <td class="w">테라스</td>
+                    <td>терраса</td>
+                  </tr>
+                  <tr>
+                    <td class="w">층간 소음</td>
+                    <td>шум между этажами (от соседей)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">도보</td>
+                    <td>пешком, пешая доступность</td>
+                  </tr>
+                  <tr>
+                    <td class="w">등기부 등본</td>
+                    <td>выписка из реестра недвижимости</td>
+                  </tr>
+                  <tr>
+                    <td class="w">부동산 중개소</td>
+                    <td>агентство недвижимости</td>
+                  </tr>
+                  <tr>
+                    <td class="w">신축</td>
+                    <td>новостройка</td>
+                  </tr>
+                  <tr>
+                    <td class="w">역세권</td>
+                    <td>район у станции метро</td>
+                  </tr>
+                  <tr>
+                    <td class="w">잔금</td>
+                    <td>остаток суммы, доплата</td>
+                  </tr>
+                  <tr>
+                    <td class="w">전입 신고</td>
+                    <td>регистрация по новому месту жительства</td>
+                  </tr>
+                  <tr>
+                    <td class="w">특약 사항</td>
+                    <td>особые условия (договора)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">풀 옵션</td>
+                    <td>с полной обстановкой (фул-опшн)</td>
+                  </tr>
                 </table>
               </div>
             </section>
@@ -1872,23 +3370,27 @@
               <div class="gram">
                 <h3 class="gram-form">-아/어도 <span class="gloss">— «даже если / хотя»</span></h3>
                 <p class="meta"><span class="tag">Форма</span> основа на ㅏ/ㅗ + 아도 · прочие основы + 어도 · 하다 → 해도</p>
-                <p class="def">Уступительное окончание: результат сохраняется независимо от условия. Часто усиливается
+                <p class="def">Уступительное окончание: результат сохраняется независимо от условия (основа на ㅏ/ㅗ +
+                  <span class="hl">아도</span> · прочие основы + <span class="hl">어도</span> · 하다 → <span
+                    class="hl">해도</span>). Часто усиливается
                   словом
-                  아무리 («как бы ни»).</p>
+                  아무리 («как бы ни»).
+                </p>
                 <div class="ex">
-                  <p class="k">나는 시간이 없어도 아침밥을 꼭 먹는다.</p>
+                  <p class="k">나는 시간이 없<span class="hl">어도</span> 아침밥을 꼭 먹는다.</p>
                   <p class="e">Даже когда у меня нет времени, я обязательно завтракаю.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">몸이 아무리 아파도 수업에 결석하지 않는다.</p>
-                  <p class="e">Как бы сильно я ни болел, я никогда не пропускаю занятия.</p>
+                  <p class="k">몸이 아무리 아<span class="hl">파도</span> 수업에 결석하지 않는다.</p>
+                  <p class="e">Как бы сильно я ни болел, я никогда не пропускаю занятия. <span class="e-note">(아프다 →
+                      아파도)</span></p>
                 </div>
                 <div class="ex">
-                  <p class="k">아무리 바빠도 가족과 함께 보내는 시간은 꼭 만든다.</p>
+                  <p class="k">아무리 바<span class="hl">빠도</span> 가족과 함께 보내는 시간은 꼭 만든다.</p>
                   <p class="e">Как бы я ни был занят, я всегда нахожу время, чтобы провести его с семьёй.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">값이 좀 비싸도 품질이 좋으면 사겠어요.</p>
+                  <p class="k">값이 좀 비<span class="hl">싸도</span> 품질이 좋으면 사겠어요.</p>
                   <p class="e">Даже если это немного дорого, я куплю, если качество хорошее.</p>
                 </div>
               </div>
@@ -1897,21 +3399,22 @@
                 <h3 class="gram-form">-게 되다 <span class="gloss">— «прийти к тому, что / в итоге (сделать)»</span></h3>
                 <p class="meta"><span class="tag">Форма</span> Основа глагола + 게 되다</p>
                 <p class="def">Обозначает изменение состояния или результат, наступивший в силу обстоятельств, а не по
-                  собственному прямому выбору — «так вышло, что…», «в итоге я…».</p>
+                  собственному прямому выбору — «так вышло, что…», «в итоге я…» (основа глагола + <span class="hl">게
+                    되다</span>).</p>
                 <div class="ex">
-                  <p class="k">한국에 살게 되면서 추석을 처음 알게 됐어요.</p>
+                  <p class="k">한국에 살<span class="hl">게 되</span>면서 추석을 처음 알<span class="hl">게 됐어요</span>.</p>
                   <p class="e">Когда я стал жить в Корее, я впервые узнал о Чхусоке.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">장사가 안 돼서 가게 문을 닫게 되었다.</p>
+                  <p class="k">장사가 안 돼서 가게 문을 닫<span class="hl">게 되었다</span>.</p>
                   <p class="e">Торговля шла плохо, поэтому магазин в итоге закрылся.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">이번에 새로운 회사에 들어가게 되어서 정말 기뻐요.</p>
+                  <p class="k">이번에 새로운 회사에 들어가<span class="hl">게 되어서</span> 정말 기뻐요.</p>
                   <p class="e">Я очень рад, что на этот раз устроился в новую компанию.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">처음에는 김치를 못 먹었는데 이제는 잘 먹게 됐어요.</p>
+                  <p class="k">처음에는 김치를 못 먹었는데 이제는 잘 먹<span class="hl">게 됐어요</span>.</p>
                   <p class="e">Сначала я не мог есть кимчи, а теперь ем его с удовольствием.</p>
                 </div>
               </div>
@@ -1996,6 +3499,109 @@
                     <td class="w">햇곡식과 햇과일로 차례를 지내다</td>
                     <td>проводить поминальный обряд с новым урожаем зерна и фруктов</td>
                   </tr>
+                  <tr class="grp">
+                    <td colspan="2">Ключевые слова (핵심 단어)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">음력</td>
+                    <td>лунный календарь</td>
+                  </tr>
+                  <tr>
+                    <td class="w">부럼</td>
+                    <td>орехи, разгрызаемые на Тэборым</td>
+                  </tr>
+                  <tr>
+                    <td class="w">기원하다</td>
+                    <td>желать, молиться (о чём-то)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">피부병</td>
+                    <td>кожная болезнь</td>
+                  </tr>
+                  <tr>
+                    <td class="w">생기다</td>
+                    <td>возникать, появляться</td>
+                  </tr>
+                  <tr>
+                    <td class="w">붉은색</td>
+                    <td>красный цвет</td>
+                  </tr>
+                  <tr>
+                    <td class="w">쫓다</td>
+                    <td>прогонять, отгонять</td>
+                  </tr>
+                  <tr>
+                    <td class="w">풍습</td>
+                    <td>обычай, традиция</td>
+                  </tr>
+                  <tr>
+                    <td class="w">한가위</td>
+                    <td>Хангави (другое название Чхусок)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">황금연휴</td>
+                    <td>«золотые» длинные выходные</td>
+                  </tr>
+                  <tr>
+                    <td class="w">귀성 전쟁</td>
+                    <td>«битва» за возвращение домой (ажиотаж)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">귀성객</td>
+                    <td>человек, едущий домой на праздник</td>
+                  </tr>
+                  <tr>
+                    <td class="w">고속도로</td>
+                    <td>автомагистраль, шоссе</td>
+                  </tr>
+                  <tr>
+                    <td class="w">붐비다</td>
+                    <td>быть переполненным</td>
+                  </tr>
+                  <tr>
+                    <td class="w">근하신년</td>
+                    <td>«С Новым годом» (формальное поздравление)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">가득하다</td>
+                    <td>быть полным, переполненным</td>
+                  </tr>
+                  <tr>
+                    <td class="w">빌다</td>
+                    <td>желать, загадывать, молиться</td>
+                  </tr>
+                  <tr>
+                    <td class="w">친지들</td>
+                    <td>родные и близкие</td>
+                  </tr>
+                  <tr>
+                    <td class="w">보름달</td>
+                    <td>полная луна</td>
+                  </tr>
+                  <tr>
+                    <td class="w">넉넉하다</td>
+                    <td>быть достаточным, в изобилии</td>
+                  </tr>
+                  <tr>
+                    <td class="w">풍성하다</td>
+                    <td>быть обильным, богатым</td>
+                  </tr>
+                  <tr>
+                    <td class="w">덕담을 하다</td>
+                    <td>говорить добрые пожелания (на праздник)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">세배하다</td>
+                    <td>совершать новогодний поклон старшим</td>
+                  </tr>
+                  <tr>
+                    <td class="w">설빔을 입다</td>
+                    <td>надевать новую одежду на Соллаль</td>
+                  </tr>
+                  <tr>
+                    <td class="w">세뱃돈을 받다</td>
+                    <td>получать новогодние деньги</td>
+                  </tr>
                 </table>
               </div>
             </section>
@@ -2011,23 +3617,33 @@
                 <h3 class="gram-form">-게 하다 <span class="gloss">— «заставлять / позволять (кому-то) делать»</span></h3>
                 <p class="meta"><span class="tag">Форма</span> Основа глагола + 게 하다</p>
                 <p class="def">Побудительная конструкция: подлежащее заставляет или позволяет другому человеку совершить
-                  действие.
-                  Человек, которого побуждают действовать, обычно отмечается частицей 에게/한테 или 이/가.</p>
+                  действие
+                  (основа глагола + <span class="hl">게 하다</span>). Человек, которого побуждают действовать, обычно
+                  отмечается частицей 에게/한테 или 이/가.</p>
                 <div class="ex">
-                  <p class="k">아이에게 자기 방을 스스로 정리하게 하세요.</p>
+                  <p class="k">아이에게 자기 방을 스스로 정리하<span class="hl">게 하세요</span>.</p>
                   <p class="e">Приучайте ребёнка самому убирать свою комнату.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">상사가 저를 일찍 퇴근하게 했어요.</p>
+                  <p class="k">상사가 저를 일찍 퇴근하<span class="hl">게 했어요</span>.</p>
                   <p class="e">Начальник разрешил мне уйти с работы пораньше.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">출입국·외국인청에서 외국인 등록을 하게 합니다.</p>
+                  <p class="k">출입국·외국인청에서 외국인 등록을 하<span class="hl">게 합니다</span>.</p>
                   <p class="e">Миграционная служба обязывает иностранцев проходить регистрацию.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">선생님은 학생들에게 매일 일기를 쓰게 했어요.</p>
+                  <p class="k">선생님은 학생들에게 매일 일기를 쓰<span class="hl">게 했어요</span>.</p>
                   <p class="e">Учитель заставлял учеников каждый день вести дневник.</p>
+                </div>
+                <div class="note">
+                  <p><span class="tag">Сравните</span> <span class="hl">-게 하다</span> работает с любым глаголом и
+                    является общим
+                    способом сказать «заставить кого-то делать». Побудительные глаголы с инфиксом из раздела 8 (먹이다,
+                    입히다) существуют только для определённых
+                    глаголов и часто подразумевают более непосредственное участие — 옷을 입혀요 («оденьте их сами») vs. 옷을 입게
+                    해요 («сделайте так,
+                    чтобы они оделись»).</p>
                 </div>
               </div>
 
@@ -2035,23 +3651,32 @@
                 <h3 class="gram-form">-아/어 가다 <span class="gloss">— «постепенно / продолжать (делать)»</span></h3>
                 <p class="meta"><span class="tag">Форма</span> Основа глагола + 아/어 가다 (в отличие от -아/어 오다 = вплоть до
                   настоящего)</p>
-                <p class="def">Описывает действие или изменение, продвигающееся от настоящего момента дальше в будущее.
-                  Парное -아/어 오다 означает, что процесс продолжался вплоть до настоящего времени.</p>
+                <p class="def">Описывает действие или изменение, продвигающееся от настоящего момента дальше в будущее
+                  (основа глагола + <span class="hl">아/어 가다</span>).
+                  Парное <span class="hl">-아/어 오다</span> означает, что процесс продолжался вплоть до настоящего времени.
+                </p>
                 <div class="ex">
-                  <p class="k">한국에 온 지 거의 3년이 되어 가요.</p>
+                  <p class="k">한국에 온 지 거의 3년이 <span class="hl">되어 가요</span>.</p>
                   <p class="e">С тех пор как я приехал в Корею, прошло почти три года.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">지금은 한국 사람들의 일하는 방식을 알아 가는 중이에요.</p>
+                  <p class="k">지금은 한국 사람들의 일하는 방식을 <span class="hl">알아 가는</span> 중이에요.</p>
                   <p class="e">Сейчас я постепенно узнаю, как работают корейцы.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">처음에는 서툴렀지만 일에 조금씩 익숙해져 가고 있어요.</p>
+                  <p class="k">처음에는 서툴렀지만 일에 조금씩 익숙<span class="hl">해져 가고</span> 있어요.</p>
                   <p class="e">Сначала я был неумелым, но мало-помалу привыкаю к работе.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">준비하던 시험이 이제 거의 끝나 가서 마음이 한결 가벼워요.</p>
+                  <p class="k">준비하던 시험이 이제 거의 <span class="hl">끝나 가서</span> 마음이 한결 가벼워요.</p>
                   <p class="e">Экзамен, к которому я готовился, теперь почти позади, поэтому на душе намного легче.</p>
+                </div>
+                <div class="note">
+                  <p><span class="tag">Сравните</span> <span class="hl">-아/어 가다</span> смотрит вперёд от настоящего (살아
+                    가다 = «жить
+                    дальше»); <span class="hl">-아/어 오다</span> смотрит назад к настоящему (살아 오다 = «прожить вплоть до сих
+                    пор»). Выбирайте
+                    по тому, в каком направлении во времени движется изменение.</p>
                 </div>
               </div>
 
@@ -2108,6 +3733,121 @@
                     <td class="w">작업 일지를 작성하다 / 제출하다</td>
                     <td>заполнять / сдавать рабочий журнал</td>
                   </tr>
+                  <tr class="grp">
+                    <td colspan="2">Ключевые слова (핵심 단어)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">제출하다</td>
+                    <td>подавать, сдавать (документ)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">마무리하다</td>
+                    <td>завершать, доделывать</td>
+                  </tr>
+                  <tr>
+                    <td class="w">거주하다</td>
+                    <td>проживать</td>
+                  </tr>
+                  <tr>
+                    <td class="w">창고</td>
+                    <td>склад, кладовая</td>
+                  </tr>
+                  <tr>
+                    <td class="w">방식</td>
+                    <td>способ, метод</td>
+                  </tr>
+                  <tr>
+                    <td class="w">파악하다</td>
+                    <td>понимать, разбираться, оценивать</td>
+                  </tr>
+                  <tr>
+                    <td class="w">허락을 받다</td>
+                    <td>получать разрешение</td>
+                  </tr>
+                  <tr>
+                    <td class="w">상의하다</td>
+                    <td>советоваться, обсуждать</td>
+                  </tr>
+                  <tr>
+                    <td class="w">반반씩</td>
+                    <td>пополам, поровну</td>
+                  </tr>
+                  <tr>
+                    <td class="w">모집 공고</td>
+                    <td>объявление о наборе</td>
+                  </tr>
+                  <tr>
+                    <td class="w">직종</td>
+                    <td>род занятий, профессия</td>
+                  </tr>
+                  <tr>
+                    <td class="w">사무직</td>
+                    <td>офисная, канцелярская работа</td>
+                  </tr>
+                  <tr>
+                    <td class="w">관리직</td>
+                    <td>руководящая должность</td>
+                  </tr>
+                  <tr>
+                    <td class="w">일용직</td>
+                    <td>подённая работа</td>
+                  </tr>
+                  <tr>
+                    <td class="w">연봉</td>
+                    <td>годовая зарплата</td>
+                  </tr>
+                  <tr>
+                    <td class="w">주급</td>
+                    <td>недельная зарплата</td>
+                  </tr>
+                  <tr>
+                    <td class="w">일당</td>
+                    <td>дневная оплата</td>
+                  </tr>
+                  <tr>
+                    <td class="w">시급</td>
+                    <td>почасовая оплата</td>
+                  </tr>
+                  <tr>
+                    <td class="w">수당</td>
+                    <td>надбавка, доплата</td>
+                  </tr>
+                  <tr>
+                    <td class="w">정확하다</td>
+                    <td>быть точным</td>
+                  </tr>
+                  <tr>
+                    <td class="w">성과</td>
+                    <td>результат, достижение</td>
+                  </tr>
+                  <tr>
+                    <td class="w">피로</td>
+                    <td>усталость, утомление</td>
+                  </tr>
+                  <tr>
+                    <td class="w">해소하다</td>
+                    <td>снимать, устранять (стресс)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">이겨 내다</td>
+                    <td>преодолевать</td>
+                  </tr>
+                  <tr>
+                    <td class="w">상하 관계</td>
+                    <td>иерархические отношения (старший — младший)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">재충전하다</td>
+                    <td>восстанавливать силы, перезаряжаться</td>
+                  </tr>
+                  <tr>
+                    <td class="w">책임감</td>
+                    <td>чувство ответственности</td>
+                  </tr>
+                  <tr>
+                    <td class="w">원만하다</td>
+                    <td>быть гладким, дружелюбным (об отношениях)</td>
+                  </tr>
                 </table>
               </div>
             </section>
@@ -2124,22 +3864,32 @@
                 <p class="meta"><span class="tag">Форма</span> Основа глагола / прилагательного / N-이다 + 잖아요 (разг.: 잖아)
                 </p>
                 <p class="def">Напоминает собеседнику о том, что он уже знает, или мягко указывает на очевидный
-                  факт. Не используется для совершенно новой информации, так как опирается на общее знание.</p>
+                  факт (основа глагола / прилагательного / N-이다 + <span class="hl">잖아요</span>). Не используется для
+                  совершенно новой информации, так как опирается на общее знание.</p>
                 <div class="ex">
-                  <p class="k">로그인을 해야 이용할 수 있잖아요.</p>
+                  <p class="k">로그인을 해야 이용할 수 있<span class="hl">잖아요</span>.</p>
                   <p class="e">Ведь нужно войти в систему, чтобы этим пользоваться.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">수지는 항상 열심히 공부하잖아요.</p>
+                  <p class="k">수지는 항상 열심히 공부하<span class="hl">잖아요</span>.</p>
                   <p class="e">Ведь Суджи всегда усердно учится.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">영상 통화가 있잖아요. 부모님께 자주 연락드리세요.</p>
+                  <p class="k">영상 통화가 있<span class="hl">잖아요</span>. 부모님께 자주 연락드리세요.</p>
                   <p class="e">Ведь есть видеозвонки — почаще связывайтесь с родителями.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">오늘 길이 막힐 거예요. 지금 퇴근 시간이잖아요.</p>
-                  <p class="e">Сегодня будут пробки. Ведь сейчас как раз час пик.</p>
+                  <p class="k">오늘 길이 막힐 거예요. 지금 퇴근 시간이<span class="hl">잖아요</span>.</p>
+                  <p class="e">Сегодня будут пробки. Ведь сейчас как раз час пик. <span class="e-note">(существительное
+                      시간 + 이잖아요)</span></p>
+                </div>
+                <div class="note">
+                  <p><span class="tag">Совет</span> Поскольку <span class="hl">-잖아요</span> апеллирует к тому, что
+                    слушатель уже
+                    знает, использование её для действительно новой информации может прозвучать как упрёк («но ты ведь
+                    должен был знать»). Для свежих
+                    фактов используйте простое <span class="hl">-아요/어요</span> или объясняющее <span
+                      class="hl">-거든요</span>.</p>
                 </div>
               </div>
 
@@ -2149,21 +3899,24 @@
                   предложение)</p>
                 <p class="def">Указывает необходимое условие: только при выполнении первого предложения становится
                   возможным
-                  второе. Часто расширяется до -아/어야 하다/되다 («нужно сделать»).</p>
+                  второе (основа глагола / прилагательного + <span class="hl">아/어야</span>). Часто расширяется до
+                  <span class="hl">-아/어야 하다/되다</span> («нужно сделать»).
+                </p>
                 <div class="ex">
-                  <p class="k">여권이 있어야 비행기를 탈 수 있다.</p>
+                  <p class="k">여권이 있<span class="hl">어야</span> 비행기를 탈 수 있다.</p>
                   <p class="e">Чтобы сесть на самолёт, нужно иметь паспорт.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">지금 출발해야 늦지 않아요.</p>
+                  <p class="k">지금 출발<span class="hl">해야</span> 늦지 않아요.</p>
                   <p class="e">Нужно выйти сейчас, чтобы не опоздать.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">빵은 부드러워야 맛있다.</p>
-                  <p class="e">Хлеб вкусен только тогда, когда он мягкий.</p>
+                  <p class="k">빵은 부드러<span class="hl">워야</span> 맛있다.</p>
+                  <p class="e">Хлеб вкусен только тогда, когда он мягкий. <span class="e-note">(ㅂ-неправильный 부드럽다 →
+                      부드러워야)</span></p>
                 </div>
                 <div class="ex">
-                  <p class="k">아이디와 비밀번호를 입력해야 로그인할 수 있어요.</p>
+                  <p class="k">아이디와 비밀번호를 입력<span class="hl">해야</span> 로그인할 수 있어요.</p>
                   <p class="e">Войти в систему можно, только если ввести логин и пароль.</p>
                 </div>
               </div>
@@ -2238,6 +3991,137 @@
                     <td class="w">앱(App)을 설치하다</td>
                     <td>устанавливать приложение</td>
                   </tr>
+                  <tr class="grp">
+                    <td colspan="2">Ключевые слова (핵심 단어)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">최신</td>
+                    <td>новейший, последний</td>
+                  </tr>
+                  <tr>
+                    <td class="w">간편하다</td>
+                    <td>быть простым и удобным</td>
+                  </tr>
+                  <tr>
+                    <td class="w">세계적</td>
+                    <td>мировой, глобальный</td>
+                  </tr>
+                  <tr>
+                    <td class="w">출장을 가다</td>
+                    <td>ездить в командировку</td>
+                  </tr>
+                  <tr>
+                    <td class="w">홈페이지</td>
+                    <td>сайт, домашняя страница</td>
+                  </tr>
+                  <tr>
+                    <td class="w">회원 가입을 하다</td>
+                    <td>регистрироваться, оформлять членство</td>
+                  </tr>
+                  <tr>
+                    <td class="w">본인 확인</td>
+                    <td>подтверждение личности</td>
+                  </tr>
+                  <tr>
+                    <td class="w">개통하다</td>
+                    <td>подключать (связь, услугу)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">접속하다</td>
+                    <td>подключаться, заходить (в сеть)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">영상</td>
+                    <td>видео, видеозапись</td>
+                  </tr>
+                  <tr>
+                    <td class="w">긍정적</td>
+                    <td>положительный</td>
+                  </tr>
+                  <tr>
+                    <td class="w">부정적</td>
+                    <td>отрицательный</td>
+                  </tr>
+                  <tr>
+                    <td class="w">고립감</td>
+                    <td>чувство изоляции, одиночества</td>
+                  </tr>
+                  <tr>
+                    <td class="w">대중화</td>
+                    <td>популяризация, массовое распространение</td>
+                  </tr>
+                  <tr>
+                    <td class="w">인터넷 중독</td>
+                    <td>интернет-зависимость</td>
+                  </tr>
+                  <tr>
+                    <td class="w">불면증</td>
+                    <td>бессонница</td>
+                  </tr>
+                  <tr>
+                    <td class="w">시력 악화</td>
+                    <td>ухудшение зрения</td>
+                  </tr>
+                  <tr>
+                    <td class="w">음주 운전</td>
+                    <td>вождение в нетрезвом виде</td>
+                  </tr>
+                  <tr>
+                    <td class="w">어색하다</td>
+                    <td>быть неловким, неуклюжим</td>
+                  </tr>
+                  <tr>
+                    <td class="w">소통하다</td>
+                    <td>общаться, поддерживать связь</td>
+                  </tr>
+                  <tr>
+                    <td class="w">신속하다</td>
+                    <td>быть быстрым, оперативным</td>
+                  </tr>
+                  <tr>
+                    <td class="w">해결하다</td>
+                    <td>решать, устранять</td>
+                  </tr>
+                  <tr>
+                    <td class="w">의존도</td>
+                    <td>степень зависимости</td>
+                  </tr>
+                  <tr>
+                    <td class="w">수시로</td>
+                    <td>то и дело, постоянно</td>
+                  </tr>
+                  <tr>
+                    <td class="w">데이터</td>
+                    <td>данные, трафик</td>
+                  </tr>
+                  <tr>
+                    <td class="w">보편화</td>
+                    <td>повсеместное распространение</td>
+                  </tr>
+                  <tr>
+                    <td class="w">소통이 단절되다</td>
+                    <td>связь прерывается, общение нарушается</td>
+                  </tr>
+                  <tr>
+                    <td class="w">개인 정보 유출</td>
+                    <td>утечка личных данных</td>
+                  </tr>
+                  <tr>
+                    <td class="w">사생활 노출</td>
+                    <td>раскрытие частной жизни</td>
+                  </tr>
+                  <tr>
+                    <td class="w">과유불급</td>
+                    <td>всё хорошо в меру (пословица)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">지혜</td>
+                    <td>мудрость</td>
+                  </tr>
+                  <tr>
+                    <td class="w">활용하다</td>
+                    <td>использовать, применять</td>
+                  </tr>
                 </table>
               </div>
             </section>
@@ -2254,21 +4138,23 @@
                 <p class="meta"><span class="tag">Форма</span> Основа глагола + -(으)려던 참이다 / 참이었다</p>
                 <p class="def">Выражает, что говорящий был как раз на пороге того, чтобы что-то сделать, именно когда
                   произошло другое
-                  событие. Передаёт удачный момент или совпадение.</p>
+                  событие (основа глагола + <span class="hl">-(으)려던 참이다</span>). Передаёт удачный момент или совпадение.
+                </p>
                 <div class="ex">
-                  <p class="k">친구에게 사과를 하려던 참이었는데 친구가 먼저 미안하다고 했어요.</p>
+                  <p class="k">친구에게 사과를 하<span class="hl">려던 참이었는데</span> 친구가 먼저 미안하다고 했어요.</p>
                   <p class="e">Я как раз собирался извиниться перед другом, когда он первым сказал, что виноват.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">지갑을 사려던 참이었는데 친구가 선물해 줬어요.</p>
+                  <p class="k">지갑을 사<span class="hl">려던 참이었는데</span> 친구가 선물해 줬어요.</p>
                   <p class="e">Я как раз собирался купить кошелёк, когда друг подарил мне его.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">막 점심을 먹으려던 참이었는데 갑자기 회의가 잡혔어요.</p>
-                  <p class="e">Я как раз собирался пообедать, когда внезапно назначили совещание.</p>
+                  <p class="k">막 점심을 먹<span class="hl">으려던 참이었는데</span> 갑자기 회의가 잡혔어요.</p>
+                  <p class="e">Я как раз собирался пообедать, когда внезапно назначили совещание. <span
+                      class="e-note">(먹다 оканчивается на согласный → 먹으려던)</span></p>
                 </div>
                 <div class="ex">
-                  <p class="k">안 그래도 너한테 전화하려던 참이었어. 잘 연락했다.</p>
+                  <p class="k">안 그래도 너한테 전화하<span class="hl">려던 참이었어</span>. 잘 연락했다.</p>
                   <p class="e">Я как раз собирался тебе позвонить. Хорошо, что ты сам вышел на связь.</p>
                 </div>
               </div>
@@ -2277,23 +4163,32 @@
                 <h3 class="gram-form">-자마자 <span class="gloss">— «как только, сразу после»</span></h3>
                 <p class="meta"><span class="tag">Форма</span> Основа глагола + 자마자 (на первом глаголе время не
                   выражается)</p>
-                <p class="def">Второе действие следует сразу же после завершения первого. Время отмечается только на
-                  последнем глаголе.</p>
+                <p class="def">Второе действие следует сразу же после завершения первого (основа глагола +
+                  <span class="hl">자마자</span>). Время отмечается только на
+                  последнем глаголе.
+                </p>
                 <div class="ex">
-                  <p class="k">집에 돌아가자마자 자요.</p>
+                  <p class="k">집에 돌아가<span class="hl">자마자</span> 자요.</p>
                   <p class="e">Как только я возвращаюсь домой, я ложусь спать.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">어머니 목소리를 듣자마자 눈물이 났어요.</p>
+                  <p class="k">어머니 목소리를 듣<span class="hl">자마자</span> 눈물이 났어요.</p>
                   <p class="e">Как только я услышал голос мамы, у меня навернулись слёзы.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">소식을 듣자마자 친구에게 전화를 걸었어요.</p>
+                  <p class="k">소식을 듣<span class="hl">자마자</span> 친구에게 전화를 걸었어요.</p>
                   <p class="e">Как только я услышал новость, я позвонил другу.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">회사에 도착하자마자 갑자기 비가 쏟아지기 시작했어요.</p>
+                  <p class="k">회사에 도착하<span class="hl">자마자</span> 갑자기 비가 쏟아지기 시작했어요.</p>
                   <p class="e">Сразу после того, как я приехал в офис, внезапно полил дождь.</p>
+                </div>
+                <div class="note">
+                  <p><span class="tag">Примечание</span> Никогда не добавляйте время к первому глаголу — говорят
+                    도착하<span class="hl">자마자</span>,
+                    а не 도착했자마자, даже если всё предложение в прошедшем времени. В отличие от 후에, 자마자 подчёркивает, что
+                    два события
+                    происходят впритык, без промежутка.</p>
                 </div>
               </div>
 
@@ -2452,6 +4347,81 @@
                     <td class="w">고민을 털어버리다</td>
                     <td>избавляться от переживаний</td>
                   </tr>
+                  <tr class="grp">
+                    <td colspan="2">Ключевые слова (핵심 단어)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">인간관계</td>
+                    <td>межличностные отношения</td>
+                  </tr>
+                  <tr>
+                    <td class="w">성격이 안 맞다</td>
+                    <td>не сходиться характерами</td>
+                  </tr>
+                  <tr>
+                    <td class="w">국적 취득</td>
+                    <td>получение гражданства</td>
+                  </tr>
+                  <tr>
+                    <td class="w">제자리걸음</td>
+                    <td>топтание на месте, застой</td>
+                  </tr>
+                  <tr>
+                    <td class="w">병행하다</td>
+                    <td>совмещать, делать параллельно</td>
+                  </tr>
+                  <tr>
+                    <td class="w">두렵다</td>
+                    <td>бояться, страшиться</td>
+                  </tr>
+                  <tr>
+                    <td class="w">고부간</td>
+                    <td>отношения свекрови и невестки</td>
+                  </tr>
+                  <tr>
+                    <td class="w">불투명하다</td>
+                    <td>быть неясным, туманным (о перспективе)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">되풀이하다</td>
+                    <td>повторять, делать снова и снова</td>
+                  </tr>
+                  <tr>
+                    <td class="w">만성 피로</td>
+                    <td>хроническая усталость</td>
+                  </tr>
+                  <tr>
+                    <td class="w">일정하다</td>
+                    <td>быть постоянным, стабильным</td>
+                  </tr>
+                  <tr>
+                    <td class="w">재테크</td>
+                    <td>управление личными финансами, инвестиции</td>
+                  </tr>
+                  <tr>
+                    <td class="w">발을 못 뻗고 자다</td>
+                    <td>спать неспокойно (от тревог)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">우울증</td>
+                    <td>депрессия</td>
+                  </tr>
+                  <tr>
+                    <td class="w">고혈압</td>
+                    <td>повышенное давление, гипертония</td>
+                  </tr>
+                  <tr>
+                    <td class="w">당뇨</td>
+                    <td>диабет</td>
+                  </tr>
+                  <tr>
+                    <td class="w">의심하다</td>
+                    <td>подозревать, сомневаться</td>
+                  </tr>
+                  <tr>
+                    <td class="w">보고되다</td>
+                    <td>быть доложенным, сообщаться</td>
+                  </tr>
                 </table>
               </div>
             </section>
@@ -2467,23 +4437,25 @@
                 <h3 class="gram-form">-(으)ㄹ 텐데 <span class="gloss">— «наверное / должно быть… поэтому»</span></h3>
                 <p class="meta"><span class="tag">Форма</span> Основа глагола / прилагательного + -(으)ㄹ 텐데 (прош.: -았/었을
                   텐데)</p>
-                <p class="def">Выражает сильное предположение или допущение, за которым обычно следует связанный с ним
+                <p class="def">Выражает сильное предположение или допущение (основа глагола / прилагательного + <span
+                    class="hl">-(으)ㄹ
+                    텐데</span>), за которым обычно следует связанный с ним
                   совет,
                   просьба или беспокойство.</p>
                 <div class="ex">
-                  <p class="k">밖에 비가 오고 있을 텐데 우산 가져가세요.</p>
+                  <p class="k">밖에 비가 오고 있<span class="hl">을 텐데</span> 우산 가져가세요.</p>
                   <p class="e">На улице, наверное, идёт дождь, поэтому возьмите зонт.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">바쁘실 텐데 시간을 내 주셔서 감사합니다.</p>
+                  <p class="k">바쁘<span class="hl">실 텐데</span> 시간을 내 주셔서 감사합니다.</p>
                   <p class="e">Вы, должно быть, заняты, поэтому спасибо, что нашли время.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">친구가 기다리고 있을 텐데 빨리 가야겠어요.</p>
+                  <p class="k">친구가 기다리고 있<span class="hl">을 텐데</span> 빨리 가야겠어요.</p>
                   <p class="e">Друг, наверное, ждёт, поэтому мне надо поторопиться.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">하루 종일 일하셨으면 많이 피곤하실 텐데 좀 쉬세요.</p>
+                  <p class="k">하루 종일 일하셨으면 많이 피곤하<span class="hl">실 텐데</span> 좀 쉬세요.</p>
                   <p class="e">Вы, должно быть, очень устали, проработав весь день, поэтому отдохните немного.</p>
                 </div>
               </div>
@@ -2492,28 +4464,33 @@
                 <h3 class="gram-form">-아/어 있다 <span class="gloss">— «находиться в состоянии (после действия)»</span>
                 </h3>
                 <p class="meta"><span class="tag">Форма</span> основа на ㅏ/ㅗ + 아 있다 · прочие основы + 어 있다</p>
-                <p class="def">Описывает сохраняющееся состояние, остающееся после завершения действия, — в отличие от
-                  -고 있다 (действие в процессе). Часто с непереходными глаголами (앉다, 서다, 열리다, 꺼지다).</p>
+                <p class="def">Описывает сохраняющееся состояние, остающееся после завершения действия (основа на ㅏ/ㅗ +
+                  <span class="hl">아 있다</span> · прочие основы + <span class="hl">어 있다</span>), — в отличие от
+                  -고 있다 (действие в процессе). Часто с непереходными глаголами (앉다, 서다, 열리다, 꺼지다).
+                </p>
                 <div class="ex">
-                  <p class="k">창문이 열려 있어요.</p>
+                  <p class="k">창문이 <span class="hl">열려 있어요</span>.</p>
                   <p class="e">Окно открыто (стоит открытым).</p>
                 </div>
                 <div class="ex">
-                  <p class="k">전원이 꺼져 있어요.</p>
+                  <p class="k">전원이 <span class="hl">꺼져 있어요</span>.</p>
                   <p class="e">Питание выключено.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">이 커피에는 설탕이 안 들어 있어요.</p>
+                  <p class="k">이 커피에는 설탕이 안 <span class="hl">들어 있어요</span>.</p>
                   <p class="e">В этом кофе нет сахара.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">할머니가 공원 벤치에 혼자 앉아 있어요.</p>
+                  <p class="k">할머니가 공원 벤치에 혼자 <span class="hl">앉아 있어요</span>.</p>
                   <p class="e">Пожилая женщина сидит одна на скамейке в парке.</p>
                 </div>
-                <p class="note">
-                <p><span class="tag">Сравните</span> 앉고 있어요 = в процессе того, как садится · 앉아 있어요 = (уже)
-                  сидит.</p>
-                </p>
+                <div class="note">
+                  <p><span class="tag">Сравните</span> 앉<span class="hl">고 있어요</span> = в процессе того, как садится ·
+                    앉<span class="hl">아 있어요</span> = (уже)
+                    сидит. <span class="hl">-아/어 있다</span> используется только с непереходными глаголами; переходные
+                    глаголы принимают <span class="hl">-아/어 놓다/두다</span> для сохранённого результата
+                    (문을 열어 놓았어요).</p>
+                </div>
               </div>
 
               <div class="vocab">
@@ -2588,6 +4565,117 @@
                   <tr>
                     <td class="w">가능하면 외출을 하지 마세요</td>
                     <td>по возможности не выходите на улицу</td>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Ключевые слова (핵심 단어)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">비가 그치다</td>
+                    <td>дождь прекращается</td>
+                  </tr>
+                  <tr>
+                    <td class="w">날이 개다</td>
+                    <td>проясняться (о погоде)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">기온이 영하로 떨어지다</td>
+                    <td>температура падает ниже нуля</td>
+                  </tr>
+                  <tr>
+                    <td class="w">마스크를 쓰다</td>
+                    <td>надевать маску</td>
+                  </tr>
+                  <tr>
+                    <td class="w">대피하다</td>
+                    <td>эвакуироваться, укрываться</td>
+                  </tr>
+                  <tr>
+                    <td class="w">찬바람이 불다</td>
+                    <td>дует холодный ветер</td>
+                  </tr>
+                  <tr>
+                    <td class="w">시간을 내다</td>
+                    <td>выделять, находить время</td>
+                  </tr>
+                  <tr>
+                    <td class="w">소나기가 내리다</td>
+                    <td>идёт ливень (кратковременный дождь)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">야외 행사</td>
+                    <td>мероприятие на открытом воздухе</td>
+                  </tr>
+                  <tr>
+                    <td class="w">체육 대회</td>
+                    <td>спортивные соревнования</td>
+                  </tr>
+                  <tr>
+                    <td class="w">무리</td>
+                    <td>чрезмерное усилие, перебор</td>
+                  </tr>
+                  <tr>
+                    <td class="w">야유회</td>
+                    <td>загородная прогулка, пикник</td>
+                  </tr>
+                  <tr>
+                    <td class="w">열대야</td>
+                    <td>тропическая (душная) ночь</td>
+                  </tr>
+                  <tr>
+                    <td class="w">옷차림</td>
+                    <td>наряд, манера одеваться</td>
+                  </tr>
+                  <tr>
+                    <td class="w">춘곤증</td>
+                    <td>весенняя сонливость и усталость</td>
+                  </tr>
+                  <tr>
+                    <td class="w">우울하다</td>
+                    <td>быть подавленным, в унынии</td>
+                  </tr>
+                  <tr>
+                    <td class="w">봄/가을을 타다</td>
+                    <td>тяжело переносить весну / осень</td>
+                  </tr>
+                  <tr>
+                    <td class="w">고열</td>
+                    <td>высокая температура, жар</td>
+                  </tr>
+                  <tr>
+                    <td class="w">근육통</td>
+                    <td>мышечная боль</td>
+                  </tr>
+                  <tr>
+                    <td class="w">의심되다</td>
+                    <td>подозреваться</td>
+                  </tr>
+                  <tr>
+                    <td class="w">몸이 나른하다</td>
+                    <td>чувствовать вялость, разбитость</td>
+                  </tr>
+                  <tr>
+                    <td class="w">피로를 느끼다</td>
+                    <td>чувствовать усталость</td>
+                  </tr>
+                  <tr>
+                    <td class="w">기운이 없다</td>
+                    <td>нет сил, чувствовать слабость</td>
+                  </tr>
+                  <tr>
+                    <td class="w">졸음이 오다</td>
+                    <td>клонить в сон</td>
+                  </tr>
+                  <tr>
+                    <td class="w">집중력이 떨어지다</td>
+                    <td>снижается концентрация</td>
+                  </tr>
+                  <tr>
+                    <td class="w">스트레칭을 하다</td>
+                    <td>делать растяжку</td>
+                  </tr>
+                  <tr>
+                    <td class="w">수면 시간</td>
+                    <td>время сна, продолжительность сна</td>
                   </tr>
                 </table>
               </div>

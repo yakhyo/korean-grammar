@@ -7,6 +7,12 @@
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="KIIP Grammar &amp; Vocabulary">
   <meta property="og:url" content="https://yakhyo.github.io/korean-grammar/levels/uz/level-5.html">
+  <link rel="canonical" href="https://yakhyo.github.io/korean-grammar/levels/uz/level-5.html">
+  <link rel="alternate" hreflang="en" href="https://yakhyo.github.io/korean-grammar/levels/level-5.html">
+  <link rel="alternate" hreflang="uz" href="https://yakhyo.github.io/korean-grammar/levels/uz/level-5.html">
+  <link rel="alternate" hreflang="ru" href="https://yakhyo.github.io/korean-grammar/levels/ru/level-5.html">
+  <link rel="alternate" hreflang="id" href="https://yakhyo.github.io/korean-grammar/levels/id/level-5.html">
+  <link rel="alternate" hreflang="x-default" href="https://yakhyo.github.io/korean-grammar/levels/level-5.html">
   <meta property="og:title" content="KIIP 5-daraja — Koreya jamiyatini tushunish">
   <meta property="og:description"
     content="KIIP 5-daraja (한국사회 이해) uchun oʻquv qoʻllanma: geografiya, tarix, davlat boshqaruvi, huquq, iqtisodiyot, jamiyat, madaniyat.">
@@ -25,46 +31,20 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Noto+Serif+KR:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,600;0,700;1,400&family=Noto+Serif+KR:wght@400;600;700&family=Noto+Sans+KR:wght@400;700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="../../assets/levels.css">
   <script>
     (function () {
       var root = document.documentElement, KEY = 'kiip-theme';
       var mq = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)');
-      function setTheme(t) { root.setAttribute('data-theme', t); }
       var saved = null;
       try { saved = localStorage.getItem(KEY); } catch (e) { }
-      setTheme(saved || (mq && mq.matches ? 'dark' : 'light'));
-      function closeMenu() {
-        var menus = document.querySelectorAll('.level-menu');
-        for (var i = 0; i < menus.length; i++) menus[i].hidden = true;
-        var btns = document.querySelectorAll('.level-switch');
-        for (var j = 0; j < btns.length; j++) btns[j].setAttribute('aria-expanded', 'false');
-      }
-      document.addEventListener('click', function (e) {
-        if (e.target.closest('.theme-toggle')) {
-          var t = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-          setTheme(t);
-          try { localStorage.setItem(KEY, t); } catch (e) { }
-          return;
-        }
-        var sw = e.target.closest('.level-switch');
-        if (sw) {
-          var open = sw.getAttribute('aria-expanded') === 'true';
-          var m = sw.parentNode.querySelector('.level-menu');
-          closeMenu();
-          sw.setAttribute('aria-expanded', String(!open));
-          if (m) m.hidden = open;
-          return;
-        }
-        if (!e.target.closest('.level-menu')) closeMenu();
-      });
-      document.addEventListener('keydown', function (e) {
-        if (e.key === 'Escape') closeMenu();
-      });
+      root.setAttribute('data-theme', saved || (mq && mq.matches ? 'dark' : 'light'));
     })();
   </script>
+  <script defer src="../../assets/nav.js"></script>
+  <script defer src="../../assets/levels.js"></script>
 </head>
 
 <body>
@@ -90,26 +70,28 @@
     </div>
     <!-- langswitch:start -->
     <div class="ctrl-group">
-      <button class="ctrl level-switch lang-switch" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Language">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M3 12h18" /><path d="M12 3c2.6 2.7 2.6 15.3 0 18M12 3c-2.6 2.7-2.6 15.3 0 18" /></svg>
+      <button class="ctrl level-switch lang-switch" type="button" aria-haspopup="true" aria-expanded="false"
+        aria-label="Language">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="9" />
+          <path d="M3 12h18" />
+          <path d="M12 3c2.6 2.7 2.6 15.3 0 18M12 3c-2.6 2.7-2.6 15.3 0 18" />
+        </svg>
         <span>UZ</span>
-        <svg class="chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg>
+        <svg class="chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M6 9l6 6 6-6" />
+        </svg>
       </button>
       <div class="level-menu lang-menu" role="menu" hidden>
         <a role="menuitem" href="../level-5.html">English</a>
         <a role="menuitem" href="level-5.html" aria-current="page">Oʻzbekcha</a>
         <a role="menuitem" href="../ru/level-5.html">Русский</a>
+        <a role="menuitem" href="../id/level-5.html">Bahasa Indonesia</a>
       </div>
     </div>
     <!-- langswitch:end -->
-    <a class="ctrl" href="https://github.com/yakhyo/korean-grammar" target="_blank" rel="noopener"
-      aria-label="Star this project on GitHub" title="Star this project on GitHub">
-      <svg width="15" height="15" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
-        <path
-          d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.75.75 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Z" />
-      </svg>
-      <span>Star</span>
-    </a>
     <button class="ctrl theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
       <svg class="i-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
         stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -137,7 +119,7 @@
             <div class="running-hdr"><span>KIIP 5-daraja · Koreya jamiyatini tushunish</span><span>한국사회 이해</span></div>
             <div class="running-ftr"><span>Mustaqil oʻrganish uchun qoʻllanma</span><span>사회통합프로그램</span></div>
 
-            <h1>KIIP 5-daraja — Koreya jamiyatini tushunish</h1>
+            <h1>5-daraja · 한국사회</h1>
             <p class="subtitle">한국사회 이해 (기본·심화) kursini mustaqil oʻrganish uchun qoʻllanma · Koreya migratsiya va
               integratsiya dasturi
             </p>
@@ -193,8 +175,8 @@
             <p class="part-head" id="part1">Oʻquv qoʻllanma</p>
             <h2 class="part-title">Koreya jamiyatining sakkiz mavzusi</h2>
 
-            <section class="unit" id="t1">
-              <div class="unit-head"><span class="unit-num">01-MAVZU</span><span class="topic-kr">지리</span><span
+            <section class="lesson" id="t1">
+              <div class="lesson-head"><span class="lesson-num">01-MAVZU</span><span class="topic-kr">지리</span><span
                   class="topic-en">Geografiya va hududlar</span></div>
               <div class="sect">
                 <h4>설명 <span class="en">Bilish kerak boʻlgan narsalar</span></h4>
@@ -277,8 +259,8 @@
               </div>
             </section>
 
-            <section class="unit" id="t2">
-              <div class="unit-head"><span class="unit-num">02-MAVZU</span><span class="topic-kr">역사</span><span
+            <section class="lesson" id="t2">
+              <div class="lesson-head"><span class="lesson-num">02-MAVZU</span><span class="topic-kr">역사</span><span
                   class="topic-en">Tarix</span></div>
               <div class="sect">
                 <h4>설명 <span class="en">Bilish kerak boʻlgan narsalar</span></h4>
@@ -362,8 +344,8 @@
               </div>
             </section>
 
-            <section class="unit" id="t3">
-              <div class="unit-head"><span class="unit-num">03-MAVZU</span><span class="topic-kr">정치</span><span
+            <section class="lesson" id="t3">
+              <div class="lesson-head"><span class="lesson-num">03-MAVZU</span><span class="topic-kr">정치</span><span
                   class="topic-en">Davlat boshqaruvi va demokratiya</span></div>
               <div class="sect">
                 <h4>설명 <span class="en">Bilish kerak boʻlgan narsalar</span></h4>
@@ -445,8 +427,8 @@
               </div>
             </section>
 
-            <section class="unit" id="t4">
-              <div class="unit-head"><span class="unit-num">04-MAVZU</span><span class="topic-kr">법</span><span
+            <section class="lesson" id="t4">
+              <div class="lesson-head"><span class="lesson-num">04-MAVZU</span><span class="topic-kr">법</span><span
                   class="topic-en">Huquq va huquqlar</span></div>
               <div class="sect">
                 <h4>설명 <span class="en">Bilish kerak boʻlgan narsalar</span></h4>
@@ -530,8 +512,8 @@
               </div>
             </section>
 
-            <section class="unit" id="t5">
-              <div class="unit-head"><span class="unit-num">05-MAVZU</span><span class="topic-kr">경제</span><span
+            <section class="lesson" id="t5">
+              <div class="lesson-head"><span class="lesson-num">05-MAVZU</span><span class="topic-kr">경제</span><span
                   class="topic-en">Iqtisodiyot va mehnat</span></div>
               <div class="sect">
                 <h4>설명 <span class="en">Bilish kerak boʻlgan narsalar</span></h4>
@@ -616,8 +598,8 @@
               </div>
             </section>
 
-            <section class="unit" id="t6">
-              <div class="unit-head"><span class="unit-num">06-MAVZU</span><span class="topic-kr">사회</span><span
+            <section class="lesson" id="t6">
+              <div class="lesson-head"><span class="lesson-num">06-MAVZU</span><span class="topic-kr">사회</span><span
                   class="topic-en">Jamiyat va ijtimoiy taʼminot</span></div>
               <div class="sect">
                 <h4>설명 <span class="en">Bilish kerak boʻlgan narsalar</span></h4>
@@ -702,8 +684,8 @@
               </div>
             </section>
 
-            <section class="unit" id="t7">
-              <div class="unit-head"><span class="unit-num">07-MAVZU</span><span class="topic-kr">문화</span><span
+            <section class="lesson" id="t7">
+              <div class="lesson-head"><span class="lesson-num">07-MAVZU</span><span class="topic-kr">문화</span><span
                   class="topic-en">Madaniyat va kundalik hayot</span></div>
               <div class="sect">
                 <h4>설명 <span class="en">Bilish kerak boʻlgan narsalar</span></h4>
@@ -789,8 +771,8 @@
               </div>
             </section>
 
-            <section class="unit" id="t8">
-              <div class="unit-head"><span class="unit-num">08-MAVZU</span><span class="topic-kr">시민</span><span
+            <section class="lesson" id="t8">
+              <div class="lesson-head"><span class="lesson-num">08-MAVZU</span><span class="topic-kr">시민</span><span
                   class="topic-en">Fuqarolik va integratsiya</span></div>
               <div class="sect">
                 <h4>설명 <span class="en">Bilish kerak boʻlgan narsalar</span></h4>

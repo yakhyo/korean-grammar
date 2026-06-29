@@ -7,61 +7,41 @@
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="KIIP Grammar &amp; Vocabulary">
   <meta property="og:url" content="https://yakhyo.github.io/korean-grammar/levels/uz/level-1.html">
-  <meta property="og:title" content="KIIP 1-bosqich — Grammatika va lugʻat">
-  <meta property="og:description" content="KIIP 1-bosqich uchun grammatika va lugʻat qoʻllanmasi (한국어와 한국문화 초급 1).">
+  <link rel="canonical" href="https://yakhyo.github.io/korean-grammar/levels/uz/level-1.html">
+  <link rel="alternate" hreflang="en" href="https://yakhyo.github.io/korean-grammar/levels/level-1.html">
+  <link rel="alternate" hreflang="uz" href="https://yakhyo.github.io/korean-grammar/levels/uz/level-1.html">
+  <link rel="alternate" hreflang="ru" href="https://yakhyo.github.io/korean-grammar/levels/ru/level-1.html">
+  <link rel="alternate" hreflang="id" href="https://yakhyo.github.io/korean-grammar/levels/id/level-1.html">
+  <link rel="alternate" hreflang="x-default" href="https://yakhyo.github.io/korean-grammar/levels/level-1.html">
+  <meta property="og:title" content="KIIP 1-daraja — Grammatika va lugʻat">
+  <meta property="og:description" content="KIIP 1-daraja uchun grammatika va lugʻat qoʻllanmasi (한국어와 한국문화 초급 1).">
   <meta property="og:image" content="https://yakhyo.github.io/korean-grammar/assets/og-image-uz.png">
   <meta property="og:image:width" content="2400">
   <meta property="og:image:height" content="1260">
   <meta property="og:image:alt" content="KIIP Grammar &amp; Vocabulary — Levels 1 to 5">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="KIIP 1-bosqich — Grammatika va lugʻat">
-  <meta name="twitter:description" content="KIIP 1-bosqich uchun grammatika va lugʻat qoʻllanmasi (한국어와 한국문화 초급 1).">
+  <meta name="twitter:title" content="KIIP 1-daraja — Grammatika va lugʻat">
+  <meta name="twitter:description" content="KIIP 1-daraja uchun grammatika va lugʻat qoʻllanmasi (한국어와 한국문화 초급 1).">
   <meta name="twitter:image" content="https://yakhyo.github.io/korean-grammar/assets/og-image-uz.png">
-  <title>KIIP 1-bosqich — Grammatika va lugʻat</title>
-  <meta name="description" content="KIIP 1-bosqich uchun grammatika va lugʻat qoʻllanmasi (한국어와 한국문화 초급 1).">
+  <title>KIIP 1-daraja — Grammatika va lugʻat</title>
+  <meta name="description" content="KIIP 1-daraja uchun grammatika va lugʻat qoʻllanmasi (한국어와 한국문화 초급 1).">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Noto+Serif+KR:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,600;0,700;1,400&family=Noto+Serif+KR:wght@400;600;700&family=Noto+Sans+KR:wght@400;700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="../../assets/levels.css">
   <script>
     (function () {
       var root = document.documentElement, KEY = 'kiip-theme';
       var mq = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)');
-      function setTheme(t) { root.setAttribute('data-theme', t); }
       var saved = null;
       try { saved = localStorage.getItem(KEY); } catch (e) { }
-      setTheme(saved || (mq && mq.matches ? 'dark' : 'light'));
-      function closeMenu() {
-        var menus = document.querySelectorAll('.level-menu');
-        for (var i = 0; i < menus.length; i++) menus[i].hidden = true;
-        var btns = document.querySelectorAll('.level-switch');
-        for (var j = 0; j < btns.length; j++) btns[j].setAttribute('aria-expanded', 'false');
-      }
-      document.addEventListener('click', function (e) {
-        if (e.target.closest('.theme-toggle')) {
-          var t = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-          setTheme(t);
-          try { localStorage.setItem(KEY, t); } catch (e) { }
-          return;
-        }
-        var sw = e.target.closest('.level-switch');
-        if (sw) {
-          var open = sw.getAttribute('aria-expanded') === 'true';
-          var m = sw.parentNode.querySelector('.level-menu');
-          closeMenu();
-          sw.setAttribute('aria-expanded', String(!open));
-          if (m) m.hidden = open;
-          return;
-        }
-        if (!e.target.closest('.level-menu')) closeMenu();
-      });
-      document.addEventListener('keydown', function (e) {
-        if (e.key === 'Escape') closeMenu();
-      });
+      root.setAttribute('data-theme', saved || (mq && mq.matches ? 'dark' : 'light'));
     })();
   </script>
+  <script defer src="../../assets/nav.js"></script>
+  <script defer src="../../assets/levels.js"></script>
 </head>
 
 <body>
@@ -69,7 +49,7 @@
     <div class="ctrl-group">
       <button class="ctrl level-switch" type="button" aria-haspopup="true" aria-expanded="false"
         aria-label="Switch level">
-        1-bosqich
+        1-daraja
         <svg class="chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
           stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <path d="M6 9l6 6 6-6" />
@@ -78,35 +58,37 @@
       <div class="level-menu" role="menu" hidden>
         <a role="menuitem" href="../../index-uz.html">Bosh sahifa</a>
         <div class="menu-sep"></div>
-        <a role="menuitem" href="level-1.html" aria-current="page">1-bosqich · 초급 1</a>
-        <a role="menuitem" href="level-2.html">2-bosqich · 초급 2</a>
-        <a role="menuitem" href="level-3.html">3-bosqich · 중급 1</a>
-        <a role="menuitem" href="level-4.html">4-bosqich · 중급 2</a>
-        <a role="menuitem" href="level-5.html">5-bosqich · 한국사회</a>
+        <a role="menuitem" href="level-1.html" aria-current="page">1-daraja · 초급 1</a>
+        <a role="menuitem" href="level-2.html">2-daraja · 초급 2</a>
+        <a role="menuitem" href="level-3.html">3-daraja · 중급 1</a>
+        <a role="menuitem" href="level-4.html">4-daraja · 중급 2</a>
+        <a role="menuitem" href="level-5.html">5-daraja · 한국사회</a>
       </div>
     </div>
     <!-- langswitch:start -->
     <div class="ctrl-group">
-      <button class="ctrl level-switch lang-switch" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Language">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M3 12h18" /><path d="M12 3c2.6 2.7 2.6 15.3 0 18M12 3c-2.6 2.7-2.6 15.3 0 18" /></svg>
+      <button class="ctrl level-switch lang-switch" type="button" aria-haspopup="true" aria-expanded="false"
+        aria-label="Language">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="9" />
+          <path d="M3 12h18" />
+          <path d="M12 3c2.6 2.7 2.6 15.3 0 18M12 3c-2.6 2.7-2.6 15.3 0 18" />
+        </svg>
         <span>UZ</span>
-        <svg class="chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg>
+        <svg class="chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M6 9l6 6 6-6" />
+        </svg>
       </button>
       <div class="level-menu lang-menu" role="menu" hidden>
         <a role="menuitem" href="../level-1.html">English</a>
         <a role="menuitem" href="level-1.html" aria-current="page">Oʻzbekcha</a>
         <a role="menuitem" href="../ru/level-1.html">Русский</a>
+        <a role="menuitem" href="../id/level-1.html">Bahasa Indonesia</a>
       </div>
     </div>
     <!-- langswitch:end -->
-    <a class="ctrl" href="https://github.com/yakhyo/korean-grammar" target="_blank" rel="noopener"
-      aria-label="Star this project on GitHub" title="Star this project on GitHub">
-      <svg width="15" height="15" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
-        <path
-          d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.75.75 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Z" />
-      </svg>
-      <span>Yulduzcha</span>
-    </a>
     <button class="ctrl theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
       <svg class="i-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
         stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -131,17 +113,17 @@
         <tr>
           <td>
 
-            <div class="running-hdr"><span>KIIP 1-bosqich · Grammatika va lugʻat</span><span>한국어와 한국문화 · 초급 1</span>
+            <div class="running-hdr"><span>KIIP 1-daraja · Grammatika va lugʻat</span><span>한국어와 한국문화 · 초급 1</span>
             </div>
             <div class="running-ftr"><span>Mustaqil oʻrganish uchun qoʻllanma</span><span>사회통합프로그램</span></div>
 
-            <h1>KIIP 1-bosqich — Grammatika va lugʻat</h1>
+            <h1>1-daraja · 초급 1</h1>
             <p class="subtitle">한국어와 한국문화 초급 1 darsligi uchun mustaqil oʻrganish qoʻllanmasi (18 boʻlimli nashr) ·
               Koreya
               integratsiya dasturi (KIIP)</p>
 
             <div class="intro">
-              <p>Ushbu qoʻllanma <strong>KIIP 1-bosqich darsligiga</strong> (한국어와 한국문화 초급 1) asoslanadi — bu Ijtimoiy
+              <p>Ushbu qoʻllanma <strong>KIIP 1-daraja darsligiga</strong> (한국어와 한국문화 초급 1) asoslanadi — bu Ijtimoiy
                 integratsiya dasturining birinchi bosqichi boʻlib, koreys alifbosidan boshlovchilar uchun
                 moʻljallangan. Qoʻllanma darslikdagi <strong>18 boʻlim</strong> tartibida tuzilgan. Har bir boʻlim oʻz
                 kundalik mavzusini, oʻsha boʻlimda oʻrgatiladigan ikkita grammatik qolipni (shakli, maʼnosi va misol
@@ -217,22 +199,31 @@
                 <p class="meta"><span class="tag">Shakli</span> undosh bilan tugagan N + 이에요 · unli bilan tugagan N + 예요
                 </p>
                 <p class="def">Muloyim nutqdagi asosiy "A — B" bogʻlamasi. Otga qoʻshilib, kishining kimligi, kasbi yoki
-                  fuqaroligini bildiradi.</p>
+                  fuqaroligini bildiradi. Tanlash faqat 받침 ga bogʻliq: undosh bilan tugagan ot + <span
+                    class="hl">이에요</span>,
+                  unli bilan tugagan ot + <span class="hl">예요</span>.</p>
                 <div class="ex">
-                  <p class="k">저는 학생이에요.</p>
-                  <p class="e">Men talabaman.</p>
+                  <p class="k">저는 학생<span class="hl">이에요</span>.</p>
+                  <p class="e">Men talabaman. <span class="e-note">(학생 undosh bilan tugaydi → 이에요)</span></p>
                 </div>
                 <div class="ex">
-                  <p class="k">이분은 의사예요.</p>
-                  <p class="e">Bu kishi shifokor.</p>
+                  <p class="k">이분은 의사<span class="hl">예요</span>.</p>
+                  <p class="e">Bu kishi shifokor. <span class="e-note">(의사 unli bilan tugaydi → 예요)</span></p>
                 </div>
                 <div class="ex">
-                  <p class="k">제 친구는 중국 사람이에요.</p>
+                  <p class="k">제 친구는 중국 사람<span class="hl">이에요</span>.</p>
                   <p class="e">Doʻstim xitoylik.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">여기는 학교예요.</p>
+                  <p class="k">여기는 학교<span class="hl">예요</span>.</p>
                   <p class="e">Bu yer maktab.</p>
+                </div>
+                <div class="note">
+                  <p><span class="tag">Istisno</span> Biror narsa B <em>emas</em>ligini aytish uchun 이에요/예요 ni
+                    toʻgʻridan-toʻgʻri inkor qilmaydi — buning oʻrniga alohida inkor bogʻlamasidan foydalaniladi:
+                    <span class="hl">N + 이/가 아니에요</span>: 저는 학생이에요 → 저는 학생<span class="hl">이 아니에요</span> ("Men talaba
+                    emasman").
+                  </p>
                 </div>
               </div>
               <div class="gram">
@@ -240,22 +231,30 @@
                 <p class="meta"><span class="tag">Shakli</span> undosh bilan tugagan N + 은 · unli bilan tugagan N + 는
                 </p>
                 <p class="def">Gapning mavzusini — nima haqida gapirilayotganini bildiradi. Koʻpincha biror narsani
-                  tanishtiradi yoki qarama-qarshi qoʻyadi.</p>
+                  tanishtiradi yoki qarama-qarshi qoʻyadi. Undosh bilan tugagan ot + <span class="hl">은</span>,
+                  unli bilan tugagan ot + <span class="hl">는</span>.</p>
                 <div class="ex">
-                  <p class="k">제 이름은 마이클이에요.</p>
-                  <p class="e">Mening ismim Maykl.</p>
+                  <p class="k">제 이름<span class="hl">은</span> 마이클이에요.</p>
+                  <p class="e">Mening ismim Maykl. <span class="e-note">(이름 ㅁ bilan tugaydi → 은)</span></p>
                 </div>
                 <div class="ex">
-                  <p class="k">저는 베트남 사람이에요.</p>
-                  <p class="e">Men vyetnamlikman.</p>
+                  <p class="k">저<span class="hl">는</span> 베트남 사람이에요.</p>
+                  <p class="e">Men vyetnamlikman. <span class="e-note">(저 unli bilan tugaydi → 는)</span></p>
                 </div>
                 <div class="ex">
-                  <p class="k">동생은 회사원이에요.</p>
-                  <p class="e">Inim idorada ishlaydi.</p>
+                  <p class="k">저<span class="hl">는</span> 커피를 안 마셔요. 그런데 차<span class="hl">는</span> 마셔요.</p>
+                  <p class="e">Men qahva ichmayman. Choyni esa ichaman. <span class="e-note">(qarama-qarshilik)</span>
+                  </p>
                 </div>
                 <div class="ex">
-                  <p class="k">오늘은 일요일이에요.</p>
+                  <p class="k">오늘<span class="hl">은</span> 일요일이에요.</p>
                   <p class="e">Bugun yakshanba.</p>
+                </div>
+                <div class="note">
+                  <p><span class="tag">Qiyoslang</span> 은/는 <em>mavzuni</em> belgilaydi (gap nima haqidaligi, koʻpincha
+                    eski yoki qarama-qarshi qoʻyilgan maʼlumot); <span class="hl">이/가</span> esa <em>egani</em>
+                    belgilaydi (koʻpincha yangi maʼlumot yoki "kim/nima?" degan savolning javobi). Keyingi qolipga
+                    qarang.</p>
                 </div>
               </div>
               <div class="vocab">
@@ -334,6 +333,61 @@
                     <td class="w">이집트</td>
                     <td>Misr</td>
                   </tr>
+                  <tr class="grp">
+                    <td colspan="2">Asosiy soʻzlar (핵심 단어)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">나라</td>
+                    <td>mamlakat, davlat</td>
+                  </tr>
+                  <tr>
+                    <td class="w">어느</td>
+                    <td>qaysi</td>
+                  </tr>
+                  <tr>
+                    <td class="w">영어</td>
+                    <td>ingliz tili</td>
+                  </tr>
+                  <tr>
+                    <td class="w">강사</td>
+                    <td>oʻqituvchi (instruktor)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">주부</td>
+                    <td>uy bekasi</td>
+                  </tr>
+                  <tr>
+                    <td class="w">초등학생</td>
+                    <td>boshlangʻich sinf oʻquvchisi</td>
+                  </tr>
+                  <tr>
+                    <td class="w">뉴욕</td>
+                    <td>Nyu-York</td>
+                  </tr>
+                  <tr>
+                    <td class="w">한국어</td>
+                    <td>koreys tili</td>
+                  </tr>
+                  <tr>
+                    <td class="w">천만에요</td>
+                    <td>arzimaydi</td>
+                  </tr>
+                  <tr>
+                    <td class="w">죄송해요</td>
+                    <td>kechirasiz</td>
+                  </tr>
+                  <tr>
+                    <td class="w">괜찮아요</td>
+                    <td>zarari yoʻq, yaxshi</td>
+                  </tr>
+                  <tr>
+                    <td class="w">자기소개</td>
+                    <td>oʻzini tanishtirish</td>
+                  </tr>
+                  <tr>
+                    <td class="w">인사</td>
+                    <td>salomlashish</td>
+                  </tr>
                 </table>
               </div>
             </section>
@@ -346,44 +400,127 @@
                 <p class="meta"><span class="tag">Shakli</span> undosh bilan tugagan N + 이 · unli bilan tugagan N + 가
                 </p>
                 <p class="def">Gapning egasini — mavjud boʻlgan, roʻy bergan yoki taʼriflanayotgan narsani bildiradi.
-                </p>
+                  Undosh bilan tugagan ot + <span class="hl">이</span>, unli bilan tugagan ot + <span
+                    class="hl">가</span>.</p>
                 <div class="ex">
-                  <p class="k">책상이 있어요.</p>
-                  <p class="e">Bu yerda parta bor.</p>
+                  <p class="k">책상<span class="hl">이</span> 있어요.</p>
+                  <p class="e">Bu yerda parta bor. <span class="e-note">(책상 undosh bilan tugaydi → 이)</span></p>
                 </div>
                 <div class="ex">
-                  <p class="k">의자가 없어요.</p>
-                  <p class="e">Stul yoʻq.</p>
+                  <p class="k">의자<span class="hl">가</span> 없어요.</p>
+                  <p class="e">Stul yoʻq. <span class="e-note">(의자 unli bilan tugaydi → 가)</span></p>
                 </div>
                 <div class="ex">
-                  <p class="k">시계가 비싸요.</p>
+                  <p class="k">시계<span class="hl">가</span> 비싸요.</p>
                   <p class="e">Soat qimmat.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">가방이 작아요.</p>
+                  <p class="k">가방<span class="hl">이</span> 작아요.</p>
                   <p class="e">Sumka kichkina.</p>
+                </div>
+                <div class="note">
+                  <p><span class="tag">Qiyoslang</span> 이/가 <em>egani</em> belgilaydi (koʻpincha yangi maʼlumot yoki
+                    "kim/nima?" degan savolning javobi); <span class="hl">은/는</span> esa <em>mavzuni</em> belgilaydi.
+                    "누가 왔어요? — 친구<span class="hl">가</span> 왔어요" javobida yangi ega 가 oladi, 는 emas.</p>
                 </div>
               </div>
               <div class="gram">
                 <h3 class="gram-form">N + 에 있다 / 없다 <span class="gloss">— "(bir joyda) bor / yoʻq"</span></h3>
                 <p class="meta"><span class="tag">Shakli</span> joy N + 에 + 있다 (bor) / 없다 (yoʻq)</p>
-                <p class="def">Biror narsaning qaysidir joyda borligini yoki yoʻqligini bildiradi. 에 joyni koʻrsatadi.
-                </p>
+                <p class="def">Biror narsaning qaysidir joyda borligini yoki yoʻqligini bildiradi. <span
+                    class="hl">에</span>
+                  joyni koʻrsatadi; <span class="hl">있다</span> = "bor", <span class="hl">없다</span> = "yoʻq".</p>
                 <div class="ex">
-                  <p class="k">방에 책상이 있어요.</p>
+                  <p class="k">방<span class="hl">에</span> 책상이 <span class="hl">있어요</span>.</p>
                   <p class="e">Xonada parta bor.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">교실에 시계가 없어요.</p>
+                  <p class="k">교실<span class="hl">에</span> 시계가 <span class="hl">없어요</span>.</p>
                   <p class="e">Sinfxonada soat yoʻq.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">집에 냉장고가 있어요.</p>
+                  <p class="k">집<span class="hl">에</span> 냉장고가 <span class="hl">있어요</span>.</p>
                   <p class="e">Uyda muzlatgich bor.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">가방에 책이 없어요.</p>
+                  <p class="k">가방<span class="hl">에</span> 책이 <span class="hl">없어요</span>.</p>
                   <p class="e">Sumkada kitob yoʻq.</p>
+                </div>
+                <div class="note">
+                  <p><span class="tag">Maslahat</span> Joy <span class="hl">에</span> qoʻshimchasini oladi, ammo mavjud
+                    boʻlgan narsa ega koʻrsatkichi 이/가 ni oladi — "방<span class="hl">에</span> 책상<span
+                      class="hl">이</span>
+                    있어요", "방을 책상이…" emas.</p>
+                </div>
+              </div>
+              <div class="gram">
+                <h3 class="gram-form">N + 위치어 + 에 있다 <span class="gloss">— "joy / oʻrin soʻzlari"</span></h3>
+                <p class="meta"><span class="tag">Shakli</span> N + oʻrin soʻzi + 에 있다/없다 (위, 아래, 앞, 뒤, 옆 …)</p>
+                <p class="def">Biror narsa <em>qayerda</em> ekanini aytish uchun oʻrin soʻzini tayanch otdan keyin
+                  qoʻyib,
+                  soʻng <span class="hl">에 있어요</span> ni qoʻshasiz. Qolip <span class="hl">N + 위에 있어요</span> ("N ning
+                  ustida") shaklida boʻladi.</p>
+                <table class="conj">
+                  <tr>
+                    <th class="k">Oʻrin</th>
+                    <th>Maʼnosi</th>
+                    <th class="k">Oʻrin</th>
+                    <th>Maʼnosi</th>
+                  </tr>
+                  <tr>
+                    <td class="k">위</td>
+                    <td>ustida</td>
+                    <td class="k">아래 · 밑</td>
+                    <td>ostida</td>
+                  </tr>
+                  <tr>
+                    <td class="k">앞</td>
+                    <td>oldida</td>
+                    <td class="k">뒤</td>
+                    <td>orqasida</td>
+                  </tr>
+                  <tr>
+                    <td class="k">옆</td>
+                    <td>yonida</td>
+                    <td class="k">안</td>
+                    <td>ichida</td>
+                  </tr>
+                  <tr>
+                    <td class="k">밖</td>
+                    <td>tashqarisida</td>
+                    <td class="k">사이</td>
+                    <td>orasida</td>
+                  </tr>
+                  <tr>
+                    <td class="k">왼쪽</td>
+                    <td>chap tomonida</td>
+                    <td class="k">오른쪽</td>
+                    <td>oʻng tomonida</td>
+                  </tr>
+                  <tr>
+                    <td class="k">맞은편</td>
+                    <td>roʻparasida</td>
+                    <td class="k">—</td>
+                    <td>—</td>
+                  </tr>
+                </table>
+                <div class="ex">
+                  <p class="k">책상 <span class="hl">위에</span> 책이 있어요.</p>
+                  <p class="e">Stol ustida kitob bor.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">은행은 병원 <span class="hl">옆에</span> 있어요.</p>
+                  <p class="e">Bank shifoxonaning yonida.</p>
+                </div>
+                <div class="ex">
+                  <p class="k">고양이가 의자 <span class="hl">아래에</span> 있어요.</p>
+                  <p class="e">Mushuk stulning ostida.</p>
+                </div>
+                <div class="note">
+                  <p><span class="tag">Qiyoslang</span> 아래 va 밑 ikkalasi ham "ostida" maʼnosini beradi; 밑 koʻproq
+                    bevosita tegib turgan, tagidagi narsa haqida (책상 <span class="hl">밑</span>), 아래 esa umumiyroq
+                    "pastda" maʼnosida. Ikkalasi ham 에 ni oladi: <span class="hl">아래에</span> / <span
+                      class="hl">밑에</span>.</p>
                 </div>
               </div>
               <div class="vocab">
@@ -503,6 +640,13 @@
                     <td class="w">휴지</td>
                     <td>salfetka, hojatxona qogʻozi</td>
                   </tr>
+                  <tr class="grp">
+                    <td colspan="2">Asosiy soʻzlar (핵심 단어)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">옷장</td>
+                    <td>kiyim shkafi</td>
+                  </tr>
                 </table>
               </div>
             </section>
@@ -514,43 +658,112 @@
                 <h3 class="gram-form">V + 아 / 어요 <span class="gloss">— "muloyim hozirgi zamon"</span></h3>
                 <p class="meta"><span class="tag">Shakli</span> ㅏ/ㅗ oʻzak + 아요 · boshqa oʻzaklar + 어요 · 하다 → 해요</p>
                 <p class="def">Hozirgi zamon uchun kundalik muloyim feʼl qoʻshimchasi (yaqin kelajak va yumshoq buyruq
-                  maʼnosida ham qoʻllanadi).</p>
+                  maʼnosida ham qoʻllanadi). Oxirgi unlisi ㅏ/ㅗ boʻlgan oʻzaklar <span class="hl">아요</span> ni,
+                  qolganlari <span class="hl">어요</span> ni oladi, 하다 esa → <span class="hl">해요</span>.</p>
                 <div class="ex">
-                  <p class="k">한국어를 배워요.</p>
-                  <p class="e">Men koreys tilini oʻrganaman.</p>
+                  <p class="k">한국어를 배<span class="hl">워요</span>.</p>
+                  <p class="e">Men koreys tilini oʻrganaman. <span class="e-note">(배우다, oʻzak 배우- + 어요 → 배워요)</span></p>
                 </div>
                 <div class="ex">
-                  <p class="k">책을 읽어요.</p>
-                  <p class="e">Men kitob oʻqiyman.</p>
+                  <p class="k">책을 읽<span class="hl">어요</span>.</p>
+                  <p class="e">Men kitob oʻqiyman. <span class="e-note">(읽- oxirgi unlisi ㅣ → 어요)</span></p>
                 </div>
                 <div class="ex">
-                  <p class="k">물을 마셔요.</p>
-                  <p class="e">Men suv ichaman.</p>
+                  <p class="k">물을 마<span class="hl">셔요</span>.</p>
+                  <p class="e">Men suv ichaman. <span class="e-note">(마시다 → 마시 + 어요 → 마셔요)</span></p>
                 </div>
                 <div class="ex">
-                  <p class="k">아침에 운동해요.</p>
-                  <p class="e">Ertalab mashq qilaman.</p>
+                  <p class="k">아침에 운동<span class="hl">해요</span>.</p>
+                  <p class="e">Ertalab mashq qilaman. <span class="e-note">(운동하다 → 해요)</span></p>
+                </div>
+              </div>
+              <div class="gram">
+                <h3 class="gram-form">으 탈락 <span class="gloss">— "ㅡ tushadigan feʼllar (notoʻgʻri)"</span></h3>
+                <p class="meta"><span class="tag">Shakli</span> oʻzak oxiridagi ㅡ tushiriladi, soʻng ㅡ dan OLDINGI
+                  unliga qarab 아요/어요 qoʻshiladi</p>
+                <p class="def">Feʼl/sifat oʻzagi <span class="hl">ㅡ</span> bilan tugaganda, 아/어요 dan oldin ㅡ tushadi.
+                  Qoʻshimcha ㅡ dan <em>oldingi</em> boʻgʻin unlisiga qarab tanlanadi: ㅏ/ㅗ → <span class="hl">아요</span>,
+                  aks holda → <span class="hl">어요</span>. Bir boʻgʻinli oʻzaklar (쓰다·크다) da oldida hech narsa yoʻq,
+                  shuning uchun standart holatda 어요 boʻladi.</p>
+                <table class="conj">
+                  <tr>
+                    <th>Feʼl</th>
+                    <th class="k">-아/어요</th>
+                    <th>Feʼl</th>
+                    <th class="k">-아/어요</th>
+                  </tr>
+                  <tr>
+                    <td>바쁘다</td>
+                    <td class="k">바빠요</td>
+                    <td>아프다</td>
+                    <td class="k">아파요</td>
+                  </tr>
+                  <tr>
+                    <td>예쁘다</td>
+                    <td class="k">예뻐요</td>
+                    <td>슬프다</td>
+                    <td class="k">슬퍼요</td>
+                  </tr>
+                  <tr>
+                    <td>기쁘다</td>
+                    <td class="k">기뻐요</td>
+                    <td>모으다</td>
+                    <td class="k">모아요</td>
+                  </tr>
+                  <tr>
+                    <td>쓰다</td>
+                    <td class="k">써요</td>
+                    <td>끄다</td>
+                    <td class="k">꺼요</td>
+                  </tr>
+                  <tr>
+                    <td>크다</td>
+                    <td class="k">커요</td>
+                    <td>—</td>
+                    <td class="k">—</td>
+                  </tr>
+                </table>
+                <div class="ex">
+                  <p class="k">오늘 너무 바<span class="hl">빠요</span>.</p>
+                  <p class="e">Bugun juda bandman. <span class="e-note">(바쁘다, 바- da ㅏ bor → 바빠요)</span></p>
+                </div>
+                <div class="ex">
+                  <p class="k">머리가 아<span class="hl">파요</span>.</p>
+                  <p class="e">Boshim ogʻriyapti. <span class="e-note">(아프다, 아- da ㅏ bor → 아파요)</span></p>
+                </div>
+                <div class="ex">
+                  <p class="k">편지를 <span class="hl">써요</span>.</p>
+                  <p class="e">Xat yozyapman. <span class="e-note">(쓰다, bir boʻgʻin → 써요)</span></p>
+                </div>
+                <div class="note">
+                  <p><span class="tag">Istisno</span> 따르다·들르다·치르다 으 tushadigan feʼllardir (따<span
+                      class="hl">라요</span>·들<span class="hl">러요</span>·치<span class="hl">러요</span>). Ammo 모르다·부르다 kabi
+                    koʻpchilik boshqa 르-oʻzaklar
+                    bunday EMAS — ular 르 notoʻgʻri feʼllaridir (모르다 → <span class="hl">몰라요</span>, 모라요 emas) va
+                    2-darajada oʻrgatiladi.</p>
                 </div>
               </div>
               <div class="gram">
                 <h3 class="gram-form">N + 을 / 를 <span class="gloss">— "toʻldiruvchi koʻrsatkichi"</span></h3>
                 <p class="meta"><span class="tag">Shakli</span> undosh bilan tugagan N + 을 · unli bilan tugagan N + 를
                 </p>
-                <p class="def">Vositasiz toʻldiruvchini — harakat yoʻnaltirilgan narsani bildiradi.</p>
+                <p class="def">Vositasiz toʻldiruvchini — harakat yoʻnaltirilgan narsani bildiradi. Undosh bilan tugagan
+                  ot + <span class="hl">을</span>, unli bilan tugagan ot + <span class="hl">를</span>.</p>
                 <div class="ex">
-                  <p class="k">음악을 들어요.</p>
-                  <p class="e">Men musiqa tinglayman.</p>
+                  <p class="k">음악<span class="hl">을</span> 들어요.</p>
+                  <p class="e">Men musiqa tinglayman. <span class="e-note">(음악 ㄱ bilan tugaydi → 을)</span></p>
                 </div>
                 <div class="ex">
-                  <p class="k">친구를 만나요.</p>
-                  <p class="e">Men doʻstim bilan uchrashaman.</p>
+                  <p class="k">친구<span class="hl">를</span> 만나요.</p>
+                  <p class="e">Men doʻstim bilan uchrashaman. <span class="e-note">(친구 unli bilan tugaydi → 를)</span>
+                  </p>
                 </div>
                 <div class="ex">
-                  <p class="k">빵을 먹어요.</p>
+                  <p class="k">빵<span class="hl">을</span> 먹어요.</p>
                   <p class="e">Men non yeyman.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">한국어를 공부해요.</p>
+                  <p class="k">한국어<span class="hl">를</span> 공부해요.</p>
                   <p class="e">Men koreys tilini oʻrganaman.</p>
                 </div>
               </div>
@@ -663,6 +876,17 @@
                     <td class="w">배가 고프다</td>
                     <td>qorni ochmoq</td>
                   </tr>
+                  <tr class="grp">
+                    <td colspan="2">Asosiy soʻzlar (핵심 단어)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">유튜브</td>
+                    <td>YouTube</td>
+                  </tr>
+                  <tr>
+                    <td class="w">학생들</td>
+                    <td>oʻquvchilar, talabalar</td>
+                  </tr>
                 </table>
               </div>
             </section>
@@ -673,44 +897,51 @@
               <div class="gram">
                 <h3 class="gram-form">N + 에 가다 / 오다 <span class="gloss">— "(bir joyga) bormoq / kelmoq"</span></h3>
                 <p class="meta"><span class="tag">Shakli</span> joy N + 에 + 가다 (bormoq) / 오다 (kelmoq)</p>
-                <p class="def">에 harakatning manzilini bildiradi. Borish uchun 가다, kelish uchun 오다 bilan ishlatiladi.
-                </p>
+                <p class="def"><span class="hl">에</span> harakatning manzilini bildiradi. Borish uchun 가다, kelish uchun
+                  오다 bilan ishlatiladi.</p>
                 <div class="ex">
-                  <p class="k">식당에 가요.</p>
+                  <p class="k">식당<span class="hl">에</span> 가요.</p>
                   <p class="e">Men oshxonaga boraman.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">친구가 한국에 와요.</p>
+                  <p class="k">친구가 한국<span class="hl">에</span> 와요.</p>
                   <p class="e">Doʻstim Koreyaga keladi.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">아침에 회사에 가요.</p>
+                  <p class="k">아침에 회사<span class="hl">에</span> 가요.</p>
                   <p class="e">Ertalab ishga boraman.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">엄마가 집에 와요.</p>
+                  <p class="k">엄마가 집<span class="hl">에</span> 와요.</p>
                   <p class="e">Onam uyga keladi.</p>
+                </div>
+                <div class="note">
+                  <p><span class="tag">Qiyoslang</span> Manzil 에 (가다/오다) va harakat joyini bildiruvchi
+                    <span class="hl">에서</span>: 도서관<span class="hl">에</span> 가요 ("kutubxonaga boraman"), ammo
+                    도서관<span class="hl">에서</span> 공부해요 ("kutubxonada oʻqiyman"). Keyingi qolipga qarang.
+                  </p>
                 </div>
               </div>
               <div class="gram">
                 <h3 class="gram-form">N + 에서 <span class="gloss">— "...da (harakat sodir boʻladigan joy)"</span></h3>
                 <p class="meta"><span class="tag">Shakli</span> joy N + 에서 + harakat feʼli</p>
-                <p class="def">Harakat sodir boʻladigan joyni bildiradi (mavjudlik yoki manzilni bildiruvchi 에 dan farq
-                  qiladi).</p>
+                <p class="def">Harakat sodir boʻladigan joyni bildiradi (mavjudlik yoki manzilni bildiruvchi
+                  <span class="hl">에</span> dan farq qiladi). Joy otiga <span class="hl">에서</span> qoʻshiladi.
+                </p>
                 <div class="ex">
-                  <p class="k">도서관에서 공부해요.</p>
+                  <p class="k">도서관<span class="hl">에서</span> 공부해요.</p>
                   <p class="e">Men kutubxonada oʻqiyman.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">집에서 밥을 먹어요.</p>
+                  <p class="k">집<span class="hl">에서</span> 밥을 먹어요.</p>
                   <p class="e">Uyda ovqatlanaman.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">카페에서 커피를 마셔요.</p>
+                  <p class="k">카페<span class="hl">에서</span> 커피를 마셔요.</p>
                   <p class="e">Kafeda qahva ichaman.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">시장에서 과일을 사요.</p>
+                  <p class="k">시장<span class="hl">에서</span> 과일을 사요.</p>
                   <p class="e">Bozordan meva sotib olaman.</p>
                 </div>
               </div>
@@ -811,6 +1042,53 @@
                     <td class="w">서점</td>
                     <td>kitob doʻkoni</td>
                   </tr>
+                  <tr class="grp">
+                    <td colspan="2">Asosiy soʻzlar (핵심 단어)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">근처</td>
+                    <td>yaqin atrof</td>
+                  </tr>
+                  <tr>
+                    <td class="w">밖</td>
+                    <td>tashqari</td>
+                  </tr>
+                  <tr>
+                    <td class="w">직원 식당</td>
+                    <td>xodimlar oshxonasi</td>
+                  </tr>
+                  <tr>
+                    <td class="w">회사 식당</td>
+                    <td>kompaniya oshxonasi</td>
+                  </tr>
+                  <tr>
+                    <td class="w">공원</td>
+                    <td>bogʻ (park)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">기타</td>
+                    <td>boshqalar; (shuningdek) gitara</td>
+                  </tr>
+                  <tr>
+                    <td class="w">남편</td>
+                    <td>er (turmush oʻrtogʻi)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">문화 센터</td>
+                    <td>madaniyat markazi</td>
+                  </tr>
+                  <tr>
+                    <td class="w">배우다</td>
+                    <td>oʻrganmoq</td>
+                  </tr>
+                  <tr>
+                    <td class="w">아주</td>
+                    <td>juda</td>
+                  </tr>
+                  <tr>
+                    <td class="w">주말</td>
+                    <td>dam olish kunlari</td>
+                  </tr>
                 </table>
               </div>
             </section>
@@ -821,44 +1099,53 @@
               <div class="gram">
                 <h3 class="gram-form">N + 에 <span class="gloss">— "...da (vaqt)"</span></h3>
                 <p class="meta"><span class="tag">Shakli</span> vaqt N + 에 (오늘, 어제, 내일, 지금 bilan ishlatilmaydi)</p>
-                <p class="def">Biror narsa sodir boʻladigan vaqtni — sana, kun, oy yoki soatni bildiradi.</p>
+                <p class="def">Biror narsa sodir boʻladigan vaqtni — sana, kun, oy yoki soatni bildiradi. Vaqt soʻziga
+                  <span class="hl">에</span> qoʻshiladi.
+                </p>
                 <div class="ex">
-                  <p class="k">월요일에 학교에 가요.</p>
+                  <p class="k">월요일<span class="hl">에</span> 학교에 가요.</p>
                   <p class="e">Dushanba kuni maktabga boraman.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">3시에 만나요.</p>
+                  <p class="k">3시<span class="hl">에</span> 만나요.</p>
                   <p class="e">Soat 3 da uchrashamiz.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">토요일에 친구를 만나요.</p>
+                  <p class="k">토요일<span class="hl">에</span> 친구를 만나요.</p>
                   <p class="e">Shanba kuni doʻstim bilan uchrashaman.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">아침 7시에 일어나요.</p>
+                  <p class="k">아침 7시<span class="hl">에</span> 일어나요.</p>
                   <p class="e">Ertalab soat 7 da uygʻonaman.</p>
+                </div>
+                <div class="note">
+                  <p><span class="tag">Istisno</span> 오늘, 어제, 내일, 지금 bilan 에 ishlatilmaydi —
+                    <span class="hl">내일</span> 만나요 ("ertaga koʻrishamiz") deyiladi, 내일<span class="hl">에</span>× emas.
+                  </p>
                 </div>
               </div>
               <div class="gram">
                 <h3 class="gram-form">N + 이 / 가 아니다 <span class="gloss">— "...emas"</span></h3>
                 <p class="meta"><span class="tag">Shakli</span> undosh bilan tugagan N + 이 아니다 · unli bilan tugagan N +
                   가 아니다</p>
-                <p class="def">이다 ning inkori — "A — B emas" deyish uchun ishlatiladi.</p>
+                <p class="def">이다 ning inkori — "A — B emas" deyish uchun ishlatiladi. Undosh bilan tugagan ot +
+                  <span class="hl">이 아니에요</span>, unli bilan tugagan ot + <span class="hl">가 아니에요</span>.
+                </p>
                 <div class="ex">
-                  <p class="k">오늘은 월요일이 아니에요.</p>
-                  <p class="e">Bugun dushanba emas.</p>
+                  <p class="k">오늘은 월요일<span class="hl">이 아니에요</span>.</p>
+                  <p class="e">Bugun dushanba emas. <span class="e-note">(월요일 ㄹ bilan tugaydi → 이 아니에요)</span></p>
                 </div>
                 <div class="ex">
-                  <p class="k">저는 학생이 아니에요.</p>
+                  <p class="k">저는 학생<span class="hl">이 아니에요</span>.</p>
                   <p class="e">Men talaba emasman.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">이것은 제 가방이 아니에요.</p>
+                  <p class="k">이것은 제 가방<span class="hl">이 아니에요</span>.</p>
                   <p class="e">Bu mening sumkam emas.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">저는 미국 사람이 아니에요.</p>
-                  <p class="e">Men amerikalik emasman.</p>
+                  <p class="k">여기는 학교<span class="hl">가 아니에요</span>.</p>
+                  <p class="e">Bu yer maktab emas. <span class="e-note">(학교 unli bilan tugaydi → 가 아니에요)</span></p>
                 </div>
               </div>
               <div class="vocab">
@@ -946,6 +1233,45 @@
                     <td class="w">다음 주</td>
                     <td>keyingi hafta</td>
                   </tr>
+                  <tr class="grp">
+                    <td colspan="2">Asosiy soʻzlar (핵심 단어)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">며칠</td>
+                    <td>nechanchi sana; necha kun</td>
+                  </tr>
+                  <tr>
+                    <td class="w">몇 월</td>
+                    <td>qaysi oy</td>
+                  </tr>
+                  <tr>
+                    <td class="w">요일</td>
+                    <td>hafta kuni</td>
+                  </tr>
+                  <tr>
+                    <td class="w">근무일</td>
+                    <td>ish kuni</td>
+                  </tr>
+                  <tr>
+                    <td class="w">명함</td>
+                    <td>tashrif qogʻozi (vizitka)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">빌딩</td>
+                    <td>bino</td>
+                  </tr>
+                  <tr>
+                    <td class="w">의사</td>
+                    <td>shifokor (vrach)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">층</td>
+                    <td>qavat</td>
+                  </tr>
+                  <tr>
+                    <td class="w">호</td>
+                    <td>xona (kvartira) raqami</td>
+                  </tr>
                 </table>
               </div>
             </section>
@@ -956,44 +1282,57 @@
               <div class="gram">
                 <h3 class="gram-form">N부터 N까지 <span class="gloss">— "...dan ...gacha"</span></h3>
                 <p class="meta"><span class="tag">Shakli</span> boshlanish N + 부터 · tugash N + 까지 (vaqt oraligʻi)</p>
-                <p class="def">Vaqt oraligʻining boshini (부터) va oxirini (까지) bildiradi. Joylar uchun 에서 … 까지
-                  ishlatiladi.</p>
+                <p class="def">Vaqt oraligʻining boshini (<span class="hl">부터</span>) va oxirini (<span
+                    class="hl">까지</span>)
+                  bildiradi. Joylar uchun 에서 … 까지 ishlatiladi.</p>
                 <div class="ex">
-                  <p class="k">9시부터 6시까지 일해요.</p>
+                  <p class="k">9시<span class="hl">부터</span> 6시<span class="hl">까지</span> 일해요.</p>
                   <p class="e">Soat 9 dan 6 gacha ishlayman.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">월요일부터 금요일까지 공부해요.</p>
+                  <p class="k">월요일<span class="hl">부터</span> 금요일<span class="hl">까지</span> 공부해요.</p>
                   <p class="e">Dushanbadan jumagacha oʻqiyman.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">1시부터 2시까지 점심을 먹어요.</p>
+                  <p class="k">1시<span class="hl">부터</span> 2시<span class="hl">까지</span> 점심을 먹어요.</p>
                   <p class="e">Soat 1 dan 2 gacha tushlik qilaman.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">아침부터 저녁까지 바빠요.</p>
+                  <p class="k">아침<span class="hl">부터</span> 저녁<span class="hl">까지</span> 바빠요.</p>
                   <p class="e">Ertalabdan kechgacha bandman.</p>
+                </div>
+                <div class="note">
+                  <p><span class="tag">Qiyoslang</span> Ikki <em>joy</em> orasidagi masofa uchun 부터 oʻrniga
+                    <span class="hl">에서</span> ishlatiladi: 집<span class="hl">에서</span> 회사<span class="hl">까지</span> 30분
+                    걸려요
+                    ("Uydan ishxonagacha 30 daqiqa ketadi").
+                  </p>
                 </div>
               </div>
               <div class="gram">
                 <h3 class="gram-form">안 + V <span class="gloss">— "...maslik (inkor)"</span></h3>
                 <p class="meta"><span class="tag">Shakli</span> 안 + feʼl/sifat &nbsp;·&nbsp; 하다 feʼllari: N + 안 하다</p>
-                <p class="def">Oddiy inkor — 안 ni feʼl oldiga qoʻyiladi. (운동하다 → 운동 안 해요.)</p>
+                <p class="def">Oddiy inkor — <span class="hl">안</span> ni feʼldan bevosita oldin qoʻyiladi.</p>
                 <div class="ex">
-                  <p class="k">아침을 안 먹어요.</p>
+                  <p class="k">아침을 <span class="hl">안</span> 먹어요.</p>
                   <p class="e">Men nonushta qilmayman.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">오늘은 일 안 해요.</p>
-                  <p class="e">Bugun ishlamayman.</p>
+                  <p class="k">오늘은 일 <span class="hl">안</span> 해요.</p>
+                  <p class="e">Bugun ishlamayman. <span class="e-note">(운동하다 turidagi: 안 otni va 하다 ni ajratadi)</span>
+                  </p>
                 </div>
                 <div class="ex">
-                  <p class="k">저는 커피를 안 마셔요.</p>
+                  <p class="k">저는 커피를 <span class="hl">안</span> 마셔요.</p>
                   <p class="e">Men qahva ichmayman.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">주말에 학교에 안 가요.</p>
+                  <p class="k">주말에 학교에 <span class="hl">안</span> 가요.</p>
                   <p class="e">Dam olish kunlari maktabga bormayman.</p>
+                </div>
+                <div class="note">
+                  <p><span class="tag">Istisno</span> 하다 feʼllarida 안 ot bilan 하다 <em>orasiga</em> qoʻyiladi:
+                    운동해요 → 운동 <span class="hl">안</span> 해요 ("mashq qilmayman"), 안 운동해요× emas.</p>
                 </div>
               </div>
               <div class="vocab">
@@ -1112,6 +1451,17 @@
                     <td class="w">잠을 자다</td>
                     <td>uxlamoq</td>
                   </tr>
+                  <tr class="grp">
+                    <td colspan="2">Asosiy soʻzlar (핵심 단어)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">점심</td>
+                    <td>tushlik</td>
+                  </tr>
+                  <tr>
+                    <td class="w">테니스</td>
+                    <td>tennis</td>
+                  </tr>
                 </table>
               </div>
             </section>
@@ -1122,45 +1472,126 @@
               <div class="gram">
                 <h3 class="gram-form">V + 고 싶다 <span class="gloss">— "...gisi kelmoq"</span></h3>
                 <p class="meta"><span class="tag">Shakli</span> feʼl oʻzagi + 고 싶다 (uchinchi shaxs: 고 싶어 하다)</p>
-                <p class="def">Soʻzlovchining biror ish qilishga boʻlgan istagini bildiradi.</p>
+                <p class="def">Soʻzlovchining biror ish qilishga boʻlgan istagini bildiradi. Feʼl oʻzagiga
+                  <span class="hl">고 싶다</span> qoʻshiladi (받침 dan qatʼi nazar).
+                </p>
                 <div class="ex">
-                  <p class="k">비빔밥을 먹고 싶어요.</p>
+                  <p class="k">비빔밥을 먹<span class="hl">고 싶어요</span>.</p>
                   <p class="e">Pibimpap yegim kelyapti.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">집에서 쉬고 싶어요.</p>
+                  <p class="k">집에서 쉬<span class="hl">고 싶어요</span>.</p>
                   <p class="e">Uyda dam olgim kelyapti.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">물을 마시고 싶어요.</p>
+                  <p class="k">물을 마시<span class="hl">고 싶어요</span>.</p>
                   <p class="e">Suv ichgim kelyapti.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">주말에 영화를 보고 싶어요.</p>
+                  <p class="k">주말에 영화를 보<span class="hl">고 싶어요</span>.</p>
                   <p class="e">Dam olish kuni kino koʻrgim kelyapti.</p>
+                </div>
+                <div class="note">
+                  <p><span class="tag">Maslahat</span> 고 싶다 soʻzlovchiga (savolda esa suhbatdoshga) tegishli. Uchinchi
+                    shaxs uchun <span class="hl">고 싶어 하다</span> ga oʻtiladi: 동생이 게임을 하<span class="hl">고
+                      싶어 해요</span> ("Inim oʻyin oʻynagisi kelyapti").</p>
                 </div>
               </div>
               <div class="gram">
                 <h3 class="gram-form">V + (으)세요 <span class="gloss">— "marhamat qilib ... qiling (muloyim
                     iltimos)"</span></h3>
                 <p class="meta"><span class="tag">Shakli</span> undosh oʻzak + 으세요 · unli oʻzak + 세요</p>
-                <p class="def">Muloyim buyruq yoki iltimos. Hurmatli hozirgi zamon ham xuddi shu shaklda boʻladi (먹다 →
-                  드세요).</p>
+                <p class="def">Muloyim buyruq yoki iltimos. Undosh oʻzak + <span class="hl">으세요</span>, unli oʻzak +
+                  <span class="hl">세요</span>. Hurmatli hozirgi zamon ham xuddi shu shaklda boʻladi (먹다 → 드세요).
+                </p>
                 <div class="ex">
-                  <p class="k">여기 앉으세요.</p>
-                  <p class="e">Marhamat, shu yerga oʻtiring.</p>
+                  <p class="k">여기 앉<span class="hl">으세요</span>.</p>
+                  <p class="e">Marhamat, shu yerga oʻtiring. <span class="e-note">(앉- undosh bilan tugaydi → 으세요)</span>
+                  </p>
                 </div>
                 <div class="ex">
-                  <p class="k">김치찌개 하나 주세요.</p>
-                  <p class="e">Bitta kimchi shoʻrva bering.</p>
+                  <p class="k">김치찌개 하나 주<span class="hl">세요</span>.</p>
+                  <p class="e">Bitta kimchi shoʻrva bering. <span class="e-note">(주- unli bilan tugaydi → 세요)</span></p>
                 </div>
                 <div class="ex">
-                  <p class="k">이 책을 읽으세요.</p>
+                  <p class="k">이 책을 읽<span class="hl">으세요</span>.</p>
                   <p class="e">Shu kitobni oʻqing.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">물 좀 주세요.</p>
+                  <p class="k">물 좀 주<span class="hl">세요</span>.</p>
                   <p class="e">Iltimos, biroz suv bering.</p>
+                </div>
+                <div class="note">
+                  <p><span class="tag">Istisno</span> Baʼzi feʼllar alohida hurmatli oʻzakdan foydalanadi: 먹다·마시다 →
+                    <span class="hl">드세요</span>, 자다 → <span class="hl">주무세요</span>, 있다 → <span class="hl">계세요</span>.
+                  </p>
+                </div>
+              </div>
+              <div class="gram">
+                <h3 class="gram-form">ㄹ 탈락 <span class="gloss">— "ㄹ tushadigan feʼllar (notoʻgʻri)"</span></h3>
+                <p class="meta"><span class="tag">Shakli</span> oʻzak oxiridagi ㄹ ㄴ, ㅂ, ㅅ (va ㄹ) bilan boshlanuvchi
+                  qoʻshimchalardan oldin tushadi</p>
+                <p class="def">Feʼl/sifat oʻzagi <span class="hl">ㄹ</span> bilan tugaganda, oʻsha ㄹ ㄴ, ㅂ, ㅅ bilan
+                  boshlanuvchi qoʻshimchalardan oldin yoʻqoladi — yaʼni -<span class="hl">ㅂ니다</span>, -(으)<span
+                    class="hl">세요</span> va sifatdosh -<span class="hl">는</span> dan oldin. Ammo 아/어요 dan oldin
+                  tushmaydi.</p>
+                <table class="conj">
+                  <tr>
+                    <th>Feʼl</th>
+                    <th class="k">-ㅂ니다</th>
+                    <th class="k">-(으)세요</th>
+                    <th class="k">-는</th>
+                  </tr>
+                  <tr>
+                    <td>살다</td>
+                    <td class="k">삽니다</td>
+                    <td class="k">사세요</td>
+                    <td class="k">사는</td>
+                  </tr>
+                  <tr>
+                    <td>알다</td>
+                    <td class="k">압니다</td>
+                    <td class="k">아세요</td>
+                    <td class="k">아는</td>
+                  </tr>
+                  <tr>
+                    <td>만들다</td>
+                    <td class="k">만듭니다</td>
+                    <td class="k">만드세요</td>
+                    <td class="k">만드는</td>
+                  </tr>
+                  <tr>
+                    <td>팔다</td>
+                    <td class="k">팝니다</td>
+                    <td class="k">파세요</td>
+                    <td class="k">파는</td>
+                  </tr>
+                  <tr>
+                    <td>열다</td>
+                    <td class="k">엽니다</td>
+                    <td class="k">여세요</td>
+                    <td class="k">여는</td>
+                  </tr>
+                </table>
+                <div class="ex">
+                  <p class="k">저는 서울에 <span class="hl">삽니다</span>.</p>
+                  <p class="e">Men Seulda yashayman. <span class="e-note">(살다 + ㅂ니다, ㄹ tushadi → 삽니다)</span></p>
+                </div>
+                <div class="ex">
+                  <p class="k">어머니가 김밥을 <span class="hl">만드세요</span>.</p>
+                  <p class="e">Onam kimpap tayyorlayaptilar. <span class="e-note">(만들다 + 세요, ㄹ tushadi → 만드세요)</span>
+                  </p>
+                </div>
+                <div class="ex">
+                  <p class="k">저는 그 사람을 잘 <span class="hl">알아요</span>.</p>
+                  <p class="e">Men u kishini yaxshi bilaman. <span class="e-note">(알다 + 아/어요, ㄹ saqlanadi → 알아요)</span>
+                  </p>
+                </div>
+                <div class="note">
+                  <p><span class="tag">Istisno</span> 멀다·길다 sifatlari ham xuddi shunday oʻzgaradi:
+                    <span class="hl">멉니다</span> ("uzoq"), <span class="hl">깁니다</span> ("uzun"). Ammo 아/어요 dan oldin
+                    ㄹ saqlanadi: 멀<span class="hl">어요</span>·길<span class="hl">어요</span>.
+                  </p>
                 </div>
               </div>
               <div class="vocab">
@@ -1300,6 +1731,33 @@
                     <td class="w">기다리다</td>
                     <td>kutmoq</td>
                   </tr>
+                  <tr class="grp">
+                    <td colspan="2">Asosiy soʻzlar (핵심 단어)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">분식집</td>
+                    <td>yengil taom oshxonasi (bunsik)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">이탈리아 식당</td>
+                    <td>italyan restorani</td>
+                  </tr>
+                  <tr>
+                    <td class="w">일식집</td>
+                    <td>yapon restorani</td>
+                  </tr>
+                  <tr>
+                    <td class="w">중국집</td>
+                    <td>xitoy restorani</td>
+                  </tr>
+                  <tr>
+                    <td class="w">한식집</td>
+                    <td>koreys restorani</td>
+                  </tr>
+                  <tr>
+                    <td class="w">이름을 쓰다</td>
+                    <td>ismini yozmoq</td>
+                  </tr>
                 </table>
               </div>
             </section>
@@ -1311,44 +1769,121 @@
                 <h3 class="gram-form">N + 하고 <span class="gloss">— "...va / ... bilan"</span></h3>
                 <p class="meta"><span class="tag">Shakli</span> N + 하고 + N (ogʻzaki) · shuningdek N + (이)랑, N + 과/와
                   (yozma)</p>
-                <p class="def">Ikki otni bogʻlaydi ("A va B") yoki "(kimdir) bilan" maʼnosini bildiradi.</p>
+                <p class="def">Ikki otni bogʻlaydi ("A va B") yoki "(kimdir) bilan" maʼnosini bildiradi.
+                  <span class="hl">하고</span> 받침 dan qatʼi nazar bir xil tarzda qoʻshiladi.
+                </p>
                 <div class="ex">
-                  <p class="k">칫솔하고 치약을 사요.</p>
+                  <p class="k">칫솔<span class="hl">하고</span> 치약을 사요.</p>
                   <p class="e">Tish choʻtkasi va tish pastasi sotib olaman.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">친구하고 같이 가요.</p>
+                  <p class="k">친구<span class="hl">하고</span> 같이 가요.</p>
                   <p class="e">Doʻstim bilan birga boraman.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">빵하고 우유를 먹어요.</p>
+                  <p class="k">빵<span class="hl">하고</span> 우유를 먹어요.</p>
                   <p class="e">Non bilan sut yeyman.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">가족하고 식당에 가요.</p>
+                  <p class="k">가족<span class="hl">하고</span> 식당에 가요.</p>
                   <p class="e">Oilam bilan oshxonaga boraman.</p>
+                </div>
+                <div class="note">
+                  <p><span class="tag">Qiyoslang</span> 하고 — kundalik ogʻzaki shakl. <span class="hl">와/과</span>
+                    koʻproq yozma/rasmiy (undosh bilan tugagan + 과, unli bilan tugagan + 와), <span
+                      class="hl">(이)랑</span>
+                    esa erkin soʻzlashuv uslubi: 친구<span class="hl">랑</span> 가요.</p>
                 </div>
               </div>
               <div class="gram">
                 <h3 class="gram-form">-습니다 / -습니까? <span class="gloss">— "rasmiy-muloyim feʼl qoʻshimchasi
                     (tuslovchi)"</span></h3>
                 <p class="meta"><span class="tag">Shakli</span> undosh oʻzak + 습니다 / 습니까? · unli oʻzak + ㅂ니다 / ㅂ니까?</p>
-                <p class="def">Eʼlonlar, taqdimotlar va ish muhitida ishlatiladigan rasmiy-muloyim uslub.</p>
+                <p class="def">Eʼlonlar, taqdimotlar va ish muhitida ishlatiladigan rasmiy-muloyim uslub. Undosh oʻzak +
+                  <span class="hl">습니다</span>, unli oʻzak + <span class="hl">ㅂ니다</span>; savollar
+                  <span class="hl">습니까/ㅂ니까</span> bilan tugaydi.
+                </p>
                 <div class="ex">
-                  <p class="k">이것은 얼마입니까?</p>
+                  <p class="k">이것은 얼마<span class="hl">입니까</span>?</p>
                   <p class="e">Bu qancha turadi?</p>
                 </div>
                 <div class="ex">
-                  <p class="k">저는 회사에 갑니다.</p>
-                  <p class="e">Men ishga boraman.</p>
+                  <p class="k">저는 회사에 <span class="hl">갑니다</span>.</p>
+                  <p class="e">Men ishga boraman. <span class="e-note">(가- unli oʻzak → ㅂ니다)</span></p>
                 </div>
                 <div class="ex">
-                  <p class="k">지금 밥을 먹습니다.</p>
-                  <p class="e">Hozir ovqatlanyapman.</p>
+                  <p class="k">지금 밥을 먹<span class="hl">습니다</span>.</p>
+                  <p class="e">Hozir ovqatlanyapman. <span class="e-note">(먹- undosh oʻzak → 습니다)</span></p>
                 </div>
                 <div class="ex">
-                  <p class="k">어디에 삽니까?</p>
-                  <p class="e">Qayerda yashaysiz?</p>
+                  <p class="k">어디에 <span class="hl">삽니까</span>?</p>
+                  <p class="e">Qayerda yashaysiz? <span class="e-note">(살다, ㄹ ㅂ니까 dan oldin tushadi → 삽니까)</span></p>
+                </div>
+              </div>
+              <div class="gram">
+                <h3 class="gram-form">수 관형사 + 단위 명사 <span class="gloss">— "sanoq son aniqlovchilari"</span></h3>
+                <p class="meta"><span class="tag">Shakli</span> asl son (aniqlovchi shakli) + numerativ: N + 세 개</p>
+                <p class="def">Narsalarni sanash uchun asl koreys sonlari oʻzining <em>aniqlovchi</em> shaklida, undan
+                  keyin
+                  numerativ ishlatiladi. Beshta son numerativdan oldin qisqaradi: 하나·둘·셋·넷·스물 → <span
+                    class="hl">한·두·세·네·스무</span>.
+                  Keng tarqalgan numerativlar: 개(narsalar), 명·분(kishilar, 분 hurmatli), 마리(hayvonlar), 권(kitoblar),
+                  잔(piyolalar),
+                  병(shishalar), 장(varaqlar), 대(texnika/mashinalar), 살(yosh).</p>
+                <table class="conj">
+                  <tr>
+                    <th>Son</th>
+                    <th class="k">Aniqlovchi</th>
+                    <th>Misol</th>
+                    <th class="k">Koreyscha</th>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td class="k">한</td>
+                    <td>bitta mushuk</td>
+                    <td class="k">고양이 한 마리</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td class="k">두</td>
+                    <td>ikki piyola</td>
+                    <td class="k">커피 두 잔</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td class="k">세</td>
+                    <td>uchta olma</td>
+                    <td class="k">사과 세 개</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td class="k">네</td>
+                    <td>toʻrt talaba</td>
+                    <td class="k">학생 네 명</td>
+                  </tr>
+                  <tr>
+                    <td>20</td>
+                    <td class="k">스무</td>
+                    <td>yigirma yoshda</td>
+                    <td class="k">스무 살</td>
+                  </tr>
+                </table>
+                <div class="ex">
+                  <p class="k">사과 <span class="hl">세</span> 개 주세요.</p>
+                  <p class="e">Uchta olma bering. <span class="e-note">(셋 → 개 numerativi oldidan 세)</span></p>
+                </div>
+                <div class="ex">
+                  <p class="k">교실에 학생이 <span class="hl">네</span> 명 있어요.</p>
+                  <p class="e">Sinfxonada toʻrtta talaba bor. <span class="e-note">(넷 → 네 + 명)</span></p>
+                </div>
+                <div class="ex">
+                  <p class="k">커피 <span class="hl">두</span> 잔 주세요.</p>
+                  <p class="e">Ikki qahva bering. <span class="e-note">(둘 → 두 + 잔)</span></p>
+                </div>
+                <div class="note">
+                  <p><span class="tag">Istisno</span> Faqat 하나·둘·셋·넷·스물 qisqaradi (한·두·세·네·스무). 다섯 va undan kattalari
+                    oʻzgarmaydi: 다섯 개, 열 명, 스물<span class="hl">한</span> 살 — eʼtibor bering, 21 da faqat oxirgi 1
+                    qisqaradi (스물한, 스무한 emas).</p>
                 </div>
               </div>
               <div class="vocab">
@@ -1455,6 +1990,33 @@
                     <td class="w">얼마예요?</td>
                     <td>qancha turadi?</td>
                   </tr>
+                  <tr class="grp">
+                    <td colspan="2">Asosiy soʻzlar (핵심 단어)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">걷다</td>
+                    <td>yurmoq, piyoda yurmoq</td>
+                  </tr>
+                  <tr>
+                    <td class="w">다리</td>
+                    <td>oyoq; koʻprik</td>
+                  </tr>
+                  <tr>
+                    <td class="w">전주</td>
+                    <td>Chonju (shahar)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">즐겁다</td>
+                    <td>yoqimli, quvnoq</td>
+                  </tr>
+                  <tr>
+                    <td class="w">한복을 입다</td>
+                    <td>hanbok kiymoq</td>
+                  </tr>
+                  <tr>
+                    <td class="w">한옥 마을</td>
+                    <td>hanok qishlogʻi (anʼanaviy uylar)</td>
+                  </tr>
                 </table>
               </div>
             </section>
@@ -1465,42 +2027,48 @@
               <div class="gram">
                 <h3 class="gram-form">V + 았 / 었어요 <span class="gloss">— "oʻtgan zamon"</span></h3>
                 <p class="meta"><span class="tag">Shakli</span> ㅏ/ㅗ oʻzak + 았어요 · boshqa oʻzaklar + 었어요 · 하다 → 했어요</p>
-                <p class="def">Feʼl va sifatlar uchun muloyim oʻtgan zamon qoʻshimchasi.</p>
+                <p class="def">Feʼl va sifatlar uchun muloyim oʻtgan zamon qoʻshimchasi. Oxirgi unlisi ㅏ/ㅗ boʻlgan
+                  oʻzaklar <span class="hl">았어요</span> ni, qolganlari <span class="hl">었어요</span> ni oladi, 하다 esa →
+                  <span class="hl">했어요</span>.
+                </p>
                 <div class="ex">
-                  <p class="k">주말에 친구를 만났어요.</p>
-                  <p class="e">Dam olish kuni doʻstim bilan uchrashdim.</p>
+                  <p class="k">주말에 친구를 만<span class="hl">났어요</span>.</p>
+                  <p class="e">Dam olish kuni doʻstim bilan uchrashdim. <span class="e-note">(만나 + 았어요 → 만났어요)</span>
+                  </p>
                 </div>
                 <div class="ex">
-                  <p class="k">어제 영화를 봤어요.</p>
-                  <p class="e">Kecha kino koʻrdim.</p>
+                  <p class="k">어제 영화를 <span class="hl">봤어요</span>.</p>
+                  <p class="e">Kecha kino koʻrdim. <span class="e-note">(보 + 았어요 → 봤어요)</span></p>
                 </div>
                 <div class="ex">
-                  <p class="k">아침에 빵을 먹었어요.</p>
-                  <p class="e">Ertalab non yedim.</p>
+                  <p class="k">아침에 빵을 먹<span class="hl">었어요</span>.</p>
+                  <p class="e">Ertalab non yedim. <span class="e-note">(먹- oxirgi unlisi ㅓ → 었어요)</span></p>
                 </div>
                 <div class="ex">
-                  <p class="k">지난주에 한국에 왔어요.</p>
-                  <p class="e">Oʻtgan hafta Koreyaga keldim.</p>
+                  <p class="k">지난주에 한국에 <span class="hl">왔어요</span>.</p>
+                  <p class="e">Oʻtgan hafta Koreyaga keldim. <span class="e-note">(오 + 았어요 → 왔어요)</span></p>
                 </div>
               </div>
               <div class="gram">
                 <h3 class="gram-form">N + 도 <span class="gloss">— "ham"</span></h3>
                 <p class="meta"><span class="tag">Shakli</span> N + 도 (은/는, 이/가, 을/를 oʻrnini bosadi)</p>
-                <p class="def">"...ham" maʼnosini bildiradi — otni avval aytilgan narsaga qoʻshadi.</p>
+                <p class="def">"...ham" maʼnosini bildiradi — otni avval aytilgan narsaga qoʻshadi. <span
+                    class="hl">도</span>
+                  은/는, 이/가, 을/를 oʻrnini bosadi (ammo boshqa qoʻshimchalardan keyin qoʻshilib keladi).</p>
                 <div class="ex">
-                  <p class="k">저도 영화를 봤어요.</p>
-                  <p class="e">Men ham kino koʻrdim.</p>
+                  <p class="k">저<span class="hl">도</span> 영화를 봤어요.</p>
+                  <p class="e">Men ham kino koʻrdim. <span class="e-note">(도 는 oʻrnini bosadi: 저는 → 저도)</span></p>
                 </div>
                 <div class="ex">
-                  <p class="k">커피도 마셨어요.</p>
-                  <p class="e">Qahva ham ichdim.</p>
+                  <p class="k">커피<span class="hl">도</span> 마셨어요.</p>
+                  <p class="e">Qahva ham ichdim. <span class="e-note">(도 를 oʻrnini bosadi: 커피를 → 커피도)</span></p>
                 </div>
                 <div class="ex">
-                  <p class="k">동생도 학생이에요.</p>
+                  <p class="k">동생<span class="hl">도</span> 학생이에요.</p>
                   <p class="e">Inim ham talaba.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">저도 한국어를 배워요.</p>
+                  <p class="k">저<span class="hl">도</span> 한국어를 배워요.</p>
                   <p class="e">Men ham koreys tilini oʻrganaman.</p>
                 </div>
               </div>
@@ -1613,6 +2181,49 @@
                     <td class="w">전화를 받다</td>
                     <td>telefonga javob bermoq</td>
                   </tr>
+                  <tr class="grp">
+                    <td colspan="2">Asosiy soʻzlar (핵심 단어)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">채소</td>
+                    <td>sabzavot</td>
+                  </tr>
+                  <tr>
+                    <td class="w">녹차</td>
+                    <td>koʻk choy</td>
+                  </tr>
+                  <tr>
+                    <td class="w">빠르다</td>
+                    <td>tez, tezkor</td>
+                  </tr>
+                  <tr>
+                    <td class="w">청소기</td>
+                    <td>changyutgich</td>
+                  </tr>
+                  <tr>
+                    <td class="w">계란</td>
+                    <td>tuxum</td>
+                  </tr>
+                  <tr>
+                    <td class="w">닭</td>
+                    <td>tovuq</td>
+                  </tr>
+                  <tr>
+                    <td class="w">닭고기</td>
+                    <td>tovuq goʻshti</td>
+                  </tr>
+                  <tr>
+                    <td class="w">봉투</td>
+                    <td>konvert; xalta</td>
+                  </tr>
+                  <tr>
+                    <td class="w">상품</td>
+                    <td>mahsulot, tovar</td>
+                  </tr>
+                  <tr>
+                    <td class="w">할인</td>
+                    <td>chegirma</td>
+                  </tr>
                 </table>
               </div>
             </section>
@@ -1628,41 +2239,54 @@
                   feʼllarning
                   alohida shakli bor: 먹다 → 드시다, 자다 → 주무시다.</p>
                 <div class="ex">
-                  <p class="k">아버지는 요리를 잘하세요.</p>
-                  <p class="e">Otam ovqatni juda yaxshi pishiradilar.</p>
+                  <p class="k">아버지는 요리를 잘하<span class="hl">세요</span>.</p>
+                  <p class="e">Otam ovqatni juda yaxshi pishiradilar. <span class="e-note">(하 + 시 + 어요 → 하세요)</span></p>
                 </div>
                 <div class="ex">
-                  <p class="k">할머니께서 책을 읽으세요.</p>
-                  <p class="e">Buvim kitob oʻqiyaptilar.</p>
+                  <p class="k">할머니께서 책을 읽<span class="hl">으세요</span>.</p>
+                  <p class="e">Buvim kitob oʻqiyaptilar. <span class="e-note">(읽- undosh oʻzak → 으세요)</span></p>
                 </div>
                 <div class="ex">
-                  <p class="k">어머니께서 집에 계세요.</p>
-                  <p class="e">Onam uydalar.</p>
+                  <p class="k">어머니께서 집에 <span class="hl">계세요</span>.</p>
+                  <p class="e">Onam uydalar. <span class="e-note">(있다 → hurmatli 계시다 → 계세요)</span></p>
                 </div>
                 <div class="ex">
-                  <p class="k">할아버지께서 신문을 보세요.</p>
+                  <p class="k">할아버지께서 신문을 보<span class="hl">세요</span>.</p>
                   <p class="e">Bobom gazeta oʻqiydilar.</p>
+                </div>
+                <div class="note">
+                  <p><span class="tag">Maslahat</span> Hurmatli ega koʻpincha <span class="hl">께서</span> ni oladi
+                    (이/가 ning hurmatli shakli): 할머니<span class="hl">께서</span> 읽으세요. Alohida hurmatli feʼllar:
+                    먹다 → <span class="hl">드시다</span>, 자다 → <span class="hl">주무시다</span>, 있다 → <span
+                      class="hl">계시다</span>.</p>
                 </div>
               </div>
               <div class="gram">
                 <h3 class="gram-form">-지만 <span class="gloss">— "...sa-da, lekin"</span></h3>
                 <p class="meta"><span class="tag">Shakli</span> feʼl / sifat oʻzagi + 지만</p>
-                <p class="def">Ikki gapni qarama-qarshilik bilan bogʻlaydi — "X, lekin Y".</p>
+                <p class="def">Ikki gapni qarama-qarshilik bilan bogʻlaydi — "X, lekin Y". Oʻzakka
+                  <span class="hl">지만</span> qoʻshiladi (har qanday 받침).
+                </p>
                 <div class="ex">
-                  <p class="k">한국어는 어렵지만 재미있어요.</p>
+                  <p class="k">한국어는 어렵<span class="hl">지만</span> 재미있어요.</p>
                   <p class="e">Koreys tili qiyin, lekin qiziqarli.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">저는 가지만 동생은 안 가요.</p>
+                  <p class="k">저는 가<span class="hl">지만</span> 동생은 안 가요.</p>
                   <p class="e">Men boraman, lekin inim bormaydi.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">이 옷은 예쁘지만 비싸요.</p>
+                  <p class="k">이 옷은 예쁘<span class="hl">지만</span> 비싸요.</p>
                   <p class="e">Bu kiyim chiroyli, lekin qimmat.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">날씨는 춥지만 좋아요.</p>
+                  <p class="k">날씨는 춥<span class="hl">지만</span> 좋아요.</p>
                   <p class="e">Havo sovuq, lekin yoqimli.</p>
+                </div>
+                <div class="note">
+                  <p><span class="tag">Maslahat</span> Oʻtgan zamondagi qarama-qarshilikda zamon birinchi gapga
+                    qoʻyiladi:
+                    먹<span class="hl">었지만</span> 배가 고파요 ("Yegan boʻlsam-da, qornim och").</p>
                 </div>
               </div>
               <div class="vocab">
@@ -1742,6 +2366,25 @@
                     <td class="w">죽다 → 돌아가시다</td>
                     <td>oʻlmoq → vafot etmoq (hurmatli)</td>
                   </tr>
+                  <tr class="grp">
+                    <td colspan="2">Asosiy soʻzlar (핵심 단어)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">나</td>
+                    <td>men (norasmiy)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">부모님</td>
+                    <td>ota-ona</td>
+                  </tr>
+                  <tr>
+                    <td class="w">고등학생</td>
+                    <td>oʻrta maktab (litsey) oʻquvchisi</td>
+                  </tr>
+                  <tr>
+                    <td class="w">높임말</td>
+                    <td>hurmat shakli (iltifotli nutq)</td>
+                  </tr>
                 </table>
               </div>
             </section>
@@ -1752,22 +2395,30 @@
               <div class="gram">
                 <h3 class="gram-form">N + 에게 / 한테 / 께 <span class="gloss">— "(birovga) ...ga / ... uchun"</span></h3>
                 <p class="meta"><span class="tag">Shakli</span> 한테 (ogʻzaki) · 에게 (yozma) · 께 (hurmatli)</p>
-                <p class="def">Biror narsani yoki harakatni qabul qiluvchi kishini bildiradi.</p>
+                <p class="def">Biror narsani yoki harakatni qabul qiluvchi kishini bildiradi. <span class="hl">한테</span>
+                  (ogʻzaki) va <span class="hl">에게</span> (yozma) bir xil; <span class="hl">께</span> esa ulugʻ kishi
+                  uchun
+                  hurmatli shakl.</p>
                 <div class="ex">
-                  <p class="k">친구한테 선물을 줘요.</p>
+                  <p class="k">친구<span class="hl">한테</span> 선물을 줘요.</p>
                   <p class="e">Doʻstimga sovgʻa beraman.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">부모님께 꽃을 드려요.</p>
-                  <p class="e">Ota-onamga gul taqdim qilaman.</p>
+                  <p class="k">부모님<span class="hl">께</span> 꽃을 드려요.</p>
+                  <p class="e">Ota-onamga gul taqdim qilaman. <span class="e-note">(hurmatli 께 + 드리다)</span></p>
                 </div>
                 <div class="ex">
-                  <p class="k">동생에게 책을 줘요.</p>
+                  <p class="k">동생<span class="hl">에게</span> 책을 줘요.</p>
                   <p class="e">Inimga kitob beraman.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">친구한테 전화해요.</p>
+                  <p class="k">친구<span class="hl">한테</span> 전화해요.</p>
                   <p class="e">Doʻstimga qoʻngʻiroq qilaman.</p>
+                </div>
+                <div class="note">
+                  <p><span class="tag">Maslahat</span> "Birovdan" maʼnosi uchun 서 qoʻshiladi: 친구<span
+                      class="hl">한테서</span> /
+                    친구<span class="hl">에게서</span> 선물을 받았어요 ("Doʻstimdan sovgʻa oldim").</p>
                 </div>
               </div>
               <div class="gram">
@@ -1775,22 +2426,33 @@
                 </h3>
                 <p class="meta"><span class="tag">Shakli</span> ㅏ/ㅗ oʻzak + 아 주다 · boshqa oʻzaklar + 어 주다 · hurmatli:
                   드리다</p>
-                <p class="def">Harakat boshqa birov foydasiga, yaxshilik yuzasidan bajarilganini bildiradi.</p>
+                <p class="def">Harakat boshqa birov foydasiga, yaxshilik yuzasidan bajarilganini bildiradi. ㅏ/ㅗ oʻzak +
+                  <span class="hl">아 주다</span>, boshqa oʻzaklar + <span class="hl">어 주다</span>; "(ulugʻ kishi uchun)
+                  qilib bermoq" ning hurmatli shakli 드리다.
+                </p>
                 <div class="ex">
-                  <p class="k">친구가 사진을 찍어 줬어요.</p>
-                  <p class="e">Doʻstim menga surat olib berdi.</p>
+                  <p class="k">친구가 사진을 찍<span class="hl">어 줬어요</span>.</p>
+                  <p class="e">Doʻstim menga surat olib berdi. <span class="e-note">(찍- oxirgi unlisi ㅣ → 어 주다)</span>
+                  </p>
                 </div>
                 <div class="ex">
-                  <p class="k">좀 도와주세요.</p>
-                  <p class="e">Iltimos, menga yordam bering.</p>
+                  <p class="k">좀 도<span class="hl">와주세요</span>.</p>
+                  <p class="e">Iltimos, menga yordam bering. <span class="e-note">(돕다 → 도와 + 주다; iltimos shakli
+                      주세요)</span></p>
                 </div>
                 <div class="ex">
-                  <p class="k">친구가 밥을 사 줬어요.</p>
-                  <p class="e">Doʻstim menga ovqat olib berdi.</p>
+                  <p class="k">친구가 밥을 사 <span class="hl">줬어요</span>.</p>
+                  <p class="e">Doʻstim menga ovqat olib berdi. <span class="e-note">(사 + 주다)</span></p>
                 </div>
                 <div class="ex">
-                  <p class="k">창문 좀 열어 주세요.</p>
+                  <p class="k">창문 좀 열<span class="hl">어 주세요</span>.</p>
                   <p class="e">Iltimos, derazani ochib bering.</p>
+                </div>
+                <div class="note">
+                  <p><span class="tag">Maslahat</span> Yaxshilik ulugʻ kishi uchun boʻlsa, 주다 oʻrniga kamtarona
+                    <span class="hl">드리다</span> ishlatiladi: 할머니께 책을 읽<span class="hl">어 드려요</span> ("Buvimga kitob
+                    oʻqib beraman").
+                  </p>
                 </div>
               </div>
               <div class="vocab">
@@ -1878,6 +2540,41 @@
                     <td class="w">감사합니다</td>
                     <td>rahmat</td>
                   </tr>
+                  <tr class="grp">
+                    <td colspan="2">Asosiy soʻzlar (핵심 단어)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">선물</td>
+                    <td>sovgʻa</td>
+                  </tr>
+                  <tr>
+                    <td class="w">초대</td>
+                    <td>taklif</td>
+                  </tr>
+                  <tr>
+                    <td class="w">초대장</td>
+                    <td>taklifnoma</td>
+                  </tr>
+                  <tr>
+                    <td class="w">초대하다</td>
+                    <td>taklif qilmoq</td>
+                  </tr>
+                  <tr>
+                    <td class="w">노래를 부르다</td>
+                    <td>qoʻshiq aytmoq</td>
+                  </tr>
+                  <tr>
+                    <td class="w">카드를 쓰다</td>
+                    <td>otkritka yozmoq</td>
+                  </tr>
+                  <tr>
+                    <td class="w">기분이 좋다</td>
+                    <td>kayfiyati yaxshi boʻlmoq</td>
+                  </tr>
+                  <tr>
+                    <td class="w">어린이날</td>
+                    <td>Bolalar kuni</td>
+                  </tr>
                 </table>
               </div>
             </section>
@@ -1888,44 +2585,61 @@
               <div class="gram">
                 <h3 class="gram-form">V + (으)ㄹ 거예요 <span class="gloss">— "...moqchiman (kelasi zamon)"</span></h3>
                 <p class="meta"><span class="tag">Shakli</span> undosh oʻzak + 을 거예요 · unli oʻzak + ㄹ 거예요</p>
-                <p class="def">Kelajakdagi reja yoki niyatni, yoki ehtimoliy taxminni bildiradi.</p>
+                <p class="def">Kelajakdagi reja yoki niyatni, yoki ehtimoliy taxminni bildiradi. Undosh oʻzak +
+                  <span class="hl">을 거예요</span>, unli oʻzak + <span class="hl">ㄹ 거예요</span>.
+                </p>
                 <div class="ex">
-                  <p class="k">이번 휴가에 여행을 갈 거예요.</p>
-                  <p class="e">Bu taʼtilda sayohatga boraman.</p>
+                  <p class="k">이번 휴가에 여행을 <span class="hl">갈 거예요</span>.</p>
+                  <p class="e">Bu taʼtilda sayohatga boraman. <span class="e-note">(가- unli oʻzak → ㄹ 거예요)</span></p>
                 </div>
                 <div class="ex">
-                  <p class="k">주말에 집에서 쉴 거예요.</p>
+                  <p class="k">주말에 집에서 <span class="hl">쉴 거예요</span>.</p>
                   <p class="e">Dam olish kuni uyda dam olaman.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">내일 친구를 만날 거예요.</p>
+                  <p class="k">내일 친구를 <span class="hl">만날 거예요</span>.</p>
                   <p class="e">Ertaga doʻstim bilan uchrashaman.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">저녁에 한국 음식을 먹을 거예요.</p>
-                  <p class="e">Kechqurun koreys taomini yeyman.</p>
+                  <p class="k">저녁에 한국 음식을 <span class="hl">먹을 거예요</span>.</p>
+                  <p class="e">Kechqurun koreys taomini yeyman. <span class="e-note">(먹- undosh oʻzak → 을 거예요)</span>
+                  </p>
+                </div>
+                <div class="note">
+                  <p><span class="tag">Eslatma</span> Yozma shaklda 것이에요 deb yoziladi, ammo nutqda hamma
+                    <span class="hl">거예요</span> deydi va shunday yozadi. Bu yerdagi ㄹ — kelasi zamon sifatdoshi,
+                    shuning uchun ㄹ-oʻzak faqat bitta ㄹ ni saqlaydi: 살다 → <span class="hl">살 거예요</span>.
+                  </p>
                 </div>
               </div>
               <div class="gram">
                 <h3 class="gram-form">A/V + 고 <span class="gloss">— "...ib / va (sanash yoki ketma-ketlik)"</span></h3>
                 <p class="meta"><span class="tag">Shakli</span> feʼl / sifat oʻzagi + 고</p>
                 <p class="def">Gaplarni bogʻlab faktlarni sanaydi ("va") yoki harakatlarni ketma-ket qoʻyadi ("...ib,
-                  soʻng").</p>
+                  soʻng"). Oʻzakka <span class="hl">고</span> qoʻshiladi (har qanday 받침).</p>
                 <div class="ex">
-                  <p class="k">밥을 먹고 영화를 봐요.</p>
-                  <p class="e">Ovqatlanib, keyin kino koʻraman.</p>
+                  <p class="k">밥을 먹<span class="hl">고</span> 영화를 봐요.</p>
+                  <p class="e">Ovqatlanib, keyin kino koʻraman. <span class="e-note">(ketma-ketlik: avval ovqat, soʻng
+                      kino)</span></p>
                 </div>
                 <div class="ex">
-                  <p class="k">방이 크고 깨끗해요.</p>
-                  <p class="e">Xona keng va toza.</p>
+                  <p class="k">방이 크<span class="hl">고</span> 깨끗해요.</p>
+                  <p class="e">Xona keng va toza. <span class="e-note">(ikki belgini sanash)</span></p>
                 </div>
                 <div class="ex">
-                  <p class="k">이 옷은 싸고 예뻐요.</p>
+                  <p class="k">이 옷은 싸<span class="hl">고</span> 예뻐요.</p>
                   <p class="e">Bu kiyim arzon va chiroyli.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">손을 씻고 밥을 먹어요.</p>
+                  <p class="k">손을 씻<span class="hl">고</span> 밥을 먹어요.</p>
                   <p class="e">Qoʻlimni yuvib, ovqatlanaman.</p>
+                </div>
+                <div class="note">
+                  <p><span class="tag">Qiyoslang</span> 고 shunchaki sanaydi yoki voqealarni tartiblaydi; "...gani uchun
+                    /
+                    natijada" maʼnosida <span class="hl">아/어서</span> ishlatiladi (16-boʻlim). 밥을 먹<span
+                      class="hl">고</span>
+                    갔어요 = yeb, soʻng bordi; 배가 고파<span class="hl">서</span> 먹었어요 = och boʻlgani uchun yedi.</p>
                 </div>
               </div>
               <div class="vocab">
@@ -2034,6 +2748,53 @@
                     <td class="w">고향 음식을 먹다</td>
                     <td>milliy taom yemoq</td>
                   </tr>
+                  <tr class="grp">
+                    <td colspan="2">Asosiy soʻzlar (핵심 단어)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">친구 집을 방문하다</td>
+                    <td>doʻst uyiga tashrif buyurmoq</td>
+                  </tr>
+                  <tr>
+                    <td class="w">휴일</td>
+                    <td>dam olish kuni (bayram)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">불꽃놀이</td>
+                    <td>otashin oʻyin (salyut)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">휴가</td>
+                    <td>taʼtil</td>
+                  </tr>
+                  <tr>
+                    <td class="w">강원도</td>
+                    <td>Kanvon viloyati</td>
+                  </tr>
+                  <tr>
+                    <td class="w">부산</td>
+                    <td>Pusan (shahar)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">빨리</td>
+                    <td>tez, tezda</td>
+                  </tr>
+                  <tr>
+                    <td class="w">안산</td>
+                    <td>Ansan (shahar)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">인삼차</td>
+                    <td>jenshen choyi</td>
+                  </tr>
+                  <tr>
+                    <td class="w">친척</td>
+                    <td>qarindoshlar</td>
+                  </tr>
+                  <tr>
+                    <td class="w">화장품</td>
+                    <td>kosmetika</td>
+                  </tr>
                 </table>
               </div>
             </section>
@@ -2045,43 +2806,57 @@
                 <h3 class="gram-form">N + (으)로 <span class="gloss">— "... vositasida (transport / asbob)"</span></h3>
                 <p class="meta"><span class="tag">Shakli</span> undosh bilan tugagan N + 으로 · unli / ㄹ bilan tugagan N +
                   로</p>
-                <p class="def">Usul, vosita yoki qurolni — shu jumladan transportni bildiradi.</p>
+                <p class="def">Usul, vosita yoki qurolni — shu jumladan transportni bildiradi. Undosh bilan tugagan N +
+                  <span class="hl">으로</span>, unli yoki ㄹ bilan tugagan N + <span class="hl">로</span>.
+                </p>
                 <div class="ex">
-                  <p class="k">버스로 학교에 가요.</p>
-                  <p class="e">Maktabga avtobusda boraman.</p>
+                  <p class="k">버스<span class="hl">로</span> 학교에 가요.</p>
+                  <p class="e">Maktabga avtobusda boraman. <span class="e-note">(버스 unli bilan tugaydi → 로)</span></p>
                 </div>
                 <div class="ex">
-                  <p class="k">젓가락으로 먹어요.</p>
-                  <p class="e">Choʻp bilan ovqatlanaman.</p>
+                  <p class="k">젓가락<span class="hl">으로</span> 먹어요.</p>
+                  <p class="e">Choʻp bilan ovqatlanaman. <span class="e-note">(젓가락 ㄱ bilan tugaydi → 으로)</span></p>
                 </div>
                 <div class="ex">
-                  <p class="k">지하철로 회사에 가요.</p>
-                  <p class="e">Ishga metroda boraman.</p>
+                  <p class="k">지하철<span class="hl">로</span> 회사에 가요.</p>
+                  <p class="e">Ishga metroda boraman. <span class="e-note">(지하철 ㄹ bilan tugaydi → 로, 으로 emas)</span></p>
                 </div>
                 <div class="ex">
-                  <p class="k">볼펜으로 이름을 써요.</p>
+                  <p class="k">볼펜<span class="hl">으로</span> 이름을 써요.</p>
                   <p class="e">Ismimni ruchkada yozaman.</p>
+                </div>
+                <div class="note">
+                  <p><span class="tag">Istisno</span> ㄹ 받침 dan keyin oddiy <span class="hl">로</span> ishlatiladi, 으로
+                    emas:
+                    지하철<span class="hl">로</span>, 연필<span class="hl">로</span> — bu yerda ㄹ unlilar kabi xizmat qiladi.
+                  </p>
                 </div>
               </div>
               <div class="gram">
                 <h3 class="gram-form">V + (으)러 가다 / 오다 <span class="gloss">— "... qilgani bormoq / kelmoq"</span></h3>
                 <p class="meta"><span class="tag">Shakli</span> undosh oʻzak + 으러 · unli oʻzak + 러 + 가다/오다</p>
-                <p class="def">Biror joyga borish yoki kelishning maqsadini bildiradi.</p>
+                <p class="def">Biror joyga borish yoki kelishning maqsadini bildiradi. Undosh oʻzak +
+                  <span class="hl">으러</span>, unli oʻzak + <span class="hl">러</span>, soʻng 가다/오다.
+                </p>
                 <div class="ex">
-                  <p class="k">밥을 먹으러 식당에 가요.</p>
-                  <p class="e">Ovqatlangani oshxonaga boraman.</p>
+                  <p class="k">밥을 먹<span class="hl">으러</span> 식당에 가요.</p>
+                  <p class="e">Ovqatlangani oshxonaga boraman. <span class="e-note">(먹- undosh oʻzak → 으러)</span></p>
                 </div>
                 <div class="ex">
-                  <p class="k">친구를 만나러 왔어요.</p>
-                  <p class="e">Doʻstim bilan uchrashgani keldim.</p>
+                  <p class="k">친구를 만나<span class="hl">러</span> 왔어요.</p>
+                  <p class="e">Doʻstim bilan uchrashgani keldim. <span class="e-note">(만나- unli oʻzak → 러)</span></p>
                 </div>
                 <div class="ex">
-                  <p class="k">옷을 사러 백화점에 가요.</p>
+                  <p class="k">옷을 사<span class="hl">러</span> 백화점에 가요.</p>
                   <p class="e">Kiyim olgani savdo markaziga boraman.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">책을 빌리러 도서관에 가요.</p>
+                  <p class="k">책을 빌리<span class="hl">러</span> 도서관에 가요.</p>
                   <p class="e">Kitob olgani kutubxonaga boraman.</p>
+                </div>
+                <div class="note">
+                  <p><span class="tag">Maslahat</span> (으)러 faqat harakat feʼllari bilan keladi (가다·오다·다니다). Har qanday
+                    feʼl bilan umumiy maqsad uchun <span class="hl">(으)려고</span> ishlatiladi (2-daraja).</p>
                 </div>
               </div>
               <div class="vocab">
@@ -2149,6 +2924,37 @@
                     <td class="w">택시 타는 곳 / 택시</td>
                     <td>taksi toʻxtash joyi / taksi</td>
                   </tr>
+                  <tr class="grp">
+                    <td colspan="2">Asosiy soʻzlar (핵심 단어)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">소포</td>
+                    <td>pochta posilkasi</td>
+                  </tr>
+                  <tr>
+                    <td class="w">환전하다</td>
+                    <td>valyuta almashtirmoq</td>
+                  </tr>
+                  <tr>
+                    <td class="w">남산</td>
+                    <td>Namsan (Seuldagi togʻ)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">남산 서울 타워</td>
+                    <td>Namsan Seul minorasi</td>
+                  </tr>
+                  <tr>
+                    <td class="w">전망대</td>
+                    <td>kuzatuv maydonchasi</td>
+                  </tr>
+                  <tr>
+                    <td class="w">케이블카</td>
+                    <td>osma yoʻl (kanat yoʻli)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">힘들다</td>
+                    <td>qiyin, ogʻir, charchatadigan</td>
+                  </tr>
                 </table>
               </div>
             </section>
@@ -2160,45 +2966,59 @@
                 <h3 class="gram-form">V + (으)ㄹ까요? <span class="gloss">— "...aylikmi? / ...aymi?"</span></h3>
                 <p class="meta"><span class="tag">Shakli</span> undosh oʻzak + 을까요? · unli oʻzak + ㄹ까요?</p>
                 <p class="def">Birgalikda biror ish qilishni taklif qiladi yoki yordam taklif qiladi va suhbatdoshning
-                  fikrini soʻraydi.</p>
+                  fikrini soʻraydi. Undosh oʻzak + <span class="hl">을까요</span>, unli oʻzak + <span
+                    class="hl">ㄹ까요</span>.</p>
                 <div class="ex">
-                  <p class="k">저녁 7시에 만날까요?</p>
-                  <p class="e">Kechqurun soat 7 da uchrashaylikmi?</p>
+                  <p class="k">저녁 7시에 만<span class="hl">날까요</span>?</p>
+                  <p class="e">Kechqurun soat 7 da uchrashaylikmi? <span class="e-note">(만나- unli oʻzak → ㄹ까요)</span>
+                  </p>
                 </div>
                 <div class="ex">
-                  <p class="k">제가 도와드릴까요?</p>
+                  <p class="k">제가 도와<span class="hl">드릴까요</span>?</p>
                   <p class="e">Sizga yordam beraymi?</p>
                 </div>
                 <div class="ex">
-                  <p class="k">우리 같이 점심 먹을까요?</p>
-                  <p class="e">Birga tushlik qilaylikmi?</p>
+                  <p class="k">우리 같이 점심 먹<span class="hl">을까요</span>?</p>
+                  <p class="e">Birga tushlik qilaylikmi? <span class="e-note">(먹- undosh oʻzak → 을까요)</span></p>
                 </div>
                 <div class="ex">
-                  <p class="k">내일 영화 볼까요?</p>
+                  <p class="k">내일 영화 <span class="hl">볼까요</span>?</p>
                   <p class="e">Ertaga kino koʻraylikmi?</p>
+                </div>
+                <div class="note">
+                  <p><span class="tag">Maslahat</span> 을까요? taklifiga <span class="hl">-(으)ㅂ시다</span> ("...aylik")
+                    yoki 아/어요 bilan javob beriladi: "네, 같이 <span class="hl">먹읍시다</span>" / "네, 먹어요" ("Ha, yeylik").</p>
                 </div>
               </div>
               <div class="gram">
                 <h3 class="gram-form">못 + V <span class="gloss">— "...ololmaslik (imkonsizlik)"</span></h3>
                 <p class="meta"><span class="tag">Shakli</span> 못 + feʼl &nbsp;·&nbsp; 하다 feʼllari: N + 못 하다</p>
-                <p class="def">Qoʻlidan kelmaslik yoki imkonsizlikni bildiradi — ...ololmadim, ...ololmayman (안 esa
-                  "shunchaki
-                  qilmaydi" maʼnosida farq qiladi).</p>
+                <p class="def">Qoʻlidan kelmaslik yoki imkonsizlikni bildiradi — ...ololmadim, ...ololmayman.
+                  <span class="hl">못</span> ni feʼldan bevosita oldin qoʻyiladi (안 esa "shunchaki qilmaydi" maʼnosida
+                  farq qiladi).
+                </p>
                 <div class="ex">
-                  <p class="k">오늘은 못 가요.</p>
+                  <p class="k">오늘은 <span class="hl">못</span> 가요.</p>
                   <p class="e">Bugun bora olmayman.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">수영을 못 해요.</p>
-                  <p class="e">Men suza olmayman.</p>
+                  <p class="k">수영을 <span class="hl">못</span> 해요.</p>
+                  <p class="e">Men suza olmayman. <span class="e-note">(하다 feʼli: 못 otni va 하다 ni ajratadi)</span></p>
                 </div>
                 <div class="ex">
-                  <p class="k">매운 음식을 못 먹어요.</p>
+                  <p class="k">매운 음식을 <span class="hl">못</span> 먹어요.</p>
                   <p class="e">Achchiq taom yeya olmayman.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">바빠서 친구를 못 만나요.</p>
+                  <p class="k">바빠서 친구를 <span class="hl">못</span> 만나요.</p>
                   <p class="e">Band boʻlganim uchun doʻstim bilan uchrasha olmayman.</p>
+                </div>
+                <div class="note">
+                  <p><span class="tag">Qiyoslang</span> <span class="hl">안</span> = qilmaslikni tanlash (안 먹어요,
+                    "yemayman");
+                    <span class="hl">못</span> = qoʻlidan kelmaslik (못 먹어요, "yeya olmayman"). 안 kabi 못 ham
+                    하다 feʼllarini ajratadi: 운동 <span class="hl">못</span> 해요.
+                  </p>
                 </div>
               </div>
               <div class="vocab">
@@ -2270,6 +3090,25 @@
                     <td class="w">시험이 있다</td>
                     <td>imtihon boʻlmoq</td>
                   </tr>
+                  <tr class="grp">
+                    <td colspan="2">Asosiy soʻzlar (핵심 단어)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">모임</td>
+                    <td>yigʻin, uchrashuv</td>
+                  </tr>
+                  <tr>
+                    <td class="w">갑자기 일이 생기다</td>
+                    <td>birdan ish chiqib qolmoq</td>
+                  </tr>
+                  <tr>
+                    <td class="w">회식을 하다</td>
+                    <td>korporativ kechki ovqat qilmoq</td>
+                  </tr>
+                  <tr>
+                    <td class="w">답장하다</td>
+                    <td>javob yozmoq</td>
+                  </tr>
                 </table>
               </div>
             </section>
@@ -2280,43 +3119,56 @@
               <div class="gram">
                 <h3 class="gram-form">A/V + 네요 <span class="gloss">— "...-ku! (yangi sezgan narsa)"</span></h3>
                 <p class="meta"><span class="tag">Shakli</span> feʼl / sifat oʻzagi + 네요</p>
-                <p class="def">Yengil hayrat yoki endigina sezgan narsa haqidagi taassurotni bildiradi.</p>
+                <p class="def">Yengil hayrat yoki endigina sezgan narsa haqidagi taassurotni bildiradi. Oʻzakka
+                  <span class="hl">네요</span> qoʻshiladi.
+                </p>
                 <div class="ex">
-                  <p class="k">오늘 날씨가 덥네요.</p>
+                  <p class="k">오늘 날씨가 덥<span class="hl">네요</span>.</p>
                   <p class="e">Bugun havo issiq-ku!</p>
                 </div>
                 <div class="ex">
-                  <p class="k">한국어를 잘하네요.</p>
+                  <p class="k">한국어를 잘하<span class="hl">네요</span>.</p>
                   <p class="e">Koreyschada juda yaxshi gapirar ekansiz!</p>
                 </div>
                 <div class="ex">
-                  <p class="k">이 음식이 정말 맛있네요.</p>
+                  <p class="k">이 음식이 정말 맛있<span class="hl">네요</span>.</p>
                   <p class="e">Bu taom rostdan ham mazali ekan!</p>
                 </div>
                 <div class="ex">
-                  <p class="k">밖에 비가 오네요.</p>
+                  <p class="k">밖에 비가 오<span class="hl">네요</span>.</p>
                   <p class="e">Tashqarida yomgʻir yogʻyapti-ku!</p>
+                </div>
+                <div class="note">
+                  <p><span class="tag">Istisno</span> ㄹ-oʻzak 네요 dan oldin ㄹ ni tushiradi: 살다 → <span
+                      class="hl">사네요</span>
+                    ("Shu yerda yashar ekansiz-ku!"), 멀다 → <span class="hl">머네요</span> ("Uzoq ekan-da!").</p>
                 </div>
               </div>
               <div class="gram">
                 <h3 class="gram-form">N + 보다 <span class="gloss">— "...dan (qiyoslash)"</span></h3>
                 <p class="meta"><span class="tag">Shakli</span> N + 보다 (+ 더 "koʻproq") + sifat</p>
-                <p class="def">Qiyoslash mezonini bildiradi — "N dan koʻra ...roq". Koʻpincha 더 bilan birga keladi.</p>
+                <p class="def">Qiyoslash mezonini bildiradi — "N dan koʻra ...roq". <span class="hl">보다</span>
+                  qiyoslanayotgan
+                  narsaga qoʻshiladi, koʻpincha <span class="hl">더</span> ("koʻproq") bilan birga keladi.</p>
                 <div class="ex">
-                  <p class="k">서울이 부산보다 추워요.</p>
+                  <p class="k">서울이 부산<span class="hl">보다</span> 추워요.</p>
                   <p class="e">Seul Busanga qaraganda sovuqroq.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">오늘이 어제보다 더 더워요.</p>
+                  <p class="k">오늘이 어제<span class="hl">보다</span> 더 더워요.</p>
                   <p class="e">Bugun kechagidan issiqroq.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">기차가 버스보다 빨라요.</p>
+                  <p class="k">기차가 버스<span class="hl">보다</span> 빨라요.</p>
                   <p class="e">Poyezd avtobusdan tezroq.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">동생이 저보다 키가 커요.</p>
+                  <p class="k">동생이 저<span class="hl">보다</span> 키가 커요.</p>
                   <p class="e">Inim mendan boʻyliroq.</p>
+                </div>
+                <div class="note">
+                  <p><span class="tag">Maslahat</span> Soʻz tartibi erkin: 부산<span class="hl">보다</span> 서울이 추워요
+                    ham xuddi shu maʼnoni beradi. 보다 li ot — siz <em>qarshi</em> oʻlchaydigan asos.</p>
                 </div>
               </div>
               <div class="vocab">
@@ -2396,6 +3248,49 @@
                     <td class="w">천둥 / 번개가 치다</td>
                     <td>momaqaldiroq / chaqmoq chaqmoq</td>
                   </tr>
+                  <tr class="grp">
+                    <td colspan="2">Asosiy soʻzlar (핵심 단어)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">계절</td>
+                    <td>fasl, mavsum</td>
+                  </tr>
+                  <tr>
+                    <td class="w">사계절</td>
+                    <td>toʻrt fasl</td>
+                  </tr>
+                  <tr>
+                    <td class="w">날씨</td>
+                    <td>ob-havo</td>
+                  </tr>
+                  <tr>
+                    <td class="w">꽃이 많이 피다</td>
+                    <td>koʻp gul ochiladi</td>
+                  </tr>
+                  <tr>
+                    <td class="w">눈썰매를 타다</td>
+                    <td>chana uchmoq</td>
+                  </tr>
+                  <tr>
+                    <td class="w">단풍이 아름답다</td>
+                    <td>kuzgi yaproqlar chiroyli</td>
+                  </tr>
+                  <tr>
+                    <td class="w">바닷가</td>
+                    <td>dengiz boʻyi (plyaj)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">인구</td>
+                    <td>aholi</td>
+                  </tr>
+                  <tr>
+                    <td class="w">매우</td>
+                    <td>juda, nihoyatda</td>
+                  </tr>
+                  <tr>
+                    <td class="w">스키를 타다</td>
+                    <td>changʻi uchmoq</td>
+                  </tr>
                 </table>
               </div>
             </section>
@@ -2406,44 +3301,62 @@
               <div class="gram">
                 <h3 class="gram-form">-아 / 어서 <span class="gloss">— "...gani uchun, shu sababli"</span></h3>
                 <p class="meta"><span class="tag">Shakli</span> ㅏ/ㅗ oʻzak + 아서 · boshqa oʻzaklar + 어서 · 하다 → 해서</p>
-                <p class="def">Sabab bilan natijani bogʻlaydi. Birinchi gap oʻz zamonini koʻrsata olmaydi (zamon oxirgi
-                  feʼlga qoʻyiladi).</p>
+                <p class="def">Sabab bilan natijani bogʻlaydi. ㅏ/ㅗ oʻzak + <span class="hl">아서</span>, boshqa oʻzaklar +
+                  <span class="hl">어서</span>, 하다 → <span class="hl">해서</span>. Birinchi gap oʻz zamonini koʻrsata
+                  olmaydi (zamon oxirgi feʼlga qoʻyiladi).
+                </p>
                 <div class="ex">
-                  <p class="k">배가 아파서 병원에 갔어요.</p>
-                  <p class="e">Qornim ogʻrigani uchun shifoxonaga bordim.</p>
+                  <p class="k">배가 아파<span class="hl">서</span> 병원에 갔어요.</p>
+                  <p class="e">Qornim ogʻrigani uchun shifoxonaga bordim. <span class="e-note">(아파서 da 았 yoʻq)</span>
+                  </p>
                 </div>
                 <div class="ex">
-                  <p class="k">바빠서 점심을 못 먹었어요.</p>
+                  <p class="k">바빠<span class="hl">서</span> 점심을 못 먹었어요.</p>
                   <p class="e">Band boʻlganim uchun tushlik qila olmadim.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">날씨가 추워서 집에 있어요.</p>
+                  <p class="k">날씨가 추워<span class="hl">서</span> 집에 있어요.</p>
                   <p class="e">Havo sovuq boʻlgani uchun uyda turibman.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">머리가 아파서 약을 먹어요.</p>
+                  <p class="k">머리가 아파<span class="hl">서</span> 약을 먹어요.</p>
                   <p class="e">Boshim ogʻrigani uchun dori ichaman.</p>
+                </div>
+                <div class="note">
+                  <p><span class="tag">Istisno</span> 아/어서 buyruq yoki taklifdan oldin ishlatilmaydi — 으세요/읍시다 bilan
+                    "...gani uchun" maʼnosida <span class="hl">(으)니까</span> ishlatiladi: 추우<span class="hl">니까</span>
+                    문을 닫으세요 ("Sovuq, shuning uchun eshikni yoping").</p>
                 </div>
               </div>
               <div class="gram">
                 <h3 class="gram-form">V + 는 것 <span class="gloss">— "...ish (harakatning ot shakli)"</span></h3>
                 <p class="meta"><span class="tag">Shakli</span> feʼl oʻzagi + 는 것 (koʻpincha 는 게 / 는 걸 ga qisqaradi)</p>
-                <p class="def">Feʼlni ot birikmasiga aylantiradi, shunda u ega yoki toʻldiruvchi boʻla oladi.</p>
+                <p class="def">Feʼlni ot birikmasiga aylantiradi, shunda u ega yoki toʻldiruvchi boʻla oladi. Feʼl
+                  oʻzagi +
+                  <span class="hl">는 것</span>, nutqda koʻpincha <span class="hl">는 게</span> (+이) / <span class="hl">는
+                    걸</span> (+을) ga qisqaradi.
+                </p>
                 <div class="ex">
-                  <p class="k">운동하는 것이 건강에 좋아요.</p>
+                  <p class="k">운동하<span class="hl">는 것</span>이 건강에 좋아요.</p>
                   <p class="e">Mashq qilish sogʻliq uchun foydali.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">저는 책 읽는 것을 좋아해요.</p>
+                  <p class="k">저는 책 읽<span class="hl">는 것</span>을 좋아해요.</p>
                   <p class="e">Men kitob oʻqishni yoqtiraman.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">저는 노래하는 것을 좋아해요.</p>
+                  <p class="k">저는 노래하<span class="hl">는 것</span>을 좋아해요.</p>
                   <p class="e">Men qoʻshiq aytishni yoqtiraman.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">아침에 일어나는 것이 힘들어요.</p>
+                  <p class="k">아침에 일어나<span class="hl">는 것</span>이 힘들어요.</p>
                   <p class="e">Ertalab turish qiyin.</p>
+                </div>
+                <div class="note">
+                  <p><span class="tag">Maslahat</span> Erkin soʻzlashuvda 는 것이 → <span class="hl">는 게</span> va 는 것을 →
+                    <span class="hl">는 걸</span>: 운동하<span class="hl">는 게</span> 좋아요, 책 읽<span class="hl">는 걸</span>
+                    좋아해요.
+                  </p>
                 </div>
               </div>
               <div class="vocab">
@@ -2538,6 +3451,21 @@
                     <td class="w">푹 쉬다</td>
                     <td>yaxshilab dam olmoq</td>
                   </tr>
+                  <tr class="grp">
+                    <td colspan="2">Asosiy soʻzlar (핵심 단어)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">다리가 부러지다</td>
+                    <td>oyoq sinmoq</td>
+                  </tr>
+                  <tr>
+                    <td class="w">비타민 C</td>
+                    <td>C vitamini</td>
+                  </tr>
+                  <tr>
+                    <td class="w">생강차</td>
+                    <td>zanjabil choyi</td>
+                  </tr>
                 </table>
               </div>
             </section>
@@ -2549,43 +3477,59 @@
                 <h3 class="gram-form">N + (으)로 <span class="gloss">— "... tomonga (yoʻnalish)"</span></h3>
                 <p class="meta"><span class="tag">Shakli</span> undosh bilan tugagan N + 으로 · unli / ㄹ bilan tugagan N +
                   로</p>
-                <p class="def">Bu yerda 으로 yoʻnalishni — qaysi tomonga yurish yoki burilishni bildiradi.</p>
+                <p class="def">Bu yerda <span class="hl">(으)로</span> yoʻnalishni — qaysi tomonga yurish yoki burilishni
+                  bildiradi. Undosh bilan tugagan N + <span class="hl">으로</span>, unli yoki ㄹ bilan tugagan N +
+                  <span class="hl">로</span>.
+                </p>
                 <div class="ex">
-                  <p class="k">이쪽으로 오세요.</p>
-                  <p class="e">Marhamat, bu tomonga keling.</p>
+                  <p class="k">이쪽<span class="hl">으로</span> 오세요.</p>
+                  <p class="e">Marhamat, bu tomonga keling. <span class="e-note">(이쪽 ㄱ bilan tugaydi → 으로)</span></p>
                 </div>
                 <div class="ex">
-                  <p class="k">오른쪽으로 가세요.</p>
+                  <p class="k">오른쪽<span class="hl">으로</span> 가세요.</p>
                   <p class="e">Oʻng tomonga yuring.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">2층으로 올라가세요.</p>
+                  <p class="k">2층<span class="hl">으로</span> 올라가세요.</p>
                   <p class="e">Ikkinchi qavatga chiqing.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">출구는 저쪽으로 가세요.</p>
+                  <p class="k">출구는 저쪽<span class="hl">으로</span> 가세요.</p>
                   <p class="e">Chiqish uchun u tomonga yuring.</p>
+                </div>
+                <div class="note">
+                  <p><span class="tag">Qiyoslang</span> Yoʻnalish 으로 = "...tomonga / ...yoʻnalishida" (학교<span
+                      class="hl">로</span> 가요, oʻsha tomonga ketmoq); manzil 에 = "...ga yetib bormoq" (학교<span
+                      class="hl">에</span> 가요, maktabning oʻziga bormoq).</p>
                 </div>
               </div>
               <div class="gram">
                 <h3 class="gram-form">V + 지 마세요 <span class="gloss">— "...mang (taqiq)"</span></h3>
                 <p class="meta"><span class="tag">Shakli</span> feʼl oʻzagi + 지 마세요 (oddiy: 지 마)</p>
-                <p class="def">Muloyim inkor buyruq — birovga biror ishni qilmaslikni aytadi.</p>
+                <p class="def">Muloyim inkor buyruq — birovga biror ishni qilmaslikni aytadi. Feʼl oʻzagiga
+                  <span class="hl">지 마세요</span> qoʻshiladi (har qanday 받침).
+                </p>
                 <div class="ex">
-                  <p class="k">사진을 찍지 마세요.</p>
+                  <p class="k">사진을 찍<span class="hl">지 마세요</span>.</p>
                   <p class="e">Surat olmang.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">여기에서 담배를 피우지 마세요.</p>
+                  <p class="k">여기에서 담배를 피우<span class="hl">지 마세요</span>.</p>
                   <p class="e">Bu yerda chekmang.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">교실에서 음식을 먹지 마세요.</p>
+                  <p class="k">교실에서 음식을 먹<span class="hl">지 마세요</span>.</p>
                   <p class="e">Sinfxonada ovqat yemang.</p>
                 </div>
                 <div class="ex">
-                  <p class="k">여기에 쓰레기를 버리지 마세요.</p>
+                  <p class="k">여기에 쓰레기를 버리<span class="hl">지 마세요</span>.</p>
                   <p class="e">Bu yerga axlat tashlamang.</p>
+                </div>
+                <div class="note">
+                  <p><span class="tag">Qiyoslang</span> 지 마세요 harakatni taqiqlaydi ("qilmang"); tasdiq iltimos esa
+                    <span class="hl">(으)세요</span> ("qiling"). Erkin nutqda 지 마세요 → <span class="hl">지 마</span>:
+                    걱정하<span class="hl">지 마</span> ("xavotir olma").
+                  </p>
                 </div>
               </div>
               <div class="vocab">
@@ -2661,6 +3605,77 @@
                     <td class="w">담배를 피우다</td>
                     <td>chekmoq</td>
                   </tr>
+                  <tr class="grp">
+                    <td colspan="2">Asosiy soʻzlar (핵심 단어)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">등록하다</td>
+                    <td>roʻyxatdan oʻtmoq</td>
+                  </tr>
+                  <tr>
+                    <td class="w">박물관</td>
+                    <td>muzey</td>
+                  </tr>
+                  <tr>
+                    <td class="w">수영반</td>
+                    <td>suzish toʻgaragi</td>
+                  </tr>
+                  <tr>
+                    <td class="w">역사 공부를 하다</td>
+                    <td>tarix oʻrganmoq</td>
+                  </tr>
+                  <tr>
+                    <td class="w">주민 센터</td>
+                    <td>aholiga xizmat markazi</td>
+                  </tr>
+                  <tr>
+                    <td class="w">주차장</td>
+                    <td>avtoturargoh</td>
+                  </tr>
+                  <tr>
+                    <td class="w">센터 사무실</td>
+                    <td>markaz idorasi</td>
+                  </tr>
+                  <tr>
+                    <td class="w">아래층</td>
+                    <td>pastki qavat</td>
+                  </tr>
+                  <tr>
+                    <td class="w">오른쪽</td>
+                    <td>oʻng tomon</td>
+                  </tr>
+                  <tr>
+                    <td class="w">왼쪽</td>
+                    <td>chap tomon</td>
+                  </tr>
+                  <tr>
+                    <td class="w">역사 박물관</td>
+                    <td>tarix muzeyi</td>
+                  </tr>
+                  <tr>
+                    <td class="w">동물원</td>
+                    <td>hayvonot bogʻi</td>
+                  </tr>
+                  <tr>
+                    <td class="w">설악산 국립 공원</td>
+                    <td>Soraksan milliy bogʻi</td>
+                  </tr>
+                  <tr>
+                    <td class="w">쓰레기 투기</td>
+                    <td>axlat tashlash (qoidabuzarlik)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">야영</td>
+                    <td>ochiq havoda tunash (lager)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">취사</td>
+                    <td>ovqat pishirish (tabiatda)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">캠핑</td>
+                    <td>kemping</td>
+                  </tr>
                 </table>
               </div>
             </section>
@@ -2672,44 +3687,61 @@
                 <h3 class="gram-form">A/V + 지요? <span class="gloss">— "...-a? (tasdiqlatish)"</span></h3>
                 <p class="meta"><span class="tag">Shakli</span> feʼl / sifat oʻzagi + 지요? (ogʻzaki: 죠?)</p>
                 <p class="def">Soʻzlovchi allaqachon toʻgʻri deb bilgan narsani suhbatdoshdan tasdiqlashini soʻraydi.
-                </p>
+                  Oʻzakka <span class="hl">지요</span> qoʻshiladi; nutqda <span class="hl">죠</span> ga qisqaradi.</p>
                 <div class="ex">
-                  <p class="k">한국 음식이 맛있지요?</p>
+                  <p class="k">한국 음식이 맛있<span class="hl">지요</span>?</p>
                   <p class="e">Koreys taomi mazali-a?</p>
                 </div>
                 <div class="ex">
-                  <p class="k">날씨가 춥지요?</p>
+                  <p class="k">날씨가 춥<span class="hl">지요</span>?</p>
                   <p class="e">Havo sovuq-a?</p>
                 </div>
                 <div class="ex">
-                  <p class="k">이 영화 재미있지요?</p>
+                  <p class="k">이 영화 재미있<span class="hl">지요</span>?</p>
                   <p class="e">Bu kino qiziqarli-a?</p>
                 </div>
                 <div class="ex">
-                  <p class="k">내일 학교에 가지요?</p>
+                  <p class="k">내일 학교에 가<span class="hl">지요</span>?</p>
                   <p class="e">Ertaga maktabga borasiz-a?</p>
+                </div>
+                <div class="note">
+                  <p><span class="tag">Maslahat</span> 지요? rozilik kutadi, shuning uchun javob odatda 네 boʻladi:
+                    "춥<span class="hl">죠</span>?" — "네, 추워요." Oddiy 아/어요? esa hech qanday taxminsiz neytral
+                    ha/yoʻq savoli boʻlib, undan farq qiladi.</p>
                 </div>
               </div>
               <div class="gram">
                 <h3 class="gram-form">A/V + 는데 <span class="gloss">— "...-yu, lekin (zamin yoki
                     qarama-qarshilik)"</span></h3>
                 <p class="meta"><span class="tag">Shakli</span> feʼl + 는데 · sifat + -(으)ㄴ데 · N + 인데</p>
-                <p class="def">Asosiy gapdan oldin zamin tayyorlaydi yoki qarama-qarshilik kiritadi.</p>
+                <p class="def">Asosiy gapdan oldin zamin tayyorlaydi yoki qarama-qarshilik kiritadi. Feʼllar
+                  <span class="hl">는데</span> ni; sifatlar <span class="hl">-(으)ㄴ데</span> ni; otlar
+                  <span class="hl">인데</span> ni oladi.
+                </p>
                 <div class="ex">
-                  <p class="k">한국 생활은 힘든데 재미있어요.</p>
-                  <p class="e">Koreyadagi hayot ogʻir, lekin qiziqarli.</p>
+                  <p class="k">한국 생활은 힘<span class="hl">든데</span> 재미있어요.</p>
+                  <p class="e">Koreyadagi hayot ogʻir, lekin qiziqarli. <span class="e-note">(힘들다 + ㄴ데, ㄹ tushadi →
+                      힘든데)</span></p>
                 </div>
                 <div class="ex">
-                  <p class="k">지금 비가 오는데 우산이 없어요.</p>
-                  <p class="e">Hozir yomgʻir yogʻyapti, lekin soyabonim yoʻq.</p>
+                  <p class="k">지금 비가 오<span class="hl">는데</span> 우산이 없어요.</p>
+                  <p class="e">Hozir yomgʻir yogʻyapti, lekin soyabonim yoʻq. <span class="e-note">(feʼl 오다 → 는데)</span>
+                  </p>
                 </div>
                 <div class="ex">
-                  <p class="k">배가 고픈데 식당이 문을 닫았어요.</p>
-                  <p class="e">Qornim ochib qolgan, lekin oshxona yopilib qolibdi.</p>
+                  <p class="k">배가 고<span class="hl">픈데</span> 식당이 문을 닫았어요.</p>
+                  <p class="e">Qornim ochib qolgan, lekin oshxona yopilib qolibdi. <span class="e-note">(sifat 고프다 →
+                      ㄴ데)</span></p>
                 </div>
                 <div class="ex">
-                  <p class="k">이 옷이 예쁜데 좀 비싸요.</p>
+                  <p class="k">이 옷이 예<span class="hl">쁜데</span> 좀 비싸요.</p>
                   <p class="e">Bu kiyim chiroyli, lekin biroz qimmat.</p>
+                </div>
+                <div class="note">
+                  <p><span class="tag">Qiyoslang</span> 지만 sof "lekin"; <span class="hl">는데</span> yumshoqroq —
+                    koʻpincha
+                    shunchaki zamin tayyorlaydi ("...-yu, shu sababli...") va iltimosga tabiiy kirish boʻladi: 시간이
+                    있<span class="hl">는데</span> 같이 갈까요? ("Vaqtim bor, birga boraylikmi?").</p>
                 </div>
               </div>
               <div class="vocab">
@@ -2800,6 +3832,69 @@
                   <tr>
                     <td class="w">버스 전용 차로</td>
                     <td>faqat avtobuslar uchun yoʻlak</td>
+                  </tr>
+                  <tr class="grp">
+                    <td colspan="2">Asosiy soʻzlar (핵심 단어)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">교통 카드</td>
+                    <td>transport kartasi</td>
+                  </tr>
+                  <tr>
+                    <td class="w">대중교통 수단을 이용하다</td>
+                    <td>jamoat transportidan foydalanmoq</td>
+                  </tr>
+                  <tr>
+                    <td class="w">입학하다</td>
+                    <td>(maktabga) oʻqishga kirmoq</td>
+                  </tr>
+                  <tr>
+                    <td class="w">점심시간</td>
+                    <td>tushlik vaqti</td>
+                  </tr>
+                  <tr>
+                    <td class="w">졸업하다</td>
+                    <td>(oʻqishni) bitirmoq</td>
+                  </tr>
+                  <tr>
+                    <td class="w">택시를 잡다</td>
+                    <td>taksi ushlamoq</td>
+                  </tr>
+                  <tr>
+                    <td class="w">편하다</td>
+                    <td>qulay boʻlmoq</td>
+                  </tr>
+                  <tr>
+                    <td class="w">문을 닫다</td>
+                    <td>eshikni yopmoq; (doʻkon) yopilmoq</td>
+                  </tr>
+                  <tr>
+                    <td class="w">문을 열다</td>
+                    <td>eshikni ochmoq; (doʻkon) ochilmoq</td>
+                  </tr>
+                  <tr>
+                    <td class="w">팥빙수</td>
+                    <td>patbingsu (muzli shirinlik)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">결혼하다</td>
+                    <td>turmush qurmoq</td>
+                  </tr>
+                  <tr>
+                    <td class="w">익숙하다</td>
+                    <td>koʻnikkan, tanish boʻlmoq</td>
+                  </tr>
+                  <tr>
+                    <td class="w">중국어</td>
+                    <td>xitoy tili</td>
+                  </tr>
+                  <tr>
+                    <td class="w">평일</td>
+                    <td>ish kuni (oddiy kun)</td>
+                  </tr>
+                  <tr>
+                    <td class="w">의식주</td>
+                    <td>oziq-ovqat, kiyim va uy-joy (asosiy ehtiyojlar)</td>
                   </tr>
                 </table>
               </div>
@@ -3002,7 +4097,7 @@
             </div>
             <hr class="rule">
             <p style="text-align:center; color:var(--faint); font-size:13px; font-style:italic; margin-top:24px;">End of
-              qoʻllanma soʻngi · KIIP 1-bosqich — 한국어와 한국문화 초급 1 · 화이팅!</p>
+              qoʻllanma soʻngi · KIIP 1-daraja — 한국어와 한국문화 초급 1 · 화이팅!</p>
             <!--INDEX-->
 
           </td>

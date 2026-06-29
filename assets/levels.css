@@ -5,13 +5,20 @@
       --ink-strong: #1a1815;
       --muted: #6b6560;
       --soft: #4a4540;
-      --faint: #9a938b;
+      --faint: #78716a;
       --line: #d8d2ca;
       --line-strong: #ddd5c8;
       --zebra: #f4f7f4;
       --shadow: rgba(0, 0, 0, .05);
       --shadow-hover: rgba(0, 0, 0, .10);
       --voc-border: var(--line);
+      /* Top controls — sized in rem so they scale with the reader's text size. */
+      --ctrl-h: 2.25rem;        /* control pill height */
+      --ctrl-inset: 1rem;       /* gap from the page edges */
+      /* The level/language selectors live at the top of the page and scroll away
+         with it; they don't float. So a pinned unit header has the top to itself
+         and rests just below the very top edge — nothing to dodge. */
+      --sticky-top: 0.75rem;
     }
 
     :root[data-theme="dark"] {
@@ -120,28 +127,109 @@
       transition: background-color .25s ease, color .25s ease;
     }
 
-    .page-controls {
+    /* Small opaque top strip, the page colour, that masks the sliver of text
+       scrolling up just above a pinned unit header (so nothing peeks over it).
+       Below the sticky headers (z 5). */
+    body::before {
+      content: "";
       position: fixed;
-      top: 16px;
-      right: 16px;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: calc(var(--sticky-top) + 0.5rem);
+      z-index: 4;
+      pointer-events: none;
+      background: var(--bg);
+    }
+
+    /* The level + language selectors sit at the top of the page and scroll away
+       with it — they are NOT fixed. So they're only on screen at the top, and a
+       pinned unit header owns the top edge once you scroll, with nothing to fight.
+       (absolute, not static, so they overlay the top margin without pushing the
+       document down.) */
+    .page-controls {
+      position: absolute;
+      top: var(--ctrl-inset);
+      right: var(--ctrl-inset);
       display: flex;
-      gap: 8px;
+      gap: 0.5rem;
       z-index: 60;
+    }
+    /* once the level switcher becomes the masthead rail and the theme/language
+       pills have moved to the dock, the top cluster is empty — hide it */
+    .page-controls.is-empty { display: none; }
+
+    /* ============================================================
+       Masthead level nav (built by levels.js): a header menu above the page
+       title — Home on the left, Level 1–5 on the right, the current level in the
+       level's accent. Keys off the per-level --accent vars, so light/dark and
+       each level's colour come for free. Scrolls away with the masthead.
+       ============================================================ */
+    .sr-only {
+      position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+      overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+    }
+    .level-nav {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.375rem 1.25rem;
+      margin: 0 0 1.125rem;
+      padding-bottom: 0.6875rem;
+      border-bottom: 1px solid var(--line);
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 0.8125rem;
+      font-weight: 600;
+    }
+    .ln-home {
+      color: var(--muted);
+      text-decoration: none;
+      white-space: nowrap;
+      transition: color .15s ease;
+    }
+    .ln-levels {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 0.375rem 1.25rem;
+    }
+    .ln-lvl {
+      color: var(--muted);
+      text-decoration: none;
+      white-space: nowrap;
+      transition: color .15s ease;
+    }
+    .ln-home:hover,
+    .ln-lvl:hover { color: var(--accent-ink); }
+    .level-nav a:focus-visible {
+      outline: 2px solid var(--accent-ink);
+      outline-offset: 3px;
+      border-radius: 2px;
+    }
+    /* current level — the accent + a weight bump ("you are here") */
+    .ln-lvl[aria-current="page"] {
+      color: var(--accent-ink);
+      font-weight: 700;
+      cursor: default;
     }
 
     .ctrl {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
-      height: 36px;
-      padding: 0 13px;
+      gap: 0.375rem;
+      height: var(--ctrl-h);
+      padding: 0 0.8125rem;
       border-radius: 999px;
       border: 1px solid var(--line);
       background: var(--surface);
       color: var(--ink);
       cursor: pointer;
       font-family: 'Noto Sans KR', sans-serif;
-      font-size: 13px;
+      font-size: 0.8125rem;
       font-weight: 600;
       text-decoration: none;
       box-shadow: 0 1px 3px var(--shadow);
@@ -159,7 +247,7 @@
     }
 
     .theme-toggle {
-      padding: 0 11px;
+      padding: 0 0.6875rem;
     }
 
     .theme-toggle .i-moon {
@@ -244,7 +332,7 @@
       }
 
       .ctrl {
-        padding: 0 10px;
+        padding: 0 0.625rem;
       }
     }
 
@@ -339,6 +427,7 @@
 
     .lesson {
       margin: 34px 0 0;
+      scroll-margin-top: var(--sticky-top);
     }
 
     .lesson-head {
@@ -464,6 +553,37 @@
       color: var(--muted);
       margin: 1px 0 0;
       font-style: italic;
+    }
+
+    /* Highlight the target grammar pattern inside an example.
+       color-mix derives a soft highlighter tint from each level's accent,
+       so it adapts per level and to dark mode, and prints correctly. */
+    .ex .k .hl,
+    .def .hl,
+    .note .hl {
+      font-weight: 600;
+      color: var(--accent-ink);
+      background: color-mix(in srgb, var(--accent) 16%, transparent);
+      border-radius: 2px;
+      padding: 0 2px;
+      -webkit-box-decoration-break: clone;
+      box-decoration-break: clone;
+    }
+
+    .ex .e .hl {
+      font-weight: 600;
+      font-style: italic;
+      color: var(--accent-ink);
+      background: none;
+      padding: 0;
+    }
+
+    /* Small parenthetical hint after a translation (why this form, what changed) */
+    .ex .e .e-note {
+      font-style: normal;
+      color: var(--faint);
+      font-size: 12px;
+      font-family: 'Noto Sans KR', sans-serif;
     }
 
     .note {
@@ -630,6 +750,10 @@
         display: none !important;
       }
 
+      body::before {
+        display: none !important;
+      }
+
       :root[data-theme="dark"] {
         --bg: #fdfcfa;
         --surface: #ffffff;
@@ -637,7 +761,7 @@
         --ink-strong: #1a1815;
         --muted: #6b6560;
         --soft: #4a4540;
-        --faint: #9a938b;
+        --faint: #78716a;
         --line: #d8d2ca;
         --zebra: #f4f7f4;
       }
@@ -789,6 +913,7 @@
 
     .unit {
       margin: 34px 0 0;
+      scroll-margin-top: var(--sticky-top);
     }
 
     .unit-head {
@@ -877,4 +1002,258 @@
     .sect {
       break-inside: avoid;
     }
+    }
+
+    /* ============================================================
+       Reader mode (added by assets/levels.js)
+       Collapsible units · floating search/jump bar · back-to-top
+       ============================================================ */
+    .lesson-head {
+      cursor: pointer;
+      -webkit-user-select: none;
+      user-select: none;
+      position: sticky;
+      top: var(--sticky-top);
+      z-index: 5;
+      background: var(--bg);
+      padding-top: 9px;
+      box-shadow: 0 1px 0 var(--line);
+      transition: border-color .15s ease, box-shadow .15s ease;
+      /* one line, so the pinned header is always a single compact row that shares
+         the top band with the floating controls (never wraps to a second line) */
+      flex-wrap: nowrap;
+      align-items: center;
+    }
+    /* unit number + Korean title never shrink; only the translation gives way.
+       Both the title and translation stay on one line (truncate, never wrap). */
+    .lesson-head .lesson-num { flex-shrink: 0; }
+    .lesson-head .topic-kr { flex-shrink: 0; white-space: nowrap; }
+    .lesson-head .topic-en {
+      min-width: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    /* the open unit's header sits above neighbouring collapsed headers while pinned */
+    .lesson.is-open .lesson-head { z-index: 6; }
+    .lesson-head:hover { border-color: var(--accent-line, var(--line-strong)); }
+    .lesson-head:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+    }
+    .lesson-count {
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--faint);
+      white-space: nowrap;
+      align-self: center;
+    }
+    .lesson-chev {
+      margin-left: auto;
+      align-self: center;
+      color: var(--muted);
+      display: inline-flex;
+      transition: transform .2s ease, color .15s ease;
+    }
+    .lesson-head:hover .lesson-chev { color: var(--accent); }
+    .lesson.is-open .lesson-chev { transform: rotate(180deg); }
+
+    .lesson-body { display: none; }
+    .lesson.is-open .lesson-body { display: block; }
+
+    /* during a search: keep results tight */
+    body.is-searching .gram,
+    body.is-searching .vocab h3,
+    body.is-searching table.voc tr.grp,
+    body.is-searching table.voc tr:first-child { display: none; }
+    /* level 5: collapse the theme prose so only matching term rows remain */
+    body.is-searching .sect > :not(table.terms),
+    body.is-searching .callout,
+    body.is-searching table.terms tr:first-child { display: none; }
+
+    /* floating reader dock: the search bar pill + a separate theme button,
+       sitting side by side and sliding in/out together */
+    .reader-dock {
+      position: fixed;
+      left: 50%;
+      bottom: 1.125rem;
+      transform: translate(-50%, 140%);
+      z-index: 70;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      width: max-content;
+      max-width: calc(100vw - 1.5rem);
+      opacity: 0;
+      pointer-events: none;
+      transition: transform .28s cubic-bezier(.2,.8,.2,1), opacity .2s ease;
+    }
+    body.reader-ready .reader-dock,
+    body.is-searching .reader-dock {
+      transform: translate(-50%, 0);
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .reader-bar {
+      display: flex;
+      align-items: center;
+      gap: 0.375rem;
+      min-width: 0;
+      padding: 0.375rem 0.5rem;
+      max-width: 35rem;
+      width: max-content;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      box-shadow: 0 8px 30px var(--shadow-hover);
+      font-family: 'Noto Sans KR', sans-serif;
+    }
+    /* The light/dark toggle + language switcher share one pill beside the search
+       bar (moved out of the top controls by levels.js). The pill matches the bar's
+       surface and height; the two controls inside are plain icon buttons. */
+    .reader-tools {
+      flex: 0 0 auto;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.125rem;
+      padding: 0.375rem;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: var(--surface);
+      box-shadow: 0 8px 30px var(--shadow-hover);
+    }
+    .reader-theme,
+    .reader-lang .lang-switch {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.5rem;
+      height: 2.5rem;
+      padding: 0;
+      border: 0;
+      border-radius: 999px;
+      background: transparent;
+      color: var(--ink);
+      box-shadow: none;
+      cursor: pointer;
+    }
+    .reader-theme:hover,
+    .reader-lang .lang-switch:hover { color: var(--accent); background: var(--accent-bg, var(--zebra)); transform: none; }
+    /* in the dock the language button shows just its globe; the code + caret are
+       dropped, and its menu opens upward (the dock is at the bottom of the screen) */
+    .reader-lang { position: relative; display: inline-flex; }
+    .reader-lang .lang-switch > span,
+    .reader-lang .lang-switch .chev { display: none; }
+    .reader-lang .level-menu { top: auto; bottom: calc(100% + 8px); }
+    .reader-ico { display: inline-flex; color: var(--faint); padding-left: 0.375rem; }
+    .reader-search {
+      flex: 1 1 auto;
+      min-width: 7.5rem;
+      border: 0;
+      background: transparent;
+      color: var(--ink);
+      font-size: 0.875rem;
+      font-family: inherit;
+      padding: 0.5rem 0.125rem;
+      outline: none;
+    }
+    .reader-search::placeholder { color: var(--faint); }
+    .reader-count {
+      font-size: 0.6875rem;
+      font-weight: 600;
+      color: var(--faint);
+      white-space: nowrap;
+    }
+    .reader-units {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.1875rem;
+      height: 2.5rem;
+      padding: 0 0.75rem;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: var(--bg);
+      color: var(--ink);
+      font: 600 0.8125rem/1 'Noto Sans KR', sans-serif;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .reader-units:hover { border-color: var(--accent); color: var(--accent); }
+    .reader-units-chev { display: inline-flex; }
+    .reader-top {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.5rem;
+      height: 2.5rem;
+      flex: 0 0 auto;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: var(--bg);
+      color: var(--ink);
+      cursor: pointer;
+    }
+    .reader-top:hover { border-color: var(--accent); color: var(--accent); }
+
+    /* units popover */
+    .reader-pop {
+      position: fixed;
+      left: 50%;
+      bottom: 4.75rem;
+      transform: translateX(-50%);
+      z-index: 71;
+      width: min(35rem, calc(100vw - 1.5rem));
+      max-height: 56vh;
+      overflow-y: auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.125rem;
+      padding: 0.5rem;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 1rem;
+      box-shadow: 0 12px 40px var(--shadow-hover);
+    }
+    .reader-pop[hidden] { display: none; }
+    .reader-pop a {
+      display: block;
+      padding: 0.5rem 0.625rem;
+      border-radius: 0.5rem;
+      color: var(--ink);
+      text-decoration: none;
+      font: 500 0.8125rem/1.35 'Noto Sans KR', sans-serif;
+    }
+    .reader-pop a .n {
+      display: inline-block;
+      min-width: 1.875rem;
+      font-weight: 700;
+      font-size: 0.6875rem;
+      color: var(--accent-ink, var(--accent));
+    }
+    .reader-pop a:hover { background: var(--accent-bg, var(--zebra)); color: var(--accent-ink, var(--accent)); }
+
+    @media (max-width: 520px) {
+      .reader-pop { grid-template-columns: 1fr; }
+      .reader-units { padding: 0 0.5625rem; }
+      .reader-dock { bottom: 0.75rem; gap: 0.375rem; }
+      .reader-bar { gap: 0.25rem; }
+      /* the extra tools pill needs room, so let the search field shrink further */
+      .reader-search { min-width: 4rem; }
+      .reader-tools { padding: 0.3125rem; }
+      /* one column reads cleaner than two cramped, wrapping ones on a phone */
+      nav.toc { columns: 1; }
+      /* drop the word-count on phones — the single-line header is tight enough
+         and the translation gets that room instead */
+      .lesson-count { display: none; }
+      /* level nav: flow Home + levels from the left and let them wrap, with a
+         comfortable row gap for tapping */
+      .level-nav { justify-content: flex-start; gap: 0.5rem 1rem; }
+      .ln-levels { gap: 0.5rem 1rem; }
+    }
+
+    @media print {
+      .reader-dock, .reader-pop { display: none !important; }
+      .lesson-body { display: block !important; }
+      .lesson-chev, .lesson-count { display: none !important; }
     }

@@ -7,6 +7,12 @@
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="KIIP Grammar &amp; Vocabulary">
   <meta property="og:url" content="https://yakhyo.github.io/korean-grammar/levels/ru/level-5.html">
+  <link rel="canonical" href="https://yakhyo.github.io/korean-grammar/levels/ru/level-5.html">
+  <link rel="alternate" hreflang="en" href="https://yakhyo.github.io/korean-grammar/levels/level-5.html">
+  <link rel="alternate" hreflang="uz" href="https://yakhyo.github.io/korean-grammar/levels/uz/level-5.html">
+  <link rel="alternate" hreflang="ru" href="https://yakhyo.github.io/korean-grammar/levels/ru/level-5.html">
+  <link rel="alternate" hreflang="id" href="https://yakhyo.github.io/korean-grammar/levels/id/level-5.html">
+  <link rel="alternate" hreflang="x-default" href="https://yakhyo.github.io/korean-grammar/levels/level-5.html">
   <meta property="og:title" content="KIIP Уровень 5 — Понимание корейского общества">
   <meta property="og:description"
     content="Учебное пособие по KIIP Уровень 5 (한국사회 이해): география, история, государственное устройство, право, экономика, общество, культура.">
@@ -25,46 +31,20 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Noto+Serif+KR:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,600;0,700;1,400&family=Noto+Serif+KR:wght@400;600;700&family=Noto+Sans+KR:wght@400;700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="../../assets/levels.css">
   <script>
     (function () {
       var root = document.documentElement, KEY = 'kiip-theme';
       var mq = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)');
-      function setTheme(t) { root.setAttribute('data-theme', t); }
       var saved = null;
       try { saved = localStorage.getItem(KEY); } catch (e) { }
-      setTheme(saved || (mq && mq.matches ? 'dark' : 'light'));
-      function closeMenu() {
-        var menus = document.querySelectorAll('.level-menu');
-        for (var i = 0; i < menus.length; i++) menus[i].hidden = true;
-        var btns = document.querySelectorAll('.level-switch');
-        for (var j = 0; j < btns.length; j++) btns[j].setAttribute('aria-expanded', 'false');
-      }
-      document.addEventListener('click', function (e) {
-        if (e.target.closest('.theme-toggle')) {
-          var t = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-          setTheme(t);
-          try { localStorage.setItem(KEY, t); } catch (e) { }
-          return;
-        }
-        var sw = e.target.closest('.level-switch');
-        if (sw) {
-          var open = sw.getAttribute('aria-expanded') === 'true';
-          var m = sw.parentNode.querySelector('.level-menu');
-          closeMenu();
-          sw.setAttribute('aria-expanded', String(!open));
-          if (m) m.hidden = open;
-          return;
-        }
-        if (!e.target.closest('.level-menu')) closeMenu();
-      });
-      document.addEventListener('keydown', function (e) {
-        if (e.key === 'Escape') closeMenu();
-      });
+      root.setAttribute('data-theme', saved || (mq && mq.matches ? 'dark' : 'light'));
     })();
   </script>
+  <script defer src="../../assets/nav.js"></script>
+  <script defer src="../../assets/levels.js"></script>
 </head>
 
 <body>
@@ -108,17 +88,10 @@
         <a role="menuitem" href="../level-5.html">English</a>
         <a role="menuitem" href="../uz/level-5.html">Oʻzbekcha</a>
         <a role="menuitem" href="level-5.html" aria-current="page">Русский</a>
+        <a role="menuitem" href="../id/level-5.html">Bahasa Indonesia</a>
       </div>
     </div>
     <!-- langswitch:end -->
-    <a class="ctrl" href="https://github.com/yakhyo/korean-grammar" target="_blank" rel="noopener"
-      aria-label="Отметить проект звездой на GitHub" title="Отметить проект звездой на GitHub">
-      <svg width="15" height="15" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
-        <path
-          d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.75.75 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Z" />
-      </svg>
-      <span>Звезда</span>
-    </a>
     <button class="ctrl theme-toggle" type="button" aria-label="Переключить тёмный режим"
       title="Переключить тёмный режим">
       <svg class="i-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -148,7 +121,7 @@
             </div>
             <div class="running-ftr"><span>Справочник для самостоятельного изучения</span><span>사회통합프로그램</span></div>
 
-            <h1>KIIP Уровень 5 — Понимание корейского общества</h1>
+            <h1>Уровень 5 · 한국사회</h1>
             <p class="subtitle">Справочник для самостоятельного изучения 한국사회 이해 (기본·심화) · Программа адаптации и
               интеграции иммигрантов Кореи
             </p>
@@ -205,8 +178,8 @@
             <p class="part-head" id="part1">Учебное пособие</p>
             <h2 class="part-title">Восемь тем корейского общества</h2>
 
-            <section class="unit" id="t1">
-              <div class="unit-head"><span class="unit-num">ТЕМА 01</span><span class="topic-kr">지리</span><span
+            <section class="lesson" id="t1">
+              <div class="lesson-head"><span class="lesson-num">ТЕМА 01</span><span class="topic-kr">지리</span><span
                   class="topic-en">География и регионы</span></div>
               <div class="sect">
                 <h4>설명 <span class="en">Что нужно знать</span></h4>
@@ -291,8 +264,8 @@
               </div>
             </section>
 
-            <section class="unit" id="t2">
-              <div class="unit-head"><span class="unit-num">ТЕМА 02</span><span class="topic-kr">역사</span><span
+            <section class="lesson" id="t2">
+              <div class="lesson-head"><span class="lesson-num">ТЕМА 02</span><span class="topic-kr">역사</span><span
                   class="topic-en">История</span></div>
               <div class="sect">
                 <h4>설명 <span class="en">Что нужно знать</span></h4>
@@ -379,8 +352,8 @@
               </div>
             </section>
 
-            <section class="unit" id="t3">
-              <div class="unit-head"><span class="unit-num">ТЕМА 03</span><span class="topic-kr">정치</span><span
+            <section class="lesson" id="t3">
+              <div class="lesson-head"><span class="lesson-num">ТЕМА 03</span><span class="topic-kr">정치</span><span
                   class="topic-en">Государственное устройство и демократия</span></div>
               <div class="sect">
                 <h4>설명 <span class="en">Что нужно знать</span></h4>
@@ -465,8 +438,8 @@
               </div>
             </section>
 
-            <section class="unit" id="t4">
-              <div class="unit-head"><span class="unit-num">ТЕМА 04</span><span class="topic-kr">법</span><span
+            <section class="lesson" id="t4">
+              <div class="lesson-head"><span class="lesson-num">ТЕМА 04</span><span class="topic-kr">법</span><span
                   class="topic-en">Право и права человека</span></div>
               <div class="sect">
                 <h4>설명 <span class="en">Что нужно знать</span></h4>
@@ -557,8 +530,8 @@
               </div>
             </section>
 
-            <section class="unit" id="t5">
-              <div class="unit-head"><span class="unit-num">ТЕМА 05</span><span class="topic-kr">경제</span><span
+            <section class="lesson" id="t5">
+              <div class="lesson-head"><span class="lesson-num">ТЕМА 05</span><span class="topic-kr">경제</span><span
                   class="topic-en">Экономика и труд</span></div>
               <div class="sect">
                 <h4>설명 <span class="en">Что нужно знать</span></h4>
@@ -648,8 +621,8 @@
               </div>
             </section>
 
-            <section class="unit" id="t6">
-              <div class="unit-head"><span class="unit-num">ТЕМА 06</span><span class="topic-kr">사회</span><span
+            <section class="lesson" id="t6">
+              <div class="lesson-head"><span class="lesson-num">ТЕМА 06</span><span class="topic-kr">사회</span><span
                   class="topic-en">Общество и социальное обеспечение</span></div>
               <div class="sect">
                 <h4>설명 <span class="en">Что нужно знать</span></h4>
@@ -738,8 +711,8 @@
               </div>
             </section>
 
-            <section class="unit" id="t7">
-              <div class="unit-head"><span class="unit-num">ТЕМА 07</span><span class="topic-kr">문화</span><span
+            <section class="lesson" id="t7">
+              <div class="lesson-head"><span class="lesson-num">ТЕМА 07</span><span class="topic-kr">문화</span><span
                   class="topic-en">Культура и повседневная жизнь</span></div>
               <div class="sect">
                 <h4>설명 <span class="en">Что нужно знать</span></h4>
@@ -831,8 +804,8 @@
               </div>
             </section>
 
-            <section class="unit" id="t8">
-              <div class="unit-head"><span class="unit-num">ТЕМА 08</span><span class="topic-kr">시민</span><span
+            <section class="lesson" id="t8">
+              <div class="lesson-head"><span class="lesson-num">ТЕМА 08</span><span class="topic-kr">시민</span><span
                   class="topic-en">Гражданство и интеграция</span></div>
               <div class="sect">
                 <h4>설명 <span class="en">Что нужно знать</span></h4>
