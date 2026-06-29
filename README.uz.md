@@ -1,6 +1,6 @@
 # KIIP Grammar &amp; Vocabulary
 
-[English](README.md) · **Oʻzbekcha** · [Русский](README.ru.md)
+[English](README.md) · **Oʻzbekcha** · [Русский](README.ru.md) · [Bahasa Indonesia](README.id.md)
 
 **Koreyaning Immigratsiya va Integratsiya dasturi (KIIP / 사회통합프로그램)** koreys tili oʻquv dasturi uchun mustaqil oʻrganishga moʻljallangan maʼlumotnoma toʻplami.
 
@@ -18,7 +18,7 @@
 
 ## Imkoniyatlar
 
-- 🌐 **Til almashtirgich** — har bir sahifada inglizcha, oʻzbekcha va ruscha oʻrtasida almashish uchun ochiluvchi menyu; koreyscha matn oʻz holicha qoladi, faqat izohlar va tarjimalar oʻzgaradi.
+- 🌐 **Til almashtirgich** — har bir sahifada inglizcha, oʻzbekcha, ruscha va indonezcha oʻrtasida almashish uchun ochiluvchi menyu; koreyscha matn oʻz holicha qoladi, faqat izohlar va tarjimalar oʻzgaradi.
 - 🧭 **Daraja almashtirgich** — har bir sahifadagi ochiluvchi menyu orqali ortga qaytmasdan istalgan darajaga (yoki bosh sahifaga) toʻgʻridan-toʻgʻri oʻtish mumkin.
 - 🌗 **Tungi / kunduzgi rejim** — har bir sahifadagi tugma orqali almashtiriladi, qayta kirganda eslab qolinadi va sukut boʻyicha tizim sozlamalaringizga moslashadi.
 - ⭐ **Yulduzcha tugmasi** — loyihani GitHubʼda yulduzcha bilan belgilash uchun tezkor havola.
@@ -31,7 +31,7 @@
 - 1–4-darajalar amaldagi KIIP darsliklari nashrlariga asoslanadi; lugʻat roʻyxatlari darsdagi soʻzlarning aynan nusxasi emas, balki kengaytirilgan mavzuli maʼlumotnomalardir.
 - Har bir grammatik nuqta naqshni turli kontekstlarda koʻrsatish uchun **toʻrtta ishlangan namuna gap** bilan beriladi.
 - 5-daraja *Koreys jamiyatini anglash* kursini qamrab oladi.
-- Oʻzbekcha va ruscha nashrlar izohlar, namunalar va lugʻatning toʻliq tarjimasidir; koreyscha matnning oʻzi esa uchala tilda bir xil.
+- Oʻzbekcha, ruscha va indonezcha nashrlar izohlar, namunalar va lugʻatning toʻliq tarjimasidir; koreyscha matnning oʻzi esa toʻrttala tilda bir xil.
 
 ## Loyiha tuzilishi
 
@@ -40,10 +40,12 @@
 ├── index.html         # Bosh sahifa (inglizcha — asosiy)
 ├── index-uz.html      # Bosh sahifa (oʻzbekcha)
 ├── index-ru.html      # Bosh sahifa (ruscha)
+├── index-id.html      # Bosh sahifa (indonezcha)
 ├── levels/            # Har bir daraja uchun, har bir tilda bittadan sahifa
 │   ├── level-1.html … level-5.html      # Inglizcha (asosiy)
 │   ├── uz/level-1.html … level-5.html   # Oʻzbekcha
-│   └── ru/level-1.html … level-5.html   # Ruscha
+│   ├── ru/level-1.html … level-5.html   # Ruscha
+│   └── id/level-1.html … level-5.html   # Indonezcha
 ├── assets/            # Umumiy stil fayllari va ijtimoiy preview rasmlari
 │   ├── home.css       # Bosh sahifalar
 │   ├── levels.css     # Daraja sahifalari (urgʻu rangi html.lvN klassi orqali)

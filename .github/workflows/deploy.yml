@@ -30,7 +30,7 @@ jobs:
       - name: Checkout ${{ github.ref_name }}
         uses: actions/checkout@v5
 
-      # Fail the deploy if the Korean has drifted between the EN/UZ/RU copies
+      # Fail the deploy if the Korean has drifted between the EN/UZ/RU/ID copies
       # of any level (a moved highlight span, a word edited in one file only…).
       - name: Check Korean is in sync across languages
         run: node tools/check-korean-sync.mjs

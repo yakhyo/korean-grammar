@@ -1,15 +1,15 @@
 #!/usr/bin/env node
-/* Korean sync checker for the trilingual KIIP level pages.
+/* Korean sync checker for the multilingual KIIP level pages.
  *
- * Each level exists three times — EN (levels/level-N.html), UZ (levels/uz/…)
- * and RU (levels/ru/…). The *Korean* in those three files must be identical:
+ * Each level exists four times — EN (levels/level-N.html), UZ (levels/uz/…),
+ * RU (levels/ru/…) and ID (levels/id/…). The *Korean* in those files must be identical:
  * the example sentences (with their <span class="hl"> highlight markup), the
  * vocabulary head-words, the unit topic titles and the grammar-pattern forms
  * are the same Korean in every language — only the surrounding translation
  * differs. When the Korean drifts between copies (a highlight span moved, a
  * word edited in one file but not the others) the pages silently disagree.
  *
- * This script extracts those Korean-only fields from all three copies of every
+ * This script extracts those Korean-only fields from all four copies of every
  * level and reports any place they no longer match. It is READ-ONLY — it never
  * touches the site files. Exit code 0 = in sync, 1 = drift found, so it can run
  * in CI or a pre-commit hook.
@@ -28,6 +28,7 @@ const LANGS = [
   { key: 'EN', file: (n) => `levels/level-${n}.html` },
   { key: 'UZ', file: (n) => `levels/uz/level-${n}.html` },
   { key: 'RU', file: (n) => `levels/ru/level-${n}.html` },
+  { key: 'ID', file: (n) => `levels/id/level-${n}.html` },
 ];
 
 // Each "field" is a Korean-only fragment that must match across languages.
