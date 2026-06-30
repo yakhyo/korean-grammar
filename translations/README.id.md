@@ -38,12 +38,12 @@ Kumpulan referensi belajar mandiri untuk kurikulum bahasa Korea **Program Imigra
 ```
 .
 ├── docs/                       # Situs yang dipublikasikan — GitHub Pages menyajikan folder ini
-│   ├── index.html              # Pengalihan → /en/ (titik masuk netral bahasa)
-│   ├── en/                     # Inggris — index.html (→ /en/) + level-1/ … level-5/ (→ /en/level-1/ …)
-│   ├── uz/                     # Uzbek — index.html (→ /uz/) + level-1/ … level-5/ (→ /uz/level-1/ …)
-│   ├── ru/                     # Rusia (tata letak sama seperti uz/)
-│   ├── id/                     # Indonesia (tata letak sama seperti uz/)
-│   ├── level-1/ … level-5/     # Stub pengalihan → /en/level-N/ (untuk URL Inggris lama)
+│   ├── index.html              # Pengalihan → /lang/en/ (akar situs)
+│   ├── lang/                   # Satu folder per bahasa
+│   │   ├── en/                 # Inggris — index.html (→ /lang/en/) + level-1/ … level-5/
+│   │   ├── uz/                 # Uzbek (→ /lang/uz/, tata letak sama)
+│   │   ├── ru/                 # Rusia
+│   │   └── id/                 # Indonesia
 │   ├── assets/                 # Lembar gaya bersama dan gambar pratinjau media sosial
 │   │   ├── home.css            # Halaman beranda
 │   │   ├── levels.css          # Halaman tingkat (aksen melalui kelas html.lvN)

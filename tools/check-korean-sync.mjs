@@ -22,7 +22,7 @@ import { readFileSync, existsSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, resolve } from 'node:path';
 
-const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..', 'docs');
+const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..', 'docs', 'lang');
 const LEVELS = [1, 2, 3, 4, 5];
 const LANGS = [
   { key: 'EN', file: (n) => `en/level-${n}/index.html` },

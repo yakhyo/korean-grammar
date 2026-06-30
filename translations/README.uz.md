@@ -38,12 +38,12 @@
 ```
 .
 ├── docs/                       # Nashr etilgan sayt — GitHub Pages shu papkani uzatadi
-│   ├── index.html              # Yoʻnaltirish → /en/ (tildan xoli kirish nuqtasi)
-│   ├── en/                     # Inglizcha — index.html (→ /en/) + level-1/ … level-5/ (→ /en/level-1/ …)
-│   ├── uz/                     # Oʻzbekcha — index.html (→ /uz/) + level-1/ … level-5/ (→ /uz/level-1/ …)
-│   ├── ru/                     # Ruscha (uz/ bilan bir xil tuzilma)
-│   ├── id/                     # Indonezcha (uz/ bilan bir xil tuzilma)
-│   ├── level-1/ … level-5/     # Yoʻnaltirish fayllari → /en/level-N/ (eski inglizcha URLʼlar uchun)
+│   ├── index.html              # Yoʻnaltirish → /lang/en/ (sayt ildizi)
+│   ├── lang/                   # Har bir til uchun bitta papka
+│   │   ├── en/                 # Inglizcha — index.html (→ /lang/en/) + level-1/ … level-5/
+│   │   ├── uz/                 # Oʻzbekcha (→ /lang/uz/, bir xil tuzilma)
+│   │   ├── ru/                 # Ruscha
+│   │   └── id/                 # Indonezcha
 │   ├── assets/                 # Umumiy stil fayllari va ijtimoiy preview rasmlari
 │   │   ├── home.css            # Bosh sahifalar
 │   │   ├── levels.css          # Daraja sahifalari (urgʻu rangi html.lvN klassi orqali)

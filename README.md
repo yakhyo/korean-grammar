@@ -38,12 +38,12 @@ A self-study reference set for the **Korea Immigration &amp; Integration Program
 ```
 .
 ├── docs/                       # The published site — GitHub Pages serves this folder
-│   ├── index.html              # Redirect → /en/ (language-neutral entry point)
-│   ├── en/                     # English — index.html (→ /en/) + level-1/ … level-5/ (→ /en/level-1/ …)
-│   ├── uz/                     # Uzbek — index.html (→ /uz/) + level-1/ … level-5/ (→ /uz/level-1/ …)
-│   ├── ru/                     # Russian (same layout as uz/)
-│   ├── id/                     # Indonesian (same layout as uz/)
-│   ├── level-1/ … level-5/     # Redirect stubs → /en/level-N/ (keep old English URLs alive)
+│   ├── index.html              # Redirect → /lang/en/ (site root)
+│   ├── lang/                   # One folder per language
+│   │   ├── en/                 # English — index.html (→ /lang/en/) + level-1/ … level-5/
+│   │   ├── uz/                 # Uzbek (→ /lang/uz/, same layout)
+│   │   ├── ru/                 # Russian
+│   │   └── id/                 # Indonesian
 │   ├── assets/                 # Shared stylesheets + social preview images
 │   │   ├── home.css            # Landing pages
 │   │   ├── levels.css          # Level pages (accent via html.lvN class)
