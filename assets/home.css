@@ -15,7 +15,6 @@
       /* Floating top-right controls — sized in rem so they scale with text size. */
       --ctrl-h: 2.25rem;        /* control pill height */
       --ctrl-inset: 1rem;       /* gap from the viewport edges */
-      --bar-space: calc(var(--ctrl-inset) + var(--ctrl-h) + 0.25rem);
     }
 
     :root[data-theme="dark"] {
@@ -57,25 +56,6 @@
     html,
     body {
       transition: background-color .25s ease, color .25s ease;
-    }
-
-    /* Soft fade so content dissolves into the background as it scrolls up to
-       the floating controls, instead of bleeding through the gaps between the
-       pills. Sits above page content but below the controls (z 60). */
-    body::before {
-      content: "";
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: var(--bar-space);
-      z-index: 4;
-      pointer-events: none;
-      background: linear-gradient(var(--bg) 88%, transparent);
-    }
-
-    @media print {
-      body::before { display: none; }
     }
 
     .page-controls {
@@ -257,7 +237,6 @@
     .lead {
       font-size: 18px;
       color: var(--soft);
-      max-width: 640px;
       margin: 0;
       text-wrap: pretty;
     }
