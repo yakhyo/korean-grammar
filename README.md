@@ -1,6 +1,6 @@
 # KIIP Grammar &amp; Vocabulary
 
-**English** · [Oʻzbekcha](README.uz.md) · [Русский](README.ru.md) · [Bahasa Indonesia](README.id.md)
+**English** · [Oʻzbekcha](translations/README.uz.md) · [Русский](translations/README.ru.md) · [Bahasa Indonesia](translations/README.id.md)
 
 A self-study reference set for the **Korea Immigration &amp; Integration Program (KIIP / 사회통합프로그램)** Korean curriculum.
 
@@ -37,26 +37,31 @@ A self-study reference set for the **Korea Immigration &amp; Integration Program
 
 ```
 .
-├── index.html              # Landing page (English — default) → /
-├── level-1/ … level-5/     # English level pages → /level-1/ … (each folder holds an index.html)
-├── uz/                     # Uzbek — index.html (→ /uz/) + level-1/ … level-5/ (→ /uz/level-1/ …)
-├── ru/                     # Russian (same layout as uz/)
-├── id/                     # Indonesian (same layout as uz/)
-├── assets/            # Shared stylesheets + social preview images
-│   ├── home.css       # Landing pages
-│   ├── levels.css     # Level pages (accent via html.lvN class)
-│   └── og-image*.png  # Per-language social preview images
-├── tools/             # Maintenance scripts (no dependencies)
+├── docs/                       # The published site — GitHub Pages serves this folder
+│   ├── index.html              # Redirect → /en/ (language-neutral entry point)
+│   ├── en/                     # English — index.html (→ /en/) + level-1/ … level-5/ (→ /en/level-1/ …)
+│   ├── uz/                     # Uzbek — index.html (→ /uz/) + level-1/ … level-5/ (→ /uz/level-1/ …)
+│   ├── ru/                     # Russian (same layout as uz/)
+│   ├── id/                     # Indonesian (same layout as uz/)
+│   ├── level-1/ … level-5/     # Redirect stubs → /en/level-N/ (keep old English URLs alive)
+│   ├── assets/                 # Shared stylesheets + social preview images
+│   │   ├── home.css            # Landing pages
+│   │   ├── levels.css          # Level pages (accent via html.lvN class)
+│   │   └── og-image*.png       # Per-language social preview images
+│   ├── sitemap.xml             # URL list with hreflang alternates
+│   └── .nojekyll               # Serve files as-is on GitHub Pages
+├── tools/                      # Maintenance scripts (no dependencies)
 │   └── check-korean-sync.mjs   # Verify Korean matches across EN/UZ/RU/ID
-└── .nojekyll          # Serve files as-is on GitHub Pages
+├── translations/               # README translations (uz · ru · id)
+└── README.md                   # This file (English)
 ```
 
 ## Run locally
 
-No build step — just open `index.html` in a browser, or serve the folder:
+No build step — serve the `docs/` folder:
 
 ```bash
-python3 -m http.server 8000
+python3 -m http.server 8000 --directory docs
 # then visit http://localhost:8000
 ```
 
