@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 /* Korean sync checker for the multilingual KIIP level pages.
  *
- * Each level exists four times — EN (levels/level-N.html), UZ (levels/uz/…),
- * RU (levels/ru/…) and ID (levels/id/…). The *Korean* in those files must be identical:
+ * Each level exists four times — EN (level-N/index.html), UZ (uz/level-N/…),
+ * RU (ru/level-N/…) and ID (id/level-N/…). The *Korean* in those files must be identical:
  * the example sentences (with their <span class="hl"> highlight markup), the
  * vocabulary head-words, the unit topic titles and the grammar-pattern forms
  * are the same Korean in every language — only the surrounding translation
@@ -25,10 +25,10 @@ import { dirname, resolve } from 'node:path';
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const LEVELS = [1, 2, 3, 4, 5];
 const LANGS = [
-  { key: 'EN', file: (n) => `levels/level-${n}.html` },
-  { key: 'UZ', file: (n) => `levels/uz/level-${n}.html` },
-  { key: 'RU', file: (n) => `levels/ru/level-${n}.html` },
-  { key: 'ID', file: (n) => `levels/id/level-${n}.html` },
+  { key: 'EN', file: (n) => `level-${n}/index.html` },
+  { key: 'UZ', file: (n) => `uz/level-${n}/index.html` },
+  { key: 'RU', file: (n) => `ru/level-${n}/index.html` },
+  { key: 'ID', file: (n) => `id/level-${n}/index.html` },
 ];
 
 // Each "field" is a Korean-only fragment that must match across languages.

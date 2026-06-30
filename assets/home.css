@@ -435,6 +435,20 @@
       color: var(--ink);
     }
 
+    .note p {
+      margin: 0 0 0.7em;
+    }
+
+    .note ul {
+      margin: 0;
+      padding-left: 1.2em;
+    }
+
+    .note li {
+      margin: 0.4em 0;
+      line-height: 1.55;
+    }
+
     footer {
       margin-top: 44px;
       padding-top: 22px;

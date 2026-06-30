@@ -37,15 +37,11 @@ Kumpulan referensi belajar mandiri untuk kurikulum bahasa Korea **Program Imigra
 
 ```
 .
-├── index.html         # Halaman beranda (Inggris — bawaan)
-├── index-uz.html      # Halaman beranda (Uzbek)
-├── index-ru.html      # Halaman beranda (Rusia)
-├── index-id.html      # Halaman beranda (Indonesia)
-├── levels/            # Satu halaman per tingkat, per bahasa
-│   ├── level-1.html … level-5.html      # Inggris (bawaan)
-│   ├── uz/level-1.html … level-5.html   # Uzbek
-│   ├── ru/level-1.html … level-5.html   # Rusia
-│   └── id/level-1.html … level-5.html   # Indonesia
+├── index.html              # Halaman beranda (Inggris — bawaan) → /
+├── level-1/ … level-5/     # Halaman tingkat (Inggris) → /level-1/ … (tiap folder berisi index.html)
+├── uz/                     # Uzbek — index.html (→ /uz/) + level-1/ … level-5/ (→ /uz/level-1/ …)
+├── ru/                     # Rusia (tata letak sama seperti uz/)
+├── id/                     # Indonesia (tata letak sama seperti uz/)
 ├── assets/            # Lembar gaya bersama dan gambar pratinjau media sosial
 │   ├── home.css       # Halaman beranda
 │   ├── levels.css     # Halaman tingkat (aksen melalui kelas html.lvN)

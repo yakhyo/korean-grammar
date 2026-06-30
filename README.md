@@ -37,15 +37,11 @@ A self-study reference set for the **Korea Immigration &amp; Integration Program
 
 ```
 .
-├── index.html         # Landing page (English — default)
-├── index-uz.html      # Landing page (Uzbek)
-├── index-ru.html      # Landing page (Russian)
-├── index-id.html      # Landing page (Indonesian)
-├── levels/            # One page per level, per language
-│   ├── level-1.html … level-5.html      # English (default)
-│   ├── uz/level-1.html … level-5.html   # Uzbek
-│   ├── ru/level-1.html … level-5.html   # Russian
-│   └── id/level-1.html … level-5.html   # Indonesian
+├── index.html              # Landing page (English — default) → /
+├── level-1/ … level-5/     # English level pages → /level-1/ … (each folder holds an index.html)
+├── uz/                     # Uzbek — index.html (→ /uz/) + level-1/ … level-5/ (→ /uz/level-1/ …)
+├── ru/                     # Russian (same layout as uz/)
+├── id/                     # Indonesian (same layout as uz/)
 ├── assets/            # Shared stylesheets + social preview images
 │   ├── home.css       # Landing pages
 │   ├── levels.css     # Level pages (accent via html.lvN class)

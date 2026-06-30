@@ -37,15 +37,11 @@
 
 ```
 .
-├── index.html         # Bosh sahifa (inglizcha — asosiy)
-├── index-uz.html      # Bosh sahifa (oʻzbekcha)
-├── index-ru.html      # Bosh sahifa (ruscha)
-├── index-id.html      # Bosh sahifa (indonezcha)
-├── levels/            # Har bir daraja uchun, har bir tilda bittadan sahifa
-│   ├── level-1.html … level-5.html      # Inglizcha (asosiy)
-│   ├── uz/level-1.html … level-5.html   # Oʻzbekcha
-│   ├── ru/level-1.html … level-5.html   # Ruscha
-│   └── id/level-1.html … level-5.html   # Indonezcha
+├── index.html              # Bosh sahifa (inglizcha — asosiy) → /
+├── level-1/ … level-5/     # Inglizcha daraja sahifalari → /level-1/ … (har birida index.html bor)
+├── uz/                     # Oʻzbekcha — index.html (→ /uz/) + level-1/ … level-5/ (→ /uz/level-1/ …)
+├── ru/                     # Ruscha (uz/ bilan bir xil tuzilma)
+├── id/                     # Indonezcha (uz/ bilan bir xil tuzilma)
 ├── assets/            # Umumiy stil fayllari va ijtimoiy preview rasmlari
 │   ├── home.css       # Bosh sahifalar
 │   ├── levels.css     # Daraja sahifalari (urgʻu rangi html.lvN klassi orqali)

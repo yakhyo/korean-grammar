@@ -36,10 +36,15 @@
     var levels = document.createElement('ol');
     levels.className = 'ln-levels';
 
-    Array.prototype.forEach.call(menu.querySelectorAll('a[href]'), function (a) {
-      var href = a.getAttribute('href') || '';
-      var label = a.textContent.trim();
-      if (/index[^/]*\.html$/.test(href)) {       // Home — left side (index / index-ru / index-uz)
+    // The menu is "Home, <separator>, Level 1…5": classify by position rather
+    // than by href shape, so clean URLs (/ , /uz/ , /uz/level-1/ …) still work.
+    var seenSep = false;
+    Array.prototype.forEach.call(menu.children, function (node) {
+      if (node.classList && node.classList.contains('menu-sep')) { seenSep = true; return; }
+      if (node.tagName !== 'A') return;
+      var href = node.getAttribute('href') || '';
+      var label = node.textContent.trim();
+      if (!seenSep) {                              // Home — before the separator
         var home = document.createElement('a');
         home.className = 'ln-home';
         home.href = href;
@@ -47,12 +52,11 @@
         nav.appendChild(home);
         return;
       }
-      if (!/level-\d/.test(href)) return;
-      var li = document.createElement('li');
+      var li = document.createElement('li');       // a level — after the separator
       var lv = document.createElement('a');
       lv.className = 'ln-lvl';
       lv.href = href;
-      if (a.getAttribute('aria-current')) lv.setAttribute('aria-current', 'page');
+      if (node.getAttribute('aria-current')) lv.setAttribute('aria-current', 'page');
       // "Level 1 · 초급 1" -> "Level 1" (the Korean tier stays in the h1)
       lv.textContent = (label.split('·')[0] || label).trim();
       li.appendChild(lv);
